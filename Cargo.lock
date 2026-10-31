@@ -779,7 +779,7 @@ dependencies = [
 
 [[package]]
 name = "ctg-desktop"
-version = "0.3.2"
+version = "0.3.3"
 dependencies = [
  "serde",
  "serde_json",
@@ -3550,7 +3550,7 @@ dependencies = [
 
 [[package]]
 name = "soundbit-app"
-version = "0.3.2"
+version = "0.3.3"
 dependencies = [
  "schemars 1.2.3",
  "serde",
@@ -3564,7 +3564,7 @@ dependencies = [
 
 [[package]]
 name = "soundbit-audio-io"
-version = "0.3.2"
+version = "0.3.3"
 dependencies = [
  "cpal",
  "thiserror 2.0.21",
@@ -3572,7 +3572,7 @@ dependencies = [
 
 [[package]]
 name = "soundbit-cli"
-version = "0.3.2"
+version = "0.3.3"
 dependencies = [
  "anyhow",
  "clap",
@@ -3584,7 +3584,7 @@ dependencies = [
 
 [[package]]
 name = "soundbit-core"
-version = "0.3.2"
+version = "0.3.3"
 dependencies = [
  "proptest",
  "serde",
@@ -3594,11 +3594,11 @@ dependencies = [
 
 [[package]]
 name = "soundbit-dsp"
-version = "0.3.2"
+version = "0.3.3"
 
 [[package]]
 name = "soundbit-engine"
-version = "0.3.2"
+version = "0.3.3"
 dependencies = [
  "rtrb",
  "soundbit-core",
@@ -3608,7 +3608,7 @@ dependencies = [
 
 [[package]]
 name = "soundbit-formats"
-version = "0.3.2"
+version = "0.3.3"
 dependencies = [
  "serde",
  "serde_json",
@@ -3618,7 +3618,7 @@ dependencies = [
 
 [[package]]
 name = "soundbit-mcp"
-version = "0.3.2"
+version = "0.3.3"
 dependencies = [
  "axum",
  "insta",
@@ -5167,7 +5167,7 @@ dependencies = [
 
 [[package]]
 name = "xtask"
-version = "0.3.2"
+version = "0.3.3"
 dependencies = [
  "anyhow",
  "cargo_metadata 0.23.1",

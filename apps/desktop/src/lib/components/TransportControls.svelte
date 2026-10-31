@@ -28,7 +28,7 @@
     class="play"
     class:playing={transport.playing}
     onclick={() => void transport.toggle()}
-    disabled={!transport.playing && !editor.state?.length_bars}
+    disabled={transport.busy || (!transport.playing && !editor.state?.length_bars)}
     title={transport.playing ? 'Stop (Space)' : !editor.state?.length_bars ? 'Generate or open a song first' : 'Play (Space)'}
     aria-label={transport.playing ? 'Stop' : 'Play'}
   >
@@ -37,7 +37,8 @@
   <button
     class="ghost icon"
     class:on={transport.looping}
-    onclick={() => (transport.looping = !transport.looping)}
+    onclick={() => void transport.toggleLoop()}
+    disabled={transport.busy}
     title={transport.looping ? 'Loop on' : 'Loop off'}
     aria-pressed={transport.looping}
   >

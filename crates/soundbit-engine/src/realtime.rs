@@ -6,7 +6,7 @@
 //! ones are moved back so they are freed off the audio thread.
 
 use std::sync::Arc;
-use std::sync::atomic::{AtomicBool, AtomicU64, Ordering};
+use std::sync::atomic::{AtomicU64, Ordering};
 
 use rtrb::{Consumer, Producer, RingBuffer};
 use thiserror::Error;
@@ -23,7 +23,8 @@ const QUEUE_CAPACITY: usize = 64;
 pub struct PlayerError;
 
 enum ToAudio {
-    Start(Box<Engine>),
+    Start(Box<Engine>, u64),
+    Loop(bool),
     Replace(Schedule),
     Stop,
 }
@@ -41,7 +42,8 @@ enum Garbage {
 #[derive(Debug, Default)]
 struct Status {
     position: AtomicU64,
-    playing: AtomicBool,
+    command: AtomicU64,
+    finished: AtomicU64,
 }
 
 /// Creates a connected control and audio-thread player.
@@ -53,6 +55,7 @@ pub fn player() -> (PlayerControl, RtPlayer) {
         outbox: to_audio,
         garbage: garbage_in,
         status: Arc::clone(&status),
+        command: 0,
     };
     let rt = RtPlayer {
         inbox,
@@ -60,6 +63,7 @@ pub fn player() -> (PlayerControl, RtPlayer) {
         status,
         engine: None,
         playing: false,
+        generation: 0,
     };
     (control, rt)
 }
@@ -69,6 +73,7 @@ pub struct PlayerControl {
     outbox: Producer<ToAudio>,
     garbage: Consumer<Garbage>,
     status: Arc<Status>,
+    command: u64,
 }
 
 impl PlayerControl {
@@ -86,9 +91,11 @@ impl PlayerControl {
         let mut engine = Engine::new(schedule);
         engine.set_looping(looping);
         engine.seek(from);
+        let command = self.command.wrapping_add(2) | 1;
+        self.send(ToAudio::Start(Box::new(engine), command))?;
+        self.command = command;
         self.status.position.store(from, Ordering::Relaxed);
-        self.send(ToAudio::Start(Box::new(engine)))?;
-        self.status.playing.store(true, Ordering::Relaxed);
+        self.status.command.store(command, Ordering::Release);
         Ok(())
     }
 
@@ -101,19 +108,31 @@ impl PlayerControl {
         self.send(ToAudio::Replace(schedule))
     }
 
+    /// Changes looping without restarting or moving the play head.
+    ///
+    /// # Errors
+    ///
+    /// Returns [`PlayerError`] if the audio thread is not draining its queue.
+    pub fn set_looping(&mut self, looping: bool) -> Result<(), PlayerError> {
+        self.send(ToAudio::Loop(looping))
+    }
+
     /// Stops playback.
     ///
     /// # Errors
     ///
     /// Returns [`PlayerError`] if the audio thread is not draining its queue.
     pub fn stop(&mut self) -> Result<(), PlayerError> {
-        self.status.playing.store(false, Ordering::Relaxed);
-        self.send(ToAudio::Stop)
+        self.send(ToAudio::Stop)?;
+        self.command = self.command.wrapping_add(2) & !1;
+        self.status.command.store(self.command, Ordering::Release);
+        Ok(())
     }
 
     /// Whether something is playing.
     pub fn is_playing(&self) -> bool {
-        self.status.playing.load(Ordering::Relaxed)
+        let command = self.status.command.load(Ordering::Acquire);
+        command & 1 != 0 && self.status.finished.load(Ordering::Acquire) != command
     }
 
     /// Current playback position in samples.
@@ -139,6 +158,7 @@ pub struct RtPlayer {
     status: Arc<Status>,
     engine: Option<Box<Engine>>,
     playing: bool,
+    generation: u64,
 }
 
 impl RtPlayer {
@@ -156,7 +176,11 @@ impl RtPlayer {
                     .store(engine.position(), Ordering::Relaxed);
                 if engine.is_finished() {
                     self.playing = false;
-                    self.status.playing.store(false, Ordering::Relaxed);
+                    // Only finish this start. A newer start may already be queued while
+                    // this audio callback was rendering the previous song's tail.
+                    self.status
+                        .finished
+                        .store(self.generation, Ordering::Release);
                 }
             }
             _ => out.fill(0.0),
@@ -166,7 +190,8 @@ impl RtPlayer {
     // RT-SAFE
     fn handle(&mut self, message: ToAudio) {
         match message {
-            ToAudio::Start(engine) => {
+            ToAudio::Start(engine, generation) => {
+                self.generation = generation;
                 if let Some(old) = self.engine.replace(engine) {
                     self.discard(Garbage::Engine(old));
                 }
@@ -179,6 +204,11 @@ impl RtPlayer {
                 }
                 None => self.discard(Garbage::Schedule(schedule)),
             },
+            ToAudio::Loop(looping) => {
+                if let Some(engine) = &mut self.engine {
+                    engine.set_looping(looping);
+                }
+            }
             ToAudio::Stop => self.playing = false,
         }
     }
@@ -270,5 +300,52 @@ mod tests {
         peak(&mut rt, 100);
         assert_eq!(control.position(), 4_200);
         control.collect_garbage();
+    }
+    #[test]
+    fn loop_changes_apply_during_playback_without_restarting() {
+        let (mut control, mut rt) = player();
+        control.start(schedule(), 15_900, false).expect("starts");
+        peak(&mut rt, 50);
+        control.set_looping(true).expect("loop enabled");
+        peak(&mut rt, 200);
+        assert!(control.is_playing());
+        assert_eq!(control.position(), 150);
+        control.set_looping(false).expect("loop disabled");
+        peak(&mut rt, 50);
+        assert_eq!(control.position(), 200);
+        for _ in 0..40 {
+            peak(&mut rt, 1_000);
+        }
+        assert!(!control.is_playing());
+    }
+
+    #[test]
+    fn previous_song_finishing_cannot_cancel_queued_restart() {
+        let (mut control, mut rt) = player();
+        control.start(schedule(), 0, false).expect("starts");
+        peak(&mut rt, 1);
+        let previous = rt.generation;
+        control.start(schedule(), 0, true).expect("restarts");
+        // Model the audio callback finishing the old song after the new start was queued.
+        rt.status.finished.store(previous, Ordering::Release);
+        assert!(control.is_playing());
+        assert!(peak(&mut rt, 256) > 0.0);
+        assert!(control.is_playing());
+    }
+
+    #[test]
+    fn rejected_stop_does_not_report_stopped_while_audio_keeps_playing() {
+        let (mut control, mut rt) = player();
+        control.start(schedule(), 0, true).expect("starts");
+        peak(&mut rt, 1);
+        for _ in 0..QUEUE_CAPACITY {
+            control.set_looping(true).expect("queue room");
+        }
+        assert!(control.stop().is_err());
+        assert!(control.is_playing());
+        peak(&mut rt, 256);
+        control.stop().expect("drained");
+        assert!(!control.is_playing());
+        assert_eq!(peak(&mut rt, 256), 0.0);
     }
 }

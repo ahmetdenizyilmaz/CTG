@@ -30,6 +30,16 @@ impl TrackPlayer {
     }
 
     // RT-SAFE
+    /// Retires voices tied to the previous sample bank, then follows the replacement plan.
+    /// Oscillator voices have copied patches and may safely finish their release tails.
+    pub(crate) fn replace_plan(&mut self, position: u64, plan: &TrackPlan) {
+        for voice in &mut self.voices {
+            voice.retire_sample();
+        }
+        self.seek(position, plan);
+    }
+
+    // RT-SAFE
     /// Releases every sounding note at `now`, letting it ring out.
     pub(crate) fn release_all(&mut self, now: u64) {
         for voice in &mut self.voices {

@@ -106,15 +106,16 @@ impl Engine {
 
     // RT-SAFE
     /// Swaps in a new schedule (for example after an edit) at the current position and returns
-    /// the old one, which the caller should drop off the audio thread. Sounding notes keep
-    /// playing; notes of removed tracks stop.
+    /// the old one, which the caller should drop off the audio thread. Oscillator notes keep
+    /// playing; sample voices and notes of removed tracks stop. Sample indices cannot outlive
+    /// their original bank, even if the new bank happens to have the same number of entries.
     pub fn replace_schedule(&mut self, schedule: Schedule) -> Schedule {
         let old = std::mem::replace(&mut self.schedule, schedule);
         self.reverb.set_params(self.schedule.reverb());
         let plans = self.schedule.tracks();
         for (index, player) in self.players.iter_mut().enumerate() {
             match plans.get(index) {
-                Some(plan) => player.seek(self.position, plan),
+                Some(plan) => player.replace_plan(self.position, plan),
                 None => player.reset(),
             }
         }

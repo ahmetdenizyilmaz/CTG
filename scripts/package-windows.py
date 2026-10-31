@@ -8,7 +8,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'out'
-PACKAGE = OUT / 'CTG-0.3.2-Windows'
+PACKAGE = OUT / 'CTG-0.3.3-Windows'
 PACKAGE.mkdir(parents=True, exist_ok=True)
 TARGET = Path(os.environ.get('CARGO_TARGET_DIR', ROOT / 'target'))
 for name in ['ctg-desktop.exe', 'ctg.exe']:

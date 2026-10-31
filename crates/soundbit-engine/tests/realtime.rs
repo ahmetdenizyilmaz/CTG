@@ -135,3 +135,42 @@ fn live_player_never_allocates_on_the_audio_side() {
     );
     control.collect_garbage();
 }
+
+#[test]
+fn replacing_a_live_sample_song_with_native_voices_does_not_panic_or_allocate() {
+    let schedule = Schedule::compile(&common::zzfx_song(), 8_000).expect("valid");
+    let replacement = Schedule::compile(&showcase_song(), 8_000).expect("valid");
+    let mut engine = Engine::new(schedule);
+    // ZzFX fixture starts at step 14 (1.75 s). Keep that sample active across the swap.
+    engine.seek(14_000);
+    let mut block = vec![0.0_f32; 256 * 2];
+    engine.process(&mut block);
+    assert!(block.iter().any(|sample| sample.abs() > 0.0001));
+    let mut old = None;
+    let count = allocations_during(|| {
+        old = Some(engine.replace_schedule(replacement));
+        engine.process(&mut block);
+    });
+    assert_eq!(count, 0, "live sample-bank replacement allocated");
+    assert!(block.iter().all(|sample| sample.is_finite()));
+    drop(old);
+}
+
+#[test]
+fn replacing_a_sample_bank_does_not_reuse_active_indices_in_the_new_bank() {
+    let schedule = Schedule::compile(&common::zzfx_song(), 8_000).expect("valid");
+    let replacement = schedule.clone();
+    let mut engine = Engine::new(schedule);
+    engine.seek(14_000);
+    let mut block = vec![0.0_f32; 256 * 2];
+    engine.process(&mut block);
+    assert!(block.iter().any(|sample| sample.abs() > 0.0001));
+    let old = engine.replace_schedule(replacement);
+    engine.process(&mut block);
+    // No new note is due yet; even an in-bounds old sample index must be retired.
+    assert!(block.iter().all(|sample| *sample == 0.0));
+    engine.seek(30_000);
+    engine.process(&mut block);
+    assert!(block.iter().any(|sample| sample.abs() > 0.0001));
+    drop(old);
+}

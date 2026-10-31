@@ -17,9 +17,18 @@ const DEFAULT_MCP_PORT: u16 = 7414;
 /// Audio output status. The output must stay alive for playback to work.
 #[derive(Debug)]
 pub(crate) struct Audio {
-    _output: Option<AudioOutput>,
+    output: Option<AudioOutput>,
     pub(crate) device: Option<String>,
     pub(crate) error: Option<String>,
+}
+
+impl Audio {
+    pub(crate) fn failure(&self) -> Option<String> {
+        self.output
+            .as_ref()
+            .and_then(AudioOutput::error)
+            .or_else(|| self.error.clone())
+    }
 }
 
 /// Embedded MCP endpoint status.
@@ -34,7 +43,7 @@ pub(crate) struct Mcp {
 pub(crate) struct AppState {
     session: SharedSession,
     playback: Mutex<Option<Playback>>,
-    pub(crate) audio: Audio,
+    audio: Mutex<Audio>,
     pub(crate) mcp: Mcp,
     pub(crate) workspace: PathBuf,
 }
@@ -49,7 +58,7 @@ impl AppState {
         Self {
             session,
             playback: Mutex::new(playback),
-            audio,
+            audio: Mutex::new(audio),
             mcp,
             workspace,
         }
@@ -58,6 +67,22 @@ impl AppState {
     /// Locks the session. Commands apply atomically, so a poisoned lock is safe to recover.
     pub(crate) fn session(&self) -> MutexGuard<'_, Session> {
         self.session.lock().unwrap_or_else(PoisonError::into_inner)
+    }
+
+    pub(crate) fn audio(&self) -> MutexGuard<'_, Audio> {
+        self.audio.lock().unwrap_or_else(PoisonError::into_inner)
+    }
+
+    /// Called under the playback lock before Play. Failed devices can be reopened without
+    /// restarting the editor or losing unsaved work. Lock order: playback before audio.
+    pub(crate) fn recover_audio(&self, playback: &mut Option<Playback>) -> Result<(), String> {
+        let mut audio = self.audio();
+        if playback.is_none() || audio.failure().is_some() {
+            let (player, reopened) = open_audio();
+            *playback = player;
+            *audio = reopened;
+        }
+        audio.failure().map_or(Ok(()), Err)
     }
 
     /// Locks playback; `None` when no audio device is available.
@@ -75,7 +100,7 @@ fn open_audio() -> (Option<Playback>, Audio) {
             (
                 Some(playback),
                 Audio {
-                    _output: Some(output),
+                    output: Some(output),
                     device: Some(info.device),
                     error: None,
                 },
@@ -84,7 +109,7 @@ fn open_audio() -> (Option<Playback>, Audio) {
         Err(error) => (
             None,
             Audio {
-                _output: None,
+                output: None,
                 device: None,
                 error: Some(error.to_string()),
             },

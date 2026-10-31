@@ -57,6 +57,15 @@ impl Playback {
         Ok(())
     }
 
+    /// Changes looping without restarting playback.
+    ///
+    /// # Errors
+    ///
+    /// Returns [`PlaybackError::Player`] if the audio thread does not respond.
+    pub fn set_looping(&mut self, looping: bool) -> Result<(), PlaybackError> {
+        Ok(self.control.set_looping(looping)?)
+    }
+
     /// Stops playback.
     ///
     /// # Errors

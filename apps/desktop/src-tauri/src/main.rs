@@ -43,6 +43,7 @@ fn main() {
             commands::files::export_wav,
             commands::playback::play,
             commands::playback::stop,
+            commands::playback::set_looping,
             commands::playback::playback_state,
             commands::presets::list_presets,
             commands::presets::preset_get,

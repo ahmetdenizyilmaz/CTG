@@ -75,9 +75,10 @@ pub(crate) struct EnvironmentDto {
 
 impl EnvironmentDto {
     pub(crate) fn new(state: &AppState) -> Self {
+        let audio = state.audio();
         Self {
-            audio_device: state.audio.device.clone(),
-            audio_error: state.audio.error.clone(),
+            audio_device: audio.device.clone(),
+            audio_error: audio.failure(),
             mcp_url: state.mcp.url.clone(),
             mcp_error: state.mcp.error.clone(),
             workspace: state.workspace.display().to_string(),
@@ -89,6 +90,7 @@ impl EnvironmentDto {
 #[derive(Debug, Serialize)]
 pub(crate) struct PlaybackDto {
     pub(crate) playing: bool,
+    pub(crate) error: Option<String>,
     pub(crate) position_bars: Option<f64>,
     pub(crate) position_seconds: Option<f64>,
 }

@@ -1,5 +1,16 @@
 # CTG releases
 
+## 0.3.3
+
+- Fix an audio-thread panic when a live ZzFX note outlived its replaced sample bank after generating or editing.
+
+- Prevent old playback status replies and previous-song completion from overriding a new Play command.
+- Guard overlapping transport commands and repeated Space key events.
+- Apply Loop changes immediately while playing, without restarting the song.
+- Retry transient status polling failures and show persistent errors.
+- Surface audio stream failures and reopen failed devices on the next Play attempt, preserving the editor session.
+- Keep the restored v2 composer unchanged.
+
 ## 0.3.2
 
 - Restore the v2 composition algorithm after listening feedback; the same settings produce the earlier notes and arrangement.

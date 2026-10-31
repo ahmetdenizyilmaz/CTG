@@ -95,6 +95,14 @@ impl Voice {
     }
 
     // RT-SAFE
+    /// Sample indices belong to one schedule. Retire them before that bank is replaced.
+    pub(crate) fn retire_sample(&mut self) {
+        if self.sample.is_some() {
+            self.active = false;
+        }
+    }
+
+    // RT-SAFE
     /// Makes the note release no later than `now`.
     pub(crate) fn release_by(&mut self, now: u64) {
         self.release_at = self.release_at.min(now);
@@ -115,7 +123,12 @@ impl Voice {
         }
 
         if let Some(index) = self.sample {
-            return self.render_sample(now, &samples[index]);
+            let Some(sample) = samples.get(index) else {
+                // A missing sample must never unwind through a platform audio callback.
+                self.active = false;
+                return VoiceFrame::default();
+            };
+            return self.render_sample(now, sample);
         }
         if self.modulated {
             self.retune(now);

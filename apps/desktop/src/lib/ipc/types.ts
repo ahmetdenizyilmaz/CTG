@@ -175,6 +175,7 @@ export interface PresetInfo {
 }
 
 export interface PlaybackState {
+  error?: string | null;
   playing: boolean;
   position_bars: number | null;
   position_seconds: number | null;

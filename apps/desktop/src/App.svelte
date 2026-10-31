@@ -22,7 +22,7 @@
     if (target instanceof HTMLElement && (target.isContentEditable || ['INPUT','SELECT','TEXTAREA'].includes(target.tagName))) return;
     const command = event.ctrlKey || event.metaKey;
     const key = event.key.toLowerCase();
-    if (event.key === ' ') { event.preventDefault(); void transport.toggle(); }
+    if (event.key === ' ') { event.preventDefault(); if (!event.repeat) void transport.toggle(); }
     else if (command && key === 'z') { event.preventDefault(); void (event.shiftKey ? editor.redo() : editor.undo()); }
     else if (command && key === 'y') { event.preventDefault(); void editor.redo(); }
     else if (command && key === 's') { event.preventDefault(); void editor.save(event.shiftKey); }

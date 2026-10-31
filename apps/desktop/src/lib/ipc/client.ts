@@ -25,6 +25,7 @@ export const backend = {
   saveProject: (path: string | null) => invoke<EditorState>('save_project', { path }),
   exportWav: (path: string) => invoke<string>('export_wav', { path }),
   play: (fromBar: number, looping: boolean) => invoke<PlaybackState>('play', { fromBar, looping }),
+  setLooping: (looping: boolean) => invoke<PlaybackState>('set_looping', { looping }),
   stop: () => invoke<PlaybackState>('stop'),
   playbackState: () => invoke<PlaybackState>('playback_state'),
   listPresets: () => invoke<PresetInfo[]>('list_presets'),
