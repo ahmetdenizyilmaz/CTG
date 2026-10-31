@@ -17,6 +17,12 @@ class ComposerStore {
     catch (error) { this.error = errorMessage(error); }
   }
 
+  neonFunk(): void {
+    if(!this.config)return;
+    Object.assign(this.config,{title:'Midnight Pixel Groove',vibe:'funk',key:'E',scale:'dorian',bpm:130,swing:8,neon_funk:true,expressive_slides:true,bass_hits:9,bass_rhythm:'template',seed:freshSeed(),instruments:{lead:'zzfx_neon_lead',harmony:'zzfx_neon_chords',bass:'zzfx_neon_bass',emotional:'zzfx_midnight_keys',kick:'zzfx_neon_kick',snare:'zzfx_neon_snare',hat:'zzfx_neon_hat'}});
+    this.report=null;
+  }
+
   async preview(): Promise<void> {
     if (!this.config || this.busy) return;
     this.busy = true;

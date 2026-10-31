@@ -41,7 +41,10 @@ fn corrupt_custom_files_warn_but_leave_valid_sounds_available() {
     let directory = tempfile::tempdir().expect("temp");
     std::fs::write(directory.path().join("broken.json"), "invalid").expect("write");
     let loaded = PresetLibrary::with_user_directory(directory.path()).expect("load");
-    assert_eq!(loaded.all().len(), 86);
+    assert_eq!(
+        loaded.all().len(),
+        PresetLibrary::builtin().expect("factory").all().len()
+    );
     assert_eq!(loaded.warnings().len(), 1);
     assert!(loaded.warnings()[0].contains("broken.json"));
 }

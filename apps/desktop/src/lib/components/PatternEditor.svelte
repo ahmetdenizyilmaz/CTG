@@ -7,6 +7,9 @@
   import { transport } from '../stores/transport.svelte';
   import Segmented from '../ui/Segmented.svelte';
 
+  import NoteExpression from './NoteExpression.svelte';
+  let expressionKey = $state<{pattern:number;start:number;pitch:number}|null>(null);
+
   const LENGTHS = [1, 2, 4, 8, 16].map((steps) => ({
     value: steps,
     label: String(steps),
@@ -20,6 +23,7 @@
   let width = $state(0);
   const editorState = $derived(editor.state);
   const pattern = $derived(editor.pattern);
+  const expressionNote = $derived(pattern?.id===expressionKey?.pattern ? pattern?.notes.find(n=>n.start===expressionKey?.start&&n.pitch===expressionKey?.pitch) : undefined);
   const grid = $derived(rollGrid(editorState?.steps_per_bar ?? 16, width));
   const instrumentIndex = $derived(editorState?.song.instruments.findIndex((i) => i.id === pattern?.instrument) ?? 0);
 
@@ -62,7 +66,10 @@
     const cell = cellAt(grid, event.offsetX, event.offsetY);
     if (!cell || !pattern) return;
     const pitch = pitchAtRow(cell.row);
-    void editor.act({ kind: 'toggle_note', pattern: pattern.id, start: cell.column, pitch, length: editor.noteLength });
+    const existing=pattern.notes.find(n=>n.pitch===pitch&&cell.column>=n.start&&cell.column<n.start+n.length);
+    if(existing&&!event.shiftKey){expressionKey={pattern:pattern.id,start:existing.start,pitch};return;}
+    expressionKey=null;
+    void editor.act({ kind: 'toggle_note', pattern: pattern.id, start: existing?.start ?? cell.column, pitch, length: editor.noteLength });
   }
 
   function rename(event: Event & { currentTarget: HTMLInputElement }): void {
@@ -105,6 +112,7 @@
         <button onclick={() => transpose(12)} title="Up an octave">+8va</button>
       </div>
     </div>
+    {#if expressionNote && expressionKey}<NoteExpression note={expressionNote} patternId={expressionKey.pattern} zzfx={editorState?.song.instruments.find(i=>i.id===pattern.instrument)?.voice.type==='zzfx'}/>{:else}<small class="muted">Click a note to edit slides and expression. Shift-click deletes it.</small>{/if}
     <div class="steps" style:padding-left={`${grid.labelWidth}px`}>
       {#each steps as step (step)}
         <span

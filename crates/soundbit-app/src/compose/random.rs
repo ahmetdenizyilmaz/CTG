@@ -18,6 +18,7 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
         ],
         Vibe::Funk => &[
             "ctg_singing_pulse",
+            "zzfx_neon_lead",
             "ctg_soft_ep",
             "aloboi_warm_lead",
             "square_pluck",
@@ -34,6 +35,7 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
     let basses: &[&str] = match vibe {
         Vibe::Funk => &[
             "pc98_opna_slap_bass",
+            "zzfx_neon_bass",
             "fm_bass",
             "triangle_bass",
             "ctg_rubber_bass",
@@ -56,6 +58,7 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
             &[
                 "trig_velvet_chord_pluck",
                 "ctg_soft_ep",
+                "zzfx_neon_chords",
                 "ctg_wood_pluck",
                 "ctg_bell_arp",
                 "fm_electric_piano",
@@ -72,6 +75,7 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
             &[
                 "aloboi_cello_solo",
                 "ctg_velvet_reed",
+                "zzfx_midnight_keys",
                 "flute",
                 "fm_strings",
                 "aloboi_warm_lead",

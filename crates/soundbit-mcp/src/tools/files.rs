@@ -59,14 +59,16 @@ fn describe(error: &dyn Error) -> String {
 #[tool_router(router = file_tools, vis = "pub(crate)")]
 impl SoundBitServer {
     #[tool(
-        description = "Lists SoundBit project files (.sbproj) in the workspace.",
+        description = "Lists CTG and ZzFX project files (.sbproj, .zzfx, .js, .json) in the workspace.",
         annotations(read_only_hint = true)
     )]
     fn files_list(&self) -> ToolResult {
         let workspace = self.workspace();
-        reply(
-            &json!({"workspace": workspace.root().display().to_string(), "projects": workspace.projects(PROJECT_EXTENSION)}),
-        )
+        let projects: Vec<_> = ["sbproj", "zzfx", "js", "json"]
+            .iter()
+            .flat_map(|ext| workspace.projects(ext))
+            .collect();
+        reply(&json!({"workspace": workspace.root().display().to_string(), "projects": projects}))
     }
 
     #[tool(description = "Saves the song as a project file in the workspace.")]
@@ -98,7 +100,18 @@ impl SoundBitServer {
                            `discard_unsaved: true`",
             );
         }
-        let path = attempt!(self.workspace().resolve(&input.path, PROJECT_EXTENSION));
+        let path = attempt!(
+            self.workspace().resolve(
+                &input.path,
+                match std::path::Path::new(&input.path)
+                    .extension()
+                    .and_then(|e| e.to_str())
+                {
+                    Some(ext @ ("zzfx" | "js" | "json")) => ext,
+                    _ => PROJECT_EXTENSION,
+                }
+            )
+        );
         match Session::open(&path) {
             Ok(opened) => *session = opened,
             Err(error) => return refuse(describe(&error)),

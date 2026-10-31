@@ -35,6 +35,7 @@ impl Source {
     pub(crate) fn start(&mut self, patch: &SourcePatch, hz: f64, sample_rate: f64) {
         *self = match *patch {
             SourcePatch::Pulse { duty } => Self::Pulse(tuned(PulseOsc::new(duty), hz, sample_rate)),
+            SourcePatch::Zzfx(_) => Self::Silent,
             SourcePatch::Triangle => Self::Triangle(tuned(TriangleOsc::default(), hz, sample_rate)),
             SourcePatch::Sawtooth => Self::Sawtooth(tuned(SawOsc::default(), hz, sample_rate)),
             SourcePatch::Sine => Self::Sine(tuned(SineOsc::default(), hz, sample_rate)),

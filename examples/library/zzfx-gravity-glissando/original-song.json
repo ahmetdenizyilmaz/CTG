@@ -1,0 +1,3057 @@
+{
+  "config": {
+    "name": "Gravity Glissando",
+    "vibe": "adventure",
+    "key": "F#",
+    "scale": "dorian",
+    "bpm": 128,
+    "length": "epic"
+  },
+  "instruments": [
+    [
+      0.5,
+      0,
+      261.63,
+      0.005,
+      0.28,
+      0.18,
+      5,
+      0.78,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.03,
+      0.88,
+      0.03,
+      0
+    ],
+    [
+      0.31,
+      0,
+      261.63,
+      0.008,
+      0.24,
+      0.16,
+      2,
+      0.8,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.022,
+      0.76,
+      0.03,
+      0
+    ],
+    [
+      0.64,
+      0,
+      130.815,
+      0.002,
+      0.22,
+      0.1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.9,
+      0.02,
+      0
+    ],
+    [
+      0.82,
+      0,
+      375,
+      0,
+      0.01,
+      0.075,
+      4,
+      1,
+      -9,
+      0,
+      0,
+      0,
+      0,
+      0.45,
+      0,
+      0,
+      0,
+      0.05,
+      0.035,
+      0
+    ]
+  ],
+  "patternOrder": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H"
+  ],
+  "patternRoles": {
+    "A": "verse",
+    "B": "verse",
+    "C": "contrast",
+    "D": "bridge",
+    "E": "climax",
+    "F": "contrast",
+    "G": "bridge",
+    "H": "climax"
+  },
+  "patterns": {
+    "A": [
+      [
+        0,
+        -0.08,
+        30,
+        0,
+        33,
+        32,
+        30,
+        25,
+        27,
+        28,
+        30,
+        0,
+        27,
+        23,
+        25,
+        0,
+        28,
+        25,
+        33,
+        0,
+        32,
+        30,
+        28,
+        25,
+        30,
+        37,
+        35,
+        33,
+        32,
+        30,
+        28,
+        27,
+        25,
+        21
+      ],
+      [
+        1,
+        0.26,
+        25,
+        0,
+        28,
+        25,
+        21,
+        0,
+        23,
+        25,
+        27,
+        0,
+        23,
+        18,
+        21,
+        0,
+        25,
+        21,
+        25,
+        0,
+        23,
+        21,
+        20,
+        16,
+        21,
+        33,
+        32,
+        30,
+        28,
+        27,
+        25,
+        23,
+        21,
+        18
+      ],
+      [
+        2,
+        0,
+        18,
+        18,
+        0,
+        25,
+        18,
+        0,
+        21,
+        21,
+        23,
+        23,
+        0,
+        18,
+        23,
+        0,
+        25,
+        27,
+        15,
+        27,
+        0,
+        21,
+        13,
+        25,
+        20,
+        30,
+        28,
+        27,
+        25,
+        23,
+        21,
+        20,
+        18,
+        13
+      ],
+      [
+        3,
+        -0.07,
+        1,
+        0,
+        32,
+        1,
+        14,
+        0,
+        32,
+        1,
+        0,
+        1,
+        32,
+        0,
+        14,
+        0,
+        32,
+        14,
+        1,
+        0,
+        32,
+        1,
+        14,
+        0,
+        32,
+        1,
+        32,
+        14,
+        1,
+        14,
+        32,
+        1,
+        14,
+        1
+      ]
+    ],
+    "B": [
+      [
+        0,
+        -0.08,
+        18,
+        21,
+        25,
+        30,
+        33,
+        32,
+        30,
+        28,
+        25,
+        0,
+        0,
+        27,
+        30,
+        28,
+        27,
+        25,
+        23,
+        0,
+        0,
+        30,
+        33,
+        35,
+        33,
+        32,
+        30,
+        0,
+        30,
+        32,
+        33,
+        30,
+        28,
+        25
+      ],
+      [
+        1,
+        0.26,
+        13,
+        18,
+        21,
+        0,
+        0,
+        25,
+        21,
+        20,
+        18,
+        21,
+        18,
+        0,
+        0,
+        23,
+        18,
+        16,
+        15,
+        18,
+        15,
+        0,
+        0,
+        27,
+        23,
+        23,
+        21,
+        0,
+        21,
+        23,
+        25,
+        21,
+        20,
+        18
+      ],
+      [
+        2,
+        0,
+        18,
+        21,
+        25,
+        18,
+        0,
+        25,
+        18,
+        16,
+        13,
+        18,
+        21,
+        23,
+        0,
+        30,
+        23,
+        21,
+        18,
+        23,
+        27,
+        15,
+        0,
+        21,
+        27,
+        25,
+        23,
+        0,
+        18,
+        30,
+        25,
+        18,
+        21,
+        23
+      ],
+      [
+        3,
+        -0.07,
+        1,
+        32,
+        14,
+        1,
+        0,
+        32,
+        1,
+        14,
+        0,
+        32,
+        1,
+        0,
+        1,
+        32,
+        0,
+        14,
+        0,
+        32,
+        14,
+        1,
+        0,
+        32,
+        1,
+        14,
+        0,
+        0,
+        1,
+        14,
+        32,
+        1,
+        14,
+        32
+      ]
+    ],
+    "C": [
+      [
+        0,
+        -0.08,
+        32,
+        33,
+        35,
+        32,
+        30,
+        28,
+        33,
+        35,
+        37,
+        33,
+        32,
+        30,
+        35,
+        37,
+        39,
+        35,
+        33,
+        32,
+        37,
+        39,
+        37,
+        33,
+        30,
+        0,
+        28,
+        0,
+        25,
+        0,
+        21,
+        0,
+        18,
+        20
+      ],
+      [
+        1,
+        0.26,
+        23,
+        25,
+        27,
+        23,
+        21,
+        20,
+        25,
+        27,
+        28,
+        25,
+        23,
+        21,
+        27,
+        28,
+        30,
+        27,
+        25,
+        23,
+        28,
+        30,
+        28,
+        25,
+        21,
+        0,
+        20,
+        0,
+        16,
+        0,
+        13,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        20,
+        32,
+        27,
+        20,
+        18,
+        16,
+        21,
+        33,
+        28,
+        21,
+        20,
+        18,
+        23,
+        35,
+        30,
+        23,
+        21,
+        20,
+        25,
+        25,
+        20,
+        18,
+        16,
+        0,
+        13,
+        0,
+        18,
+        0,
+        0,
+        0,
+        18,
+        18
+      ],
+      [
+        3,
+        -0.07,
+        1,
+        14,
+        32,
+        1,
+        14,
+        32,
+        1,
+        14,
+        32,
+        1,
+        14,
+        32,
+        1,
+        14,
+        1,
+        14,
+        1,
+        14,
+        1,
+        1,
+        14,
+        32,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        32,
+        32
+      ]
+    ],
+    "D": [
+      [
+        0,
+        -0.08,
+        18,
+        20,
+        18,
+        21,
+        20,
+        18,
+        42,
+        40,
+        39,
+        37,
+        35,
+        33,
+        32,
+        30,
+        28,
+        27,
+        25,
+        23,
+        21,
+        20,
+        18,
+        13,
+        0,
+        0,
+        37,
+        0,
+        18,
+        21,
+        25,
+        30,
+        33,
+        37
+      ],
+      [
+        1,
+        0.26,
+        13,
+        15,
+        13,
+        16,
+        15,
+        13,
+        37,
+        35,
+        33,
+        32,
+        30,
+        28,
+        27,
+        25,
+        23,
+        21,
+        20,
+        18,
+        16,
+        15,
+        13,
+        9,
+        0,
+        0,
+        30,
+        0,
+        13,
+        18,
+        21,
+        25,
+        30,
+        33
+      ],
+      [
+        2,
+        0,
+        18,
+        20,
+        18,
+        21,
+        20,
+        18,
+        30,
+        28,
+        27,
+        25,
+        23,
+        21,
+        20,
+        18,
+        16,
+        15,
+        13,
+        23,
+        21,
+        20,
+        18,
+        13,
+        0,
+        0,
+        18,
+        0,
+        18,
+        21,
+        23,
+        25,
+        27,
+        30
+      ],
+      [
+        3,
+        -0.07,
+        32,
+        14,
+        32,
+        14,
+        32,
+        14,
+        1,
+        32,
+        14,
+        32,
+        1,
+        32,
+        14,
+        1,
+        14,
+        1,
+        14,
+        1,
+        14,
+        14,
+        1,
+        1,
+        0,
+        0,
+        1,
+        14,
+        1,
+        14,
+        14,
+        1,
+        14,
+        14
+      ]
+    ],
+    "E": [
+      [
+        0,
+        -0.08,
+        39,
+        42,
+        30,
+        33,
+        35,
+        37,
+        0,
+        35,
+        27,
+        30,
+        33,
+        35,
+        0,
+        33,
+        32,
+        30,
+        33,
+        35,
+        37,
+        40,
+        0,
+        37,
+        35,
+        33,
+        32,
+        33,
+        30,
+        40,
+        37,
+        35,
+        33,
+        32
+      ],
+      [
+        1,
+        0.26,
+        33,
+        37,
+        25,
+        30,
+        33,
+        30,
+        25,
+        30,
+        23,
+        27,
+        30,
+        27,
+        23,
+        27,
+        30,
+        27,
+        27,
+        30,
+        33,
+        30,
+        25,
+        28,
+        32,
+        28,
+        23,
+        25,
+        21,
+        37,
+        33,
+        32,
+        30,
+        28
+      ],
+      [
+        2,
+        0,
+        27,
+        30,
+        18,
+        30,
+        18,
+        21,
+        23,
+        25,
+        23,
+        30,
+        23,
+        27,
+        28,
+        27,
+        25,
+        23,
+        15,
+        27,
+        21,
+        27,
+        13,
+        25,
+        20,
+        25,
+        23,
+        25,
+        18,
+        30,
+        28,
+        25,
+        23,
+        21
+      ],
+      [
+        3,
+        -0.07,
+        14,
+        14,
+        1,
+        32,
+        14,
+        1,
+        32,
+        1,
+        1,
+        32,
+        14,
+        1,
+        32,
+        1,
+        14,
+        14,
+        1,
+        32,
+        14,
+        1,
+        32,
+        1,
+        14,
+        32,
+        1,
+        1,
+        14,
+        1,
+        32,
+        14,
+        32,
+        1
+      ]
+    ],
+    "F": [
+      [
+        0,
+        -0.08,
+        37,
+        35,
+        33,
+        30,
+        0,
+        28,
+        35,
+        33,
+        32,
+        28,
+        0,
+        25,
+        33,
+        32,
+        30,
+        27,
+        25,
+        23,
+        30,
+        0,
+        33,
+        32,
+        30,
+        0,
+        30,
+        0,
+        32,
+        0,
+        33,
+        0,
+        35,
+        0
+      ],
+      [
+        1,
+        0.26,
+        33,
+        0,
+        30,
+        0,
+        25,
+        0,
+        32,
+        0,
+        28,
+        0,
+        23,
+        0,
+        30,
+        0,
+        27,
+        0,
+        21,
+        20,
+        25,
+        0,
+        28,
+        27,
+        25,
+        0,
+        27,
+        0,
+        25,
+        0,
+        23,
+        0,
+        21,
+        0
+      ],
+      [
+        2,
+        0,
+        30,
+        28,
+        25,
+        18,
+        0,
+        16,
+        28,
+        27,
+        23,
+        16,
+        0,
+        15,
+        27,
+        25,
+        21,
+        15,
+        13,
+        23,
+        18,
+        18,
+        25,
+        23,
+        18,
+        0,
+        23,
+        0,
+        21,
+        0,
+        20,
+        0,
+        20,
+        0
+      ],
+      [
+        3,
+        -0.07,
+        1,
+        32,
+        14,
+        32,
+        1,
+        1,
+        1,
+        32,
+        14,
+        1,
+        14,
+        32,
+        1,
+        32,
+        14,
+        32,
+        1,
+        14,
+        1,
+        0,
+        14,
+        1,
+        14,
+        0,
+        1,
+        0,
+        32,
+        0,
+        32,
+        0,
+        32,
+        0
+      ]
+    ],
+    "G": [
+      [
+        0,
+        -0.08,
+        32,
+        0,
+        33,
+        0,
+        35,
+        0,
+        37,
+        0,
+        39,
+        0,
+        40,
+        0,
+        42,
+        0,
+        30,
+        0,
+        0,
+        0,
+        18,
+        0,
+        21,
+        20,
+        18,
+        0,
+        16,
+        13,
+        18,
+        21,
+        23,
+        25,
+        27,
+        30
+      ],
+      [
+        1,
+        0.26,
+        28,
+        25,
+        30,
+        27,
+        32,
+        28,
+        33,
+        30,
+        35,
+        32,
+        37,
+        33,
+        37,
+        0,
+        25,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        13,
+        16,
+        18,
+        21,
+        23,
+        25
+      ],
+      [
+        2,
+        0,
+        18,
+        0,
+        18,
+        0,
+        16,
+        0,
+        15,
+        0,
+        15,
+        0,
+        13,
+        0,
+        13,
+        0,
+        18,
+        0,
+        0,
+        18,
+        21,
+        0,
+        23,
+        25,
+        18,
+        0,
+        16,
+        13,
+        18,
+        21,
+        23,
+        25,
+        27,
+        30
+      ],
+      [
+        3,
+        -0.07,
+        32,
+        0,
+        32,
+        0,
+        14,
+        0,
+        32,
+        0,
+        1,
+        32,
+        14,
+        32,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        32,
+        0,
+        1,
+        0,
+        14,
+        0,
+        1,
+        32,
+        1,
+        32,
+        14,
+        1,
+        14,
+        14
+      ]
+    ],
+    "H": [
+      [
+        0,
+        -0.08,
+        30,
+        0,
+        33,
+        32,
+        30,
+        25,
+        27,
+        28,
+        30,
+        0,
+        33,
+        35,
+        37,
+        39,
+        40,
+        0,
+        37,
+        35,
+        33,
+        0,
+        32,
+        33,
+        30,
+        0,
+        33,
+        32,
+        30,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0.26,
+        25,
+        30,
+        33,
+        30,
+        25,
+        30,
+        33,
+        30,
+        23,
+        27,
+        30,
+        27,
+        28,
+        32,
+        35,
+        0,
+        33,
+        30,
+        28,
+        0,
+        25,
+        27,
+        25,
+        0,
+        28,
+        27,
+        25,
+        0,
+        21,
+        0,
+        18,
+        0
+      ],
+      [
+        2,
+        0,
+        18,
+        30,
+        18,
+        21,
+        23,
+        25,
+        27,
+        28,
+        23,
+        30,
+        23,
+        27,
+        25,
+        25,
+        21,
+        33,
+        23,
+        35,
+        18,
+        30,
+        25,
+        27,
+        18,
+        30,
+        23,
+        25,
+        18,
+        0,
+        18,
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        -0.07,
+        1,
+        32,
+        14,
+        1,
+        32,
+        1,
+        14,
+        32,
+        1,
+        32,
+        14,
+        1,
+        14,
+        14,
+        1,
+        14,
+        1,
+        14,
+        1,
+        32,
+        14,
+        32,
+        1,
+        1,
+        14,
+        32,
+        1,
+        14,
+        1,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "patternEffects": {
+    "A": [
+      [
+        {
+          "code": "SU",
+          "value": 120
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 101
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 112
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 104
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 120
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 149
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 149
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 149
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 149
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 160
+        }
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 144
+        },
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 144
+        },
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 144
+        },
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 112
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 112
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 152
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 152
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 152
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 152
+        },
+        null,
+        null
+      ],
+      [
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "B": [
+      [
+        {
+          "code": "SD",
+          "value": 112
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 128
+        },
+        {
+          "code": "SU",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 144
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 133
+        },
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 149
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 112
+        },
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 128
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 128
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 128
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 117
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 117
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "C": [
+      [
+        {
+          "code": "SU",
+          "value": 136
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 112
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 144
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 117
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 149
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 128
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 165
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 165
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 176
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 181
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 192
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 197
+        },
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "code": "SU",
+          "value": 117
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 128
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 160
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 176
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 181
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 192
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        {
+          "code": "SD",
+          "value": 128
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 128
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 128
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 165
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 181
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 192
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "D": [
+      [
+        {
+          "code": "SU",
+          "value": 96
+        },
+        {
+          "code": "SD",
+          "value": 96
+        },
+        {
+          "code": "SU",
+          "value": 96
+        },
+        {
+          "code": "SD",
+          "value": 96
+        },
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 176
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 176
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 181
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 181
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 192
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 192
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 200
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 208
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 144
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 176
+        },
+        {
+          "code": "SU",
+          "value": 181
+        },
+        {
+          "code": "SU",
+          "value": 192
+        },
+        {
+          "code": "SU",
+          "value": 197
+        },
+        {
+          "code": "SU",
+          "value": 208
+        },
+        {
+          "code": "SU",
+          "value": 216
+        }
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 168
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 176
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 184
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 192
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 176
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 192
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 208
+        },
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 176
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 184
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 192
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 200
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 149
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 176
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 192
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 208
+        },
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 192
+        },
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "E": [
+      [
+        {
+          "code": "SU",
+          "value": 208
+        },
+        {
+          "code": "SU",
+          "value": 224
+        },
+        {
+          "code": "SU",
+          "value": 133
+        },
+        null,
+        null,
+        {
+          "code": "VB",
+          "value": 69
+        },
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 117
+        },
+        {
+          "code": "SU",
+          "value": 144
+        },
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 149
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 117
+        },
+        {
+          "code": "SD",
+          "value": 165
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 176
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 181
+        }
+      ],
+      [
+        {
+          "code": "SU",
+          "value": 192
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 160
+        },
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 176
+        },
+        null
+      ],
+      [
+        {
+          "code": "SU",
+          "value": 192
+        },
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 117
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 117
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 117
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 165
+        },
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 181
+        },
+        null
+      ],
+      [
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "F": [
+      [
+        {
+          "code": "SD",
+          "value": 165
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 165
+        },
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 144
+        },
+        {
+          "code": "SD",
+          "value": 176
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 176
+        },
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 149
+        },
+        {
+          "code": "SD",
+          "value": 181
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 181
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 192
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 133
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 144
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 152
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 165
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 176
+        },
+        null
+      ],
+      [
+        {
+          "code": "SD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 168
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 176
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 149
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 160
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 168
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 176
+        },
+        null
+      ],
+      [
+        {
+          "code": "SD",
+          "value": 168
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 176
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 184
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 149
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 165
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 181
+        },
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "G": [
+      [
+        {
+          "code": "SU",
+          "value": 149
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 160
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 168
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 176
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 184
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 192
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 208
+        },
+        null,
+        {
+          "code": "SD",
+          "value": 216
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 149
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 168
+        },
+        {
+          "code": "SU",
+          "value": 176
+        },
+        {
+          "code": "SU",
+          "value": 184
+        },
+        {
+          "code": "SU",
+          "value": 192
+        },
+        {
+          "code": "SU",
+          "value": 200
+        },
+        {
+          "code": "SU",
+          "value": 213
+        }
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 213
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 165
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 184
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 200
+        },
+        null
+      ],
+      [
+        {
+          "code": "SD",
+          "value": 144
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 152
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 168
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 216
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 144
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 165
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 184
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 200
+        },
+        null
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 197
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ],
+    "H": [
+      [
+        {
+          "code": "SU",
+          "value": 149
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 133
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 144
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 176
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 192
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "VB",
+          "value": 53
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "code": "SU",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 176
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 128
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        {
+          "code": "SD",
+          "value": 128
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 128
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "SU",
+          "value": 149
+        },
+        null,
+        {
+          "code": "SU",
+          "value": 149
+        },
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        {
+          "code": "SD",
+          "value": 133
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      [
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 176
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "code": "PD",
+          "value": 160
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    ]
+  },
+  "sequence": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ]
+}

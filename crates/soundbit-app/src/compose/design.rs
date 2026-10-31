@@ -56,7 +56,7 @@ impl SongDesign {
             Vibe::Battle | Vibe::Boss => &["driving", "breakbeat", "four_on_floor"],
             _ => &["syncopated", "four_on_floor", "half_time", "tresillo"],
         };
-        Self {
+        let mut design = Self {
             groove: grooves[rng.pick(grooves.len())].into(),
             accompaniment: [
                 "rising_arp",
@@ -74,7 +74,13 @@ impl SongDesign {
             answer: rng.pick(4),
             register: if rng.chance(20) { 48 } else { 60 },
             articulation: rng.pick(3),
+        };
+        if config.neon_funk {
+            design.groove = "syncopated".into();
+            design.accompaniment = "offbeat_stabs".into();
+            design.bass_motion = "octave".into();
         }
+        design
     }
 }
 

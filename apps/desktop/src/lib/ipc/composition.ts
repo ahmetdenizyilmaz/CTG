@@ -18,6 +18,8 @@ export interface ComposeConfig {
   modal_mixture: boolean;
   secondary_dominants: boolean;
   suspensions: boolean;
+  neon_funk: boolean;
+  expressive_slides: boolean;
   instruments: Record<'lead' | 'harmony' | 'bass' | 'emotional' | 'kick' | 'snare' | 'hat', string>;
 }
 export interface CompositionReport {

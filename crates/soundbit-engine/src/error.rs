@@ -12,6 +12,9 @@ pub const MAX_SAMPLE_RATE: u32 = 192_000;
 #[derive(Debug, Clone, PartialEq, Eq, Error)]
 #[non_exhaustive]
 pub enum EngineError {
+    /// Procedural sample cache exceeded its bounded preparation budget.
+    #[error("ZzFX sample cache exceeds 128 MiB; reduce distinct sounds or envelope lengths")]
+    SampleCacheLimit,
     /// The requested sample rate is not supported.
     #[error("sample rate must be between {min} and {max} Hz, got {got}")]
     InvalidSampleRate {

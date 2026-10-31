@@ -73,7 +73,7 @@ with sync_playwright() as p:
     page.get_by_text('Afterglow 1 | lead',exact=True).click()
     page.screenshot(path=str(ROOT/'out/ctg-studio-final.png'))
     page.get_by_role('button',name='Demo library',exact=True).click()
-    assert page.locator('.demo-grid article').count()==22
+    assert page.locator('.demo-grid article').count()==len(catalog)
     page.get_by_label('Demo creator',exact=True).select_option('Antigravity')
     assert page.locator('.demo-grid article').count()==13
     page.get_by_label('Search demos',exact=True).fill('Singularity')
@@ -96,7 +96,7 @@ with sync_playwright() as p:
     assert page.get_by_role('button',name='Copy configuration',exact=True).is_visible()
     assert not errors,errors
     report=dict(compose_stays_open_for_all_chip_profiles=True,instrument_menu_visible_and_clickable=True,
-        native_demos_loaded=14,library_tracks=22,creator_and_search_filters=True,one_audio_preview_at_a_time=True,
+        native_demos_loaded=sum(bool(d["project"]) for d in catalog),library_tracks=len(catalog),creator_and_search_filters=True,one_audio_preview_at_a_time=True,
         reset_restores_sound=True,save_preset=True,playback=True,save_roundtrip=True,export=exported,random_composition=True,javascript_errors=errors)
     (ROOT/'out/workstation-check.json').write_text(json.dumps(report,indent=2))
     print(json.dumps(report,indent=2))

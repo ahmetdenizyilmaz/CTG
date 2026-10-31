@@ -7,6 +7,8 @@ mod modulation;
 mod unison;
 mod voice;
 mod wavetable;
+mod zzfx;
+pub use zzfx::{ZzfxEffect, ZzfxEffectCode, ZzfxParameters};
 
 use serde::{Deserialize, Serialize};
 

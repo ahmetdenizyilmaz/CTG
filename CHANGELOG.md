@@ -1,5 +1,15 @@
 # CTG releases
 
+## 0.3.0
+
+- Editable ZzFX Studio JSON, .zzfx and literal .js import through desktop, CLI and MCP.
+- Native 21-parameter ZzFX synthesis, eight tracker effects, overlapping effect lanes and held cross-pattern tails. Precomputed samples keep allocation off the audio thread.
+- 168 factory sounds retaining all 86 existing instruments, plus ZzFX and original-song palettes.
+- 25 editable demos: all eight ZzFX archive entries, plus Pixel Sunrise, First Light and Clash of Banners.
+- Neon Pixel Funk composition recipe, occasional expressive pickups/glissando, and clickable note expression controls with undo.
+- Free-profile capacity raised to 128 tracks/instruments; chip-profile limits remain enforced.
+- Project format 3 reads previous versions and preserves new expression. Save imported scores as a new native project.
+
 ## 0.2.0
 
 - Independent CTG application identity and repository.

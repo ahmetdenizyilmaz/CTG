@@ -66,7 +66,7 @@ static ALLOCATOR: CountingAllocator = CountingAllocator;
 
 #[test]
 fn process_never_allocates() {
-    for song in [showcase_song(), shaped_song()] {
+    for song in [showcase_song(), shaped_song(), common::zzfx_song()] {
         let schedule = Schedule::compile(&song, 48_000).expect("valid rate");
         let mut engine = Engine::new(schedule);
         engine.enable_metering();

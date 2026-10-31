@@ -106,7 +106,11 @@ function drawNotes(context: CanvasRenderingContext2D, view: RollView): void {
       context.font = '500 8px "JetBrains Mono", monospace';
       context.textBaseline = 'middle';
       context.fillStyle = '#07131b';
-      context.fillText(pitchName(note.pitch), x + 5, y + height / 2 - 1);
+      const expression = note.slide_semitones ? (note.glissando ? ' steps' : ' slide') : note.zzfx_effect ? ` ${note.zzfx_effect.code}` : '';
+      context.save();
+      context.beginPath();context.rect(x,y,width,height);context.clip();
+      context.fillText(pitchName(note.pitch)+expression, x + 5, y + height / 2 - 1);
+      context.restore();
     }
   }
 }

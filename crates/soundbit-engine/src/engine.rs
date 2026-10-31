@@ -163,7 +163,13 @@ impl Engine {
             .zip(self.schedule.tracks())
             .enumerate()
         {
-            let frame = player.render(self.position, plan, patches, self.sample_rate);
+            let frame = player.render(
+                self.position,
+                plan,
+                patches,
+                self.sample_rate,
+                self.schedule.samples(),
+            );
             if let Some(meters) = &mut self.meters {
                 meters.record(index, frame.left * MASTER_GAIN, frame.right * MASTER_GAIN);
             }

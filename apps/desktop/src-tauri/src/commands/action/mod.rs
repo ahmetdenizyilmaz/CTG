@@ -53,6 +53,10 @@ pub(crate) enum Action {
         semitones: i32,
     },
     ToggleNote(NoteToggle),
+    SetNotes {
+        pattern: u32,
+        notes: Vec<soundbit_app::model::Note>,
+    },
     AddTrack {
         name: String,
     },
@@ -137,6 +141,9 @@ impl Action {
             Self::RemovePattern { id } => PatternCommand::Remove(pattern(id)).into(),
             Self::TransposePattern { id, semitones } => {
                 PatternCommand::Transpose(pattern(id), semitones).into()
+            }
+            Self::SetNotes { pattern: id, notes } => {
+                PatternCommand::SetNotes(pattern(id), notes).into()
             }
             Self::ToggleNote(toggle) => toggle.into_command(song)?,
             Self::AddTrack { name } => TrackCommand::Add(TrackSettings::new(name)).into(),

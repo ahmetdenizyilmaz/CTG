@@ -43,6 +43,39 @@ pub(crate) fn source(id: &str) -> Option<&'static str> {
         "last-light" => Some(include_str!(
             "../../../../../examples/library/last-light/last-light.sbproj"
         )),
+        "zzfx-starlight-overdrive" => Some(include_str!(
+            "../../../../../examples/library/zzfx-starlight-overdrive/zzfx-starlight-overdrive.sbproj"
+        )),
+        "zzfx-neon-pixel-funk" => Some(include_str!(
+            "../../../../../examples/library/zzfx-neon-pixel-funk/zzfx-neon-pixel-funk.sbproj"
+        )),
+        "zzfx-crimson-valkyrie" => Some(include_str!(
+            "../../../../../examples/library/zzfx-crimson-valkyrie/zzfx-crimson-valkyrie.sbproj"
+        )),
+        "zzfx-neon-pixel-funk-star-collapse-sync" => Some(include_str!(
+            "../../../../../examples/library/zzfx-neon-pixel-funk-star-collapse-sync/zzfx-neon-pixel-funk-star-collapse-sync.sbproj"
+        )),
+        "zzfx-neon-pixel-funk-director-cut-sync" => Some(include_str!(
+            "../../../../../examples/library/zzfx-neon-pixel-funk-director-cut-sync/zzfx-neon-pixel-funk-director-cut-sync.sbproj"
+        )),
+        "zzfx-gravity-glissando" => Some(include_str!(
+            "../../../../../examples/library/zzfx-gravity-glissando/zzfx-gravity-glissando.sbproj"
+        )),
+        "zzfx-supernova-groove" => Some(include_str!(
+            "../../../../../examples/library/zzfx-supernova-groove/zzfx-supernova-groove.sbproj"
+        )),
+        "zzfx-singularity" => Some(include_str!(
+            "../../../../../examples/library/zzfx-singularity/zzfx-singularity.sbproj"
+        )),
+        "clash-of-banners" => Some(include_str!(
+            "../../../../../examples/library/clash-of-banners/clash-of-banners.sbproj"
+        )),
+        "first-light" => Some(include_str!(
+            "../../../../../examples/library/first-light/first-light.sbproj"
+        )),
+        "pixel-sunrise" => Some(include_str!(
+            "../../../../../examples/library/pixel-sunrise/pixel-sunrise.sbproj"
+        )),
         _ => None,
     }
 }

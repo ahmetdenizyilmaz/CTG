@@ -35,6 +35,15 @@ pub(crate) fn pattern_view(song: &Song, id: PatternId) -> Value {
                         json!(f64::from(note.detune_milli_hz) / 1_000.0),
                     );
                 }
+                if note.tail_steps != 0 {
+                    map.insert("tail_steps".into(), json!(note.tail_steps));
+                }
+                if note.glissando {
+                    map.insert("glissando".into(), json!(true));
+                }
+                if let Some(fx) = note.zzfx_effect {
+                    map.insert("zzfx_effect".into(), json!(fx));
+                }
                 if note.slide_semitones != 0 {
                     map.insert("slide_semitones".to_owned(), json!(note.slide_semitones));
                 }

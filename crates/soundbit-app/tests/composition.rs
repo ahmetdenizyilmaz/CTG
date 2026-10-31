@@ -158,7 +158,7 @@ fn native_generation_undo_redo_restores_complete_projects() {
 fn all_added_packs_are_default_and_cached() {
     let first = PresetLibrary::builtin().expect("presets");
     let second = PresetLibrary::builtin().expect("presets");
-    assert_eq!(first.all().len(), 86);
+    assert_eq!(first.all().len(), 168);
     assert!(std::ptr::eq(first.all().as_ptr(), second.all().as_ptr()));
     for id in [
         "aloboi_cello_solo",
@@ -299,5 +299,55 @@ fn bridge_suspensions_are_prepared_and_change_actual_notes_when_eligible() {
     assert!(
         changed > 0,
         "suspension control must change eligible bridge phrases"
+    );
+}
+
+#[test]
+fn neon_funk_recipe_has_original_zzfx_sounds_and_expressive_sections() {
+    let config: ComposeConfig =
+        serde_json::from_str(include_str!("../../../examples/neon-funk/recipe.json"))
+            .expect("recipe");
+    let composition = generate(&config).expect("Neon palette");
+    assert_eq!(composition.report.design.groove, "syncopated");
+    assert_eq!(composition.report.design.accompaniment, "offbeat_stabs");
+    assert_eq!(composition.report.design.bass_motion, "octave");
+    assert!(
+        composition
+            .song
+            .instruments()
+            .all(|(_, i)| matches!(i.voice, soundbit_app::model::Voice::Zzfx { .. }))
+    );
+    assert!(
+        composition
+            .report
+            .bars
+            .iter()
+            .any(|b| b.role == Role::Bridge && b.attacks[0] == 0 && b.attacks[3] > 0)
+    );
+    assert!(
+        composition
+            .report
+            .bars
+            .iter()
+            .any(|b| b.role == Role::Climax && b.attacks[0] > 0)
+    );
+    assert!(
+        composition
+            .song
+            .patterns()
+            .flat_map(|(_, p)| p.notes())
+            .any(|n| n.slide_semitones != 0)
+    );
+    assert!(
+        composition
+            .song
+            .patterns()
+            .flat_map(|(_, p)| p.notes())
+            .any(|n| n.glissando)
+    );
+    let project = soundbit_formats::to_project_json(&composition.song).expect("write");
+    assert_eq!(
+        composition.song,
+        soundbit_formats::from_project_json(&project).expect("read")
     );
 }

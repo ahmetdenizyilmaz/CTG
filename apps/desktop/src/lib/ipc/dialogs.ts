@@ -6,7 +6,7 @@ const PROJECT_FILTER = { name: 'CTG Studio project', extensions: ['sbproj'] };
 const WAV_FILTER = { name: 'WAV audio', extensions: ['wav'] };
 
 export async function chooseProjectToOpen(): Promise<string | null> {
-  const path = await open({ multiple: false, directory: false, filters: [PROJECT_FILTER] });
+  const path = await open({ multiple: false, directory: false, filters: [{ name: 'CTG / ZzFX projects', extensions: ['sbproj', 'zzfx', 'js', 'json'] }] });
   return typeof path === 'string' ? path : null;
 }
 

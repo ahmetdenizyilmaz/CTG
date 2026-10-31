@@ -18,6 +18,7 @@ pub(crate) enum SourcePatch {
     Noise { short: bool },
     Wavetable([f32; WAVETABLE_LEN]),
     Fm(FmParams),
+    Zzfx(soundbit_core::ZzfxParameters),
 }
 
 /// Left and right gain factors.
@@ -95,6 +96,7 @@ fn source_patch(voice: &Voice, sample_rate: u32) -> SourcePatch {
         },
         Voice::Wavetable(table) => SourcePatch::Wavetable(normalized(table)),
         Voice::Fm(fm) => SourcePatch::Fm(fm_params(fm, sample_rate)),
+        Voice::Zzfx { parameters } => SourcePatch::Zzfx(*parameters),
     }
 }
 

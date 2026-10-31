@@ -47,7 +47,7 @@
       <aside class="library" aria-label="Sound library">
         <div class="dock-heading"><span>PROJECT LIBRARY</span><span class="tag">LOCAL</span></div>
         <InstrumentPanel /><PatternPanel />
-        <div class="library-foot">86 factory sounds <span>+ your presets</span></div>
+        <div class="library-foot">{editor.presets.length} available sounds <span>+ your presets</span></div>
       </aside>
       <section class="stage" aria-label="Music workspace">
         <div class="stage-heading"><div><span class="eyebrow">SESSION / ARRANGEMENT</span><h1>{editor.song.meta.title}</h1></div>

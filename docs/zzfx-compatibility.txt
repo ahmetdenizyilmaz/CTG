@@ -1,0 +1,62 @@
+CTG 0.3: ZzFX import and expressive composition
+
+OPEN AND EDIT
+Open accepts native .sbproj, ZzFX Studio .zzfx/.js literal exports, Studio song.json,
+or a JSON ZzFXM tuple [instruments, patterns, sequence, BPM]. JavaScript is parsed
+as numeric data and never executed. Imported sessions have no save path: Save As
+creates a new .sbproj without overwriting the source. CLI equivalent:
+  ctg import "Neon Pixel Funk.zzfx" -o "Neon Pixel Funk.sbproj"
+MCP: files_list, song_open, then song_save with a new .sbproj path.
+
+SYNTHESIS
+ZzFX instruments retain all 21 parameters in their original order: volume,
+randomness, frequency, attack, sustain, release, shape, shapeCurve, slide,
+deltaSlide, pitchJump, pitchJumpTime, repeatTime, noise, modulation, bitCrush,
+delay, sustainVolume, decay, tremolo, filter. Shape 0=sine, 1=triangle, 2=saw,
+3=clipped tangent, 4=phase-cubed noise, 5=variable-duty square. Time is seconds.
+Positive filter values are high-pass, negative values low-pass. Frequency is
+the instrument's frequency at MIDI C4; imported projects preserve their original
+reference tuning. The dedicated Neon composition presets use standard C4.
+
+ZzFX uses its own amplitude envelope; the common Envelope controls still drive
+the native filter envelope. Native volume/pan, filter, unison, vibrato, reverb,
+continuous note slides and semitone-stepped glissando apply to these voices too.
+Sounds are prepared off the audio thread at 44.1 kHz and resampled at playback.
+The per-schedule sample bank has a 128 MiB limit and individual sounds a 15-second
+limit. Oversized projects report an error instead of allocating without a bound.
+
+TRACKER EFFECTS
+SU/SD: slide up/down; VB: original Studio repeat/tremolo wobble; DT: shape curve;
+ST: staccato; PD: pitch drop; BC: bit crush; TR: tremolo. Amount is 0-255.
+Studio exports expand these into separate instrument/lane variants so effects
+can overlap. CTG imports those lanes and parameters. New CTG notes can instead
+use zzfx_effect:{code:"SU",value:96} without changing the reusable instrument.
+The native vibrato control provides actual pitch vibrato independently of VB.
+
+NOTE EDITING AND AI
+Click a piano-roll block for velocity, slide_semitones (-48..48), glissando and
+tail_steps. A tail holds the note after the visible block, including across bars.
+Shift-click deletes. Expression changes are undoable and saved in format 3.
+MCP pattern_set_notes accepts the same fields. Older projects load with slides,
+glissando and held tails off unless explicitly present.
+
+NEW FUNK SONGS
+Compose > Neon Pixel Funk recipe > Generate song. The preset sets E Dorian,
+130 BPM, syncopated octave bass, offbeat chord stabs and a ZzFX palette. A slower
+bridge and energetic climax develop the motif. Selected phrase endings/pickups
+use slides and stepped glissando. Different seeds change the composed notes.
+The same configuration is in examples/neon-funk/recipe.json for CLI and MCP.
+For deliberate AI authorship, an agent can choose these instruments and write
+its own notes/sections through the normal editing tools, without the generator.
+
+COMPATIBILITY LIMITS
+Uniform patterns of 4-64 rows (multiples of four), MIDI-range notes, up to 128
+instruments/tracks, 1024 native patterns, and 512 sequence entries are supported.
+Fractional note attenuation maps to MIDI velocity; pan maps to integer CTG pan.
+Volume-only rows and variable-length raw patterns are rejected with an explicit
+error. Fractional BPM is rounded to native integer BPM. Arbitrary executable JS
+and ZzFX one-shot sound code without a song are not project formats.
+The synth uses deterministic pitch randomness. CTG timing, gain, pan/velocity
+quantization and resampling mean full mixes are not bit-identical to ZzFXM.
+External mastering, added audio/SFX and edits absent from the source score cannot
+be recovered from a project. Original mastered demo previews are retained.

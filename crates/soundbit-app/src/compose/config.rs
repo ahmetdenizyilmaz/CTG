@@ -123,7 +123,11 @@ pub struct ComposeConfig {
     pub secondary_dominants: bool,
     /// Prepare and resolve a suspension at suitable bridge chord changes.
     pub suspensions: bool,
-    /// Native instrument presets; no `ZzFX` synthesis is used.
+    /// Lock in syncopated octave bass and offbeat stabs for neon chiptune funk.
+    pub neon_funk: bool,
+    /// Add deliberate pickups, slides and glissando to selected phrases.
+    pub expressive_slides: bool,
+    /// Native and `ZzFX` instrument preset IDs.
     pub instruments: Palette,
 }
 impl Default for ComposeConfig {
@@ -147,6 +151,8 @@ impl Default for ComposeConfig {
             secondary_dominants: false,
             suspensions: true,
             instruments: Palette::default(),
+            neon_funk: false,
+            expressive_slides: false,
         }
     }
 }

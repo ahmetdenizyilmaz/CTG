@@ -8,6 +8,7 @@
   import EnvelopeControls from './EnvelopeControls.svelte';
   import FilterControls from './FilterControls.svelte';
   import ModulationControls from './ModulationControls.svelte';
+  import ZzfxControls from './ZzfxControls.svelte';
   import InstrumentPresets from './InstrumentPresets.svelte';
 
   let { instrument }: { instrument: Instrument } = $props();
@@ -59,6 +60,9 @@
 
   {#key `${editor.state?.editor_id}:${instrument.id}`}<InstrumentPresets {instrument} />{/key}
 
+  {#if instrument.voice.type === 'zzfx'}
+    <ZzfxControls parameters={instrument.voice.parameters} onchange={(parameters)=>act({voice:{type:'zzfx',parameters}})}/>
+  {/if}
   {#if instrument.voice.type === 'pulse'}
     <div class="field">Duty
       <Segmented label="Duty cycle" options={DUTIES} value={instrument.voice.duty}
@@ -77,7 +81,7 @@
     title="Share of the sound sent into the song's reverb room" onchange={(reverb_send) => act({ reverb_send })} />
 
   <details>
-    <summary>Envelope{instrument.voice.type === 'fm' ? ' (filter only)' : ''}</summary>
+    <summary>Envelope{['fm','zzfx'].includes(instrument.voice.type) ? ' (filter only)' : ''}</summary>
     <EnvelopeControls envelope={instrument.envelope} onchange={(envelope) => act({ envelope })} />
   </details>
   <details>

@@ -56,6 +56,7 @@ impl TrackPlayer {
         plan: &TrackPlan,
         patches: &[Patch],
         sample_rate: f64,
+        samples: &[Vec<f32>],
     ) -> VoiceFrame {
         while let Some(event) = plan.events.get(self.next_event) {
             if event.on > now {
@@ -69,7 +70,7 @@ impl TrackPlayer {
 
         let (mut left, mut right, mut send) = (0.0, 0.0, 0.0);
         for voice in &mut self.voices {
-            let frame = voice.render(now);
+            let frame = voice.render(now, samples);
             left += frame.left;
             right += frame.right;
             send += frame.send;

@@ -27,13 +27,18 @@ mix revision script. The original `songs/` examples are retained from the engine
 | [Neon Afterburn](library/neon-afterburn/neon-afterburn.sbproj) | Ady & Codex | Editable native project + original audio |
 | [Velvet Voltage](library/velvet-voltage/velvet-voltage.sbproj) | Ady & Codex | Editable native project + original audio |
 | [Last Light](library/last-light/last-light.sbproj) | Ady & Codex | Editable native project + original audio |
-| [Starlight Overdrive](library/zzfx-starlight-overdrive/zzfx-starlight-overdrive.mp3) | Antigravity | ZzFX audio reference |
-| [Neon Pixel Funk](library/zzfx-neon-pixel-funk/zzfx-neon-pixel-funk.mp3) | Antigravity | ZzFX audio reference |
-| [Crimson Valkyrie](library/zzfx-crimson-valkyrie/zzfx-crimson-valkyrie.mp3) | Antigravity | ZzFX audio reference |
-| [Neon Pixel Funk (Star Collapse Sync)](library/zzfx-neon-pixel-funk-star-collapse-sync/zzfx-neon-pixel-funk-star-collapse-sync.mp3) | Antigravity | ZzFX audio reference |
-| [Neon Pixel Funk (Director Cut Sync)](library/zzfx-neon-pixel-funk-director-cut-sync/zzfx-neon-pixel-funk-director-cut-sync.mp3) | Antigravity | ZzFX audio reference |
-| [Gravity Glissando](library/zzfx-gravity-glissando/zzfx-gravity-glissando.mp3) | Antigravity | ZzFX audio reference |
-| [Supernova Groove](library/zzfx-supernova-groove/zzfx-supernova-groove.mp3) | Antigravity | ZzFX audio reference |
-| [Singularity](library/zzfx-singularity/zzfx-singularity.mp3) | Antigravity | ZzFX audio reference |
+| [Starlight Overdrive](library/zzfx-starlight-overdrive/zzfx-starlight-overdrive.sbproj) | Antigravity | Editable ZzFX score + original audio |
+| [Neon Pixel Funk](library/zzfx-neon-pixel-funk/zzfx-neon-pixel-funk.sbproj) | Antigravity | Editable ZzFX score + original audio |
+| [Crimson Valkyrie](library/zzfx-crimson-valkyrie/zzfx-crimson-valkyrie.sbproj) | Antigravity | Editable ZzFX score + original audio |
+| [Neon Pixel Funk (Star Collapse Sync)](library/zzfx-neon-pixel-funk-star-collapse-sync/zzfx-neon-pixel-funk-star-collapse-sync.sbproj) | Antigravity | Editable ZzFX score + original audio |
+| [Neon Pixel Funk (Director Cut Sync)](library/zzfx-neon-pixel-funk-director-cut-sync/zzfx-neon-pixel-funk-director-cut-sync.sbproj) | Antigravity | Editable ZzFX score + original audio |
+| [Gravity Glissando](library/zzfx-gravity-glissando/zzfx-gravity-glissando.sbproj) | Antigravity | Editable ZzFX score + original audio |
+| [Supernova Groove](library/zzfx-supernova-groove/zzfx-supernova-groove.sbproj) | Antigravity | Editable ZzFX score + original audio |
+| [Singularity](library/zzfx-singularity/zzfx-singularity.sbproj) | Antigravity | Editable ZzFX score + original audio |
 
 The original audio files are copied without processing; catalog SHA-256 hashes record them. Original source folders remain untouched.
+
+The ZzFX library folders include original.zzfx and original-song.json for import
+comparison. neon-funk/recipe.json generates new music with the Neon Funk palette.
+
+Original native demos: [Pixel Sunrise](songs/pixel-sunrise.sbproj), [First Light](songs/first-light.sbproj), [Clash of Banners](songs/clash-of-banners.sbproj).

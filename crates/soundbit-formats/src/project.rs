@@ -1,7 +1,7 @@
 //! The SoundBit project file: a versioned JSON envelope around a song.
 //!
 //! ```json
-//! { "format": "soundbit-project", "format_version": 2, "song": { ... } }
+//! { "format": "soundbit-project", "format_version": 3, "song": { ... } }
 //! ```
 //!
 //! Every change to the song's JSON layout bumps [`FORMAT_VERSION`] and ships a migration from
@@ -18,7 +18,7 @@ use crate::migrations::{OLDEST_VERSION, upgrade};
 pub const PROJECT_EXTENSION: &str = "sbproj";
 
 /// Newest project format version, written by [`to_project_json`].
-pub const FORMAT_VERSION: u32 = 2;
+pub const FORMAT_VERSION: u32 = 3;
 
 const FORMAT_TAG: &str = "soundbit-project";
 
@@ -94,7 +94,7 @@ mod tests {
         let song = Song::new("Round trip");
         let text = to_project_json(&song).expect("serializes");
         assert!(
-            text.starts_with("{\n  \"format\": \"soundbit-project\",\n  \"format_version\": 2,")
+            text.starts_with("{\n  \"format\": \"soundbit-project\",\n  \"format_version\": 3,")
         );
         assert_eq!(from_project_json(&text).expect("loads"), song);
     }
@@ -125,7 +125,7 @@ mod tests {
 
     #[test]
     fn invalid_song_errors_point_at_the_problem() {
-        let text = r#"{"format": "soundbit-project", "format_version": 2, "song": {
+        let text = r#"{"format": "soundbit-project", "format_version": 3, "song": {
             "instruments": [{"id": 1, "name": "x", "voice": {"type": "sine"}, "volume": 300}]
         }}"#;
         let error = from_project_json(text).expect_err("invalid volume");

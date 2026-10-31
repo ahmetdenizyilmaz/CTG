@@ -8,7 +8,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'out'
-PACKAGE = OUT / 'CTG-0.2.0-Windows'
+PACKAGE = OUT / 'CTG-0.3.0-Windows'
 PACKAGE.mkdir(parents=True, exist_ok=True)
 TARGET = Path(os.environ.get('CARGO_TARGET_DIR', ROOT / 'target'))
 for name in ['ctg-desktop.exe', 'ctg.exe']:
@@ -16,6 +16,7 @@ for name in ['ctg-desktop.exe', 'ctg.exe']:
 for name in ['LICENSE', 'README.md', 'THIRD_PARTY_NOTICES.md', 'CHANGELOG.md']:
     shutil.copy2(ROOT / name, PACKAGE / name)
 shutil.copy2(ROOT / 'docs/CTG-Studio-guide.txt', PACKAGE / 'CTG-guide.txt')
+shutil.copy2(ROOT / 'docs/zzfx-compatibility.txt', PACKAGE / 'zzfx-compatibility.txt')
 shutil.copytree(ROOT / 'examples', PACKAGE / 'examples', dirs_exist_ok=True,
                 ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
 shutil.copytree(ROOT / 'apps/desktop/public/fonts', PACKAGE / 'font-licenses',

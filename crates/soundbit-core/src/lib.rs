@@ -37,7 +37,7 @@ pub use instrument::{
     FilterMode, FilterResonance, FmAlgorithm, FmDetune, FmFeedback, FmMultiple, FmOperator, FmRate,
     FmReleaseRate, FmSustainLevel, FmTotalLevel, FmVoice, Instrument, NoiseMode, PitchEnvelope,
     PitchSweep, Unison, UnisonDetune, UnisonVoices, Vibrato, VibratoDepth, VibratoRate, Voice,
-    VoiceKind, WAVETABLE_LEN, WaveLevel, Wavetable,
+    VoiceKind, WAVETABLE_LEN, WaveLevel, Wavetable, ZzfxEffect, ZzfxEffectCode, ZzfxParameters,
 };
 pub use levels::{Level, Pan, Volume};
 pub use note::{Note, Velocity};

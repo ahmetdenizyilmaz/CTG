@@ -25,6 +25,14 @@ pub(crate) struct NoteInput {
     pub(crate) detune_cents: Option<i16>,
     /// Continuous linear pitch glide in semitones (-48 to 48) over the duration of the note (positive glides up for zoom-in/inflation, negative glides down for zoom-out/shrinking).
     pub(crate) slide_semitones: Option<i8>,
+    /// Quantize the pitch slide to semitone steps.
+    #[serde(default)]
+    pub(crate) glissando: bool,
+    /// Additional held steps beyond the visible note, across bar boundaries.
+    #[serde(default)]
+    pub(crate) tail_steps: u16,
+    /// Optional `ZzFX` tracker effect: {code: SU/SD/VB/DT/ST/PD/BC/TR, value: 0-255}.
+    pub(crate) zzfx_effect: Option<serde_json::Value>,
 }
 
 fn one_step() -> u16 {
@@ -122,6 +130,14 @@ impl NoteInput {
             }
             note = note.with_slide_semitones(slide);
         }
+        note.glissando = self.glissando;
+        note.tail_steps = self.tail_steps;
+        note.zzfx_effect = self
+            .zzfx_effect
+            .clone()
+            .map(serde_json::from_value)
+            .transpose()
+            .map_err(|e| format!("invalid ZzFX effect: {e}"))?;
         Ok(note)
     }
 }
@@ -175,6 +191,9 @@ mod tests {
             detune_hz: None,
             detune_cents: None,
             slide_semitones: None,
+            glissando: false,
+            tail_steps: 0,
+            zzfx_effect: None,
         }
     }
 

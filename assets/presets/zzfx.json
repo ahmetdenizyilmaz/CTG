@@ -1,0 +1,2037 @@
+{
+  "format": "soundbit-presets",
+  "format_version": 1,
+  "source": "ZzFX Studio archetypes (MIT); Antigravity authored sounds; CTG arrangements",
+  "presets": [
+    {
+      "id": "zzfx_lead_classic_square",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Lead classic square",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.5,
+            0.01,
+            261.625565,
+            0.005,
+            0.2,
+            0.08,
+            5,
+            1.0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_lead_thin_pulse",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Lead thin pulse",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.5,
+            0.01,
+            261.625565,
+            0.005,
+            0.2,
+            0.08,
+            5,
+            0.5,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_lead_nasal_pulse",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Lead nasal pulse",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.5,
+            0.01,
+            261.625565,
+            0.005,
+            0.2,
+            0.08,
+            5,
+            0.25,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.85,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_lead_bright_saw",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Lead bright saw",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.4,
+            0.01,
+            261.625565,
+            0.005,
+            0.18,
+            0.08,
+            2,
+            1.0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.85,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_lead_soft_sine",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Lead soft sine",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.45,
+            0.01,
+            261.625565,
+            0.01,
+            0.22,
+            0.1,
+            0,
+            1.0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.8,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_harmony_thin_pulse",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Harmony thin pulse",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.22,
+            0.01,
+            261.625565,
+            0.005,
+            0.12,
+            0.08,
+            5,
+            0.4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.7,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_harmony_soft_saw",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Harmony soft saw",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.2,
+            0.01,
+            261.625565,
+            0.01,
+            0.1,
+            0.08,
+            2,
+            0.8,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.6,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_harmony_triangle_pad",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Harmony triangle pad",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.2,
+            0.01,
+            261.625565,
+            0.02,
+            0.18,
+            0.12,
+            1,
+            1.0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.55,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_harmony_sine_pad",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Harmony sine pad",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.18,
+            0.01,
+            261.625565,
+            0.02,
+            0.2,
+            0.12,
+            0,
+            1.0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.5,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_harmony_buzzy_narrow",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Harmony buzzy narrow",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.25,
+            0.01,
+            261.625565,
+            0.005,
+            0.1,
+            0.06,
+            5,
+            0.2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.7,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_bass_triangle",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Bass triangle",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.6,
+            0.01,
+            130.812783,
+            0,
+            0.15,
+            0.06,
+            1,
+            1.0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.85,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_bass_square",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Bass square",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.5,
+            0.01,
+            130.812783,
+            0,
+            0.14,
+            0.05,
+            5,
+            1.0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_bass_saw",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Bass saw",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.45,
+            0.01,
+            130.812783,
+            0,
+            0.12,
+            0.05,
+            2,
+            0.8,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.85,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_bass_sub_sine",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Bass sub sine",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.65,
+            0.01,
+            130.812783,
+            0,
+            0.18,
+            0.08,
+            0,
+            1.0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.8,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_drum_standard",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Drum standard",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.8,
+            0,
+            350,
+            0,
+            0.01,
+            0.08,
+            4,
+            1.0,
+            -8,
+            0,
+            0,
+            0,
+            0,
+            0.5,
+            0,
+            0,
+            0,
+            0.05,
+            0.04,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_drum_tight",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Drum tight",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.85,
+            0,
+            380,
+            0,
+            0.005,
+            0.05,
+            4,
+            1.0,
+            -10,
+            0,
+            0,
+            0,
+            0,
+            0.45,
+            0,
+            0,
+            0,
+            0.03,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_drum_boomy",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Drum boomy",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.9,
+            0,
+            300,
+            0,
+            0.02,
+            0.12,
+            4,
+            1.0,
+            -6,
+            0,
+            0,
+            0,
+            0,
+            0.55,
+            0,
+            0,
+            0,
+            0.08,
+            0.05,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_drum_crushed",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Drum crushed",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.85,
+            0,
+            400,
+            0,
+            0.012,
+            0.09,
+            4,
+            1.0,
+            -12,
+            0,
+            0,
+            0,
+            0,
+            0.6,
+            0,
+            1.5,
+            0,
+            0.05,
+            0.04,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_drum_metallic",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Drum metallic",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.7,
+            0,
+            420,
+            0,
+            0.008,
+            0.07,
+            4,
+            1.0,
+            -4,
+            0,
+            0,
+            0,
+            0,
+            0.3,
+            0,
+            0,
+            0,
+            0.04,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_starlight_overdrive_lead",
+      "category": "zzfx",
+      "description": "Original lead sound from Starlight Overdrive. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Starlight Overdrive lead",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.52,
+            0,
+            261.63,
+            0.008,
+            0.34,
+            0.22,
+            5,
+            0.5,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.035,
+            0.86,
+            0.04,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_starlight_overdrive_chords",
+      "category": "zzfx",
+      "description": "Original chords sound from Starlight Overdrive. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Starlight Overdrive chords",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.34,
+            0,
+            261.63,
+            0.012,
+            0.28,
+            0.2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.025,
+            0.78,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_starlight_overdrive_bass",
+      "category": "zzfx",
+      "description": "Original bass sound from Starlight Overdrive. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Starlight Overdrive bass",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.64,
+            0,
+            130.815,
+            0.003,
+            0.22,
+            0.1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.88,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_starlight_overdrive_kit",
+      "category": "zzfx",
+      "description": "Original kit sound from Starlight Overdrive. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Starlight Overdrive kit",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.78,
+            0,
+            360,
+            0,
+            0.012,
+            0.085,
+            4,
+            1,
+            -8,
+            0,
+            0,
+            0,
+            0,
+            0.48,
+            0,
+            0,
+            0,
+            0.06,
+            0.04,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_pixel_funk_lead",
+      "category": "zzfx",
+      "description": "Original lead sound from Neon Pixel Funk. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Neon Pixel Funk lead",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.5,
+            0,
+            261.63,
+            0.004,
+            0.28,
+            0.18,
+            5,
+            0.85,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.028,
+            0.88,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_pixel_funk_chords",
+      "category": "zzfx",
+      "description": "Original chords sound from Neon Pixel Funk. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Neon Pixel Funk chords",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.3,
+            0,
+            261.63,
+            0.008,
+            0.24,
+            0.16,
+            2,
+            0.75,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.02,
+            0.74,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_pixel_funk_bass",
+      "category": "zzfx",
+      "description": "Original bass sound from Neon Pixel Funk. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Neon Pixel Funk bass",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.62,
+            0,
+            130.815,
+            0.002,
+            0.2,
+            0.09,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_pixel_funk_kit",
+      "category": "zzfx",
+      "description": "Original kit sound from Neon Pixel Funk. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Neon Pixel Funk kit",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.82,
+            0,
+            380,
+            0,
+            0.01,
+            0.075,
+            4,
+            1,
+            -9,
+            0,
+            0,
+            0,
+            0,
+            0.45,
+            0,
+            0,
+            0,
+            0.05,
+            0.035,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_crimson_valkyrie_lead",
+      "category": "zzfx",
+      "description": "Original lead sound from Crimson Valkyrie. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Crimson Valkyrie lead",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.48,
+            0,
+            261.63,
+            0.005,
+            0.28,
+            0.18,
+            2,
+            0.9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.03,
+            0.86,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_crimson_valkyrie_chords",
+      "category": "zzfx",
+      "description": "Original chords sound from Crimson Valkyrie. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Crimson Valkyrie chords",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.32,
+            0,
+            261.63,
+            0.004,
+            0.22,
+            0.14,
+            5,
+            0.45,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.02,
+            0.78,
+            0.025,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_crimson_valkyrie_bass",
+      "category": "zzfx",
+      "description": "Original bass sound from Crimson Valkyrie. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Crimson Valkyrie bass",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.6,
+            0,
+            130.815,
+            0.002,
+            0.2,
+            0.09,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_crimson_valkyrie_kit",
+      "category": "zzfx",
+      "description": "Original kit sound from Crimson Valkyrie. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Crimson Valkyrie kit",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.8,
+            0,
+            370,
+            0,
+            0.01,
+            0.075,
+            4,
+            1,
+            -9,
+            0,
+            0,
+            0,
+            0,
+            0.46,
+            0,
+            0,
+            0,
+            0.05,
+            0.035,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_pixel_funk_star_collapse_sync_lead",
+      "category": "zzfx",
+      "description": "Original lead sound from Neon Pixel Funk (Star Collapse Sync). Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Neon Pixel Funk (Star Collapse Sync) lead",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.5,
+            0,
+            261.63,
+            0.004,
+            0.28,
+            0.18,
+            5,
+            0.85,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.028,
+            0.88,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_pixel_funk_star_collapse_sync_chords",
+      "category": "zzfx",
+      "description": "Original chords sound from Neon Pixel Funk (Star Collapse Sync). Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Neon Pixel Funk (Star Collapse Sync) chords",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.3,
+            0,
+            261.63,
+            0.008,
+            0.24,
+            0.16,
+            2,
+            0.75,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.02,
+            0.74,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_pixel_funk_star_collapse_sync_bass",
+      "category": "zzfx",
+      "description": "Original bass sound from Neon Pixel Funk (Star Collapse Sync). Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Neon Pixel Funk (Star Collapse Sync) bass",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.62,
+            0,
+            130.815,
+            0.002,
+            0.2,
+            0.09,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_pixel_funk_star_collapse_sync_kit",
+      "category": "zzfx",
+      "description": "Original kit sound from Neon Pixel Funk (Star Collapse Sync). Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Neon Pixel Funk (Star Collapse Sync) kit",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.82,
+            0,
+            380,
+            0,
+            0.01,
+            0.075,
+            4,
+            1,
+            -9,
+            0,
+            0,
+            0,
+            0,
+            0.45,
+            0,
+            0,
+            0,
+            0.05,
+            0.035,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_pixel_funk_director_cut_sync_lead",
+      "category": "zzfx",
+      "description": "Original lead sound from Neon Pixel Funk (Director Cut Sync). Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Neon Pixel Funk (Director Cut Sync) lead",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.5,
+            0,
+            261.63,
+            0.004,
+            0.26,
+            0.16,
+            5,
+            0.85,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.028,
+            0.88,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_pixel_funk_director_cut_sync_chords",
+      "category": "zzfx",
+      "description": "Original chords sound from Neon Pixel Funk (Director Cut Sync). Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Neon Pixel Funk (Director Cut Sync) chords",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.3,
+            0,
+            261.63,
+            0.008,
+            0.22,
+            0.14,
+            2,
+            0.75,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.02,
+            0.74,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_pixel_funk_director_cut_sync_bass",
+      "category": "zzfx",
+      "description": "Original bass sound from Neon Pixel Funk (Director Cut Sync). Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Neon Pixel Funk (Director Cut Sync) bass",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.62,
+            0,
+            130.815,
+            0.002,
+            0.19,
+            0.08,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_pixel_funk_director_cut_sync_kit",
+      "category": "zzfx",
+      "description": "Original kit sound from Neon Pixel Funk (Director Cut Sync). Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Neon Pixel Funk (Director Cut Sync) kit",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.82,
+            0,
+            380,
+            0,
+            0.01,
+            0.075,
+            4,
+            1,
+            -9,
+            0,
+            0,
+            0,
+            0,
+            0.45,
+            0,
+            0,
+            0,
+            0.05,
+            0.035,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_gravity_glissando_lead",
+      "category": "zzfx",
+      "description": "Original lead sound from Gravity Glissando. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Gravity Glissando lead",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.5,
+            0,
+            261.63,
+            0.005,
+            0.28,
+            0.18,
+            5,
+            0.78,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.03,
+            0.88,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_gravity_glissando_chords",
+      "category": "zzfx",
+      "description": "Original chords sound from Gravity Glissando. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Gravity Glissando chords",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.31,
+            0,
+            261.63,
+            0.008,
+            0.24,
+            0.16,
+            2,
+            0.8,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.022,
+            0.76,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_gravity_glissando_bass",
+      "category": "zzfx",
+      "description": "Original bass sound from Gravity Glissando. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Gravity Glissando bass",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.64,
+            0,
+            130.815,
+            0.002,
+            0.22,
+            0.1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_gravity_glissando_kit",
+      "category": "zzfx",
+      "description": "Original kit sound from Gravity Glissando. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Gravity Glissando kit",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.82,
+            0,
+            375,
+            0,
+            0.01,
+            0.075,
+            4,
+            1,
+            -9,
+            0,
+            0,
+            0,
+            0,
+            0.45,
+            0,
+            0,
+            0,
+            0.05,
+            0.035,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_supernova_groove_lead",
+      "category": "zzfx",
+      "description": "Original lead sound from Supernova Groove. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Supernova Groove lead",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.5,
+            0,
+            261.63,
+            0.004,
+            0.27,
+            0.17,
+            5,
+            0.82,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.028,
+            0.88,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_supernova_groove_chords",
+      "category": "zzfx",
+      "description": "Original chords sound from Supernova Groove. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Supernova Groove chords",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.31,
+            0,
+            261.63,
+            0.008,
+            0.23,
+            0.15,
+            2,
+            0.74,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.022,
+            0.75,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_supernova_groove_bass",
+      "category": "zzfx",
+      "description": "Original bass sound from Supernova Groove. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Supernova Groove bass",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.64,
+            0,
+            130.815,
+            0.002,
+            0.2,
+            0.085,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_supernova_groove_kit",
+      "category": "zzfx",
+      "description": "Original kit sound from Supernova Groove. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Supernova Groove kit",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.82,
+            0,
+            380,
+            0,
+            0.01,
+            0.075,
+            4,
+            1,
+            -9,
+            0,
+            0,
+            0,
+            0,
+            0.45,
+            0,
+            0,
+            0,
+            0.05,
+            0.035,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_singularity_lead",
+      "category": "zzfx",
+      "description": "Original lead sound from Singularity. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Singularity lead",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.48,
+            0,
+            261.63,
+            0.006,
+            0.29,
+            0.19,
+            2,
+            0.85,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.032,
+            0.86,
+            0.035,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_singularity_chords",
+      "category": "zzfx",
+      "description": "Original chords sound from Singularity. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Singularity chords",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.32,
+            0,
+            261.63,
+            0.005,
+            0.24,
+            0.16,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.025,
+            0.78,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_singularity_bass",
+      "category": "zzfx",
+      "description": "Original bass sound from Singularity. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Singularity bass",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.64,
+            0,
+            130.815,
+            0.002,
+            0.21,
+            0.09,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_singularity_kit",
+      "category": "zzfx",
+      "description": "Original kit sound from Singularity. Save preset keeps your own variations.",
+      "instrument": {
+        "name": "ZzFX Singularity kit",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.82,
+            0,
+            365,
+            0,
+            0.011,
+            0.08,
+            4,
+            1,
+            -9,
+            0,
+            0,
+            0,
+            0,
+            0.46,
+            0,
+            0,
+            0,
+            0.05,
+            0.035,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_lead",
+      "category": "zzfx",
+      "description": "Neon Pixel Funk palette, calibrated to standard C4 tuning for new compositions.",
+      "instrument": {
+        "name": "ZzFX Neon Funk Lead",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.5,
+            0,
+            261.625565,
+            0.004,
+            0.28,
+            0.18,
+            5,
+            0.85,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.028,
+            0.88,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_chords",
+      "category": "zzfx",
+      "description": "Neon Pixel Funk palette, calibrated to standard C4 tuning for new compositions.",
+      "instrument": {
+        "name": "ZzFX Neon Funk Chords",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.3,
+            0,
+            261.625565,
+            0.008,
+            0.24,
+            0.16,
+            2,
+            0.75,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.02,
+            0.74,
+            0.03,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_bass",
+      "category": "zzfx",
+      "description": "Neon Pixel Funk palette, calibrated to standard C4 tuning for new compositions.",
+      "instrument": {
+        "name": "ZzFX Neon Funk Bass",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.62,
+            0,
+            261.625565,
+            0.002,
+            0.2,
+            0.09,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.9,
+            0.02,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_midnight_keys",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Midnight Keys",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.42,
+            0,
+            261.625565,
+            0.015,
+            0.65,
+            0.35,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.08,
+            0.65,
+            0.12,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_kick",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Neon Kick",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.9,
+            0,
+            440,
+            0.001,
+            0.01,
+            0.12,
+            0,
+            1,
+            0,
+            0,
+            -80,
+            0.012,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.2,
+            0.035,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_snare",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Neon Snare",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.65,
+            0,
+            380,
+            0.001,
+            0.02,
+            0.1,
+            4,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.55,
+            0,
+            0,
+            0,
+            0.2,
+            0.025,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    },
+    {
+      "id": "zzfx_neon_hat",
+      "category": "zzfx",
+      "description": "Editable ZzFX sound; all 21 synthesis parameters are available.",
+      "instrument": {
+        "name": "ZzFX Neon Hat",
+        "voice": {
+          "type": "zzfx",
+          "parameters": [
+            0.35,
+            0,
+            988,
+            0.001,
+            0.004,
+            0.035,
+            4,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.65,
+            0,
+            0,
+            0,
+            0.1,
+            0.012,
+            0,
+            0
+          ]
+        },
+        "volume": 80
+      }
+    }
+  ]
+}

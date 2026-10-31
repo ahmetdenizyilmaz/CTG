@@ -19,11 +19,13 @@ const silent: FmOperator = { ...carrier(1), total_level: 127 };
 /** A Game Boy-style triangle: 0 to 15 and back. */
 const triangleTable = Array.from({ length: 32 }, (_, i) => (i < 16 ? i : 31 - i));
 
-export const VOICE_KINDS: VoiceKind[] = ['pulse', 'triangle', 'sawtooth', 'sine', 'noise', 'wavetable', 'fm'];
+export const VOICE_KINDS: VoiceKind[] = ['pulse', 'triangle', 'sawtooth', 'sine', 'noise', 'wavetable', 'fm', 'zzfx'];
 
 /** Default parameters when switching an instrument to another voice type. */
 export function defaultVoice(kind: VoiceKind): Voice {
   switch (kind) {
+    case 'zzfx':
+      return {type: 'zzfx', parameters: [0.5,0,261.625565,0.004,0.2,0.15,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0]};
     case 'pulse':
       return { type: 'pulse', duty: 'quarter' };
     case 'noise':

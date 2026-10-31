@@ -1,6 +1,5 @@
 ---
 source: crates/soundbit-mcp/tests/protocol.rs
-assertion_line: 375
 expression: summary
 ---
 [
@@ -365,6 +364,11 @@ expression: summary
           "description": "Add sevenths or ninths to suitable chords.",
           "type": "boolean"
         },
+        "expressive_slides": {
+          "default": false,
+          "description": "Add deliberate pickups, slides and glissando to selected phrases.",
+          "type": "boolean"
+        },
         "form": {
           "$ref": "#/$defs/Form",
           "default": "standard",
@@ -381,7 +385,7 @@ expression: summary
             "lead": "aloboi_warm_lead",
             "snare": "snare"
           },
-          "description": "Native instrument presets; no `ZzFX` synthesis is used."
+          "description": "Native and `ZzFX` instrument preset IDs."
         },
         "key": {
           "default": "D",
@@ -396,6 +400,11 @@ expression: summary
         "motif_development": {
           "default": true,
           "description": "Reuse and develop one melodic motif across sections.",
+          "type": "boolean"
+        },
+        "neon_funk": {
+          "default": false,
+          "description": "Lock in syncopated octave bass and offbeat stabs for neon chiptune funk.",
           "type": "boolean"
         },
         "scale": {
@@ -510,6 +519,11 @@ expression: summary
               "description": "Add sevenths or ninths to suitable chords.",
               "type": "boolean"
             },
+            "expressive_slides": {
+              "default": false,
+              "description": "Add deliberate pickups, slides and glissando to selected phrases.",
+              "type": "boolean"
+            },
             "form": {
               "$ref": "#/$defs/Form",
               "default": "standard",
@@ -526,7 +540,7 @@ expression: summary
                 "lead": "aloboi_warm_lead",
                 "snare": "snare"
               },
-              "description": "Native instrument presets; no `ZzFX` synthesis is used."
+              "description": "Native and `ZzFX` instrument preset IDs."
             },
             "key": {
               "default": "D",
@@ -541,6 +555,11 @@ expression: summary
             "motif_development": {
               "default": true,
               "description": "Reuse and develop one melodic motif across sections.",
+              "type": "boolean"
+            },
+            "neon_funk": {
+              "default": false,
+              "description": "Lock in syncopated octave bass and offbeat stabs for neon chiptune funk.",
               "type": "boolean"
             },
             "scale": {
@@ -747,7 +766,7 @@ expression: summary
     "annotations": {
       "readOnlyHint": true
     },
-    "description": "Lists SoundBit project files (.sbproj) in the workspace.",
+    "description": "Lists CTG and ZzFX project files (.sbproj, .zzfx, .js, .json) in the workspace.",
     "input_schema": {
       "properties": {},
       "type": "object"
@@ -1178,6 +1197,27 @@ expression: summary
               "required": [
                 "type",
                 "samples"
+              ],
+              "type": "object"
+            },
+            {
+              "description": "Full `ZzFX` sound with 0?21 parameters in upstream order; missing values use `ZzFX` defaults. Frequency is at C4.",
+              "properties": {
+                "parameters": {
+                  "items": {
+                    "format": "double",
+                    "type": "number"
+                  },
+                  "type": "array"
+                },
+                "type": {
+                  "const": "zzfx",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "parameters"
               ],
               "type": "object"
             },
@@ -1750,6 +1790,27 @@ expression: summary
               "type": "object"
             },
             {
+              "description": "Full `ZzFX` sound with 0?21 parameters in upstream order; missing values use `ZzFX` defaults. Frequency is at C4.",
+              "properties": {
+                "parameters": {
+                  "items": {
+                    "format": "double",
+                    "type": "number"
+                  },
+                  "type": "array"
+                },
+                "type": {
+                  "const": "zzfx",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type",
+                "parameters"
+              ],
+              "type": "object"
+            },
+            {
               "description": "Four-operator FM, like the Sega Genesis. Unset values use a plain sine patch.",
               "properties": {
                 "algorithm": {
@@ -1902,6 +1963,11 @@ expression: summary
                 "null"
               ]
             },
+            "glissando": {
+              "default": false,
+              "description": "Quantize the pitch slide to semitone steps.",
+              "type": "boolean"
+            },
             "hz": {
               "description": "Exact target frequency in hertz (20.0-20000.0). Overrides the pitch's base 12-TET frequency for micro-Hz / Aloboi / Oscilloscope tuning.",
               "format": "double",
@@ -1939,6 +2005,14 @@ expression: summary
               "minimum": 0,
               "type": "integer"
             },
+            "tail_steps": {
+              "default": 0,
+              "description": "Additional held steps beyond the visible note, across bar boundaries.",
+              "format": "uint16",
+              "maximum": 65535,
+              "minimum": 0,
+              "type": "integer"
+            },
             "velocity": {
               "description": "MIDI velocity 1-127. Defaults to 100.",
               "format": "uint8",
@@ -1948,6 +2022,9 @@ expression: summary
                 "integer",
                 "null"
               ]
+            },
+            "zzfx_effect": {
+              "description": "Optional `ZzFX` tracker effect: {code: SU/SD/VB/DT/ST/PD/BC/TR, value: 0-255}."
             }
           },
           "required": [
@@ -2007,6 +2084,11 @@ expression: summary
                 "null"
               ]
             },
+            "glissando": {
+              "default": false,
+              "description": "Quantize the pitch slide to semitone steps.",
+              "type": "boolean"
+            },
             "hz": {
               "description": "Exact target frequency in hertz (20.0-20000.0). Overrides the pitch's base 12-TET frequency for micro-Hz / Aloboi / Oscilloscope tuning.",
               "format": "double",
@@ -2044,6 +2126,14 @@ expression: summary
               "minimum": 0,
               "type": "integer"
             },
+            "tail_steps": {
+              "default": 0,
+              "description": "Additional held steps beyond the visible note, across bar boundaries.",
+              "format": "uint16",
+              "maximum": 65535,
+              "minimum": 0,
+              "type": "integer"
+            },
             "velocity": {
               "description": "MIDI velocity 1-127. Defaults to 100.",
               "format": "uint8",
@@ -2053,6 +2143,9 @@ expression: summary
                 "integer",
                 "null"
               ]
+            },
+            "zzfx_effect": {
+              "description": "Optional `ZzFX` tracker effect: {code: SU/SD/VB/DT/ST/PD/BC/TR, value: 0-255}."
             }
           },
           "required": [
@@ -2271,6 +2364,11 @@ expression: summary
                 "null"
               ]
             },
+            "glissando": {
+              "default": false,
+              "description": "Quantize the pitch slide to semitone steps.",
+              "type": "boolean"
+            },
             "hz": {
               "description": "Exact target frequency in hertz (20.0-20000.0). Overrides the pitch's base 12-TET frequency for micro-Hz / Aloboi / Oscilloscope tuning.",
               "format": "double",
@@ -2308,6 +2406,14 @@ expression: summary
               "minimum": 0,
               "type": "integer"
             },
+            "tail_steps": {
+              "default": 0,
+              "description": "Additional held steps beyond the visible note, across bar boundaries.",
+              "format": "uint16",
+              "maximum": 65535,
+              "minimum": 0,
+              "type": "integer"
+            },
             "velocity": {
               "description": "MIDI velocity 1-127. Defaults to 100.",
               "format": "uint8",
@@ -2317,6 +2423,9 @@ expression: summary
                 "integer",
                 "null"
               ]
+            },
+            "zzfx_effect": {
+              "description": "Optional `ZzFX` tracker effect: {code: SU/SD/VB/DT/ST/PD/BC/TR, value: 0-255}."
             }
           },
           "required": [
@@ -2523,6 +2632,11 @@ expression: summary
               "description": "Add sevenths or ninths to suitable chords.",
               "type": "boolean"
             },
+            "expressive_slides": {
+              "default": false,
+              "description": "Add deliberate pickups, slides and glissando to selected phrases.",
+              "type": "boolean"
+            },
             "form": {
               "$ref": "#/$defs/Form",
               "default": "standard",
@@ -2539,7 +2653,7 @@ expression: summary
                 "lead": "aloboi_warm_lead",
                 "snare": "snare"
               },
-              "description": "Native instrument presets; no `ZzFX` synthesis is used."
+              "description": "Native and `ZzFX` instrument preset IDs."
             },
             "key": {
               "default": "D",
@@ -2554,6 +2668,11 @@ expression: summary
             "motif_development": {
               "default": true,
               "description": "Reuse and develop one melodic motif across sections.",
+              "type": "boolean"
+            },
+            "neon_funk": {
+              "default": false,
+              "description": "Lock in syncopated octave bass and offbeat stabs for neon chiptune funk.",
               "type": "boolean"
             },
             "scale": {

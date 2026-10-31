@@ -204,3 +204,25 @@ pub(crate) fn audio_hash(samples: &[f32]) -> u64 {
 fn quantize(sample: f32) -> i16 {
     (sample.clamp(-1.0, 1.0) * f32::from(i16::MAX)).round() as i16
 }
+
+/// `ZzFX` sample playback with expression, unison and a tail crossing the bar.
+pub(crate) fn zzfx_song() -> Song {
+    let mut song = Song::new("ZzFX expression");
+    let mut n = note("C4", 14, 2);
+    n.slide_semitones = 12;
+    n.glissando = true;
+    n.tail_steps = 4;
+    n.zzfx_effect = Some(soundbit_core::ZzfxEffect {
+        code: soundbit_core::ZzfxEffectCode::SU,
+        value: 48,
+    });
+    let mut instrument = Instrument::new(
+        "ZzFX",
+        Voice::Zzfx {
+            parameters: soundbit_core::ZzfxParameters::default(),
+        },
+    );
+    instrument.unison.voices = UnisonVoices::new(3).expect("valid");
+    add_instrument_part(&mut song, instrument, &[n]);
+    song
+}

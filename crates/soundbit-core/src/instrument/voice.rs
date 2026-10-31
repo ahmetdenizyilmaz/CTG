@@ -4,7 +4,7 @@ use std::fmt;
 
 use serde::{Deserialize, Serialize};
 
-use super::{FmVoice, Wavetable};
+use super::{FmVoice, Wavetable, ZzfxParameters};
 
 /// Pulse width of a pulse wave, as found on the NES and Game Boy.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Default, Serialize, Deserialize)]
@@ -65,6 +65,8 @@ pub enum VoiceKind {
     Wavetable,
     /// Four-operator FM.
     Fm,
+    /// `ZzFX` procedural sound.
+    Zzfx,
 }
 
 impl fmt::Display for VoiceKind {
@@ -77,6 +79,7 @@ impl fmt::Display for VoiceKind {
             Self::Noise => "noise",
             Self::Wavetable => "wavetable",
             Self::Fm => "fm",
+            Self::Zzfx => "zzfx",
         })
     }
 }
@@ -107,6 +110,11 @@ pub enum Voice {
     Wavetable(Wavetable),
     /// Four-operator FM patch.
     Fm(FmVoice),
+    /// Full `ZzFX` synthesis parameters, including sweeps and delay.
+    Zzfx {
+        /// 21 values in upstream `ZzFX` order.
+        parameters: ZzfxParameters,
+    },
 }
 
 impl Voice {
@@ -120,6 +128,7 @@ impl Voice {
             Self::Noise { .. } => VoiceKind::Noise,
             Self::Wavetable(_) => VoiceKind::Wavetable,
             Self::Fm(_) => VoiceKind::Fm,
+            Self::Zzfx { .. } => VoiceKind::Zzfx,
         }
     }
 }

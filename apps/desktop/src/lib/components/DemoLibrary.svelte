@@ -30,7 +30,7 @@
       <div class="demo-body"><span class="eyebrow">{demo.author} / {demo.project ? 'EDITABLE PROJECT' : 'AUDIO ONLY'}</span><h2>{demo.title}</h2><p>{demo.detail}</p><div class="metadata">{#if demo.bpm}<span>{demo.bpm} BPM</span>{/if}<span>{demo.time}</span>{#if demo.tracks}<span>{demo.tracks} tracks</span>{/if}</div><audio controls preload="none" src={`/demos/${demo.audio}`} aria-label={`Listen to ${demo.title}`} onplay={preview}></audio><div class="demo-bottom"><small>{demo.category}</small>{#if demo.project}<button class="primary" disabled={busy} onclick={() => void load(demo.id)}>Open project</button>{:else}<span class="archive-note">ZzFX audio reference</span>{/if}</div></div>
     </article>
   {:else}<p class="muted">No songs match these filters.</p>{/each}</div>
-  <p class="footnote">Native projects open as editable copies. Original mastered previews may have different finishing or tail lengths. ZzFX archive entries are listening references, not editable CTG songs.</p>
+  <p class="footnote">Native projects open as editable copies. Original mastered previews may have different finishing or tail lengths. ZzFX scores include their original synthesis parameters and tracker effects.</p>
 </section>
 <style>
   .filters{display:flex;gap:10px;align-items:center;margin-bottom:24px;flex-wrap:wrap}.filters input{flex:1;min-width:200px;padding:10px 12px}.filters select{padding:10px 24px 10px 10px;font-size:11px}.filters>span{font:10px var(--font-mono);color:var(--muted)}audio{width:100%;height:34px;margin:0 0 16px}.archive-note{font-size:10px;color:var(--muted)}

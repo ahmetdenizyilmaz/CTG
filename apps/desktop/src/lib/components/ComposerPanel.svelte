@@ -5,7 +5,9 @@
   import type { ComposeConfig } from '../ipc/composition';
 
   onMount(() => { void composer.init(); });
-  const features: { key: keyof Pick<ComposeConfig, 'motif_development' | 'voice_leading' | 'cadences' | 'chord_colors' | 'modal_mixture' | 'secondary_dominants' | 'suspensions'>; name: string; help: string }[] = [
+  const features: { key: keyof Pick<ComposeConfig, 'motif_development' | 'voice_leading' | 'cadences' | 'chord_colors' | 'modal_mixture' | 'secondary_dominants' | 'suspensions' | 'neon_funk' | 'expressive_slides'>; name: string; help: string }[] = [
+    {key:'neon_funk',name:'Neon funk groove',help:'Syncopated octave bass and offbeat chord stabs.'},
+    {key:'expressive_slides',name:'Slides and glissando',help:'Pitch scoops and a rising stepped solo in the climax.'},
     { key: 'motif_development', name: 'Develop a recurring hook', help: 'Related variations, a slower bridge and a faster climax.' },
     { key: 'voice_leading', name: 'Smooth melodic and chord movement', help: 'Prefer nearby notes and connected chord inversions.' },
     { key: 'cadences', name: 'Build tension and resolve endings', help: 'Coordinated phrase endings and a final home chord.' },
@@ -22,6 +24,8 @@
   <p class="muted">Shape a recurring hook, choose your sounds, then edit every note.</p>
   {#if composer.config}
     {@const config = composer.config}
+    <button class="primary" disabled={composer.busy} onclick={()=>composer.neonFunk()}>Neon Pixel Funk recipe</button>
+    <p class="muted">Load E Dorian, the original ZzFX sounds, octave bass and expressive slides, then Generate song for a new composition.</p>
     <div class="actions discovery">
       <button disabled={composer.busy} onclick={() => void composer.randomSong()}>Random song</button>
       <button class="ghost" disabled={composer.busy} onclick={() => void composer.randomInstruments()}>Random instruments</button>

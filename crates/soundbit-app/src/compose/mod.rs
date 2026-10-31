@@ -107,7 +107,8 @@ pub fn generate(config: &ComposeConfig) -> Result<Composition, String> {
             bar: local_bar,
             final_bar: bar + 1 == planned.len(),
         };
-        let lead = melody.bar(&context, &mut rng)?;
+        let mut lead = melody.bar(&context, &mut rng)?;
+        express_lead(&mut lead, &context)?;
         let harmony = accompaniment::harmony(&context, &voiced, &lead)?;
         let (drums, kicks) =
             percussion::drums(&design, role, local_bar, plan.section_end, &mut rng)?;
@@ -197,4 +198,22 @@ pub fn transform_notes(
             })
         })
         .collect()
+}
+
+fn express_lead(lead: &mut [Note], context: &BarContext<'_>) -> Result<(), String> {
+    if (context.bar % 4 == 3 || (context.role == Role::Climax && context.bar % 4 == 1))
+        && context.config.expressive_slides
+        && !context.final_bar
+        && context.role != Role::Bridge
+        && let Some(note) = lead.iter_mut().find(|n| n.length.get() >= 2)
+    {
+        let interval = if context.role == Role::Climax { 12 } else { 2 };
+        if note.pitch.get() >= interval {
+            note.pitch = soundbit_core::Pitch::new(note.pitch.get() - interval)
+                .map_err(|e| e.to_string())?;
+            note.slide_semitones = i8::try_from(interval).unwrap_or(2);
+            note.glissando = context.role == Role::Climax && context.bar % 2 == 1;
+        }
+    }
+    Ok(())
 }

@@ -10,7 +10,15 @@ use std::sync::{Arc, OnceLock};
 use crate::AppError;
 
 /// The preset files, by name.
-const FILES: [(&str, &str); 10] = [
+const FILES: [(&str, &str); 12] = [
+    (
+        "zzfx.json",
+        include_str!("../../../assets/presets/zzfx.json"),
+    ),
+    (
+        "legacy_songs.json",
+        include_str!("../../../assets/presets/legacy_songs.json"),
+    ),
     (
         "ctg_alternatives.json",
         include_str!("../../../assets/presets/ctg_alternatives.json"),

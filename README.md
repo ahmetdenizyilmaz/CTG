@@ -13,12 +13,14 @@ synth, arrange a song, or invite an MCP-compatible AI to compose in the same ses
 - A slate/emerald workstation with a navigation rail, project library, arrangement
   and piano-roll editors, and a dedicated sound inspector. Visual direction inspired
   by the user's PixelForge app; CTG has its own mark and music-focused layout.
-- **86 factory instruments:** chip leads, FM keys, strings, brass, drums and eight
-  alternative basses. Edit synthesis, envelopes, filters, vibrato, unison and reverb.
+- **168 factory instruments:** the existing chip, FM, orchestral and custom packs,
+  58 ZzFX sounds, and 24 original-song instruments. Edit synthesis, envelopes, filters, vibrato, unison and reverb.
 - **Reset and Save preset:** restore a sound or keep it in your reusable local library.
 - **Composition lab:** seeded 16/32/48-bar arrangements with motifs, voice leading,
   cadences, contrasting sections, swing and Euclidean bass rhythms.
-- **Demo library:** 22 songs, searchable by creator and collection. Fourteen native projects open as editable copies; eight Antigravity ZzFX recordings are audio references.
+- **Demo library:** 25 editable songs, including Neon Pixel Funk, Gravity Glissando, Pixel Sunrise, First Light and Clash of Banners. Original mastered previews are retained.
+- **ZzFX import:** open Studio `.zzfx`, literal `.js`, or `song.json`; save an editable `.sbproj`. Full procedural synthesis and tracker effects run inside CTG.
+- **Note expression:** click a note to edit slides, stepped glissando, velocity, held tails and ZzFX effects. Compose has a Neon Pixel Funk recipe for E-Dorian octave-bass funk with a reflective bridge.
 - Undo/redo, native `.sbproj` projects, offline stereo WAV rendering, and a CLI.
 
 The composer uses musical heuristics, not an AI model. Connected AI agents can
@@ -115,3 +117,9 @@ SoundBit audio/editing foundation by Renas Demirbas and ahmetdenizyilmaz/SoundBi
 The compatible project format and internal engine crate names are retained.
 ZzFX Studio composition ideas are credited under MIT. Fonts and other references
 are documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## ZzFX compatibility
+
+See [import and expression details](docs/zzfx-compatibility.txt). Imports never execute
+JavaScript. Mastering applied outside the source project is not recreated; the
+original demo recordings remain available for comparison.

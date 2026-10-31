@@ -13,12 +13,15 @@ you make is undoable (history_undo) and is shown to the user as an 'AI:' step.
 
 Composition: composition_defaults -> composition_preview -> song_compose with the editor_id
 and revision from song_get. The seed and full recipe are reproducible across CLI, desktop and
-MCP. Generation replaces the song in one undo step and does not write files. pattern_develop
+MCP. For Neon Pixel Funk style use key E, scale dorian, vibe funk, neon_funk true,
+expressive_slides true, and zzfx_neon_lead/chords/bass, zzfx_midnight_keys, zzfx_neon_kick/snare/hat.
+MCP song_open imports .zzfx, literal .js and Studio .json safely; save the result as .sbproj.
+Generation replaces the song in one undo step and does not write files. pattern_develop
 inverts or shifts a motif in scale degrees. The full factory and saved-sound library, including Aloboi, PC-98,
-oscilloscope and motion-trigger packs, are available through preset_list.
+oscilloscope, motion-trigger, ZzFX and original-song packs, are available through preset_list.
 
 Song model:
-- Instruments define a sound: a voice (pulse, triangle, sawtooth, sine, noise, wavetable, fm) \
+- Instruments define a sound: a voice (pulse, triangle, sawtooth, sine, noise, wavetable, fm, zzfx) \
 plus envelope, volume and pan, and optional sound shaping: a pitch envelope (kicks, toms, \
 timpani, lasers), vibrato, unison (detuned copies for strings and choirs), a resonant filter \
 and a reverb send into the song's shared reverb room. preset_list offers ready-made \
@@ -45,8 +48,10 @@ pub(crate) fn reference() -> Value {
             "format": "Letter A-G, optional # or b, octave number: C4 (middle C, MIDI 60), F#3, Bb5. Range C-1 to G9.",
             "timing": "start and length are in steps; a bar has steps_per_bar steps (steps_per_beat x beats_per_bar).",
             "velocity": "1-127, default 100.",
+            "expression": "slide_semitones -48..48; glissando true makes semitone steps; tail_steps holds beyond the visible block across bars. ZzFX notes accept zzfx_effect {code: SU/SD/VB/DT/ST/PD/BC/TR, value: 0..255}.",
         },
         "voices": {
+            "zzfx": {"params": {"parameters": "21 numbers: volume, randomness, C4 Hz, attack, sustain, release, shape 0..5, shapeCurve, slide, deltaSlide, pitchJump, pitchJumpTime, repeatTime, noise, modulation, bitCrush, delay, sustainVolume, decay, tremolo, filter (+high-pass/-low-pass)"}, "use": "Original ZzFX synthesis with its own envelope. Prefer zero randomness for tuned harmony. Native filter, unison, vibrato, note slides and reverb also work."},
             "pulse": {"params": {"duty": ["eighth", "quarter", "half", "three_quarters"]}, "use": "NES/Game Boy leads and harmonies; quarter is the classic lead."},
             "triangle": {"params": {}, "use": "NES-style stepped triangle; basslines."},
             "sawtooth": {"params": {}, "use": "Bright, buzzy leads and pads (C64 style)."},

@@ -10,6 +10,16 @@ use crate::cli::Command;
 
 pub(crate) fn run(command: Command) -> anyhow::Result<()> {
     match command {
+        Command::Import { input, output } => {
+            anyhow::ensure!(!output.exists(), "output already exists");
+            anyhow::ensure!(
+                output.extension().is_some_and(|e| e == "sbproj"),
+                "output must use .sbproj"
+            );
+            let mut session = soundbit_app::Session::open(input)?;
+            session.save_as(output)?;
+            Ok(())
+        }
         Command::Compose {
             config,
             output,

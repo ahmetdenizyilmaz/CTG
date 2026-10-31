@@ -26,14 +26,19 @@ mod meter;
 mod patch;
 pub mod realtime;
 mod render;
+mod sample_bank;
 mod schedule;
 mod shaping;
 mod source;
 mod track;
 mod voice;
+mod zzfx;
 
 pub use engine::{CHANNELS, Engine};
 pub use error::{EngineError, MAX_SAMPLE_RATE, MIN_SAMPLE_RATE};
 pub use meter::TrackPower;
 pub use render::{RenderOptions, Rendered, render};
 pub use schedule::{PositionMap, Schedule};
+
+#[cfg(test)]
+mod zzfx_reference;

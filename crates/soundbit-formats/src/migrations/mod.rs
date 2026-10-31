@@ -9,7 +9,8 @@ mod v1_to_v2;
 use serde_json::Value;
 
 /// Migration from version `index + 1` to `index + 2`.
-const STEPS: [fn(&mut Value); 1] = [v1_to_v2::migrate];
+// v3 adds defaulted note expression fields and a new voice variant.
+const STEPS: [fn(&mut Value); 2] = [v1_to_v2::migrate, |_| {}];
 
 /// Oldest format version that can still be loaded.
 pub(crate) const OLDEST_VERSION: u32 = 1;

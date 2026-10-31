@@ -33,6 +33,15 @@ pub struct Note {
     /// Continuous linear pitch glide in semitones across the note's duration (e.g. +12 for zoom-in/inflation, -12 for zoom-out/shrink).
     #[serde(default, skip_serializing_if = "is_zero_i8")]
     pub slide_semitones: i8,
+    /// Quantize the slide to semitone steps for glissando.
+    #[serde(default)]
+    pub glissando: bool,
+    /// Additional held steps after the visible block, including across bar boundaries.
+    #[serde(default, skip_serializing_if = "is_zero_u16")]
+    pub tail_steps: u16,
+    /// Optional `ZzFX` Studio effect for this note.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub zzfx_effect: Option<crate::ZzfxEffect>,
 }
 
 #[allow(
@@ -59,6 +68,14 @@ const fn is_zero_i8(val: &i8) -> bool {
     *val == 0
 }
 
+#[allow(
+    clippy::trivially_copy_pass_by_ref,
+    reason = "serde requires a reference"
+)]
+const fn is_zero_u16(value: &u16) -> bool {
+    *value == 0
+}
+
 impl Note {
     /// Creates a note with the default velocity.
     ///
@@ -75,6 +92,9 @@ impl Note {
             detune_cents: 0,
             detune_milli_hz: 0,
             slide_semitones: 0,
+            glissando: false,
+            tail_steps: 0,
+            zzfx_effect: None,
         })
     }
 

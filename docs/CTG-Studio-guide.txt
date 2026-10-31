@@ -3,7 +3,7 @@ CTG (ChipTuneGenerator MCP)
 HUMANS
 Launch ctg-desktop.exe. Compose in the navigation rail opens the composition inspector. Choose character, key,
 scale, tempo, form, bass rhythm, swing and musical ideas. Instruments offers all
-86 built-in presets. Preview chords shows the plan without changing your song.
+168 built-in presets. Preview chords shows the plan without changing your song.
 Generate song replaces the arrangement in one undo step. WAV export renders a
 snapshot in the background so the editor remains responsive. Play, edit the piano
 roll, change instrument settings, mute tracks, save a project or export WAV.
@@ -121,10 +121,9 @@ musical behavior, not a promise that every generated song will suit your taste.
 Voice-leading and consonance scoring are heuristics; listen and edit the result.
 
 The generated arrangement uses seven independent lanes so a kick cannot erase a
-simultaneous snare or hat. Every lane uses your selected native preset; there is
-no ZzFX synth or dependency in the finished application. Instrument ADSR, FM,
-filter, unison, vibrato and pitch-slide facilities remain available to humans
-and AI instead of translating ZzFX-specific effect parameters.
+simultaneous snare or hat. Every lane uses your selected native or ZzFX preset. ZzFX synthesis, its tracker
+effects, native filter, unison, vibrato, reverb and note slides are available
+to both humans and AI.
 
 BUILD
 Rust stable and Node.js >=22 are required.
@@ -143,8 +142,20 @@ GPL-3.0-or-later is retained. ZzFX Studio composition vocabulary by Justin Walsh
 is MIT-licensed; see THIRD_PARTY_NOTICES.md. Music files are yours.
 
 DEMO LIBRARY
-Demos has 22 songs with search, creator and collection filters. Fourteen native
-projects open as independent editable copies. Eight earlier Antigravity ZzFX
-recordings are audio-only references. Original mastered previews may differ from
+Demos has 25 songs with search, creator and collection filters. All 25 open as
+independent editable copies, including eight Antigravity ZzFX scores and the
+earlier Pixel Sunrise, First Light and Clash of Banners. Original mastered previews may differ from
 a fresh native render in mastering or tail length. Starting a preview pauses
 other previews and native playback. Compose stays docked while menus are used.
+
+NEON FUNK AND NOTE EXPRESSION
+In Compose choose Neon Pixel Funk recipe, then Generate song. It loads E Dorian,
+130 BPM, syncopated octave bass, offbeat stabs and the ZzFX Neon palette. Each seed
+develops a motif through contrasting sections, a midnight bridge and a climax.
+Pickups and glissando are occasional phrase ornaments. You can change every sound.
+Click a piano-roll note to edit velocity, Slide (semitones), Stepped glissando,
+Hold after block, and (for ZzFX voices) tracker effect and amount. Shift-click or
+Delete note removes it. All expression changes can be undone.
+AI can author the same notes through pattern_set_notes, or use song_compose with
+neon_funk:true and expressive_slides:true. examples/neon-funk/recipe.json is a
+complete reusable recipe for CLI or MCP. See zzfx-compatibility.txt for import.

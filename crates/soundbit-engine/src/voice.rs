@@ -18,6 +18,10 @@ pub(crate) struct VoiceFrame {
 
 /// One playing note: its unison layers, envelope, modulation, filter and gains.
 #[derive(Debug, Clone, Copy, Default, PartialEq)]
+#[allow(
+    clippy::struct_excessive_bools,
+    reason = "independent playback and modulation flags"
+)]
 pub(crate) struct Voice {
     layers: [Source; MAX_UNISON],
     layer_count: usize,
@@ -28,6 +32,9 @@ pub(crate) struct Voice {
     /// Whether the pitch moves, so the layers must be retuned every sample.
     modulated: bool,
     slide_semitones: f64,
+    glissando: bool,
+    sample: Option<usize>,
+    sample_positions: [f64; MAX_UNISON],
     duration_samples: u64,
     pitch: PitchMod,
     filter: VoiceFilter,
@@ -69,6 +76,9 @@ impl Voice {
         {
             layer.start_at(&patch.source, self.hz * ratio, sample_rate, phase);
         }
+        self.sample = event.sample;
+        self.sample_positions = [0.0; MAX_UNISON];
+        self.glissando = event.glissando;
         self.slide_semitones = f64::from(event.slide_semitones);
         self.duration_samples = event.off.saturating_sub(event.on).max(1);
         self.modulated = !patch.pitch.is_static() || event.slide_semitones != 0;
@@ -92,7 +102,7 @@ impl Voice {
 
     // RT-SAFE
     /// Renders one frame at sample position `now`.
-    pub(crate) fn render(&mut self, now: u64) -> VoiceFrame {
+    pub(crate) fn render(&mut self, now: u64, samples: &[Vec<f32>]) -> VoiceFrame {
         if !self.active {
             return VoiceFrame::default();
         }
@@ -104,6 +114,9 @@ impl Voice {
             }
         }
 
+        if let Some(index) = self.sample {
+            return self.render_sample(now, &samples[index]);
+        }
         if self.modulated {
             self.retune(now);
         }
@@ -138,7 +151,8 @@ impl Voice {
             let progress = (now.saturating_sub(self.started_at) as f64
                 / self.duration_samples as f64)
                 .clamp(0.0, 1.0);
-            semitone_offset += self.slide_semitones * progress;
+            let slide = self.slide_semitones * progress;
+            semitone_offset += if self.glissando { slide.trunc() } else { slide };
         }
         let hz = (self.hz * semitone_ratio(semitone_offset)).max(1.0);
         for (layer, ratio) in self
@@ -148,6 +162,57 @@ impl Voice {
             .take(self.layer_count)
         {
             layer.set_frequency(hz * ratio, self.sample_rate);
+        }
+    }
+
+    // RT-SAFE
+    #[allow(
+        clippy::cast_precision_loss,
+        clippy::cast_possible_truncation,
+        clippy::cast_sign_loss,
+        reason = "bounded sample-buffer cursor"
+    )]
+    fn render_sample(&mut self, now: u64, samples: &[f32]) -> VoiceFrame {
+        if now >= self.release_at {
+            self.active = false;
+            return VoiceFrame::default();
+        }
+        let progress = (now.saturating_sub(self.started_at) as f64 / self.duration_samples as f64)
+            .clamp(0., 1.);
+        let slide = self.slide_semitones * progress;
+        let offset = self.pitch.next_offset() + if self.glissando { slide.trunc() } else { slide };
+        let rate = 44100. / self.sample_rate * semitone_ratio(offset);
+        let mut value = 0.;
+        let mut sounding = false;
+        for (position, ratio) in self
+            .sample_positions
+            .iter_mut()
+            .zip(self.layer_ratios)
+            .take(self.layer_count)
+        {
+            let index = *position as usize;
+            if index < samples.len() {
+                sounding = true;
+                let fraction = (*position - index as f64) as f32;
+                value += samples[index]
+                    + (samples.get(index + 1).copied().unwrap_or(0.) - samples[index]) * fraction;
+            }
+            *position += rate * ratio;
+        }
+        if !sounding {
+            self.active = false;
+            return VoiceFrame::default();
+        }
+        value *= self.layer_gain;
+        // ZzFXM de-clicks the end of each note over 99 samples at 44.1 kHz.
+        let fade =
+            ((self.release_at - now) as f64 / (99. * self.sample_rate / 44100.)).min(1.) as f32;
+        let envelope = self.envelope.next_level();
+        let out = self.filter.process(value * fade, envelope);
+        VoiceFrame {
+            left: out * self.gain.left,
+            right: out * self.gain.right,
+            send: out * self.send,
         }
     }
 

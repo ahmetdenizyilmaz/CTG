@@ -1,0 +1,1006 @@
+{
+  "format": "soundbit-presets",
+  "format_version": 1,
+  "source": "Original native example instruments; preserved project authorship",
+  "presets": [
+    {
+      "id": "legacy_clash_of_banners_1",
+      "category": "legacy_songs",
+      "description": "Original instrument from Clash of Banners",
+      "instrument": {
+        "name": "Brass Lead",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 5,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 30,
+              "attack_rate": 24,
+              "decay_rate": 6,
+              "sustain_rate": 0,
+              "sustain_level": 3,
+              "release_rate": 7
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 4,
+              "attack_rate": 24,
+              "decay_rate": 3,
+              "sustain_rate": 1,
+              "sustain_level": 2,
+              "release_rate": 7
+            },
+            {
+              "multiple": 1,
+              "detune": 2,
+              "total_level": 36,
+              "attack_rate": 22,
+              "decay_rate": 6,
+              "sustain_rate": 0,
+              "sustain_level": 4,
+              "release_rate": 7
+            },
+            {
+              "multiple": 1,
+              "detune": -2,
+              "total_level": 10,
+              "attack_rate": 24,
+              "decay_rate": 3,
+              "sustain_rate": 1,
+              "sustain_level": 2,
+              "release_rate": 7
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 14,
+          "rate": 55,
+          "delay": 220
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 100,
+        "pan": 0,
+        "reverb_send": 30
+      }
+    },
+    {
+      "id": "legacy_clash_of_banners_2",
+      "category": "legacy_songs",
+      "description": "Original instrument from Clash of Banners",
+      "instrument": {
+        "name": "Horn Section",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 3,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 40,
+              "attack_rate": 20,
+              "decay_rate": 4,
+              "sustain_rate": 0,
+              "sustain_level": 3,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 8,
+              "attack_rate": 20,
+              "decay_rate": 2,
+              "sustain_rate": 1,
+              "sustain_level": 2,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": 1,
+              "total_level": 44,
+              "attack_rate": 20,
+              "decay_rate": 4,
+              "sustain_rate": 0,
+              "sustain_level": 4,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": -1,
+              "total_level": 12,
+              "attack_rate": 20,
+              "decay_rate": 2,
+              "sustain_rate": 1,
+              "sustain_level": 2,
+              "release_rate": 6
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 8,
+          "rate": 50,
+          "delay": 300
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1600,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 48,
+        "pan": -20,
+        "reverb_send": 40
+      }
+    },
+    {
+      "id": "legacy_clash_of_banners_3",
+      "category": "legacy_songs",
+      "description": "Original instrument from Clash of Banners",
+      "instrument": {
+        "name": "Strings Ostinato",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "envelope": {
+          "attack": 4,
+          "decay": 120,
+          "sustain": 20,
+          "release": 70
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 3,
+          "detune": 10
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2600,
+          "resonance": 15,
+          "envelope_depth": 18
+        },
+        "volume": 62,
+        "pan": 25,
+        "reverb_send": 25
+      }
+    },
+    {
+      "id": "legacy_clash_of_banners_4",
+      "category": "legacy_songs",
+      "description": "Original instrument from Clash of Banners",
+      "instrument": {
+        "name": "Strings Pad",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "envelope": {
+          "attack": 140,
+          "decay": 300,
+          "sustain": 85,
+          "release": 380
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 12,
+          "rate": 52,
+          "delay": 260
+        },
+        "unison": {
+          "voices": 3,
+          "detune": 14
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 3200,
+          "resonance": 10,
+          "envelope_depth": 0
+        },
+        "volume": 30,
+        "pan": -35,
+        "reverb_send": 40
+      }
+    },
+    {
+      "id": "legacy_clash_of_banners_5",
+      "category": "legacy_songs",
+      "description": "Original instrument from Clash of Banners",
+      "instrument": {
+        "name": "Choir",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 450,
+          "decay": 500,
+          "sustain": 80,
+          "release": 800
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 10,
+          "rate": 48,
+          "delay": 400
+        },
+        "unison": {
+          "voices": 4,
+          "detune": 18
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1800,
+          "resonance": 20,
+          "envelope_depth": 0
+        },
+        "volume": 26,
+        "pan": 15,
+        "reverb_send": 55
+      }
+    },
+    {
+      "id": "legacy_clash_of_banners_6",
+      "category": "legacy_songs",
+      "description": "Original instrument from Clash of Banners",
+      "instrument": {
+        "name": "FM Bass",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 4,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 26,
+              "attack_rate": 31,
+              "decay_rate": 12,
+              "sustain_rate": 0,
+              "sustain_level": 6,
+              "release_rate": 10
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 6,
+              "sustain_rate": 2,
+              "sustain_level": 3,
+              "release_rate": 10
+            },
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 42,
+              "attack_rate": 31,
+              "decay_rate": 12,
+              "sustain_rate": 0,
+              "sustain_level": 8,
+              "release_rate": 10
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 12,
+              "attack_rate": 31,
+              "decay_rate": 6,
+              "sustain_rate": 2,
+              "sustain_level": 3,
+              "release_rate": 10
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 64,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "legacy_clash_of_banners_7",
+      "category": "legacy_songs",
+      "description": "Original instrument from Clash of Banners",
+      "instrument": {
+        "name": "Timpani",
+        "voice": {
+          "type": "sine"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 700,
+          "sustain": 0,
+          "release": 200
+        },
+        "pitch_envelope": {
+          "semitones": 5,
+          "time": 90
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 34,
+        "pan": 0,
+        "reverb_send": 35
+      }
+    },
+    {
+      "id": "legacy_clash_of_banners_8",
+      "category": "legacy_songs",
+      "description": "Original instrument from Clash of Banners",
+      "instrument": {
+        "name": "Taiko",
+        "voice": {
+          "type": "sine"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 600,
+          "sustain": 0,
+          "release": 200
+        },
+        "pitch_envelope": {
+          "semitones": 14,
+          "time": 110
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 78,
+        "pan": 0,
+        "reverb_send": 45
+      }
+    },
+    {
+      "id": "legacy_clash_of_banners_9",
+      "category": "legacy_songs",
+      "description": "Original instrument from Clash of Banners",
+      "instrument": {
+        "name": "Snare",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 150,
+          "sustain": 0,
+          "release": 40
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 900,
+          "resonance": 10,
+          "envelope_depth": 0
+        },
+        "volume": 40,
+        "pan": 10,
+        "reverb_send": 15
+      }
+    },
+    {
+      "id": "legacy_clash_of_banners_10",
+      "category": "legacy_songs",
+      "description": "Original instrument from Clash of Banners",
+      "instrument": {
+        "name": "Cymbal",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 1500,
+          "sustain": 0,
+          "release": 600
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 3500,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 30,
+        "pan": -10,
+        "reverb_send": 30
+      }
+    },
+    {
+      "id": "legacy_first_light_1",
+      "category": "legacy_songs",
+      "description": "Original instrument from First Light",
+      "instrument": {
+        "name": "Lead",
+        "voice": {
+          "type": "pulse",
+          "duty": "quarter"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 160,
+          "sustain": 60,
+          "release": 70
+        },
+        "volume": 70,
+        "pan": 0
+      }
+    },
+    {
+      "id": "legacy_first_light_2",
+      "category": "legacy_songs",
+      "description": "Original instrument from First Light",
+      "instrument": {
+        "name": "Arp",
+        "voice": {
+          "type": "pulse",
+          "duty": "eighth"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 70,
+          "sustain": 25,
+          "release": 30
+        },
+        "volume": 40,
+        "pan": -25
+      }
+    },
+    {
+      "id": "legacy_first_light_3",
+      "category": "legacy_songs",
+      "description": "Original instrument from First Light",
+      "instrument": {
+        "name": "Bass",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 0,
+          "sustain": 100,
+          "release": 25
+        },
+        "volume": 95,
+        "pan": 0
+      }
+    },
+    {
+      "id": "legacy_first_light_4",
+      "category": "legacy_songs",
+      "description": "Original instrument from First Light",
+      "instrument": {
+        "name": "Drums",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 110,
+          "sustain": 0,
+          "release": 15
+        },
+        "volume": 75,
+        "pan": 0
+      }
+    },
+    {
+      "id": "legacy_pixel_sunrise_1",
+      "category": "legacy_songs",
+      "description": "Original instrument from Pixel Sunrise",
+      "instrument": {
+        "name": "Lead",
+        "voice": {
+          "type": "pulse",
+          "duty": "quarter"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 15,
+          "rate": 60,
+          "delay": 180
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 96,
+        "pan": 0,
+        "reverb_send": 25
+      }
+    },
+    {
+      "id": "legacy_pixel_sunrise_2",
+      "category": "legacy_songs",
+      "description": "Original instrument from Pixel Sunrise",
+      "instrument": {
+        "name": "Harmony",
+        "voice": {
+          "type": "pulse",
+          "duty": "eighth"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 140,
+          "sustain": 60,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 56,
+        "pan": -25,
+        "reverb_send": 25
+      }
+    },
+    {
+      "id": "legacy_pixel_sunrise_3",
+      "category": "legacy_songs",
+      "description": "Original instrument from Pixel Sunrise",
+      "instrument": {
+        "name": "Arp",
+        "voice": {
+          "type": "pulse",
+          "duty": "half"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 140,
+          "sustain": 0,
+          "release": 60
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 50,
+        "pan": 30,
+        "reverb_send": 30
+      }
+    },
+    {
+      "id": "legacy_pixel_sunrise_4",
+      "category": "legacy_songs",
+      "description": "Original instrument from Pixel Sunrise",
+      "instrument": {
+        "name": "Strings",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "envelope": {
+          "attack": 140,
+          "decay": 300,
+          "sustain": 85,
+          "release": 380
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 12,
+          "rate": 52,
+          "delay": 260
+        },
+        "unison": {
+          "voices": 3,
+          "detune": 14
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 3200,
+          "resonance": 10,
+          "envelope_depth": 0
+        },
+        "volume": 24,
+        "pan": 0,
+        "reverb_send": 45
+      }
+    },
+    {
+      "id": "legacy_pixel_sunrise_5",
+      "category": "legacy_songs",
+      "description": "Original instrument from Pixel Sunrise",
+      "instrument": {
+        "name": "Flute",
+        "voice": {
+          "type": "sine"
+        },
+        "envelope": {
+          "attack": 60,
+          "decay": 200,
+          "sustain": 80,
+          "release": 150
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 18,
+          "rate": 55,
+          "delay": 180
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 62,
+        "pan": 10,
+        "reverb_send": 40
+      }
+    },
+    {
+      "id": "legacy_pixel_sunrise_6",
+      "category": "legacy_songs",
+      "description": "Original instrument from Pixel Sunrise",
+      "instrument": {
+        "name": "Bass",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 80,
+          "sustain": 90,
+          "release": 40
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 46,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "legacy_pixel_sunrise_7",
+      "category": "legacy_songs",
+      "description": "Original instrument from Pixel Sunrise",
+      "instrument": {
+        "name": "Kick",
+        "voice": {
+          "type": "sine"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 220,
+          "sustain": 0,
+          "release": 30
+        },
+        "pitch_envelope": {
+          "semitones": 36,
+          "time": 50
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 78,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "legacy_pixel_sunrise_8",
+      "category": "legacy_songs",
+      "description": "Original instrument from Pixel Sunrise",
+      "instrument": {
+        "name": "Snare",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 150,
+          "sustain": 0,
+          "release": 40
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 900,
+          "resonance": 10,
+          "envelope_depth": 0
+        },
+        "volume": 46,
+        "pan": 0,
+        "reverb_send": 15
+      }
+    },
+    {
+      "id": "legacy_pixel_sunrise_9",
+      "category": "legacy_songs",
+      "description": "Original instrument from Pixel Sunrise",
+      "instrument": {
+        "name": "Hats",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 45,
+          "sustain": 0,
+          "release": 20
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 6000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 30,
+        "pan": 15,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "legacy_pixel_sunrise_10",
+      "category": "legacy_songs",
+      "description": "Original instrument from Pixel Sunrise",
+      "instrument": {
+        "name": "Crash",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 1500,
+          "sustain": 0,
+          "release": 600
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 3500,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 26,
+        "pan": 0,
+        "reverb_send": 30
+      }
+    }
+  ]
+}

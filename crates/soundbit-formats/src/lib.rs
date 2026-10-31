@@ -10,6 +10,10 @@ mod migrations;
 mod preset;
 mod project;
 mod wav;
+mod zzfx;
+mod zzfx_expand;
+mod zzfx_literal;
+pub use zzfx::from_zzfx;
 
 pub use error::FormatError;
 pub use preset::{PRESET_FORMAT_VERSION, Preset, parse_presets};

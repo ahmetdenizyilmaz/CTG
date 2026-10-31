@@ -53,7 +53,7 @@ async function loadArchive() {
         const row=document.createElement('article'); row.className='song';row.dataset.src=song.audio;
         row.innerHTML='<button class="play">&#9654;</button><div class="song-info"><span class="song-type"></span><h3></h3><p></p></div><div class="song-meta"><span></span><span></span></div><div class="song-progress"><div></div></div>';
         row.querySelector('.play').setAttribute('aria-label',`Play ${song.title}`);
-        row.querySelector('.song-type').textContent=`${song.author} / ${song.project?'NATIVE PROJECT':'ZZFX AUDIO REFERENCE'}`;
+        row.querySelector('.song-type').textContent=`${song.author} / ${song.project?'EDITABLE PROJECT':'AUDIO PREVIEW'}`;
         row.querySelector('h3').textContent=song.title;row.querySelector('p').textContent=song.detail;
         row.querySelector('.song-meta span').textContent=song.bpm?`${song.bpm} BPM`:'';
         row.querySelector('.song-meta span:last-child').textContent=song.time;

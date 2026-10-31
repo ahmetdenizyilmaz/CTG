@@ -35,6 +35,7 @@ export interface FmOperator {
 
 export type Voice =
   | { type: 'pulse'; duty: DutyCycle }
+  | { type: 'zzfx'; parameters: number[] }
   | { type: 'triangle' }
   | { type: 'sawtooth' }
   | { type: 'sine' }
@@ -94,7 +95,14 @@ export interface Instrument {
   reverb_send: number;
 }
 
+export type ZzfxEffectCode = 'SU' | 'SD' | 'VB' | 'DT' | 'ST' | 'PD' | 'BC' | 'TR';
 export interface Note {
+  slide_semitones?: number;
+  glissando?: boolean;
+  tail_steps?: number;
+  detune_cents?: number;
+  detune_milli_hz?: number;
+  zzfx_effect?: {code: ZzfxEffectCode; value: number} | null;
   pitch: number;
   start: number;
   length: number;
@@ -199,6 +207,7 @@ export type Action =
   | { kind: 'toggle_note'; pattern: number; start: number; pitch: number; length: number }
   | { kind: 'add_track'; name: string }
   | { kind: 'update_track'; id: number; name?: string; muted?: boolean; volume?: number }
+  | { kind: 'set_notes'; pattern: number; notes: Note[] }
   | { kind: 'remove_track'; id: number }
   | { kind: 'set_clip'; track: number; bar: number; pattern: number | null };
 

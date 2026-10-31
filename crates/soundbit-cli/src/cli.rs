@@ -14,6 +14,12 @@ pub(crate) struct Cli {
 
 #[derive(Debug, Subcommand)]
 pub(crate) enum Command {
+    /// Import a `ZzFX` Studio project as an editable CTG project.
+    Import {
+        input: PathBuf,
+        #[arg(short, long)]
+        output: PathBuf,
+    },
     /// Generate an editable native composition. Print defaults with compose-config.
     Compose {
         /// JSON recipe; omitted fields use defaults.

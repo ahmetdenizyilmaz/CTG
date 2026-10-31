@@ -36,6 +36,8 @@ pub(crate) enum VoiceInput {
         /// Exactly 32 levels, each 0-15.
         samples: Vec<u8>,
     },
+    /// Full `ZzFX` sound with 0?21 parameters in upstream order; missing values use `ZzFX` defaults. Frequency is at C4.
+    Zzfx { parameters: Vec<f64> },
     /// Four-operator FM, like the Sega Genesis. Unset values use a plain sine patch.
     Fm {
         /// Operator routing 0-7.
@@ -74,6 +76,9 @@ impl VoiceInput {
         Ok(match self {
             Self::Pulse { duty } => Voice::Pulse {
                 duty: duty.map(|d| d.0).unwrap_or_default(),
+            },
+            Self::Zzfx { parameters } => Voice::Zzfx {
+                parameters: soundbit_app::model::ZzfxParameters::try_from(parameters.clone())?,
             },
             Self::Triangle => Voice::Triangle,
             Self::Sawtooth => Voice::Sawtooth,

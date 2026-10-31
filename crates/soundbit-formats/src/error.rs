@@ -6,6 +6,9 @@ use thiserror::Error;
 #[derive(Debug, Error)]
 #[non_exhaustive]
 pub enum FormatError {
+    /// Invalid or unsupported `ZzFX` Studio data.
+    #[error("ZzFX import: {0}")]
+    Zzfx(String),
     /// The JSON is valid but is not a SoundBit project.
     #[error("not a SoundBit project: expected \"format\": \"soundbit-project\"")]
     NotAProject,

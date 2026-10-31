@@ -26,6 +26,9 @@ pub(crate) struct NoteEvent {
     pub(crate) detune_milli_hz: i32,
     /// Continuous pitch glide in semitones over the note duration.
     pub(crate) slide_semitones: i8,
+    pub(crate) glissando: bool,
+    pub(crate) zzfx_effect: Option<soundbit_core::ZzfxEffect>,
+    pub(crate) sample: Option<usize>,
 }
 
 /// Everything one track plays, in start order.
@@ -62,6 +65,7 @@ impl PositionMap {
 pub struct Schedule {
     sample_rate: u32,
     patches: Vec<Patch>,
+    samples: Vec<Vec<f32>>,
     tracks: Vec<TrackPlan>,
     end: u64,
     clock: StepClock,
@@ -93,10 +97,11 @@ impl Schedule {
             size: f32::from(room.size.get()) / 100.0,
             damping: f32::from(room.damping.get()) / 100.0,
         };
-        let tracks = song
+        let mut tracks: Vec<TrackPlan> = song
             .tracks()
             .map(|(_, track)| plan_track(song, track, &clock, &instrument_ids))
             .collect();
+        let samples = crate::sample_bank::compile(&mut tracks, &patches)?;
         let end = clock.sample_at(u64::from(song.length_bars()) * steps_per_bar);
         let loop_region = song.loop_range().map(|range| {
             let bar = |bar: u16| clock.sample_at(u64::from(bar) * steps_per_bar);
@@ -106,6 +111,7 @@ impl Schedule {
         Ok(Self {
             sample_rate,
             patches,
+            samples,
             tracks,
             end,
             clock,
@@ -150,6 +156,10 @@ impl Schedule {
         self.uses_reverb
     }
 
+    pub(crate) fn samples(&self) -> &[Vec<f32>] {
+        &self.samples
+    }
+
     pub(crate) fn patches(&self) -> &[Patch] {
         &self.patches
     }
@@ -190,13 +200,17 @@ fn plan_track(
             let start = bar_start + u64::from(note.start);
             events.push(NoteEvent {
                 on: clock.sample_at(start),
-                off: clock.sample_at(start + u64::from(note.length.get())),
+                off: clock
+                    .sample_at(start + u64::from(note.length.get()) + u64::from(note.tail_steps)),
                 patch,
                 pitch: note.pitch.get(),
                 velocity: f32::from(note.velocity.get()) / 127.0,
                 detune_cents: note.detune_cents,
                 detune_milli_hz: note.detune_milli_hz,
                 slide_semitones: note.slide_semitones,
+                glissando: note.glissando,
+                zzfx_effect: note.zzfx_effect,
+                sample: None,
             });
         }
     }

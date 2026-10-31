@@ -418,3 +418,34 @@ async fn native_composer_previews_checks_concurrency_and_undoes() {
     .await;
     client.cancel().await.expect("stop");
 }
+
+#[tokio::test]
+async fn zzfx_import_expression_and_export_work_through_mcp() {
+    let dir = tempfile::tempdir().expect("temp dir");
+    let original = include_str!("../../../examples/library/zzfx-neon-pixel-funk/original.zzfx");
+    std::fs::write(dir.path().join("neon.zzfx"), original).expect("fixture");
+    let client = connect(dir.path()).await;
+    let files = ok(&client, "files_list", json!({})).await;
+    assert!(files.to_string().contains("neon.zzfx"));
+    let opened = ok(&client, "song_open", json!({"path":"neon.zzfx"})).await;
+    assert_eq!(opened["title"], "Neon Pixel Funk");
+    let instrument=ok(&client,"instrument_add",json!({"name":"AI slide", "voice":{"type":"zzfx","parameters":[0.5,0,261.625_565,0.01,0.3,0.2,1,1]}})).await;
+    let pattern=ok(&client,"pattern_create",json!({"name":"AI glissando","instrument_id":instrument["id"],"notes":[{"note":"E4","start":0,"length":4,"slide_semitones":12,"glissando":true,"tail_steps":2,"zzfx_effect":{"code":"SU","value":64}}]})).await;
+    assert_eq!(pattern["notes"][0]["tail_steps"], 2);
+    assert_eq!(pattern["notes"][0]["glissando"], true);
+    assert_eq!(pattern["notes"][0]["zzfx_effect"]["code"], "SU");
+    ok(&client, "song_save", json!({"path":"edited.sbproj"})).await;
+    assert_eq!(
+        std::fs::read_to_string(dir.path().join("neon.zzfx")).expect("source"),
+        original
+    );
+    let before = ok(&client, "song_get", json!({})).await;
+    std::fs::write(
+        dir.path().join("bad.js"),
+        "throw new Error('never execute')",
+    )
+    .expect("bad fixture");
+    fails(&client, "song_open", json!({"path":"bad.js"})).await;
+    assert_eq!(before, ok(&client, "song_get", json!({})).await);
+    client.cancel().await.expect("close");
+}
