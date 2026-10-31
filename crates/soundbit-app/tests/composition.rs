@@ -39,7 +39,7 @@ fn every_style_scale_and_bass_mode_produces_valid_bounded_editable_music() {
                 };
                 let generated = generate(&config).expect("valid config");
                 assert_eq!(generated.song.length_bars(), 16);
-                assert!(generated.song.profile_violations().is_empty());
+                assert_eq!(generated.song.profile_violations(), []);
                 assert_eq!(generated.song.tracks().count(), 7);
                 for (_, pattern) in generated.song.patterns() {
                     assert!(pattern.end_step() <= 16);

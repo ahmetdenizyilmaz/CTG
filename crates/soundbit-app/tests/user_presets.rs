@@ -24,7 +24,7 @@ fn saving_is_lossless_persistent_and_never_overwrites_another_copy() {
     );
     assert_eq!(loaded.find(&second.id).expect("second").instrument, sound);
     assert!(first_path.exists());
-    assert!(loaded.warnings().is_empty());
+    assert_eq!(loaded.warnings(), &[] as &[String]);
     assert!(
         std::fs::read_dir(directory.path())
             .expect("files")

@@ -52,7 +52,7 @@ fn same_style_key_tempo_and_instruments_still_produce_distinct_compositions() {
         );
         let last = result.report.bars.last().expect("last");
         assert_eq!(last.bar, 31);
-        assert!(result.song.profile_violations().is_empty());
+        assert_eq!(result.song.profile_violations(), []);
     }
     assert!(
         contours.len() > 100,

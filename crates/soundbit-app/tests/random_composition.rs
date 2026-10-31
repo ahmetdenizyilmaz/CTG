@@ -20,7 +20,7 @@ fn discovery_is_diverse_and_preserves_musical_guardrails() {
         assert!(recipe.swing <= 24);
         assert!(!(recipe.modal_mixture && recipe.secondary_dominants));
         let song = generate(&recipe).expect("random recipe generates").song;
-        assert!(song.profile_violations().is_empty());
+        assert_eq!(song.profile_violations(), []);
         assert_eq!(song.tracks().count(), 7);
         assert!([16, 32].contains(&song.length_bars()));
         for (_, pattern) in song.patterns() {
