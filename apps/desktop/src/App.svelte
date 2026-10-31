@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { version } from '../package.json';
   import { onMount } from 'svelte';
   import ArrangementView from './lib/components/ArrangementView.svelte';
   import InstrumentPanel from './lib/components/InstrumentPanel.svelte';
@@ -39,7 +40,7 @@
       <button class:chosen={workspace.view === 'compose'} aria-label="Compose" onclick={() => { workspace.view = 'compose'; workspace.inspector = true; }}><Icon name="plus" size={20}/><span>Compose</span></button>
       <button class:chosen={workspace.view === 'demos'} aria-label="Demo library" onclick={() => workspace.view = 'demos'}><Icon name="play" size={18}/><span>Demos</span></button>
       <button class:chosen={workspace.view === 'connect'} aria-label="Connect AI" onclick={() => workspace.view = 'connect'}><Icon name="loop" size={20}/><span>AI / MCP</span></button>
-      <div class="rail-end"><span class="vertical-label">CHIPTUNE GENERATOR</span><span>0.2</span></div>
+      <div class="rail-end"><span class="vertical-label">CHIPTUNE GENERATOR</span><span>{version}</span></div>
     </nav>
     {#if workspace.view === 'demos'}<div class="full-stage"><DemoLibrary /></div>
     {:else if workspace.view === 'connect'}<div class="full-stage"><AgentConnect /></div>
