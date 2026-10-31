@@ -34,7 +34,7 @@ fn returning_hooks_keep_their_opening_rhythm_and_phrases_have_breaths() {
                         .collect::<Vec<_>>()
                 };
                 assert_eq!(opening(start), opening(start + 2));
-                assert!(!opening(start).is_empty());
+                assert_ne!(opening(start), [] as [u16; 0]);
                 for local in 0..section.bars {
                     if (local + 1).is_multiple_of(result.report.design.phrase_bars) {
                         let phrase = notes(&result.song, 0, start + local);
