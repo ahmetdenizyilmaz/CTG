@@ -1,0 +1,28 @@
+{
+  "title": "Neon Footsteps",
+  "seed": 0,
+  "vibe": "adventure",
+  "key": "G",
+  "scale": "major",
+  "bpm": 139,
+  "form": "short",
+  "swing": 12,
+  "bass_rhythm": "template",
+  "bass_hits": 6,
+  "motif_development": true,
+  "voice_leading": true,
+  "cadences": true,
+  "chord_colors": true,
+  "modal_mixture": false,
+  "secondary_dominants": true,
+  "suspensions": true,
+  "instruments": {
+    "lead": "pc98_opna_brass_lead",
+    "harmony": "fm_electric_piano",
+    "bass": "trig_minimal_sub_pulse",
+    "emotional": "strings_ensemble",
+    "kick": "kick",
+    "snare": "clap",
+    "hat": "hihat_closed"
+  }
+}

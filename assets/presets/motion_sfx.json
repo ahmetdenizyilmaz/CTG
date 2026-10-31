@@ -1,0 +1,263 @@
+{
+  "format": "soundbit-presets",
+  "format_version": 1,
+  "source": "SoundBit Headless Fork (ahmetdenizyilmaz): Video Motion, Scene-Cut, Zoom & Object Scale Sync SFX collection, GPL-3.0-or-later",
+  "presets": [
+    {
+      "id": "sfx_zoom_in_riser",
+      "category": "sfx",
+      "description": "Musically consonant resonant filter-opening unison swell designed to pair with chord-locked upward slide_semitones (+5/+7/+12) on camera zoom-ins.",
+      "instrument": {
+        "name": "Zoom-In Harmonic Swell",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "envelope": {
+          "attack": 55,
+          "decay": 420,
+          "sustain": 76,
+          "release": 200
+        },
+        "vibrato": {
+          "depth": 18,
+          "rate": 52,
+          "delay": 100
+        },
+        "unison": {
+          "voices": 3,
+          "detune": 16
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 520,
+          "resonance": 44,
+          "envelope_depth": 52
+        },
+        "volume": 62,
+        "pan": 0,
+        "reverb_send": 34
+      }
+    },
+    {
+      "id": "sfx_zoom_out_fall",
+      "category": "sfx",
+      "description": "Musically consonant closing-filter unison release designed to pair with chord-locked downward slide_semitones (-5/-7/-12) on camera zoom-outs.",
+      "instrument": {
+        "name": "Zoom-Out Harmonic Release",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "envelope": {
+          "attack": 10,
+          "decay": 420,
+          "sustain": 52,
+          "release": 200
+        },
+        "vibrato": {
+          "depth": 16,
+          "rate": 48,
+          "delay": 90
+        },
+        "unison": {
+          "voices": 3,
+          "detune": 15
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2100,
+          "resonance": 40,
+          "envelope_depth": -44
+        },
+        "volume": 62,
+        "pan": 0,
+        "reverb_send": 34
+      }
+    },
+    {
+      "id": "sfx_object_inflate",
+      "category": "sfx",
+      "description": "Expanding warm harmonic swell (+12 semitone pure-octave rise + unison bloom) for growing/inflating objects.",
+      "instrument": {
+        "name": "Object Inflate Swell",
+        "voice": {
+          "type": "pulse",
+          "duty": "half"
+        },
+        "envelope": {
+          "attack": 25,
+          "decay": 280,
+          "sustain": 68,
+          "release": 180
+        },
+        "pitch_envelope": {
+          "semitones": -12,
+          "time": 190
+        },
+        "unison": {
+          "voices": 4,
+          "detune": 20
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 850,
+          "resonance": 36,
+          "envelope_depth": 40
+        },
+        "volume": 62,
+        "pan": 0,
+        "reverb_send": 30
+      }
+    },
+    {
+      "id": "sfx_object_shrink",
+      "category": "sfx",
+      "description": "Consonant contracting octave pluck (+12 semitone pure-octave drop into tight pulse pluck) for shrinking objects.",
+      "instrument": {
+        "name": "Object Shrink Pluck",
+        "voice": {
+          "type": "pulse",
+          "duty": "quarter"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 170,
+          "sustain": 18,
+          "release": 95
+        },
+        "pitch_envelope": {
+          "semitones": 12,
+          "time": 100
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1900,
+          "resonance": 42,
+          "envelope_depth": -30
+        },
+        "volume": 64,
+        "pan": 0,
+        "reverb_send": 22
+      }
+    },
+    {
+      "id": "sfx_scene_cut_bomb",
+      "category": "bass",
+      "description": "Cinematic sub-bass impact bomb (+36 semitone transient slam) for major video scene cuts.",
+      "instrument": {
+        "name": "Scene-Cut Sub Bomb",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 420,
+          "sustain": 65,
+          "release": 180
+        },
+        "pitch_envelope": {
+          "semitones": 36,
+          "time": 95
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 320,
+          "resonance": 40,
+          "envelope_depth": 30
+        },
+        "volume": 90,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "sfx_motion_blip",
+      "category": "sfx",
+      "description": "Ultra-tight melodic telemetry blip for fast frame-to-frame optical flow movement pulses.",
+      "instrument": {
+        "name": "Motion Telemetry Blip",
+        "voice": {
+          "type": "pulse",
+          "duty": "quarter"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 75,
+          "sustain": 10,
+          "release": 40
+        },
+        "pitch_envelope": {
+          "semitones": 7,
+          "time": 25
+        },
+        "volume": 66,
+        "pan": 0,
+        "reverb_send": 18
+      }
+    },
+    {
+      "id": "sfx_cyber_reese_drop",
+      "category": "bass",
+      "description": "Heavy 4-voice detuned Reese neuro-bass growl that tears through big drop transitions.",
+      "instrument": {
+        "name": "Cyber Reese Bass Drop",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "envelope": {
+          "attack": 3,
+          "decay": 320,
+          "sustain": 80,
+          "release": 140
+        },
+        "pitch_envelope": {
+          "semitones": 12,
+          "time": 75
+        },
+        "unison": {
+          "voices": 4,
+          "detune": 34
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 520,
+          "resonance": 62,
+          "envelope_depth": 38
+        },
+        "volume": 74,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "sfx_glitch_stutter",
+      "category": "percussion",
+      "description": "Metallic short-loop LFSR digital glitch burst for rapid transition stutters.",
+      "instrument": {
+        "name": "Digital Glitch Stutter",
+        "voice": {
+          "type": "noise",
+          "mode": "short"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 95,
+          "sustain": 15,
+          "release": 45
+        },
+        "pitch_envelope": {
+          "semitones": 18,
+          "time": 50
+        },
+        "filter": {
+          "mode": "band_pass",
+          "cutoff": 1900,
+          "resonance": 50,
+          "envelope_depth": 24
+        },
+        "volume": 65,
+        "pan": 0,
+        "reverb_send": 12
+      }
+    }
+  ]
+}

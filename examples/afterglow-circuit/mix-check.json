@@ -1,0 +1,128 @@
+{
+  "sample_rate": 48000,
+  "channels": 2,
+  "bits_per_sample": 16,
+  "duration_seconds": 110.18666666666667,
+  "master": {
+    "sample_peak_dbfs": -3.07,
+    "rms_dbfs": -20.5,
+    "full_scale_samples": 0,
+    "dc_offset": 0.0002478
+  },
+  "sections": [
+    {
+      "name": "Window",
+      "sample_peak_dbfs": -10.76,
+      "rms_dbfs": -25.19,
+      "full_scale_samples": 0,
+      "dc_offset": 0.0001391,
+      "stem_rms_dbfs": {
+        "melody": -33.78,
+        "bass": -27.9,
+        "harmony": -30.06
+      }
+    },
+    {
+      "name": "Afterglow",
+      "sample_peak_dbfs": -5.47,
+      "rms_dbfs": -20.31,
+      "full_scale_samples": 0,
+      "dc_offset": -6.9e-05,
+      "stem_rms_dbfs": {
+        "melody": -23.69,
+        "bass": -25.31,
+        "harmony": -29.56
+      }
+    },
+    {
+      "name": "Circuit",
+      "sample_peak_dbfs": -4.35,
+      "rms_dbfs": -19.91,
+      "full_scale_samples": 0,
+      "dc_offset": 0.00052,
+      "stem_rms_dbfs": {
+        "melody": -25.28,
+        "bass": -26.03,
+        "harmony": -29.95
+      }
+    },
+    {
+      "name": "Hook",
+      "sample_peak_dbfs": -3.07,
+      "rms_dbfs": -19.73,
+      "full_scale_samples": 0,
+      "dc_offset": 0.0005068,
+      "stem_rms_dbfs": {
+        "melody": -24.56,
+        "bass": -26.04,
+        "harmony": -30.03
+      }
+    },
+    {
+      "name": "Still here",
+      "sample_peak_dbfs": -6.4,
+      "rms_dbfs": -21.11,
+      "full_scale_samples": 0,
+      "dc_offset": -1.31e-05,
+      "stem_rms_dbfs": {
+        "melody": -24.19,
+        "bass": -26.4,
+        "harmony": -29.48
+      }
+    },
+    {
+      "name": "Reconnect",
+      "sample_peak_dbfs": -5.43,
+      "rms_dbfs": -21.28,
+      "full_scale_samples": 0,
+      "dc_offset": 7.69e-05,
+      "stem_rms_dbfs": {
+        "melody": -26.18,
+        "bass": -25.6,
+        "harmony": -31.85
+      }
+    },
+    {
+      "name": "Together",
+      "sample_peak_dbfs": -4.63,
+      "rms_dbfs": -19.65,
+      "full_scale_samples": 0,
+      "dc_offset": 0.0005142,
+      "stem_rms_dbfs": {
+        "melody": -24.6,
+        "bass": -26.04,
+        "harmony": -29.35
+      }
+    },
+    {
+      "name": "Home",
+      "sample_peak_dbfs": -5.53,
+      "rms_dbfs": -21.89,
+      "full_scale_samples": 0,
+      "dc_offset": -9.84e-05,
+      "stem_rms_dbfs": {
+        "melody": -25.2,
+        "bass": -25.46,
+        "harmony": -30.64
+      }
+    }
+  ],
+  "mcp_call_counts": {
+    "reference_get": 2,
+    "preset_list": 2,
+    "song_get": 5,
+    "song_new": 1,
+    "song_update": 1,
+    "instrument_add_preset": 15,
+    "instrument_update": 22,
+    "track_add": 12,
+    "pattern_create": 155,
+    "arrangement_place_many": 2,
+    "song_save": 4,
+    "export_wav": 8,
+    "track_update": 96
+  },
+  "generator_calls": 0,
+  "external_audio_processing": false,
+  "limitations": "Numerical and score review only; no subjective listening or guarantee of musical taste. Native synth soft clipping is part of CTG; full-scale counts do not prove absence of saturation."
+}

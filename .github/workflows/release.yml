@@ -1,0 +1,39 @@
+name: Windows release
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Version tag (for example v0.2.0)
+        required: true
+        default: v0.2.0
+permissions:
+  contents: write
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: apps/desktop/package-lock.json
+      - uses: Swatinem/rust-cache@v2
+      - run: npm ci
+        working-directory: apps/desktop
+      - run: npm run check
+        working-directory: apps/desktop
+      - run: npm test
+        working-directory: apps/desktop
+      - run: npm run tauri -- build --no-bundle
+        working-directory: apps/desktop
+      - run: cargo build --release --locked -p soundbit-cli
+      - run: python scripts/package-windows.py
+      - name: Upload draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        shell: pwsh
+        run: |
+          gh release create $env:RELEASE_TAG out/CTG-0.2.0-Windows.zip --draft --title "CTG $env:RELEASE_TAG" --notes "Native Windows desktop, CLI, editable demos and guide."

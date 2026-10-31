@@ -1,0 +1,391 @@
+{
+  "config": {
+    "title": "Neon Footsteps",
+    "seed": 0,
+    "vibe": "adventure",
+    "key": "G",
+    "scale": "major",
+    "bpm": 139,
+    "form": "short",
+    "swing": 12,
+    "bass_rhythm": "template",
+    "bass_hits": 6,
+    "motif_development": true,
+    "voice_leading": true,
+    "cadences": true,
+    "chord_colors": true,
+    "modal_mixture": false,
+    "secondary_dominants": true,
+    "suspensions": true,
+    "instruments": {
+      "lead": "pc98_opna_brass_lead",
+      "harmony": "fm_electric_piano",
+      "bass": "trig_minimal_sub_pulse",
+      "emotional": "strings_ensemble",
+      "kick": "kick",
+      "snare": "clap",
+      "hat": "hihat_closed"
+    }
+  },
+  "motif": [
+    0,
+    1,
+    -1,
+    2,
+    1,
+    3,
+    4,
+    4
+  ],
+  "design": {
+    "groove": "syncopated",
+    "accompaniment": "pendulum",
+    "bass_motion": "octave",
+    "phrase_bars": 2,
+    "bars_per_chord": 1,
+    "sections": [
+      {
+        "role": "verse",
+        "bars": 4
+      },
+      {
+        "role": "contrast",
+        "bars": 4
+      },
+      {
+        "role": "bridge",
+        "bars": 4
+      },
+      {
+        "role": "climax",
+        "bars": 4
+      }
+    ],
+    "answer": 1,
+    "register": 60,
+    "articulation": 1
+  },
+  "bars": [
+    {
+      "bar": 0,
+      "role": "verse",
+      "chord": "Gadd9",
+      "voicing": [
+        55,
+        59,
+        62,
+        69
+      ],
+      "attacks": [
+        4,
+        6,
+        6,
+        0,
+        4,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 1,
+      "role": "verse",
+      "chord": "Em7",
+      "voicing": [
+        55,
+        59,
+        62,
+        64
+      ],
+      "attacks": [
+        4,
+        6,
+        6,
+        0,
+        4,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 2,
+      "role": "verse",
+      "chord": "Cmaj7",
+      "voicing": [
+        55,
+        59,
+        60,
+        64
+      ],
+      "attacks": [
+        4,
+        8,
+        6,
+        0,
+        4,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 3,
+      "role": "verse",
+      "chord": "D7",
+      "voicing": [
+        54,
+        57,
+        60,
+        62
+      ],
+      "attacks": [
+        4,
+        7,
+        6,
+        0,
+        4,
+        4,
+        8
+      ]
+    },
+    {
+      "bar": 4,
+      "role": "contrast",
+      "chord": "Am7",
+      "voicing": [
+        55,
+        57,
+        60,
+        64
+      ],
+      "attacks": [
+        4,
+        6,
+        6,
+        0,
+        4,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 5,
+      "role": "contrast",
+      "chord": "D7",
+      "voicing": [
+        54,
+        57,
+        60,
+        62
+      ],
+      "attacks": [
+        4,
+        6,
+        6,
+        0,
+        4,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 6,
+      "role": "contrast",
+      "chord": "B7 (secondary dominant)",
+      "voicing": [
+        54,
+        57,
+        59,
+        63
+      ],
+      "attacks": [
+        4,
+        8,
+        6,
+        0,
+        4,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 7,
+      "role": "contrast",
+      "chord": "Em7",
+      "voicing": [
+        52,
+        55,
+        59,
+        62
+      ],
+      "attacks": [
+        4,
+        7,
+        6,
+        0,
+        4,
+        5,
+        8
+      ]
+    },
+    {
+      "bar": 8,
+      "role": "bridge",
+      "chord": "Gadd9",
+      "voicing": [
+        55,
+        59,
+        62,
+        69
+      ],
+      "attacks": [
+        0,
+        4,
+        4,
+        1,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "bar": 9,
+      "role": "bridge",
+      "chord": "Em7",
+      "voicing": [
+        55,
+        59,
+        62,
+        64
+      ],
+      "attacks": [
+        0,
+        4,
+        4,
+        3,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "bar": 10,
+      "role": "bridge",
+      "chord": "Cmaj7",
+      "voicing": [
+        55,
+        59,
+        60,
+        64
+      ],
+      "attacks": [
+        0,
+        4,
+        4,
+        1,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "bar": 11,
+      "role": "bridge",
+      "chord": "D7",
+      "voicing": [
+        54,
+        57,
+        60,
+        62
+      ],
+      "attacks": [
+        0,
+        4,
+        4,
+        3,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "bar": 12,
+      "role": "climax",
+      "chord": "Gadd9",
+      "voicing": [
+        55,
+        59,
+        62,
+        69
+      ],
+      "attacks": [
+        5,
+        5,
+        7,
+        0,
+        4,
+        2,
+        16
+      ]
+    },
+    {
+      "bar": 13,
+      "role": "climax",
+      "chord": "Bm7",
+      "voicing": [
+        57,
+        59,
+        62,
+        66
+      ],
+      "attacks": [
+        5,
+        6,
+        7,
+        0,
+        4,
+        2,
+        16
+      ]
+    },
+    {
+      "bar": 14,
+      "role": "climax",
+      "chord": "D7 (V7)",
+      "voicing": [
+        57,
+        60,
+        62,
+        66
+      ],
+      "attacks": [
+        5,
+        8,
+        7,
+        0,
+        4,
+        2,
+        16
+      ]
+    },
+    {
+      "bar": 15,
+      "role": "climax",
+      "chord": "Gadd9",
+      "voicing": [
+        55,
+        59,
+        62,
+        69
+      ],
+      "attacks": [
+        2,
+        4,
+        7,
+        0,
+        4,
+        4,
+        16
+      ]
+    }
+  ],
+  "duration_seconds": 27.62589928057554
+}

@@ -1,0 +1,41 @@
+CTG / ChipTuneGenerator MCP 0.2.0
+Base: ahmetdenizyilmaz/SoundBit 618b266. Desktop restored from 8138666.
+Completed:
+1. Restored desktop with separate CTG branding, endpoint and user storage.
+2. Embedded 86 presets in ten packs. Cached factory preset loading, accelerated
+   batch note validation, hoisted invariant audio-loop work, and moved desktop
+   export to a background snapshot. Audio golden/no-allocation checks pass.
+3. Added shared seeded Rust composer adapting ZzFX scales, weighted progressions,
+   phrase rhythms, bass modes, arps, drums and sections to native instruments.
+4. Added motif development, melodic contour, voice leading, cadences, optional
+   chord colors/borrowing/dominants and prepared suspensions; exposed native swing.
+5. Exposed generation/configuration to desktop, CLI and MCP, with atomic undo.
+6. Passed 211 Rust and 36 frontend tests, strict Clippy, Svelte/TypeScript,
+   ESLint, formatting and repository checks. Exercised real desktop playback,
+   save/export, preview, generation, exact undo/redo, pattern development and
+   shared MCP edits. Confirmed export allows concurrent editor reads.
+
+See docs/CTG-Studio-guide.txt for usage and musical limitations.
+Portable application and demonstration: out/CTG-0.2.0-Windows/.
+No source changes were made to the original SoundBit checkout.
+
+Added constrained Random song and Random instruments discovery controls. The
+same deterministic recipe/palette sampler is exposed to desktop, CLI and MCP.
+Randomized recipes retain melodic/harmonic guardrails and curated native sounds.
+
+Instrument update: Reset, Save preset and Apply preset; persistent custom library
+shared by desktop/CLI/MCP; eight alternative basses and eight other new sounds.
+Composer v2: procedural motifs, answering phrases, six accompaniment textures,
+multiple drum and bass feels, harmonic rhythm and variable section layouts.
+Fixed-settings diversity audit over 128 seeds: 123 motifs, 128 actual melodic
+contours, 128 rhythms, five forms, four grooves, six textures, 67 chord paths.
+This measures variation and structural validity, not subjective musical quality.
+
+Independent CTG release: new application identity, repository, navigation rail,
+project library, arrangement and piano roll, dedicated inspector, persistent
+composition dock, and AI connection view. Viewport-positioned menus fix instrument
+picker clipping and native profile selection no longer dismisses Compose.
+22 demo songs preserve original audio; 14 native projects open as editable copies
+and eight ZzFX recordings remain clearly labelled audio references. Afterglow
+Circuit demonstrates deliberate composition through 325 low-level MCP calls.
+The responsive website includes the same playable archive and project downloads.

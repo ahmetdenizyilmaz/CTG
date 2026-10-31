@@ -1,0 +1,3859 @@
+{
+  "format": "soundbit-project",
+  "format_version": 2,
+  "song": {
+    "meta": {
+      "title": "Neon Satellites",
+      "author": "",
+      "description": "CTG Studio / ChipTuneGen v2 recipe: {\"title\":\"Neon Satellites\",\"seed\":6,\"vibe\":\"title_screen\",\"key\":\"F#\",\"scale\":\"natural_minor\",\"bpm\":96,\"form\":\"short\",\"swing\":12,\"bass_rhythm\":\"template\",\"bass_hits\":6,\"motif_development\":true,\"voice_leading\":true,\"cadences\":true,\"chord_colors\":true,\"modal_mixture\":false,\"secondary_dominants\":false,\"suspensions\":true,\"instruments\":{\"lead\":\"fm_electric_piano\",\"harmony\":\"aloboi_dream_arp\",\"bass\":\"triangle_bass\",\"emotional\":\"flute\",\"kick\":\"kick\",\"snare\":\"snare\",\"hat\":\"hihat_closed\"}}"
+    },
+    "timing": {
+      "bpm": 96,
+      "steps_per_beat": 4,
+      "beats_per_bar": 4,
+      "swing": 12
+    },
+    "scale": {
+      "root": 6,
+      "kind": "natural_minor"
+    },
+    "chip_profile": "free",
+    "reverb": {
+      "size": 60,
+      "damping": 40
+    },
+    "instruments": [
+      {
+        "id": 1,
+        "name": "E. Piano",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 0,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 34,
+              "attack_rate": 31,
+              "decay_rate": 10,
+              "sustain_rate": 2,
+              "sustain_level": 8,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 4,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            },
+            {
+              "multiple": 14,
+              "detune": 0,
+              "total_level": 58,
+              "attack_rate": 31,
+              "decay_rate": 18,
+              "sustain_rate": 0,
+              "sustain_level": 15,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 6,
+              "attack_rate": 31,
+              "decay_rate": 4,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 60,
+        "pan": 0,
+        "reverb_send": 25
+      },
+      {
+        "id": 2,
+        "name": "Aloboi Dream Arp",
+        "voice": {
+          "type": "pulse",
+          "duty": "half"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 160,
+          "sustain": 35,
+          "release": 140
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 18,
+          "rate": 58,
+          "delay": 60
+        },
+        "unison": {
+          "voices": 2,
+          "detune": 15
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2400,
+          "resonance": 25,
+          "envelope_depth": 28
+        },
+        "volume": 64,
+        "pan": 0,
+        "reverb_send": 34
+      },
+      {
+        "id": 3,
+        "name": "Triangle Bass",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 80,
+          "sustain": 90,
+          "release": 40
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 90,
+        "pan": 0,
+        "reverb_send": 0
+      },
+      {
+        "id": 4,
+        "name": "Flute",
+        "voice": {
+          "type": "sine"
+        },
+        "envelope": {
+          "attack": 60,
+          "decay": 200,
+          "sustain": 80,
+          "release": 150
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 18,
+          "rate": 55,
+          "delay": 180
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 65,
+        "pan": 0,
+        "reverb_send": 40
+      },
+      {
+        "id": 5,
+        "name": "Kick",
+        "voice": {
+          "type": "sine"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 220,
+          "sustain": 0,
+          "release": 30
+        },
+        "pitch_envelope": {
+          "semitones": 36,
+          "time": 50
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 95,
+        "pan": 0,
+        "reverb_send": 0
+      },
+      {
+        "id": 6,
+        "name": "Snare",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 150,
+          "sustain": 0,
+          "release": 40
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 900,
+          "resonance": 10,
+          "envelope_depth": 0
+        },
+        "volume": 60,
+        "pan": 0,
+        "reverb_send": 15
+      },
+      {
+        "id": 7,
+        "name": "Closed Hat",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 45,
+          "sustain": 0,
+          "release": 20
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 6000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 45,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    ],
+    "patterns": [
+      {
+        "id": 1,
+        "name": "Breakdown 1 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 38,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 50,
+            "start": 4,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 42,
+            "start": 6,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 54,
+            "start": 10,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 38,
+            "start": 12,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 54,
+            "start": 14,
+            "length": 2,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Breakdown 1 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 84
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Breakdown 1 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 75
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Breakdown 1 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Breakdown 2 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 47,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 59,
+            "start": 8,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 38,
+            "start": 10,
+            "length": 1,
+            "velocity": 88
+          },
+          {
+            "pitch": 50,
+            "start": 11,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 42,
+            "start": 14,
+            "length": 1,
+            "velocity": 88
+          },
+          {
+            "pitch": 50,
+            "start": 15,
+            "length": 1,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Breakdown 2 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 84
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Breakdown 2 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 75
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Breakdown 2 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Verse 1 · Hook",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 1,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 78,
+            "start": 2,
+            "length": 3,
+            "velocity": 82
+          },
+          {
+            "pitch": 78,
+            "start": 6,
+            "length": 5,
+            "velocity": 82
+          },
+          {
+            "pitch": 78,
+            "start": 12,
+            "length": 3,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Verse 1 · Harmony",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 54,
+            "start": 0,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 57,
+            "start": 4,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 54,
+            "start": 8,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 68,
+            "start": 10,
+            "length": 2,
+            "velocity": 50
+          },
+          {
+            "pitch": 68,
+            "start": 14,
+            "length": 2,
+            "velocity": 50
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Verse 1 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 42,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 49,
+            "start": 6,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 42,
+            "start": 8,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 57,
+            "start": 10,
+            "length": 1,
+            "velocity": 88
+          },
+          {
+            "pitch": 37,
+            "start": 11,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 57,
+            "start": 15,
+            "length": 1,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Verse 1 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 105
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 105
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Verse 1 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Verse 1 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 2,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 6,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 10,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 14,
+            "length": 1,
+            "velocity": 48
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Verse 2 · Hook",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 73,
+            "start": 0,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 1,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 76,
+            "start": 2,
+            "length": 3,
+            "velocity": 82
+          },
+          {
+            "pitch": 76,
+            "start": 6,
+            "length": 5,
+            "velocity": 82
+          },
+          {
+            "pitch": 76,
+            "start": 12,
+            "length": 3,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "Verse 2 · Harmony",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 56,
+            "start": 0,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 57,
+            "start": 4,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 56,
+            "start": 8,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 64,
+            "start": 10,
+            "length": 2,
+            "velocity": 50
+          },
+          {
+            "pitch": 64,
+            "start": 14,
+            "length": 2,
+            "velocity": 50
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Verse 2 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 45,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 57,
+            "start": 4,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 37,
+            "start": 7,
+            "length": 1,
+            "velocity": 88
+          },
+          {
+            "pitch": 57,
+            "start": 8,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 40,
+            "start": 11,
+            "length": 1,
+            "velocity": 88
+          },
+          {
+            "pitch": 57,
+            "start": 12,
+            "length": 2,
+            "velocity": 105
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "Verse 2 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 105
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 105
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "Verse 2 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Verse 2 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 2,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 6,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 10,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 14,
+            "length": 1,
+            "velocity": 48
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "name": "Verse 3 · Hook",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 71,
+            "start": 1,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 74,
+            "start": 2,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 74,
+            "start": 3,
+            "length": 3,
+            "velocity": 82
+          },
+          {
+            "pitch": 74,
+            "start": 7,
+            "length": 5,
+            "velocity": 82
+          },
+          {
+            "pitch": 74,
+            "start": 13,
+            "length": 2,
+            "velocity": 82
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Verse 3 · Harmony",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 54,
+            "start": 0,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 57,
+            "start": 4,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 62,
+            "start": 6,
+            "length": 2,
+            "velocity": 50
+          },
+          {
+            "pitch": 54,
+            "start": 8,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 62,
+            "start": 10,
+            "length": 2,
+            "velocity": 50
+          },
+          {
+            "pitch": 57,
+            "start": 12,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 62,
+            "start": 14,
+            "length": 2,
+            "velocity": 50
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "Verse 3 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 38,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 50,
+            "start": 4,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 42,
+            "start": 6,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 54,
+            "start": 10,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 38,
+            "start": 12,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 54,
+            "start": 14,
+            "length": 2,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "Verse 3 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 105
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 105
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "name": "Verse 3 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "name": "Verse 3 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 2,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 6,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 10,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 14,
+            "length": 1,
+            "velocity": 48
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "name": "Verse 4 · Hook",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 71,
+            "start": 1,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 74,
+            "start": 2,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 74,
+            "start": 3,
+            "length": 3,
+            "velocity": 82
+          },
+          {
+            "pitch": 74,
+            "start": 7,
+            "length": 5,
+            "velocity": 82
+          },
+          {
+            "pitch": 74,
+            "start": 13,
+            "length": 2,
+            "velocity": 82
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "name": "Verse 4 · Harmony",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 54,
+            "start": 0,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 57,
+            "start": 4,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 62,
+            "start": 6,
+            "length": 2,
+            "velocity": 50
+          },
+          {
+            "pitch": 54,
+            "start": 8,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 62,
+            "start": 10,
+            "length": 2,
+            "velocity": 50
+          },
+          {
+            "pitch": 57,
+            "start": 12,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 62,
+            "start": 14,
+            "length": 2,
+            "velocity": 50
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "name": "Verse 4 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 47,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 54,
+            "start": 3,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 47,
+            "start": 8,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 50,
+            "start": 10,
+            "length": 1,
+            "velocity": 88
+          },
+          {
+            "pitch": 42,
+            "start": 11,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 50,
+            "start": 14,
+            "length": 2,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "Verse 4 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 105
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 105
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "name": "Verse 4 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 81,
+            "start": 13,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 81,
+            "start": 15,
+            "length": 1,
+            "velocity": 58
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "name": "Verse 4 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 2,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 6,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 10,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 14,
+            "length": 1,
+            "velocity": 48
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "name": "Contrast 1 · Hook",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 73,
+            "start": 0,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 78,
+            "start": 1,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 80,
+            "start": 2,
+            "length": 3,
+            "velocity": 82
+          },
+          {
+            "pitch": 80,
+            "start": 6,
+            "length": 5,
+            "velocity": 82
+          },
+          {
+            "pitch": 80,
+            "start": 12,
+            "length": 3,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "name": "Contrast 1 · Harmony",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 54,
+            "start": 0,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 57,
+            "start": 4,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 54,
+            "start": 8,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 68,
+            "start": 10,
+            "length": 2,
+            "velocity": 50
+          },
+          {
+            "pitch": 68,
+            "start": 14,
+            "length": 2,
+            "velocity": 50
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "name": "Contrast 1 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 42,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 54,
+            "start": 4,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 45,
+            "start": 7,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 57,
+            "start": 11,
+            "length": 1,
+            "velocity": 88
+          },
+          {
+            "pitch": 42,
+            "start": 12,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 57,
+            "start": 14,
+            "length": 2,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "name": "Contrast 1 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 105
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 105
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "name": "Contrast 1 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "name": "Contrast 1 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 2,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 6,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 10,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 14,
+            "length": 1,
+            "velocity": 48
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "name": "Contrast 2 · Hook",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 74,
+            "start": 0,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 78,
+            "start": 1,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 81,
+            "start": 2,
+            "length": 3,
+            "velocity": 82
+          },
+          {
+            "pitch": 81,
+            "start": 6,
+            "length": 5,
+            "velocity": 82
+          },
+          {
+            "pitch": 81,
+            "start": 12,
+            "length": 3,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "name": "Contrast 2 · Harmony",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 54,
+            "start": 0,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 57,
+            "start": 4,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 54,
+            "start": 8,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 62,
+            "start": 10,
+            "length": 2,
+            "velocity": 50
+          },
+          {
+            "pitch": 62,
+            "start": 14,
+            "length": 2,
+            "velocity": 50
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "name": "Contrast 2 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 47,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 59,
+            "start": 4,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 47,
+            "start": 8,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 50,
+            "start": 11,
+            "length": 1,
+            "velocity": 88
+          },
+          {
+            "pitch": 47,
+            "start": 12,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 50,
+            "start": 15,
+            "length": 1,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "name": "Contrast 2 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 105
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 105
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "name": "Contrast 2 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 81,
+            "start": 13,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 81,
+            "start": 15,
+            "length": 1,
+            "velocity": 58
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "name": "Contrast 2 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 2,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 6,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 10,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 14,
+            "length": 1,
+            "velocity": 48
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "name": "Bridge 1 · Harmony",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 50,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          },
+          {
+            "pitch": 56,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          },
+          {
+            "pitch": 59,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "name": "Bridge 1 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 44,
+            "start": 0,
+            "length": 5,
+            "velocity": 105
+          },
+          {
+            "pitch": 50,
+            "start": 6,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 44,
+            "start": 8,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 59,
+            "start": 10,
+            "length": 5,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "name": "Bridge 1 · Emotional theme",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 74,
+            "start": 0,
+            "length": 2,
+            "velocity": 72
+          },
+          {
+            "pitch": 74,
+            "start": 2,
+            "length": 2,
+            "velocity": 72
+          },
+          {
+            "pitch": 74,
+            "start": 4,
+            "length": 8,
+            "velocity": 72
+          },
+          {
+            "pitch": 74,
+            "start": 12,
+            "length": 4,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "name": "Bridge 1 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 84
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "name": "Bridge 1 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 75
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "name": "Bridge 1 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "name": "Bridge 2 · Harmony",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 52,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          },
+          {
+            "pitch": 56,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          },
+          {
+            "pitch": 59,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          },
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "name": "Bridge 2 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 37,
+            "start": 0,
+            "length": 5,
+            "velocity": 105
+          },
+          {
+            "pitch": 49,
+            "start": 8,
+            "length": 3,
+            "velocity": 105
+          },
+          {
+            "pitch": 40,
+            "start": 11,
+            "length": 3,
+            "velocity": 88
+          },
+          {
+            "pitch": 52,
+            "start": 14,
+            "length": 2,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "name": "Bridge 2 · Emotional theme",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 8,
+            "length": 8,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 54,
+        "name": "Bridge 2 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 84
+          }
+        ]
+      },
+      {
+        "id": 55,
+        "name": "Bridge 2 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 75
+          }
+        ]
+      },
+      {
+        "id": 56,
+        "name": "Bridge 2 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          }
+        ]
+      },
+      {
+        "id": 57,
+        "name": "Bridge 3 · Harmony",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 54,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          },
+          {
+            "pitch": 57,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          },
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          },
+          {
+            "pitch": 68,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          }
+        ]
+      },
+      {
+        "id": 58,
+        "name": "Bridge 3 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 42,
+            "start": 0,
+            "length": 5,
+            "velocity": 105
+          },
+          {
+            "pitch": 54,
+            "start": 8,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 45,
+            "start": 10,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 54,
+            "start": 12,
+            "length": 4,
+            "velocity": 105
+          }
+        ]
+      },
+      {
+        "id": 59,
+        "name": "Bridge 3 · Emotional theme",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 73,
+            "start": 0,
+            "length": 2,
+            "velocity": 72
+          },
+          {
+            "pitch": 74,
+            "start": 2,
+            "length": 2,
+            "velocity": 72
+          },
+          {
+            "pitch": 78,
+            "start": 4,
+            "length": 8,
+            "velocity": 72
+          },
+          {
+            "pitch": 73,
+            "start": 12,
+            "length": 4,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "name": "Bridge 3 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 84
+          }
+        ]
+      },
+      {
+        "id": 61,
+        "name": "Bridge 3 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 75
+          }
+        ]
+      },
+      {
+        "id": 62,
+        "name": "Bridge 3 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          }
+        ]
+      },
+      {
+        "id": 63,
+        "name": "Bridge 4 · Harmony",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 54,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          },
+          {
+            "pitch": 57,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          },
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          },
+          {
+            "pitch": 62,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          }
+        ]
+      },
+      {
+        "id": 64,
+        "name": "Bridge 4 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 38,
+            "start": 0,
+            "length": 5,
+            "velocity": 105
+          },
+          {
+            "pitch": 50,
+            "start": 8,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 42,
+            "start": 10,
+            "length": 4,
+            "velocity": 88
+          },
+          {
+            "pitch": 54,
+            "start": 14,
+            "length": 2,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 65,
+        "name": "Bridge 4 · Emotional theme",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 74,
+            "start": 8,
+            "length": 8,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 66,
+        "name": "Bridge 4 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 84
+          }
+        ]
+      },
+      {
+        "id": 67,
+        "name": "Bridge 4 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 75
+          }
+        ]
+      },
+      {
+        "id": 68,
+        "name": "Bridge 4 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          }
+        ]
+      },
+      {
+        "id": 69,
+        "name": "Climax 1 · Hook",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 0,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 86,
+            "start": 1,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 88,
+            "start": 2,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 85,
+            "start": 4,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 88,
+            "start": 6,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 85,
+            "start": 8,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 85,
+            "start": 12,
+            "length": 3,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "name": "Climax 1 · Harmony",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 54,
+            "start": 0,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 54,
+            "start": 8,
+            "length": 2,
+            "velocity": 62
+          }
+        ]
+      },
+      {
+        "id": 71,
+        "name": "Climax 1 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 42,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 49,
+            "start": 3,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 45,
+            "start": 6,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 54,
+            "start": 8,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 37,
+            "start": 10,
+            "length": 1,
+            "velocity": 88
+          },
+          {
+            "pitch": 57,
+            "start": 11,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 45,
+            "start": 15,
+            "length": 1,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 72,
+        "name": "Climax 1 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 105
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 105
+          }
+        ]
+      },
+      {
+        "id": 73,
+        "name": "Climax 1 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 74,
+        "name": "Climax 1 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 1,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 2,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 3,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 5,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 6,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 7,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 9,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 10,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 11,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 13,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 14,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 15,
+            "length": 1,
+            "velocity": 32
+          }
+        ]
+      },
+      {
+        "id": 75,
+        "name": "Climax 2 · Hook",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 83,
+            "start": 0,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 86,
+            "start": 1,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 88,
+            "start": 2,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 86,
+            "start": 4,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 88,
+            "start": 6,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 86,
+            "start": 8,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 86,
+            "start": 12,
+            "length": 3,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 76,
+        "name": "Climax 2 · Harmony",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 54,
+            "start": 0,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 54,
+            "start": 8,
+            "length": 2,
+            "velocity": 62
+          }
+        ]
+      },
+      {
+        "id": 77,
+        "name": "Climax 2 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 47,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 59,
+            "start": 4,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 38,
+            "start": 7,
+            "length": 1,
+            "velocity": 88
+          },
+          {
+            "pitch": 59,
+            "start": 8,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 42,
+            "start": 11,
+            "length": 1,
+            "velocity": 88
+          },
+          {
+            "pitch": 59,
+            "start": 12,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 38,
+            "start": 14,
+            "length": 2,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 78,
+        "name": "Climax 2 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 105
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 105
+          }
+        ]
+      },
+      {
+        "id": 79,
+        "name": "Climax 2 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "name": "Climax 2 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 1,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 2,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 3,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 5,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 6,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 7,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 9,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 10,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 11,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 13,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 14,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 15,
+            "length": 1,
+            "velocity": 32
+          }
+        ]
+      },
+      {
+        "id": 81,
+        "name": "Climax 3 · Hook",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 83,
+            "start": 1,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 86,
+            "start": 2,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 88,
+            "start": 3,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 88,
+            "start": 5,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 86,
+            "start": 7,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 85,
+            "start": 9,
+            "length": 3,
+            "velocity": 82
+          },
+          {
+            "pitch": 85,
+            "start": 13,
+            "length": 2,
+            "velocity": 82
+          }
+        ]
+      },
+      {
+        "id": 82,
+        "name": "Climax 3 · Harmony",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 0,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 56,
+            "start": 4,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 53,
+            "start": 8,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 56,
+            "start": 12,
+            "length": 2,
+            "velocity": 62
+          }
+        ]
+      },
+      {
+        "id": 83,
+        "name": "Climax 3 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 37,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 49,
+            "start": 4,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 37,
+            "start": 8,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 53,
+            "start": 11,
+            "length": 1,
+            "velocity": 88
+          },
+          {
+            "pitch": 37,
+            "start": 12,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 53,
+            "start": 14,
+            "length": 1,
+            "velocity": 88
+          },
+          {
+            "pitch": 41,
+            "start": 15,
+            "length": 1,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 84,
+        "name": "Climax 3 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 105
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 105
+          }
+        ]
+      },
+      {
+        "id": 85,
+        "name": "Climax 3 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 86,
+        "name": "Climax 3 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 1,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 2,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 3,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 5,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 6,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 7,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 9,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 10,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 11,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 13,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 14,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 15,
+            "length": 1,
+            "velocity": 32
+          }
+        ]
+      },
+      {
+        "id": 87,
+        "name": "Climax 4 · Hook",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 83,
+            "start": 1,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 86,
+            "start": 2,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 88,
+            "start": 3,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 88,
+            "start": 5,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 86,
+            "start": 7,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 78,
+            "start": 8,
+            "length": 8,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 88,
+        "name": "Climax 4 · Harmony",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 54,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          },
+          {
+            "pitch": 57,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          },
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          },
+          {
+            "pitch": 68,
+            "start": 0,
+            "length": 16,
+            "velocity": 55
+          }
+        ]
+      },
+      {
+        "id": 89,
+        "name": "Climax 4 · Bass",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 42,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 49,
+            "start": 2,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 42,
+            "start": 4,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 57,
+            "start": 6,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 42,
+            "start": 8,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 57,
+            "start": 10,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 45,
+            "start": 14,
+            "length": 2,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 90,
+        "name": "Climax 4 · Kick",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 105
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 105
+          }
+        ]
+      },
+      {
+        "id": 91,
+        "name": "Climax 4 · Snare",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 81,
+            "start": 10,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 81,
+            "start": 14,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 81,
+            "start": 15,
+            "length": 1,
+            "velocity": 58
+          }
+        ]
+      },
+      {
+        "id": 92,
+        "name": "Climax 4 · Hi-hat",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 102,
+            "start": 0,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 1,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 2,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 3,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 4,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 5,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 6,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 7,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 8,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 9,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 10,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 11,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 12,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 102,
+            "start": 13,
+            "length": 1,
+            "velocity": 32
+          },
+          {
+            "pitch": 102,
+            "start": 14,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 102,
+            "start": 15,
+            "length": 1,
+            "velocity": 32
+          }
+        ]
+      }
+    ],
+    "tracks": [
+      {
+        "id": 1,
+        "name": "Hook",
+        "muted": false,
+        "volume": 72,
+        "clips": [
+          {
+            "bar": 2,
+            "pattern": 9
+          },
+          {
+            "bar": 3,
+            "pattern": 15
+          },
+          {
+            "bar": 4,
+            "pattern": 21
+          },
+          {
+            "bar": 5,
+            "pattern": 27
+          },
+          {
+            "bar": 6,
+            "pattern": 33
+          },
+          {
+            "bar": 7,
+            "pattern": 39
+          },
+          {
+            "bar": 12,
+            "pattern": 69
+          },
+          {
+            "bar": 13,
+            "pattern": 75
+          },
+          {
+            "bar": 14,
+            "pattern": 81
+          },
+          {
+            "bar": 15,
+            "pattern": 87
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Harmony",
+        "muted": false,
+        "volume": 48,
+        "clips": [
+          {
+            "bar": 2,
+            "pattern": 10
+          },
+          {
+            "bar": 3,
+            "pattern": 16
+          },
+          {
+            "bar": 4,
+            "pattern": 22
+          },
+          {
+            "bar": 5,
+            "pattern": 28
+          },
+          {
+            "bar": 6,
+            "pattern": 34
+          },
+          {
+            "bar": 7,
+            "pattern": 40
+          },
+          {
+            "bar": 8,
+            "pattern": 45
+          },
+          {
+            "bar": 9,
+            "pattern": 51
+          },
+          {
+            "bar": 10,
+            "pattern": 57
+          },
+          {
+            "bar": 11,
+            "pattern": 63
+          },
+          {
+            "bar": 12,
+            "pattern": 70
+          },
+          {
+            "bar": 13,
+            "pattern": 76
+          },
+          {
+            "bar": 14,
+            "pattern": 82
+          },
+          {
+            "bar": 15,
+            "pattern": 88
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Bass",
+        "muted": false,
+        "volume": 78,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 1
+          },
+          {
+            "bar": 1,
+            "pattern": 5
+          },
+          {
+            "bar": 2,
+            "pattern": 11
+          },
+          {
+            "bar": 3,
+            "pattern": 17
+          },
+          {
+            "bar": 4,
+            "pattern": 23
+          },
+          {
+            "bar": 5,
+            "pattern": 29
+          },
+          {
+            "bar": 6,
+            "pattern": 35
+          },
+          {
+            "bar": 7,
+            "pattern": 41
+          },
+          {
+            "bar": 8,
+            "pattern": 46
+          },
+          {
+            "bar": 9,
+            "pattern": 52
+          },
+          {
+            "bar": 10,
+            "pattern": 58
+          },
+          {
+            "bar": 11,
+            "pattern": 64
+          },
+          {
+            "bar": 12,
+            "pattern": 71
+          },
+          {
+            "bar": 13,
+            "pattern": 77
+          },
+          {
+            "bar": 14,
+            "pattern": 83
+          },
+          {
+            "bar": 15,
+            "pattern": 89
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Emotional theme",
+        "muted": false,
+        "volume": 68,
+        "clips": [
+          {
+            "bar": 8,
+            "pattern": 47
+          },
+          {
+            "bar": 9,
+            "pattern": 53
+          },
+          {
+            "bar": 10,
+            "pattern": 59
+          },
+          {
+            "bar": 11,
+            "pattern": 65
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Kick",
+        "muted": false,
+        "volume": 85,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 2
+          },
+          {
+            "bar": 1,
+            "pattern": 6
+          },
+          {
+            "bar": 2,
+            "pattern": 12
+          },
+          {
+            "bar": 3,
+            "pattern": 18
+          },
+          {
+            "bar": 4,
+            "pattern": 24
+          },
+          {
+            "bar": 5,
+            "pattern": 30
+          },
+          {
+            "bar": 6,
+            "pattern": 36
+          },
+          {
+            "bar": 7,
+            "pattern": 42
+          },
+          {
+            "bar": 8,
+            "pattern": 48
+          },
+          {
+            "bar": 9,
+            "pattern": 54
+          },
+          {
+            "bar": 10,
+            "pattern": 60
+          },
+          {
+            "bar": 11,
+            "pattern": 66
+          },
+          {
+            "bar": 12,
+            "pattern": 72
+          },
+          {
+            "bar": 13,
+            "pattern": 78
+          },
+          {
+            "bar": 14,
+            "pattern": 84
+          },
+          {
+            "bar": 15,
+            "pattern": 90
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Snare",
+        "muted": false,
+        "volume": 62,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 3
+          },
+          {
+            "bar": 1,
+            "pattern": 7
+          },
+          {
+            "bar": 2,
+            "pattern": 13
+          },
+          {
+            "bar": 3,
+            "pattern": 19
+          },
+          {
+            "bar": 4,
+            "pattern": 25
+          },
+          {
+            "bar": 5,
+            "pattern": 31
+          },
+          {
+            "bar": 6,
+            "pattern": 37
+          },
+          {
+            "bar": 7,
+            "pattern": 43
+          },
+          {
+            "bar": 8,
+            "pattern": 49
+          },
+          {
+            "bar": 9,
+            "pattern": 55
+          },
+          {
+            "bar": 10,
+            "pattern": 61
+          },
+          {
+            "bar": 11,
+            "pattern": 67
+          },
+          {
+            "bar": 12,
+            "pattern": 73
+          },
+          {
+            "bar": 13,
+            "pattern": 79
+          },
+          {
+            "bar": 14,
+            "pattern": 85
+          },
+          {
+            "bar": 15,
+            "pattern": 91
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Hi-hat",
+        "muted": false,
+        "volume": 40,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 4
+          },
+          {
+            "bar": 1,
+            "pattern": 8
+          },
+          {
+            "bar": 2,
+            "pattern": 14
+          },
+          {
+            "bar": 3,
+            "pattern": 20
+          },
+          {
+            "bar": 4,
+            "pattern": 26
+          },
+          {
+            "bar": 5,
+            "pattern": 32
+          },
+          {
+            "bar": 6,
+            "pattern": 38
+          },
+          {
+            "bar": 7,
+            "pattern": 44
+          },
+          {
+            "bar": 8,
+            "pattern": 50
+          },
+          {
+            "bar": 9,
+            "pattern": 56
+          },
+          {
+            "bar": 10,
+            "pattern": 62
+          },
+          {
+            "bar": 11,
+            "pattern": 68
+          },
+          {
+            "bar": 12,
+            "pattern": 74
+          },
+          {
+            "bar": 13,
+            "pattern": 80
+          },
+          {
+            "bar": 14,
+            "pattern": 86
+          },
+          {
+            "bar": 15,
+            "pattern": 92
+          }
+        ]
+      }
+    ],
+    "loop_range": null
+  }
+}

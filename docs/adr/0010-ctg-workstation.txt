@@ -1,0 +1,16 @@
+CTG workstation identity and demo loading
+
+CTG 0.2 starts a separate repository and application identity. Engine crate names
+and the soundbit-project JSON tag remain stable for compatibility and attribution.
+
+The desktop package is ctg-desktop. Its Svelte shell uses a navigation rail,
+project library, central editors and a dedicated inspector. Demos and AI setup
+have their own views. The native app embeds fourteen validated project files, opens
+them as new sessions and asks the user to save a copy rather than overwriting a
+bundled asset. To parse these embedded project strings, ctg-desktop may depend
+directly on soundbit-formats; xtask's dependency table records this boundary.
+
+The app workspace is Music/CTG and its application identifier is
+dev.chiptunegenerator.mcp. MCP remains localhost:7414 by default, configurable
+through CTG_MCP_PORT. The older CTG Studio and original SoundBit folders remain
+independent. GPL and third-party notices remain part of every distribution.

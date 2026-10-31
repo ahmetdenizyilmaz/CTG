@@ -1,0 +1,28 @@
+{
+  "title": "Electric Signals",
+  "seed": 33,
+  "vibe": "funk",
+  "key": "C#",
+  "scale": "minor_pentatonic",
+  "bpm": 130,
+  "form": "short",
+  "swing": 23,
+  "bass_rhythm": "mixed",
+  "bass_hits": 8,
+  "motif_development": true,
+  "voice_leading": true,
+  "cadences": true,
+  "chord_colors": true,
+  "modal_mixture": false,
+  "secondary_dominants": true,
+  "suspensions": true,
+  "instruments": {
+    "lead": "pc98_opna_brass_lead",
+    "harmony": "pizzicato",
+    "bass": "pc98_opna_slap_bass",
+    "emotional": "aloboi_warm_lead",
+    "kick": "kick",
+    "snare": "snare",
+    "hat": "hihat_closed"
+  }
+}

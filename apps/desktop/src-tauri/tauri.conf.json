@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "CTG",
+  "version": "0.2.0",
+  "identifier": "dev.chiptunegenerator.mcp",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "CTG - ChipTuneGenerator MCP",
+        "width": 1520,
+        "height": 940,
+        "minWidth": 1080,
+        "minHeight": 700
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src ipc: http://ipc.localhost"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "publisher": "CTG contributors",
+    "copyright": "Copyright (C) 2026 Renas Demirbas. GPL-3.0-or-later.",
+    "category": "Music",
+    "shortDescription": "ChipTuneGenerator MCP ? compose together",
+    "longDescription": "A chiptune workstation for people and AI agents, with native synthesis, editable songs and Model Context Protocol tools.",
+    "homepage": "https://github.com/ahmetdenizyilmaz/CTG",
+    "license": "GPL-3.0-or-later",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}

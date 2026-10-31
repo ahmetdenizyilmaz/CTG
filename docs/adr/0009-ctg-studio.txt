@@ -1,0 +1,23 @@
+CTG Studio native composition and restored desktop
+Status: accepted for this fork
+
+Restore the existing Tauri adapter removed by the headless fork; allow the
+ctg-studio workspace crate to depend on app, audio-io and MCP, exactly as the
+previous desktop did. Keep music generation in soundbit-app so desktop, CLI and
+MCP use identical validation, preset selection and deterministic musical output.
+serde / schemars in app describe the shared recipe; adapters do not compose.
+ReplaceSong is a boxed reversible edit, so a generated project can be undone
+without dropping session history. The file format is unchanged. Store recipes
+in existing description text instead of introducing incompatible song fields.
+
+The preset library is immutable, embedded and shared through OnceLock/Arc.
+Batch note replacement sorts once and validates overlap by pitch in one pass.
+WAV exports release the shared editor lock and render a snapshot; the desktop
+offloads DSP and writing to a worker thread.
+The audio callback computes immutable loop bounds once per block; DSP arithmetic
+and sample order are unchanged. Existing golden hashes must continue to pass.
+
+Public app branding becomes CTG Studio; CLI binary is ctg. Existing internal
+crate names and serialized file-format tags stay stable for compatibility.
+New desktop identity, theme storage, workspace and port avoid interfering with
+an installed or concurrently running SoundBit.

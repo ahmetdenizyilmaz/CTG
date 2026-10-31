@@ -1,0 +1,387 @@
+{
+  "config": {
+    "title": "Electric Signals",
+    "seed": 33,
+    "vibe": "funk",
+    "key": "C#",
+    "scale": "minor_pentatonic",
+    "bpm": 130,
+    "form": "short",
+    "swing": 23,
+    "bass_rhythm": "mixed",
+    "bass_hits": 8,
+    "motif_development": true,
+    "voice_leading": true,
+    "cadences": true,
+    "chord_colors": true,
+    "modal_mixture": false,
+    "secondary_dominants": true,
+    "suspensions": true,
+    "instruments": {
+      "lead": "pc98_opna_brass_lead",
+      "harmony": "pizzicato",
+      "bass": "pc98_opna_slap_bass",
+      "emotional": "aloboi_warm_lead",
+      "kick": "kick",
+      "snare": "snare",
+      "hat": "hihat_closed"
+    }
+  },
+  "motif": [
+    3,
+    2,
+    0,
+    -2,
+    -2
+  ],
+  "design": {
+    "groove": "breakbeat",
+    "accompaniment": "chord_pulses",
+    "bass_motion": "walking",
+    "phrase_bars": 2,
+    "bars_per_chord": 2,
+    "sections": [
+      {
+        "role": "verse",
+        "bars": 4
+      },
+      {
+        "role": "bridge",
+        "bars": 4
+      },
+      {
+        "role": "contrast",
+        "bars": 4
+      },
+      {
+        "role": "climax",
+        "bars": 4
+      }
+    ],
+    "answer": 2,
+    "register": 60,
+    "articulation": 2
+  },
+  "bars": [
+    {
+      "bar": 0,
+      "role": "verse",
+      "chord": "C#madd9",
+      "voicing": [
+        49,
+        52,
+        56,
+        63
+      ],
+      "attacks": [
+        3,
+        8,
+        8,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 1,
+      "role": "verse",
+      "chord": "C#madd9",
+      "voicing": [
+        49,
+        52,
+        56,
+        63
+      ],
+      "attacks": [
+        2,
+        8,
+        8,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 2,
+      "role": "verse",
+      "chord": "F#m7",
+      "voicing": [
+        49,
+        52,
+        54,
+        57
+      ],
+      "attacks": [
+        3,
+        8,
+        8,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 3,
+      "role": "verse",
+      "chord": "F#m7",
+      "voicing": [
+        49,
+        52,
+        54,
+        57
+      ],
+      "attacks": [
+        2,
+        8,
+        8,
+        0,
+        4,
+        5,
+        8
+      ]
+    },
+    {
+      "bar": 4,
+      "role": "bridge",
+      "chord": "C#madd9",
+      "voicing": [
+        49,
+        52,
+        56,
+        63
+      ],
+      "attacks": [
+        0,
+        4,
+        6,
+        2,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "bar": 5,
+      "role": "bridge",
+      "chord": "C#madd9",
+      "voicing": [
+        49,
+        52,
+        56,
+        63
+      ],
+      "attacks": [
+        0,
+        4,
+        6,
+        1,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "bar": 6,
+      "role": "bridge",
+      "chord": "F#m7",
+      "voicing": [
+        49,
+        52,
+        54,
+        57
+      ],
+      "attacks": [
+        0,
+        4,
+        6,
+        1,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "bar": 7,
+      "role": "bridge",
+      "chord": "F#m7",
+      "voicing": [
+        49,
+        52,
+        54,
+        57
+      ],
+      "attacks": [
+        0,
+        4,
+        6,
+        1,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "bar": 8,
+      "role": "contrast",
+      "chord": "C#madd9",
+      "voicing": [
+        49,
+        52,
+        56,
+        63
+      ],
+      "attacks": [
+        3,
+        8,
+        8,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 9,
+      "role": "contrast",
+      "chord": "C#madd9",
+      "voicing": [
+        49,
+        52,
+        56,
+        63
+      ],
+      "attacks": [
+        2,
+        8,
+        8,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 10,
+      "role": "contrast",
+      "chord": "Eb7 (secondary dominant)",
+      "voicing": [
+        49,
+        51,
+        55,
+        58
+      ],
+      "attacks": [
+        3,
+        8,
+        8,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 11,
+      "role": "contrast",
+      "chord": "Abm7",
+      "voicing": [
+        51,
+        54,
+        56,
+        59
+      ],
+      "attacks": [
+        2,
+        8,
+        8,
+        0,
+        4,
+        4,
+        8
+      ]
+    },
+    {
+      "bar": 12,
+      "role": "climax",
+      "chord": "Ebdim",
+      "voicing": [
+        51,
+        54,
+        57
+      ],
+      "attacks": [
+        5,
+        6,
+        10,
+        0,
+        3,
+        2,
+        16
+      ]
+    },
+    {
+      "bar": 13,
+      "role": "climax",
+      "chord": "Abm7",
+      "voicing": [
+        51,
+        54,
+        56,
+        59
+      ],
+      "attacks": [
+        3,
+        8,
+        10,
+        0,
+        3,
+        2,
+        16
+      ]
+    },
+    {
+      "bar": 14,
+      "role": "climax",
+      "chord": "Ab7 (V7)",
+      "voicing": [
+        51,
+        54,
+        56,
+        60
+      ],
+      "attacks": [
+        5,
+        8,
+        10,
+        0,
+        3,
+        2,
+        16
+      ]
+    },
+    {
+      "bar": 15,
+      "role": "climax",
+      "chord": "C#madd9",
+      "voicing": [
+        49,
+        52,
+        56,
+        63
+      ],
+      "attacks": [
+        2,
+        4,
+        10,
+        0,
+        4,
+        5,
+        16
+      ]
+    }
+  ],
+  "duration_seconds": 29.53846153846154
+}

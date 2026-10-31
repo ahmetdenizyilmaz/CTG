@@ -1,0 +1,265 @@
+@font-face { font-family: Geist; src: url('/fonts/geist.woff2') format('woff2'); font-weight:100 900; font-display:swap; }
+@font-face { font-family: 'JetBrains Mono'; src: url('/fonts/jetbrains-mono.woff2') format('woff2'); font-weight:100 800; font-display:swap; }
+:root {
+  /* Graphite, the default theme; the theme store overrides these at start-up. */
+  --bg: #0d0f13;
+  --panel: #15181e;
+  --panel-raised: #1e222a;
+  --border: #2a2f39;
+  --border-strong: #3a4150;
+  --text: #e7e9ee;
+  --muted: #8c93a1;
+  --accent: #3dd6c6;
+  --accent-2: #f5c451;
+  --danger: #f87171;
+  --ruler-bg: #101317;
+  --loop-bg: rgba(245, 196, 81, 0.22);
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --grid-line: #2a2f39;
+  --grid-line-strong: #3a4150;
+  --radius: 6px;
+  color-scheme: dark;
+  --font-ui: Geist, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+  background: var(--panel-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4px 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* Borderless buttons for toolbars and menus. */
+button.ghost {
+  border-color: transparent;
+  background: transparent;
+}
+
+button.ghost:hover:not(:disabled),
+button.ghost.open {
+  border-color: transparent;
+  background: var(--panel-raised);
+}
+
+button.active {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Square, borderless icon buttons. */
+button.icon-button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-color: transparent;
+  background: transparent;
+  color: var(--muted);
+}
+
+button.icon-button:hover:not(:disabled),
+button.icon-button.open {
+  border-color: transparent;
+  background: var(--panel-raised);
+  color: var(--text);
+}
+
+button.icon-button.on {
+  color: var(--accent);
+}
+
+/* A row of buttons joined into one control. */
+.button-group {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.button-group button {
+  border: none;
+  border-radius: 0;
+  border-right: 1px solid var(--border);
+  background: var(--bg);
+  padding: 2px 9px;
+  font-size: 12px;
+}
+
+.button-group button:last-child {
+  border-right: none;
+}
+
+.button-group button:hover {
+  background: var(--panel-raised);
+  border-color: var(--border);
+}
+
+select {
+  appearance: none;
+  padding-right: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%239d94c4' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 7px center;
+}
+
+input[type='range'] {
+  appearance: none;
+  height: 4px;
+  padding: 0;
+  border: none;
+  border-radius: 2px;
+  background: var(--border);
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--panel);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--border-strong);
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 10px 10px;
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.list {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.list button {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border-color: transparent;
+  background: transparent;
+}
+
+.list .selected button {
+  background: var(--panel-raised);
+  border-color: var(--accent);
+}
+
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex: none;
+}
+
+small,
+.muted {
+  color: var(--muted);
+}
+
+/* CTG workstation surfaces */
+body { -webkit-font-smoothing:antialiased; }
+button,input:not([type=range]),select { min-height:28px; transition:background 120ms,border-color 120ms; }
+button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible { outline:2px solid var(--accent);outline-offset:3px; }
+button.primary { background:var(--accent);border-color:var(--accent);color:var(--bg);font-weight:650;padding:7px 12px; }
+button.primary:hover:not(:disabled) { filter:brightness(1.08); }
+.eyebrow { font:10px var(--font-mono);letter-spacing:.12em;color:var(--accent); }
+.tag { font:9px var(--font-mono);letter-spacing:.08em;color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,transparent);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);padding:3px 5px;border-radius:4px;white-space:nowrap; }
+.library>.panel { border:0;border-bottom:1px solid var(--border);border-radius:0;padding:14px 12px; }
+.library .list button { padding:8px;font-size:11px;border-radius:5px; }
+.library .list .selected button { border-color:transparent;background:color-mix(in srgb,var(--accent) 9%,transparent);box-shadow:inset 2px 0 var(--accent); }
+.inspector .editor { border:0;margin:8px 0 0;padding:0; }
+.inspector details { border-top:1px solid var(--border);padding:12px 0; }
+.inspector summary { font-size:11px;letter-spacing:.02em; }
+.inspector .preset-controls { padding:10px 0; }
+.inspector .composer h2 { font-size:19px;color:var(--text);text-transform:none;letter-spacing:-.03em; }
+.inspector .composer p { font-size:11px; }
+.inspector .composer .fields { gap:8px; }
+.inspector .composer .fields label { font-size:10px; }
+.inspector .composer .actions { flex-wrap:wrap; }
+.inspector .composer button { font-size:11px; }
+.inspector .composer .features label { font-size:11px; }
+.editors>.panel { border-radius:7px; }
+.editors .arrangement { --head-width:155px; }
+.editors .toolbar { flex-wrap:wrap; }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none!important;animation:none!important; } }
+
+.library .list button.icon-button { width:24px;height:24px;min-height:24px;padding:0;flex:none;box-shadow:none; }

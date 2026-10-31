@@ -1,0 +1,150 @@
+CTG (ChipTuneGenerator MCP)
+
+HUMANS
+Launch ctg-desktop.exe. Compose in the navigation rail opens the composition inspector. Choose character, key,
+scale, tempo, form, bass rhythm, swing and musical ideas. Instruments offers all
+86 built-in presets. Preview chords shows the plan without changing your song.
+Generate song replaces the arrangement in one undo step. WAV export renders a
+snapshot in the background so the editor remains responsive. Play, edit the piano
+roll, change instrument settings, mute tracks, save a project or export WAV.
+The Invert / Scale +/-1 buttons develop the selected pattern. Shared pattern
+copies change together, as in the original tracker. Duplicate a pattern first
+when only one arrangement occurrence should change.
+
+INSTRUMENT EDITING AND SAVED SOUNDS
+Select an instrument on the left. Reset restores its starting settings for the
+opened/generated song, or its most recently applied/saved settings. It restores
+the whole sound, including voice, filter, envelope and mix settings. Reset is
+undoable. Saving the project also updates the instrument reset points.
+
+Save preset stores a reusable copy with the instrument's current name. Each save
+creates a new file, preserving earlier copies. Find it under Saved in the Add
+instrument menu, Replace sound selector, or composer's instrument choices.
+Use Replace sound > choose a preset > Apply preset to change the selected
+instrument without changing its notes or arrangement. All patterns using that
+instrument hear the new sound; Undo restores the previous one.
+
+Saved sounds live in <user home>/Music/CTG/presets. CTG_PRESET_DIR can
+select another folder for a portable library. The desktop, CLI and AI all read
+this library. preset_save saves the selected AI instrument by instrument_id;
+preset_list reports saved ids and any damaged-file warnings. Damaged custom
+files are skipped; factory presets and other saved sounds stay available.
+The JSON files can be backed up or copied to another CTG installation.
+
+New factory alternatives: Deep Sine Sub, Fingered Triangle, Rubber Pulse,
+Muted Pick Bass, Resonant Acid Bass, Round FM Bass, Metallic Slap Bass, Warm Saw
+Bass, Singing Pulse, Velvet Reed, Glass Keys, Soft Electric Piano, Wooden Pluck,
+Soft Bell Arp, Slow String Pad and Air Choir Pad. They use the native engine;
+appropriate alternatives also participate in random instrument selection.
+
+RANDOM DISCOVERY
+The v2 composer creates 5-8-note motifs procedurally, with controlled leaps and
+stepwise recovery, one- or two-bar hooks, answering phrases, longer bridge notes
+and varied articulation. Each song chooses a consistent groove, bass contour,
+accompaniment texture, chord-change rate and section layout. Sections can last
+2, 4, 6 or 8 bars; the chosen form still totals 16, 32 or 48 bars. Recurring roles
+share musical material, while phrase endings and the climax develop it.
+Last result shows these choices. They vary even if key, tempo, style and sounds
+are held fixed. These are composition heuristics, not a rating of musical taste.
+
+Compose > Random song immediately creates a new song and native instrument
+palette; Undo restores the previous arrangement. Every click uses a fresh seed.
+Key, scale, tempo, character, form, bass groove, chord colors and sounds vary.
+The randomizer retains motif development, voice leading and cadences, matches
+tempo/scale to character, limits density/swing, and chooses pitched instruments
+by role. Noise sweeps, drops and unrelated SFX are excluded from pitched parts.
+Kick and closed hat stay fixed; snare/clap and pitched sounds can change.
+
+Random instruments changes the composer palette for the next generation while
+keeping the musical seed and settings. Review Instruments, then Generate song.
+This regenerates the recipe: it does not preserve manual note edits made since
+generation. Save or use Undo to retain those edits. Good musical rules improve
+coherence but cannot guarantee a song will suit your taste.
+
+AI: composition_random {"seed": 123} returns a recipe without changing the song.
+Supply instruments_for with an existing recipe to change only its sounds.
+Use composition_preview and song_compose as usual.
+CLI: ctg random-config --seed 123 > recipe.json
+     ctg random-config --seed 456 --instruments-for recipe.json > new-sounds.json
+In Windows PowerShell 5, save JSON as UTF-8 without BOM in a text editor
+(its default redirection writes UTF-16). PowerShell 7 redirection uses UTF-8.
+
+AI
+The desktop exposes the same session on http://127.0.0.1:7414/mcp. CTG_MCP_PORT
+changes this port. The workspace is Music/CTG, independent of SoundBit.
+For an isolated headless session: ctg mcp --root <directory> [--http <port>].
+Read composition_defaults, then composition_preview with a recipe object.
+Call song_get for editor_id and revision. Call song_compose with config,
+expected_editor_id and expected_revision. Stale requests are rejected.
+Generation does not save files. song_save and export_wav write within the MCP
+workspace. history_undo restores the complete previous project.
+pattern_develop supports inversion and scale-degree transposition; all previous
+instrument, pattern, arrangement, sound-design and wave_synthesize_hz tools remain.
+
+CLI
+ctg compose-config                        prints a default JSON recipe
+ctg presets                               lists all native instruments as JSON
+ctg compose --config recipe.json -o song.sbproj --wav song.wav --report report.json
+ctg compose -o song.sbproj --seed 123       uses defaults and a chosen seed
+ctg info song.sbproj
+ctg play song.sbproj
+ctg render song.sbproj -o song.wav
+Existing composition outputs require --force to overwrite.
+
+REPRODUCIBILITY
+The full recipe is stored in the project description and optional report.
+New recipes are marked ChipTuneGen v2. Regenerating a v1 recipe now uses the new
+composer; existing project notes and saved audio continue to play as written.
+The same seed + recipe in this version produces the same native notes in every
+interface. Each generated bar reports its role, chord, voicing and note counts.
+Projects retain the .sbproj format for compatibility with SoundBit. Internal Rust
+crate names and file-format tags are preserved; user-facing app and command
+names, icon, desktop application identity, settings and MCP endpoint are CTG.
+
+MUSICAL CONTROLS
+Weighted progressions, scale/chord-tone melody, repeated rhythmic phrases,
+root/fifth/chord-tone bass, kick-aware exact-density bass, Euclidean rotations,
+space-aware accompaniment, independent percussion and named section roles adapt
+ZzFX Studio's composition concepts to the native SoundBit engine.
+
+Additions: recurring motifs with inversion in contrast sections, slower bridge
+and denser climax, step/leap scoring, chord inversion selection, coordinated
+cadences, optional sevenths/add9, major-key borrowed iv, targeted secondary
+dominants and prepared bridge suspension figures. Native swing was already
+available and is exposed in the composer. Pentatonic melody uses a major/minor
+harmonic parent rather than spelling malformed triads from five notes.
+
+Borrowed iv only applies to major/major-pentatonic bridges. Secondary dominants
+are applied where the following chord is not tonic. Suspensions are conditional
+on an eligible preceding melody note and resolve by step. These controls describe
+musical behavior, not a promise that every generated song will suit your taste.
+Voice-leading and consonance scoring are heuristics; listen and edit the result.
+
+The generated arrangement uses seven independent lanes so a kick cannot erase a
+simultaneous snare or hat. Every lane uses your selected native preset; there is
+no ZzFX synth or dependency in the finished application. Instrument ADSR, FM,
+filter, unison, vibrato and pitch-slide facilities remain available to humans
+and AI instead of translating ZzFX-specific effect parameters.
+
+BUILD
+Rust stable and Node.js >=22 are required.
+cd apps/desktop
+npm ci
+npm run check && npm run lint && npm test
+npm run tauri build --no-bundle
+At repository root: cargo build --release -p soundbit-cli
+The portable Windows desktop needs the Microsoft Edge WebView2 runtime (normally
+present on Windows 10/11). No account, cloud service or music download is needed.
+
+ATTRIBUTION
+Based on ahmetdenizyilmaz/SoundBit at 618b266, itself based on SoundBit by
+Renas Demirbas. Desktop restored from upstream commit 8138666.
+GPL-3.0-or-later is retained. ZzFX Studio composition vocabulary by Justin Walsh
+is MIT-licensed; see THIRD_PARTY_NOTICES.md. Music files are yours.
+
+DEMO LIBRARY
+Demos has 22 songs with search, creator and collection filters. Fourteen native
+projects open as independent editable copies. Eight earlier Antigravity ZzFX
+recordings are audio-only references. Original mastered previews may differ from
+a fresh native render in mastering or tail length. Starting a preview pauses
+other previews and native playback. Compose stays docked while menus are used.

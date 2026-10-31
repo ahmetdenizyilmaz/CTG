@@ -1,0 +1,28 @@
+{
+  "title": "Neon Satellites",
+  "seed": 6,
+  "vibe": "title_screen",
+  "key": "F#",
+  "scale": "natural_minor",
+  "bpm": 96,
+  "form": "short",
+  "swing": 12,
+  "bass_rhythm": "template",
+  "bass_hits": 6,
+  "motif_development": true,
+  "voice_leading": true,
+  "cadences": true,
+  "chord_colors": true,
+  "modal_mixture": false,
+  "secondary_dominants": false,
+  "suspensions": true,
+  "instruments": {
+    "lead": "fm_electric_piano",
+    "harmony": "aloboi_dream_arp",
+    "bass": "triangle_bass",
+    "emotional": "flute",
+    "kick": "kick",
+    "snare": "snare",
+    "hat": "hihat_closed"
+  }
+}

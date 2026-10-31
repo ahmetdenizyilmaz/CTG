@@ -1,0 +1,3826 @@
+{
+  "format": "soundbit-project",
+  "format_version": 2,
+  "song": {
+    "meta": {
+      "title": "Last Light \u2014 Star to Black Hole",
+      "author": "Ady & Codex",
+      "description": "Original 30-second cosmic score. Tuned camera glides, fusion pings, collapse risers, supernova impacts and an event-horizon drop are musical voices in this same project. Final delivery uses scene-shaped mixing and a 30-second tail fade."
+    },
+    "timing": {
+      "bpm": 120,
+      "steps_per_beat": 10,
+      "beats_per_bar": 16,
+      "swing": 0
+    },
+    "scale": {
+      "root": 0,
+      "kind": "natural_minor"
+    },
+    "chip_profile": "free",
+    "reverb": {
+      "size": 77,
+      "damping": 62
+    },
+    "instruments": [
+      {
+        "envelope": {
+          "attack": 24,
+          "decay": 250,
+          "sustain": 68,
+          "release": 190
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 12,
+          "rate": 48,
+          "delay": 210
+        },
+        "unison": {
+          "voices": 2,
+          "detune": 8
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2200,
+          "resonance": 8,
+          "envelope_depth": 5
+        },
+        "name": "Last light melody",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "volume": 47,
+        "pan": -5,
+        "reverb_send": 28,
+        "id": 1
+      },
+      {
+        "envelope": {
+          "attack": 5,
+          "decay": 450,
+          "sustain": 22,
+          "release": 260
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "name": "Stellar piano",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 0,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 34,
+              "attack_rate": 31,
+              "decay_rate": 10,
+              "sustain_rate": 2,
+              "sustain_level": 8,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 4,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            },
+            {
+              "multiple": 14,
+              "detune": 0,
+              "total_level": 58,
+              "attack_rate": 31,
+              "decay_rate": 18,
+              "sustain_rate": 0,
+              "sustain_level": 15,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 6,
+              "attack_rate": 31,
+              "decay_rate": 4,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            }
+          ]
+        },
+        "volume": 32,
+        "pan": -24,
+        "reverb_send": 30,
+        "id": 2
+      },
+      {
+        "envelope": {
+          "attack": 230,
+          "decay": 600,
+          "sustain": 64,
+          "release": 480
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 8,
+          "rate": 35,
+          "delay": 400
+        },
+        "unison": {
+          "voices": 3,
+          "detune": 11
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1150,
+          "resonance": 5,
+          "envelope_depth": 3
+        },
+        "name": "Hydrogen glow",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "volume": 18,
+        "pan": 7,
+        "reverb_send": 42,
+        "id": 3
+      },
+      {
+        "envelope": {
+          "attack": 2,
+          "decay": 130,
+          "sustain": 0,
+          "release": 65
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 16,
+          "rate": 48,
+          "delay": 100
+        },
+        "unison": {
+          "voices": 3,
+          "detune": 14
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2600,
+          "resonance": 12,
+          "envelope_depth": 8
+        },
+        "name": "Fusion clock",
+        "voice": {
+          "type": "pulse",
+          "duty": "quarter"
+        },
+        "volume": 28,
+        "pan": 28,
+        "reverb_send": 18,
+        "id": 4
+      },
+      {
+        "envelope": {
+          "attack": 4,
+          "decay": 120,
+          "sustain": 65,
+          "release": 70
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "name": "Gravity pulse",
+        "voice": {
+          "type": "triangle"
+        },
+        "volume": 66,
+        "pan": 0,
+        "reverb_send": 0,
+        "id": 5
+      },
+      {
+        "envelope": {
+          "attack": 0,
+          "decay": 155,
+          "sustain": 0,
+          "release": 25
+        },
+        "pitch_envelope": {
+          "semitones": 36,
+          "time": 50
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "name": "Heartbeat",
+        "voice": {
+          "type": "sine"
+        },
+        "volume": 72,
+        "pan": 0,
+        "reverb_send": 0,
+        "id": 6
+      },
+      {
+        "envelope": {
+          "attack": 0,
+          "decay": 110,
+          "sustain": 0,
+          "release": 40
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 900,
+          "resonance": 10,
+          "envelope_depth": 0
+        },
+        "name": "Shock rhythm",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "volume": 42,
+        "pan": -8,
+        "reverb_send": 13,
+        "id": 7
+      },
+      {
+        "envelope": {
+          "attack": 0,
+          "decay": 28,
+          "sustain": 0,
+          "release": 12
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 6000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "name": "Particle rhythm",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "volume": 24,
+        "pan": 25,
+        "reverb_send": 2,
+        "id": 8
+      },
+      {
+        "envelope": {
+          "attack": 1,
+          "decay": 180,
+          "sustain": 0,
+          "release": 90
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "name": "Fuel-change chimes",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 1,
+          "operators": [
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 28,
+              "attack_rate": 31,
+              "decay_rate": 14,
+              "sustain_rate": 1,
+              "sustain_level": 6,
+              "release_rate": 9
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 10,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 8
+            },
+            {
+              "multiple": 3,
+              "detune": 1,
+              "total_level": 40,
+              "attack_rate": 31,
+              "decay_rate": 16,
+              "sustain_rate": 1,
+              "sustain_level": 8,
+              "release_rate": 9
+            },
+            {
+              "multiple": 1,
+              "detune": -1,
+              "total_level": 8,
+              "attack_rate": 31,
+              "decay_rate": 10,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 8
+            }
+          ]
+        },
+        "volume": 34,
+        "pan": -18,
+        "reverb_send": 22,
+        "id": 9
+      },
+      {
+        "envelope": {
+          "attack": 150,
+          "decay": 480,
+          "sustain": 18,
+          "release": 190
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "band_pass",
+          "cutoff": 1700,
+          "resonance": 12,
+          "envelope_depth": 20
+        },
+        "name": "Camera air",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "volume": 30,
+        "pan": 22,
+        "reverb_send": 19,
+        "id": 10
+      },
+      {
+        "envelope": {
+          "attack": 1300,
+          "decay": 200,
+          "sustain": 85,
+          "release": 45
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 2,
+          "detune": 7
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 250,
+          "resonance": 28,
+          "envelope_depth": 48
+        },
+        "name": "Core compression",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "volume": 32,
+        "pan": -10,
+        "reverb_send": 12,
+        "id": 11
+      },
+      {
+        "envelope": {
+          "attack": 1,
+          "decay": 1100,
+          "sustain": 0,
+          "release": 160
+        },
+        "pitch_envelope": {
+          "semitones": 24,
+          "time": 120
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 420,
+          "resonance": 12,
+          "envelope_depth": 12
+        },
+        "name": "Supernova tuned impact",
+        "voice": {
+          "type": "triangle"
+        },
+        "volume": 83,
+        "pan": 0,
+        "reverb_send": 0,
+        "id": 12
+      },
+      {
+        "envelope": {
+          "attack": 2,
+          "decay": 1050,
+          "sustain": 0,
+          "release": 450
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 700,
+          "resonance": 5,
+          "envelope_depth": 0
+        },
+        "name": "Radiation shockwave",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "volume": 42,
+        "pan": -12,
+        "reverb_send": 30,
+        "id": 13
+      },
+      {
+        "envelope": {
+          "attack": 3,
+          "decay": 1000,
+          "sustain": 0,
+          "release": 180
+        },
+        "pitch_envelope": {
+          "semitones": 24,
+          "time": 450
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 750,
+          "resonance": 18,
+          "envelope_depth": 6
+        },
+        "name": "Event horizon plunge",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 4,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 26,
+              "attack_rate": 31,
+              "decay_rate": 12,
+              "sustain_rate": 0,
+              "sustain_level": 6,
+              "release_rate": 10
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 6,
+              "sustain_rate": 2,
+              "sustain_level": 3,
+              "release_rate": 10
+            },
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 42,
+              "attack_rate": 31,
+              "decay_rate": 12,
+              "sustain_rate": 0,
+              "sustain_level": 8,
+              "release_rate": 10
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 12,
+              "attack_rate": 31,
+              "decay_rate": 6,
+              "sustain_rate": 2,
+              "sustain_level": 3,
+              "release_rate": 10
+            }
+          ]
+        },
+        "volume": 63,
+        "pan": 0,
+        "reverb_send": 6,
+        "id": 14
+      },
+      {
+        "envelope": {
+          "attack": 90,
+          "decay": 300,
+          "sustain": 70,
+          "release": 170
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 2,
+          "detune": 8
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1500,
+          "resonance": 12,
+          "envelope_depth": 10
+        },
+        "name": "Harmonic camera motion",
+        "voice": {
+          "type": "triangle"
+        },
+        "volume": 31,
+        "pan": 14,
+        "reverb_send": 24,
+        "id": 15
+      },
+      {
+        "envelope": {
+          "attack": 9,
+          "decay": 210,
+          "sustain": 28,
+          "release": 220
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2400,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "name": "Photon echoes",
+        "voice": {
+          "type": "wavetable",
+          "samples": [
+            8,
+            10,
+            12,
+            13,
+            14,
+            15,
+            15,
+            15,
+            14,
+            13,
+            12,
+            10,
+            8,
+            6,
+            4,
+            3,
+            2,
+            1,
+            0,
+            0,
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8,
+            8,
+            8,
+            8,
+            8
+          ]
+        },
+        "volume": 17,
+        "pan": 38,
+        "reverb_send": 38,
+        "id": 16
+      }
+    ],
+    "patterns": [
+      {
+        "id": 1,
+        "name": "Melody / 0s",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 67,
+            "start": 5,
+            "length": 8,
+            "velocity": 100
+          },
+          {
+            "pitch": 72,
+            "start": 16,
+            "length": 8,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 26,
+            "length": 4,
+            "velocity": 96
+          },
+          {
+            "pitch": 75,
+            "start": 32,
+            "length": 11,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 45,
+            "length": 4,
+            "velocity": 96
+          },
+          {
+            "pitch": 70,
+            "start": 60,
+            "length": 8,
+            "velocity": 100
+          },
+          {
+            "pitch": 67,
+            "start": 71,
+            "length": 7,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 80,
+            "length": 13,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 97,
+            "length": 7,
+            "velocity": 96
+          },
+          {
+            "pitch": 75,
+            "start": 107,
+            "length": 13,
+            "velocity": 96
+          },
+          {
+            "pitch": 67,
+            "start": 132,
+            "length": 4,
+            "velocity": 100
+          },
+          {
+            "pitch": 72,
+            "start": 139,
+            "length": 5,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 147,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 75,
+            "start": 152,
+            "length": 5,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Melody / 8s",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 79,
+            "start": 5,
+            "length": 6,
+            "velocity": 100
+          },
+          {
+            "pitch": 75,
+            "start": 14,
+            "length": 4,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 20,
+            "length": 4,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 26,
+            "length": 10,
+            "velocity": 96
+          },
+          {
+            "pitch": 70,
+            "start": 39,
+            "length": 6,
+            "velocity": 96
+          },
+          {
+            "pitch": 67,
+            "start": 51,
+            "length": 7,
+            "velocity": 87
+          },
+          {
+            "pitch": 68,
+            "start": 61,
+            "length": 6,
+            "velocity": 83
+          },
+          {
+            "pitch": 71,
+            "start": 71,
+            "length": 8,
+            "velocity": 83
+          },
+          {
+            "pitch": 79,
+            "start": 124,
+            "length": 6,
+            "velocity": 108
+          },
+          {
+            "pitch": 84,
+            "start": 133,
+            "length": 7,
+            "velocity": 104
+          },
+          {
+            "pitch": 86,
+            "start": 142,
+            "length": 4,
+            "velocity": 104
+          },
+          {
+            "pitch": 87,
+            "start": 149,
+            "length": 7,
+            "velocity": 104
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Melody / 16s",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 86,
+            "start": 1,
+            "length": 6,
+            "velocity": 102
+          },
+          {
+            "pitch": 84,
+            "start": 9,
+            "length": 8,
+            "velocity": 98
+          },
+          {
+            "pitch": 79,
+            "start": 20,
+            "length": 6,
+            "velocity": 98
+          },
+          {
+            "pitch": 75,
+            "start": 29,
+            "length": 7,
+            "velocity": 98
+          },
+          {
+            "pitch": 75,
+            "start": 48,
+            "length": 14,
+            "velocity": 89
+          },
+          {
+            "pitch": 74,
+            "start": 66,
+            "length": 10,
+            "velocity": 85
+          },
+          {
+            "pitch": 72,
+            "start": 80,
+            "length": 14,
+            "velocity": 85
+          },
+          {
+            "pitch": 67,
+            "start": 100,
+            "length": 9,
+            "velocity": 83
+          },
+          {
+            "pitch": 68,
+            "start": 111,
+            "length": 6,
+            "velocity": 79
+          },
+          {
+            "pitch": 71,
+            "start": 120,
+            "length": 10,
+            "velocity": 79
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Melody / 24s",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 67,
+            "start": 33,
+            "length": 7,
+            "velocity": 107
+          },
+          {
+            "pitch": 72,
+            "start": 43,
+            "length": 7,
+            "velocity": 103
+          },
+          {
+            "pitch": 74,
+            "start": 52,
+            "length": 4,
+            "velocity": 103
+          },
+          {
+            "pitch": 75,
+            "start": 58,
+            "length": 10,
+            "velocity": 103
+          },
+          {
+            "pitch": 79,
+            "start": 72,
+            "length": 7,
+            "velocity": 101
+          },
+          {
+            "pitch": 75,
+            "start": 82,
+            "length": 7,
+            "velocity": 97
+          },
+          {
+            "pitch": 74,
+            "start": 91,
+            "length": 7,
+            "velocity": 97
+          },
+          {
+            "pitch": 72,
+            "start": 100,
+            "length": 13,
+            "velocity": 97
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Piano / 0s",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 26,
+            "velocity": 78
+          },
+          {
+            "pitch": 63,
+            "start": 1,
+            "length": 26,
+            "velocity": 75
+          },
+          {
+            "pitch": 67,
+            "start": 2,
+            "length": 26,
+            "velocity": 72
+          },
+          {
+            "pitch": 74,
+            "start": 3,
+            "length": 26,
+            "velocity": 69
+          },
+          {
+            "pitch": 60,
+            "start": 50,
+            "length": 26,
+            "velocity": 78
+          },
+          {
+            "pitch": 63,
+            "start": 51,
+            "length": 26,
+            "velocity": 75
+          },
+          {
+            "pitch": 67,
+            "start": 52,
+            "length": 26,
+            "velocity": 72
+          },
+          {
+            "pitch": 70,
+            "start": 53,
+            "length": 26,
+            "velocity": 69
+          },
+          {
+            "pitch": 60,
+            "start": 80,
+            "length": 26,
+            "velocity": 78
+          },
+          {
+            "pitch": 63,
+            "start": 81,
+            "length": 26,
+            "velocity": 75
+          },
+          {
+            "pitch": 65,
+            "start": 82,
+            "length": 26,
+            "velocity": 72
+          },
+          {
+            "pitch": 67,
+            "start": 83,
+            "length": 26,
+            "velocity": 69
+          },
+          {
+            "pitch": 60,
+            "start": 130,
+            "length": 26,
+            "velocity": 78
+          },
+          {
+            "pitch": 63,
+            "start": 131,
+            "length": 26,
+            "velocity": 75
+          },
+          {
+            "pitch": 67,
+            "start": 132,
+            "length": 26,
+            "velocity": 72
+          },
+          {
+            "pitch": 74,
+            "start": 133,
+            "length": 26,
+            "velocity": 69
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Piano / 8s",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 26,
+            "velocity": 78
+          },
+          {
+            "pitch": 63,
+            "start": 1,
+            "length": 26,
+            "velocity": 75
+          },
+          {
+            "pitch": 67,
+            "start": 2,
+            "length": 26,
+            "velocity": 72
+          },
+          {
+            "pitch": 70,
+            "start": 3,
+            "length": 26,
+            "velocity": 69
+          },
+          {
+            "pitch": 59,
+            "start": 32,
+            "length": 26,
+            "velocity": 78
+          },
+          {
+            "pitch": 62,
+            "start": 33,
+            "length": 26,
+            "velocity": 75
+          },
+          {
+            "pitch": 65,
+            "start": 34,
+            "length": 26,
+            "velocity": 72
+          },
+          {
+            "pitch": 68,
+            "start": 35,
+            "length": 26,
+            "velocity": 69
+          },
+          {
+            "pitch": 59,
+            "start": 60,
+            "length": 26,
+            "velocity": 78
+          },
+          {
+            "pitch": 62,
+            "start": 61,
+            "length": 26,
+            "velocity": 75
+          },
+          {
+            "pitch": 65,
+            "start": 62,
+            "length": 26,
+            "velocity": 72
+          },
+          {
+            "pitch": 68,
+            "start": 63,
+            "length": 26,
+            "velocity": 69
+          },
+          {
+            "pitch": 59,
+            "start": 96,
+            "length": 18,
+            "velocity": 78
+          },
+          {
+            "pitch": 62,
+            "start": 97,
+            "length": 18,
+            "velocity": 75
+          },
+          {
+            "pitch": 65,
+            "start": 98,
+            "length": 18,
+            "velocity": 72
+          },
+          {
+            "pitch": 60,
+            "start": 120,
+            "length": 26,
+            "velocity": 78
+          },
+          {
+            "pitch": 63,
+            "start": 121,
+            "length": 26,
+            "velocity": 75
+          },
+          {
+            "pitch": 67,
+            "start": 122,
+            "length": 26,
+            "velocity": 72
+          },
+          {
+            "pitch": 74,
+            "start": 123,
+            "length": 26,
+            "velocity": 69
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Piano / 16s",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 26,
+            "velocity": 78
+          },
+          {
+            "pitch": 63,
+            "start": 1,
+            "length": 26,
+            "velocity": 75
+          },
+          {
+            "pitch": 67,
+            "start": 2,
+            "length": 26,
+            "velocity": 72
+          },
+          {
+            "pitch": 70,
+            "start": 3,
+            "length": 26,
+            "velocity": 69
+          },
+          {
+            "pitch": 60,
+            "start": 40,
+            "length": 26,
+            "velocity": 70
+          },
+          {
+            "pitch": 63,
+            "start": 41,
+            "length": 26,
+            "velocity": 67
+          },
+          {
+            "pitch": 67,
+            "start": 42,
+            "length": 26,
+            "velocity": 64
+          },
+          {
+            "pitch": 70,
+            "start": 43,
+            "length": 26,
+            "velocity": 61
+          },
+          {
+            "pitch": 60,
+            "start": 80,
+            "length": 26,
+            "velocity": 70
+          },
+          {
+            "pitch": 63,
+            "start": 81,
+            "length": 26,
+            "velocity": 67
+          },
+          {
+            "pitch": 65,
+            "start": 82,
+            "length": 26,
+            "velocity": 64
+          },
+          {
+            "pitch": 67,
+            "start": 83,
+            "length": 26,
+            "velocity": 61
+          },
+          {
+            "pitch": 59,
+            "start": 110,
+            "length": 26,
+            "velocity": 70
+          },
+          {
+            "pitch": 62,
+            "start": 111,
+            "length": 26,
+            "velocity": 67
+          },
+          {
+            "pitch": 65,
+            "start": 112,
+            "length": 26,
+            "velocity": 64
+          },
+          {
+            "pitch": 68,
+            "start": 113,
+            "length": 26,
+            "velocity": 61
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Piano / 24s",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 60,
+            "start": 2,
+            "length": 26,
+            "velocity": 70
+          },
+          {
+            "pitch": 62,
+            "start": 3,
+            "length": 26,
+            "velocity": 67
+          },
+          {
+            "pitch": 67,
+            "start": 4,
+            "length": 26,
+            "velocity": 64
+          },
+          {
+            "pitch": 60,
+            "start": 30,
+            "length": 26,
+            "velocity": 78
+          },
+          {
+            "pitch": 63,
+            "start": 31,
+            "length": 26,
+            "velocity": 75
+          },
+          {
+            "pitch": 67,
+            "start": 32,
+            "length": 26,
+            "velocity": 72
+          },
+          {
+            "pitch": 74,
+            "start": 33,
+            "length": 26,
+            "velocity": 69
+          },
+          {
+            "pitch": 60,
+            "start": 62,
+            "length": 16,
+            "velocity": 78
+          },
+          {
+            "pitch": 63,
+            "start": 63,
+            "length": 16,
+            "velocity": 75
+          },
+          {
+            "pitch": 67,
+            "start": 64,
+            "length": 16,
+            "velocity": 72
+          },
+          {
+            "pitch": 70,
+            "start": 65,
+            "length": 16,
+            "velocity": 69
+          },
+          {
+            "pitch": 60,
+            "start": 80,
+            "length": 26,
+            "velocity": 78
+          },
+          {
+            "pitch": 63,
+            "start": 81,
+            "length": 26,
+            "velocity": 75
+          },
+          {
+            "pitch": 67,
+            "start": 82,
+            "length": 26,
+            "velocity": 72
+          },
+          {
+            "pitch": 74,
+            "start": 83,
+            "length": 26,
+            "velocity": 69
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Atmosphere / 0s",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 48,
+            "velocity": 73
+          },
+          {
+            "pitch": 63,
+            "start": 0,
+            "length": 48,
+            "velocity": 70
+          },
+          {
+            "pitch": 67,
+            "start": 0,
+            "length": 48,
+            "velocity": 67
+          },
+          {
+            "pitch": 60,
+            "start": 50,
+            "length": 28,
+            "velocity": 73
+          },
+          {
+            "pitch": 63,
+            "start": 50,
+            "length": 28,
+            "velocity": 70
+          },
+          {
+            "pitch": 67,
+            "start": 50,
+            "length": 28,
+            "velocity": 67
+          },
+          {
+            "pitch": 60,
+            "start": 80,
+            "length": 48,
+            "velocity": 73
+          },
+          {
+            "pitch": 63,
+            "start": 80,
+            "length": 48,
+            "velocity": 70
+          },
+          {
+            "pitch": 65,
+            "start": 80,
+            "length": 48,
+            "velocity": 67
+          },
+          {
+            "pitch": 60,
+            "start": 130,
+            "length": 28,
+            "velocity": 73
+          },
+          {
+            "pitch": 63,
+            "start": 130,
+            "length": 28,
+            "velocity": 70
+          },
+          {
+            "pitch": 67,
+            "start": 130,
+            "length": 28,
+            "velocity": 67
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Atmosphere / 8s",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 30,
+            "velocity": 73
+          },
+          {
+            "pitch": 63,
+            "start": 0,
+            "length": 30,
+            "velocity": 70
+          },
+          {
+            "pitch": 67,
+            "start": 0,
+            "length": 30,
+            "velocity": 67
+          },
+          {
+            "pitch": 59,
+            "start": 32,
+            "length": 26,
+            "velocity": 73
+          },
+          {
+            "pitch": 62,
+            "start": 32,
+            "length": 26,
+            "velocity": 70
+          },
+          {
+            "pitch": 65,
+            "start": 32,
+            "length": 26,
+            "velocity": 67
+          },
+          {
+            "pitch": 59,
+            "start": 60,
+            "length": 34,
+            "velocity": 73
+          },
+          {
+            "pitch": 62,
+            "start": 60,
+            "length": 34,
+            "velocity": 70
+          },
+          {
+            "pitch": 65,
+            "start": 60,
+            "length": 34,
+            "velocity": 67
+          },
+          {
+            "pitch": 59,
+            "start": 96,
+            "length": 18,
+            "velocity": 73
+          },
+          {
+            "pitch": 62,
+            "start": 96,
+            "length": 18,
+            "velocity": 70
+          },
+          {
+            "pitch": 65,
+            "start": 96,
+            "length": 18,
+            "velocity": 67
+          },
+          {
+            "pitch": 60,
+            "start": 120,
+            "length": 38,
+            "velocity": 73
+          },
+          {
+            "pitch": 63,
+            "start": 120,
+            "length": 38,
+            "velocity": 70
+          },
+          {
+            "pitch": 67,
+            "start": 120,
+            "length": 38,
+            "velocity": 67
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Atmosphere / 16s",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 38,
+            "velocity": 73
+          },
+          {
+            "pitch": 63,
+            "start": 0,
+            "length": 38,
+            "velocity": 70
+          },
+          {
+            "pitch": 67,
+            "start": 0,
+            "length": 38,
+            "velocity": 67
+          },
+          {
+            "pitch": 60,
+            "start": 40,
+            "length": 38,
+            "velocity": 64
+          },
+          {
+            "pitch": 63,
+            "start": 40,
+            "length": 38,
+            "velocity": 61
+          },
+          {
+            "pitch": 67,
+            "start": 40,
+            "length": 38,
+            "velocity": 58
+          },
+          {
+            "pitch": 60,
+            "start": 80,
+            "length": 28,
+            "velocity": 64
+          },
+          {
+            "pitch": 63,
+            "start": 80,
+            "length": 28,
+            "velocity": 61
+          },
+          {
+            "pitch": 65,
+            "start": 80,
+            "length": 28,
+            "velocity": 58
+          },
+          {
+            "pitch": 59,
+            "start": 110,
+            "length": 44,
+            "velocity": 64
+          },
+          {
+            "pitch": 62,
+            "start": 110,
+            "length": 44,
+            "velocity": 61
+          },
+          {
+            "pitch": 65,
+            "start": 110,
+            "length": 44,
+            "velocity": 58
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Atmosphere / 24s",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 60,
+            "start": 2,
+            "length": 26,
+            "velocity": 64
+          },
+          {
+            "pitch": 62,
+            "start": 2,
+            "length": 26,
+            "velocity": 61
+          },
+          {
+            "pitch": 67,
+            "start": 2,
+            "length": 26,
+            "velocity": 58
+          },
+          {
+            "pitch": 60,
+            "start": 30,
+            "length": 30,
+            "velocity": 73
+          },
+          {
+            "pitch": 63,
+            "start": 30,
+            "length": 30,
+            "velocity": 70
+          },
+          {
+            "pitch": 67,
+            "start": 30,
+            "length": 30,
+            "velocity": 67
+          },
+          {
+            "pitch": 60,
+            "start": 62,
+            "length": 16,
+            "velocity": 73
+          },
+          {
+            "pitch": 63,
+            "start": 62,
+            "length": 16,
+            "velocity": 70
+          },
+          {
+            "pitch": 67,
+            "start": 62,
+            "length": 16,
+            "velocity": 67
+          },
+          {
+            "pitch": 60,
+            "start": 80,
+            "length": 38,
+            "velocity": 73
+          },
+          {
+            "pitch": 63,
+            "start": 80,
+            "length": 38,
+            "velocity": 70
+          },
+          {
+            "pitch": 67,
+            "start": 80,
+            "length": 38,
+            "velocity": 67
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Fusion ostinato / 0s",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 72,
+            "start": 0,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 79,
+            "start": 10,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 75,
+            "start": 20,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 86,
+            "start": 30,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 79,
+            "start": 40,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 72,
+            "start": 50,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 79,
+            "start": 60,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 75,
+            "start": 70,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 72,
+            "start": 80,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 77,
+            "start": 90,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 75,
+            "start": 100,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 79,
+            "start": 110,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 77,
+            "start": 120,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 72,
+            "start": 130,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 79,
+            "start": 135,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 75,
+            "start": 140,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 86,
+            "start": 145,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 79,
+            "start": 150,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 75,
+            "start": 155,
+            "length": 2,
+            "velocity": 53
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Fusion ostinato / 8s",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 72,
+            "start": 0,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 79,
+            "start": 5,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 75,
+            "start": 10,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 82,
+            "start": 15,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 79,
+            "start": 20,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 75,
+            "start": 25,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 71,
+            "start": 32,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 77,
+            "start": 37,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 74,
+            "start": 42,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 80,
+            "start": 47,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 77,
+            "start": 52,
+            "length": 2,
+            "velocity": 68
+          },
+          {
+            "pitch": 72,
+            "start": 120,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 79,
+            "start": 125,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 75,
+            "start": 130,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 86,
+            "start": 135,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 72,
+            "start": 140,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 79,
+            "start": 145,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 75,
+            "start": 150,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 86,
+            "start": 155,
+            "length": 2,
+            "velocity": 53
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Fusion ostinato / 16s",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 72,
+            "start": 0,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 79,
+            "start": 5,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 75,
+            "start": 10,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 82,
+            "start": 15,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 72,
+            "start": 20,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 79,
+            "start": 25,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 75,
+            "start": 30,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 82,
+            "start": 35,
+            "length": 2,
+            "velocity": 53
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "Fusion ostinato / 24s",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 72,
+            "start": 30,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 79,
+            "start": 35,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 75,
+            "start": 40,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 86,
+            "start": 45,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 72,
+            "start": 50,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 79,
+            "start": 55,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 72,
+            "start": 62,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 79,
+            "start": 67,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 75,
+            "start": 72,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 72,
+            "start": 80,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 79,
+            "start": 85,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 75,
+            "start": 90,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 86,
+            "start": 95,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 72,
+            "start": 100,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 79,
+            "start": 105,
+            "length": 2,
+            "velocity": 53
+          },
+          {
+            "pitch": 75,
+            "start": 110,
+            "length": 2,
+            "velocity": 64
+          },
+          {
+            "pitch": 86,
+            "start": 115,
+            "length": 2,
+            "velocity": 53
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Bass / 0s",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 36,
+            "start": 15,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 36,
+            "start": 30,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 32,
+            "start": 50,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 32,
+            "start": 65,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 41,
+            "start": 80,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 41,
+            "start": 95,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 41,
+            "start": 110,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 36,
+            "start": 130,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 36,
+            "start": 145,
+            "length": 9,
+            "velocity": 98
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "Bass / 8s",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 32,
+            "start": 0,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 32,
+            "start": 15,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 43,
+            "start": 32,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 43,
+            "start": 47,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 36,
+            "start": 120,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 36,
+            "start": 135,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 36,
+            "start": 150,
+            "length": 8,
+            "velocity": 98
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "Bass / 16s",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 32,
+            "start": 0,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 32,
+            "start": 15,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 32,
+            "start": 30,
+            "length": 8,
+            "velocity": 98
+          },
+          {
+            "pitch": 32,
+            "start": 40,
+            "length": 9,
+            "velocity": 79
+          },
+          {
+            "pitch": 32,
+            "start": 55,
+            "length": 9,
+            "velocity": 79
+          },
+          {
+            "pitch": 32,
+            "start": 70,
+            "length": 8,
+            "velocity": 79
+          },
+          {
+            "pitch": 41,
+            "start": 80,
+            "length": 9,
+            "velocity": 79
+          },
+          {
+            "pitch": 41,
+            "start": 95,
+            "length": 9,
+            "velocity": 79
+          },
+          {
+            "pitch": 43,
+            "start": 110,
+            "length": 9,
+            "velocity": 79
+          },
+          {
+            "pitch": 43,
+            "start": 125,
+            "length": 9,
+            "velocity": 79
+          },
+          {
+            "pitch": 43,
+            "start": 140,
+            "length": 9,
+            "velocity": 79
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Bass / 24s",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 30,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 36,
+            "start": 45,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 32,
+            "start": 62,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 36,
+            "start": 80,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 36,
+            "start": 95,
+            "length": 9,
+            "velocity": 98
+          },
+          {
+            "pitch": 36,
+            "start": 110,
+            "length": 8,
+            "velocity": 98
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "name": "Heartbeat / 0s",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 50,
+            "length": 2,
+            "velocity": 100
+          },
+          {
+            "pitch": 36,
+            "start": 60,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 70,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 80,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 90,
+            "length": 2,
+            "velocity": 100
+          },
+          {
+            "pitch": 36,
+            "start": 100,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 110,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 120,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 130,
+            "length": 2,
+            "velocity": 100
+          },
+          {
+            "pitch": 36,
+            "start": 140,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 150,
+            "length": 2,
+            "velocity": 84
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Heartbeat / 8s",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 2,
+            "velocity": 100
+          },
+          {
+            "pitch": 36,
+            "start": 20,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 30,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 40,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 50,
+            "length": 2,
+            "velocity": 100
+          },
+          {
+            "pitch": 36,
+            "start": 120,
+            "length": 2,
+            "velocity": 100
+          },
+          {
+            "pitch": 36,
+            "start": 130,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 140,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 150,
+            "length": 2,
+            "velocity": 84
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "Heartbeat / 16s",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 2,
+            "velocity": 100
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 20,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 30,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 40,
+            "length": 3,
+            "velocity": 70
+          },
+          {
+            "pitch": 36,
+            "start": 70,
+            "length": 3,
+            "velocity": 70
+          },
+          {
+            "pitch": 36,
+            "start": 100,
+            "length": 3,
+            "velocity": 70
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "Heartbeat / 24s",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 30,
+            "length": 2,
+            "velocity": 100
+          },
+          {
+            "pitch": 36,
+            "start": 40,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 50,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 60,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 70,
+            "length": 2,
+            "velocity": 100
+          },
+          {
+            "pitch": 36,
+            "start": 80,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 90,
+            "length": 2,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 100,
+            "length": 2,
+            "velocity": 84
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "name": "Backbeat / 0s",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 70,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 81,
+            "start": 110,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 81,
+            "start": 150,
+            "length": 2,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "name": "Backbeat / 8s",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 30,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 81,
+            "start": 140,
+            "length": 2,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "name": "Backbeat / 16s",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 20,
+            "length": 2,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "name": "Backbeat / 24s",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 50,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 81,
+            "start": 90,
+            "length": 2,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "name": "Particles / 0s",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 55,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 65,
+            "length": 1,
+            "velocity": 37
+          },
+          {
+            "pitch": 108,
+            "start": 75,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 85,
+            "length": 1,
+            "velocity": 37
+          },
+          {
+            "pitch": 108,
+            "start": 95,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 105,
+            "length": 1,
+            "velocity": 37
+          },
+          {
+            "pitch": 108,
+            "start": 115,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 125,
+            "length": 1,
+            "velocity": 37
+          },
+          {
+            "pitch": 108,
+            "start": 135,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 145,
+            "length": 1,
+            "velocity": 37
+          },
+          {
+            "pitch": 108,
+            "start": 155,
+            "length": 1,
+            "velocity": 50
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "Particles / 8s",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 5,
+            "length": 1,
+            "velocity": 37
+          },
+          {
+            "pitch": 108,
+            "start": 15,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 25,
+            "length": 1,
+            "velocity": 37
+          },
+          {
+            "pitch": 108,
+            "start": 35,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 45,
+            "length": 1,
+            "velocity": 37
+          },
+          {
+            "pitch": 108,
+            "start": 55,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 125,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 135,
+            "length": 1,
+            "velocity": 37
+          },
+          {
+            "pitch": 108,
+            "start": 145,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 155,
+            "length": 1,
+            "velocity": 37
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "name": "Particles / 16s",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 5,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 15,
+            "length": 1,
+            "velocity": 37
+          },
+          {
+            "pitch": 108,
+            "start": 25,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 35,
+            "length": 1,
+            "velocity": 37
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "name": "Particles / 24s",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 35,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 45,
+            "length": 1,
+            "velocity": 37
+          },
+          {
+            "pitch": 108,
+            "start": 55,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 65,
+            "length": 1,
+            "velocity": 37
+          },
+          {
+            "pitch": 108,
+            "start": 75,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 85,
+            "length": 1,
+            "velocity": 37
+          },
+          {
+            "pitch": 108,
+            "start": 95,
+            "length": 1,
+            "velocity": 50
+          },
+          {
+            "pitch": 108,
+            "start": 105,
+            "length": 1,
+            "velocity": 37
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "name": "Fuel pings / 0s",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 84,
+            "start": 0,
+            "length": 3,
+            "velocity": 86
+          },
+          {
+            "pitch": 72,
+            "start": 136,
+            "length": 3,
+            "velocity": 95
+          },
+          {
+            "pitch": 75,
+            "start": 150,
+            "length": 3,
+            "velocity": 95
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "name": "Fuel pings / 8s",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 79,
+            "start": 4,
+            "length": 3,
+            "velocity": 95
+          },
+          {
+            "pitch": 82,
+            "start": 18,
+            "length": 3,
+            "velocity": 95
+          },
+          {
+            "pitch": 83,
+            "start": 32,
+            "length": 3,
+            "velocity": 107
+          },
+          {
+            "pitch": 55,
+            "start": 78,
+            "length": 1,
+            "velocity": 55
+          },
+          {
+            "pitch": 62,
+            "start": 86,
+            "length": 1,
+            "velocity": 60
+          },
+          {
+            "pitch": 65,
+            "start": 93,
+            "length": 1,
+            "velocity": 67
+          },
+          {
+            "pitch": 68,
+            "start": 99,
+            "length": 1,
+            "velocity": 73
+          },
+          {
+            "pitch": 71,
+            "start": 104,
+            "length": 1,
+            "velocity": 80
+          },
+          {
+            "pitch": 74,
+            "start": 108,
+            "length": 1,
+            "velocity": 86
+          },
+          {
+            "pitch": 77,
+            "start": 111,
+            "length": 1,
+            "velocity": 94
+          },
+          {
+            "pitch": 80,
+            "start": 114,
+            "length": 1,
+            "velocity": 101
+          },
+          {
+            "pitch": 84,
+            "start": 144,
+            "length": 4,
+            "velocity": 102
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "name": "Fuel pings / 16s",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 67,
+            "start": 120,
+            "length": 1,
+            "velocity": 65
+          },
+          {
+            "pitch": 74,
+            "start": 130,
+            "length": 1,
+            "velocity": 71
+          },
+          {
+            "pitch": 79,
+            "start": 140,
+            "length": 1,
+            "velocity": 77
+          },
+          {
+            "pitch": 83,
+            "start": 148,
+            "length": 1,
+            "velocity": 82
+          },
+          {
+            "pitch": 86,
+            "start": 154,
+            "length": 1,
+            "velocity": 85
+          },
+          {
+            "pitch": 91,
+            "start": 158,
+            "length": 1,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "name": "Fuel pings / 24s",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 72,
+            "start": 42,
+            "length": 2,
+            "velocity": 70
+          },
+          {
+            "pitch": 79,
+            "start": 47,
+            "length": 2,
+            "velocity": 70
+          },
+          {
+            "pitch": 84,
+            "start": 52,
+            "length": 2,
+            "velocity": 70
+          },
+          {
+            "pitch": 86,
+            "start": 57,
+            "length": 2,
+            "velocity": 70
+          },
+          {
+            "pitch": 87,
+            "start": 62,
+            "length": 2,
+            "velocity": 70
+          },
+          {
+            "pitch": 84,
+            "start": 78,
+            "length": 4,
+            "velocity": 83
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "name": "Camera air / 0s",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 92,
+            "start": 54,
+            "length": 22,
+            "velocity": 74
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "name": "Camera air / 8s",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 100,
+            "start": 126,
+            "length": 16,
+            "velocity": 100
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "name": "Camera air / 16s",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 88,
+            "start": 44,
+            "length": 46,
+            "velocity": 57
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "name": "Camera air / 24s",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 96,
+            "start": 30,
+            "length": 24,
+            "velocity": 76
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "name": "Collapse rise / 8s",
+        "instrument": 11,
+        "notes": [
+          {
+            "pitch": 43,
+            "start": 78,
+            "length": 40,
+            "velocity": 108,
+            "slide_semitones": 24
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "name": "Collapse rise / 16s",
+        "instrument": 11,
+        "notes": [
+          {
+            "pitch": 43,
+            "start": 116,
+            "length": 44,
+            "velocity": 93,
+            "slide_semitones": 24
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "name": "Supernova sub / 8s",
+        "instrument": 12,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 120,
+            "length": 16,
+            "velocity": 111
+          },
+          {
+            "pitch": 24,
+            "start": 144,
+            "length": 14,
+            "velocity": 122
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "name": "Supernova sub / 24s",
+        "instrument": 12,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 30,
+            "length": 14,
+            "velocity": 93
+          },
+          {
+            "pitch": 36,
+            "start": 78,
+            "length": 12,
+            "velocity": 82
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "name": "Shock noise / 8s",
+        "instrument": 13,
+        "notes": [
+          {
+            "pitch": 100,
+            "start": 120,
+            "length": 14,
+            "velocity": 89
+          },
+          {
+            "pitch": 106,
+            "start": 144,
+            "length": 12,
+            "velocity": 115
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "name": "Event horizon / 24s",
+        "instrument": 14,
+        "notes": [
+          {
+            "pitch": 24,
+            "start": 2,
+            "length": 23,
+            "velocity": 111
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "name": "Camera pitch / 0s",
+        "instrument": 15,
+        "notes": [
+          {
+            "pitch": 48,
+            "start": 54,
+            "length": 28,
+            "velocity": 89,
+            "slide_semitones": 7
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "name": "Camera pitch / 8s",
+        "instrument": 15,
+        "notes": [
+          {
+            "pitch": 79,
+            "start": 126,
+            "length": 18,
+            "velocity": 86,
+            "slide_semitones": -24
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "name": "Camera pitch / 16s",
+        "instrument": 15,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 44,
+            "length": 52,
+            "velocity": 81,
+            "slide_semitones": 24
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "name": "Camera pitch / 24s",
+        "instrument": 15,
+        "notes": [
+          {
+            "pitch": 72,
+            "start": 2,
+            "length": 22,
+            "velocity": 64,
+            "slide_semitones": -24
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "name": "Photon echoes / 0s",
+        "instrument": 16,
+        "notes": [
+          {
+            "pitch": 75,
+            "start": 114,
+            "length": 8,
+            "velocity": 64
+          },
+          {
+            "pitch": 72,
+            "start": 140,
+            "length": 3,
+            "velocity": 49
+          },
+          {
+            "pitch": 75,
+            "start": 154,
+            "length": 3,
+            "velocity": 49
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "name": "Photon echoes / 8s",
+        "instrument": 16,
+        "notes": [
+          {
+            "pitch": 79,
+            "start": 8,
+            "length": 3,
+            "velocity": 49
+          },
+          {
+            "pitch": 82,
+            "start": 22,
+            "length": 3,
+            "velocity": 49
+          },
+          {
+            "pitch": 83,
+            "start": 36,
+            "length": 3,
+            "velocity": 49
+          },
+          {
+            "pitch": 70,
+            "start": 46,
+            "length": 6,
+            "velocity": 64
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "name": "Photon echoes / 16s",
+        "instrument": 16,
+        "notes": [
+          {
+            "pitch": 75,
+            "start": 36,
+            "length": 7,
+            "velocity": 64
+          },
+          {
+            "pitch": 72,
+            "start": 87,
+            "length": 8,
+            "velocity": 64
+          }
+        ]
+      },
+      {
+        "id": 54,
+        "name": "Photon echoes / 24s",
+        "instrument": 16,
+        "notes": [
+          {
+            "pitch": 72,
+            "start": 107,
+            "length": 8,
+            "velocity": 64
+          }
+        ]
+      }
+    ],
+    "tracks": [
+      {
+        "id": 1,
+        "name": "Melody",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 1
+          },
+          {
+            "bar": 1,
+            "pattern": 2
+          },
+          {
+            "bar": 2,
+            "pattern": 3
+          },
+          {
+            "bar": 3,
+            "pattern": 4
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Piano",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 5
+          },
+          {
+            "bar": 1,
+            "pattern": 6
+          },
+          {
+            "bar": 2,
+            "pattern": 7
+          },
+          {
+            "bar": 3,
+            "pattern": 8
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Atmosphere",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 9
+          },
+          {
+            "bar": 1,
+            "pattern": 10
+          },
+          {
+            "bar": 2,
+            "pattern": 11
+          },
+          {
+            "bar": 3,
+            "pattern": 12
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Fusion ostinato",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 13
+          },
+          {
+            "bar": 1,
+            "pattern": 14
+          },
+          {
+            "bar": 2,
+            "pattern": 15
+          },
+          {
+            "bar": 3,
+            "pattern": 16
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Bass",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 17
+          },
+          {
+            "bar": 1,
+            "pattern": 18
+          },
+          {
+            "bar": 2,
+            "pattern": 19
+          },
+          {
+            "bar": 3,
+            "pattern": 20
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Heartbeat",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 21
+          },
+          {
+            "bar": 1,
+            "pattern": 22
+          },
+          {
+            "bar": 2,
+            "pattern": 23
+          },
+          {
+            "bar": 3,
+            "pattern": 24
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Backbeat",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 25
+          },
+          {
+            "bar": 1,
+            "pattern": 26
+          },
+          {
+            "bar": 2,
+            "pattern": 27
+          },
+          {
+            "bar": 3,
+            "pattern": 28
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Particles",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 29
+          },
+          {
+            "bar": 1,
+            "pattern": 30
+          },
+          {
+            "bar": 2,
+            "pattern": 31
+          },
+          {
+            "bar": 3,
+            "pattern": 32
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Fuel pings",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 33
+          },
+          {
+            "bar": 1,
+            "pattern": 34
+          },
+          {
+            "bar": 2,
+            "pattern": 35
+          },
+          {
+            "bar": 3,
+            "pattern": 36
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Camera air",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 37
+          },
+          {
+            "bar": 1,
+            "pattern": 38
+          },
+          {
+            "bar": 2,
+            "pattern": 39
+          },
+          {
+            "bar": 3,
+            "pattern": 40
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Collapse rise",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 1,
+            "pattern": 41
+          },
+          {
+            "bar": 2,
+            "pattern": 42
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Supernova sub",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 1,
+            "pattern": 43
+          },
+          {
+            "bar": 3,
+            "pattern": 44
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Shock noise",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 1,
+            "pattern": 45
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Event horizon",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 3,
+            "pattern": 46
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "Camera pitch",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 47
+          },
+          {
+            "bar": 1,
+            "pattern": 48
+          },
+          {
+            "bar": 2,
+            "pattern": 49
+          },
+          {
+            "bar": 3,
+            "pattern": 50
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "Photon echoes",
+        "muted": false,
+        "volume": 80,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 51
+          },
+          {
+            "bar": 1,
+            "pattern": 52
+          },
+          {
+            "bar": 2,
+            "pattern": 53
+          },
+          {
+            "bar": 3,
+            "pattern": 54
+          }
+        ]
+      }
+    ],
+    "loop_range": null
+  }
+}

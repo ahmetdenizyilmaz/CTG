@@ -1,0 +1,19 @@
+ZzFX Studio music generation reference
+https://github.com/thejustinwalsh/zzfx-studio
+Reviewed local revision ee2fd1e907590d3c8f84dce0d8ae32ecfe131bc2 plus our bass fixes.
+MIT, Copyright (c) 2026 Justin Walsh. Full license in THIRD_PARTY_NOTICES.md.
+
+Studied engine/chords.ts, melody.ts, bass.ts, harmony.ts, drums.ts, euclidean.ts,
+vibes.ts, song.ts and effects.ts. Progression vocabulary is adapted directly;
+other musical algorithms are implemented in Rust from their concepts, corrected
+for native instrument pitch encoding, polyphony and named section development.
+No original song, recording or instrument sample was copied.
+
+Additional theory references:
+https://musictheory.pugetsound.edu/mt21c/MelodicAlteration.html
+https://musictheory.pugetsound.edu/mt21c/RulesOfMelody.html
+https://online.berklee.edu/takenote/voice-leading-for-guitar/
+https://musictheory.pugetsound.edu/mt21c/Suspension.html
+https://viva.pressbooks.pub/openmusictheory/chapter/chord-symbols/
+https://viva.pressbooks.pub/openmusictheory/chapter/modal-mixture/
+https://open.lib.umn.edu/musiccomposition/chapter/secondary-dominants/

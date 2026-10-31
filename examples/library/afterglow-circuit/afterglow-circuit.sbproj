@@ -1,0 +1,7517 @@
+{
+  "format": "soundbit-project",
+  "format_version": 2,
+  "song": {
+    "meta": {
+      "title": "Afterglow Circuit",
+      "author": "AI guest composer for CTG Studio",
+      "description": "Original, deliberately authored via low-level CTG Studio MCP. No random-song or song_compose calls. A six-note longing theme becomes a syncopated funk hook; D minor / D Dorian with an F-major bridge. See compose.py and mcp-call-audit.jsonl."
+    },
+    "timing": {
+      "bpm": 124,
+      "steps_per_beat": 4,
+      "beats_per_bar": 4,
+      "swing": 10
+    },
+    "scale": {
+      "root": 2,
+      "kind": "natural_minor"
+    },
+    "chip_profile": "free",
+    "reverb": {
+      "size": 47,
+      "damping": 68
+    },
+    "instruments": [
+      {
+        "id": 1,
+        "name": "Afterglow / bowed melody",
+        "voice": {
+          "type": "wavetable",
+          "samples": [
+            8,
+            11,
+            13,
+            14,
+            15,
+            14,
+            12,
+            10,
+            11,
+            13,
+            14,
+            13,
+            11,
+            9,
+            7,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0,
+            1,
+            3,
+            5,
+            4,
+            2,
+            1,
+            2,
+            4,
+            6,
+            7,
+            8
+          ]
+        },
+        "envelope": {
+          "attack": 35,
+          "decay": 280,
+          "sustain": 82,
+          "release": 220
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 12,
+          "rate": 52,
+          "delay": 220
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 0
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1600,
+          "resonance": 20,
+          "envelope_depth": 20
+        },
+        "volume": 48,
+        "pan": -7,
+        "reverb_send": 23
+      },
+      {
+        "id": 2,
+        "name": "Circuit / velvet hook",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "envelope": {
+          "attack": 12,
+          "decay": 150,
+          "sustain": 76,
+          "release": 90
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 9,
+          "rate": 52,
+          "delay": 230
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2900,
+          "resonance": 8,
+          "envelope_depth": 5
+        },
+        "volume": 51,
+        "pan": 5,
+        "reverb_send": 15
+      },
+      {
+        "id": 3,
+        "name": "Lift / singing answer",
+        "voice": {
+          "type": "pulse",
+          "duty": "half"
+        },
+        "envelope": {
+          "attack": 14,
+          "decay": 180,
+          "sustain": 72,
+          "release": 180
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 8,
+          "rate": 53,
+          "delay": 220
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2500,
+          "resonance": 6,
+          "envelope_depth": 3
+        },
+        "volume": 58,
+        "pan": 9,
+        "reverb_send": 18
+      },
+      {
+        "id": 4,
+        "name": "Warm electric piano",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 0,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 43,
+              "attack_rate": 31,
+              "decay_rate": 10,
+              "sustain_rate": 2,
+              "sustain_level": 8,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 4,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            },
+            {
+              "multiple": 14,
+              "detune": 0,
+              "total_level": 75,
+              "attack_rate": 31,
+              "decay_rate": 18,
+              "sustain_rate": 0,
+              "sustain_level": 15,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 6,
+              "attack_rate": 31,
+              "decay_rate": 4,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 5,
+          "decay": 180,
+          "sustain": 65,
+          "release": 90
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2400,
+          "resonance": 8,
+          "envelope_depth": 0
+        },
+        "volume": 34,
+        "pan": -24,
+        "reverb_send": 18
+      },
+      {
+        "id": 5,
+        "name": "Dry offbeat chord guitar",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 3,
+          "decay": 190,
+          "sustain": 5,
+          "release": 85
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2100,
+          "resonance": 20,
+          "envelope_depth": 12
+        },
+        "volume": 27,
+        "pan": 26,
+        "reverb_send": 9
+      },
+      {
+        "id": 6,
+        "name": "Air behind the theme",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 220,
+          "decay": 450,
+          "sustain": 78,
+          "release": 620
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 5,
+          "rate": 38,
+          "delay": 400
+        },
+        "unison": {
+          "voices": 3,
+          "detune": 11
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1600,
+          "resonance": 9,
+          "envelope_depth": 0
+        },
+        "volume": 16,
+        "pan": 0,
+        "reverb_send": 25
+      },
+      {
+        "id": 7,
+        "name": "Four points of light",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 0,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 40,
+              "attack_rate": 31,
+              "decay_rate": 10,
+              "sustain_rate": 2,
+              "sustain_level": 8,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 4,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            },
+            {
+              "multiple": 7,
+              "detune": 0,
+              "total_level": 48,
+              "attack_rate": 31,
+              "decay_rate": 18,
+              "sustain_rate": 0,
+              "sustain_level": 15,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 6,
+              "attack_rate": 31,
+              "decay_rate": 4,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 5,
+          "decay": 180,
+          "sustain": 65,
+          "release": 90
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 4200,
+          "resonance": 8,
+          "envelope_depth": 0
+        },
+        "volume": 42,
+        "pan": 32,
+        "reverb_send": 27
+      },
+      {
+        "id": 8,
+        "name": "Pocket / rubber bass",
+        "voice": {
+          "type": "pulse",
+          "duty": "half"
+        },
+        "envelope": {
+          "attack": 5,
+          "decay": 180,
+          "sustain": 48,
+          "release": 55
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 480,
+          "resonance": 16,
+          "envelope_depth": 18
+        },
+        "volume": 62,
+        "pan": 0,
+        "reverb_send": 0
+      },
+      {
+        "id": 9,
+        "name": "Ground / finger bass",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 9,
+          "decay": 240,
+          "sustain": 50,
+          "release": 70
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1000,
+          "resonance": 8,
+          "envelope_depth": 8
+        },
+        "volume": 60,
+        "pan": 0,
+        "reverb_send": 0
+      },
+      {
+        "id": 10,
+        "name": "Round dry kick",
+        "voice": {
+          "type": "sine"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 220,
+          "sustain": 0,
+          "release": 30
+        },
+        "pitch_envelope": {
+          "semitones": 36,
+          "time": 50
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 68,
+        "pan": 0,
+        "reverb_send": 0
+      },
+      {
+        "id": 11,
+        "name": "Backbeat",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 150,
+          "sustain": 0,
+          "release": 40
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 900,
+          "resonance": 10,
+          "envelope_depth": 0
+        },
+        "volume": 39,
+        "pan": 3,
+        "reverb_send": 7
+      },
+      {
+        "id": 12,
+        "name": "Quiet sixteenth ticks",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 45,
+          "sustain": 0,
+          "release": 20
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 6000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 24,
+        "pan": -20,
+        "reverb_send": 0
+      },
+      {
+        "id": 13,
+        "name": "Offbeat breath",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 320,
+          "sustain": 0,
+          "release": 120
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 5000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 18,
+        "pan": 22,
+        "reverb_send": 4
+      },
+      {
+        "id": 14,
+        "name": "Transition toms",
+        "voice": {
+          "type": "sine"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 320,
+          "sustain": 0,
+          "release": 60
+        },
+        "pitch_envelope": {
+          "semitones": 12,
+          "time": 120
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 35,
+        "pan": -12,
+        "reverb_send": 9
+      },
+      {
+        "id": 15,
+        "name": "Section shimmer",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 1500,
+          "sustain": 0,
+          "release": 600
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 3500,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 16,
+        "pan": 30,
+        "reverb_send": 18
+      }
+    ],
+    "patterns": [
+      {
+        "id": 1,
+        "name": "Window 1 | lead",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 8,
+            "length": 3,
+            "velocity": 72
+          },
+          {
+            "pitch": 74,
+            "start": 12,
+            "length": 3,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Window Dm9 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 0,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 57,
+            "start": 1,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 64,
+            "start": 1,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 57,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 60,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 64,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Dm9 | two-note air",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 0,
+            "length": 14,
+            "velocity": 56
+          },
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 14,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Window Dm9 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 38,
+            "start": 0,
+            "length": 12,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Window 2 | lead",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 77,
+            "start": 0,
+            "length": 6,
+            "velocity": 72
+          },
+          {
+            "pitch": 74,
+            "start": 8,
+            "length": 4,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Window Bbmaj7 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 0,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 58,
+            "start": 0,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 57,
+            "start": 1,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 62,
+            "start": 1,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 57,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 58,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 62,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Bbmaj7 | two-note air",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 0,
+            "length": 14,
+            "velocity": 56
+          },
+          {
+            "pitch": 58,
+            "start": 0,
+            "length": 14,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Window Bbmaj7 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 34,
+            "start": 0,
+            "length": 12,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Window 3 | lead",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 4,
+            "length": 4,
+            "velocity": 72
+          },
+          {
+            "pitch": 72,
+            "start": 10,
+            "length": 4,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Window Fmaj7 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 52,
+            "start": 0,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 57,
+            "start": 1,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 65,
+            "start": 1,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 57,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 60,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 65,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "Fmaj7 | two-note air",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 52,
+            "start": 0,
+            "length": 14,
+            "velocity": 56
+          },
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 14,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Window Fmaj7 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 41,
+            "start": 0,
+            "length": 12,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Window 4 | lead",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 0,
+            "length": 6,
+            "velocity": 72
+          },
+          {
+            "pitch": 74,
+            "start": 10,
+            "length": 4,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Window C6 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 52,
+            "start": 0,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 57,
+            "start": 0,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 55,
+            "start": 1,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 62,
+            "start": 1,
+            "length": 5,
+            "velocity": 64
+          },
+          {
+            "pitch": 55,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 57,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 62,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "C6 | two-note air",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 52,
+            "start": 0,
+            "length": 14,
+            "velocity": 56
+          },
+          {
+            "pitch": 57,
+            "start": 0,
+            "length": 14,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "Window C6 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 12,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Afterglow 1 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 72,
+            "start": 4,
+            "length": 1,
+            "velocity": 85
+          },
+          {
+            "pitch": 74,
+            "start": 6,
+            "length": 6,
+            "velocity": 85
+          },
+          {
+            "pitch": 76,
+            "start": 14,
+            "length": 1,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "Afterglow Dm9 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 0,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 57,
+            "start": 1,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 64,
+            "start": 1,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 57,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 60,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 64,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "Afterglow Dm9 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 38,
+            "start": 0,
+            "length": 7,
+            "velocity": 87
+          },
+          {
+            "pitch": 45,
+            "start": 8,
+            "length": 3,
+            "velocity": 70
+          },
+          {
+            "pitch": 38,
+            "start": 12,
+            "length": 3,
+            "velocity": 78
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Afterglow | kick",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 94
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 67
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "name": "Afterglow | backbeat",
+        "instrument": 11,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 68
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "Afterglow | hats",
+        "instrument": 12,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 0,
+            "length": 1,
+            "velocity": 44
+          },
+          {
+            "pitch": 108,
+            "start": 2,
+            "length": 1,
+            "velocity": 31
+          },
+          {
+            "pitch": 108,
+            "start": 4,
+            "length": 1,
+            "velocity": 44
+          },
+          {
+            "pitch": 108,
+            "start": 6,
+            "length": 1,
+            "velocity": 31
+          },
+          {
+            "pitch": 108,
+            "start": 8,
+            "length": 1,
+            "velocity": 44
+          },
+          {
+            "pitch": 108,
+            "start": 10,
+            "length": 1,
+            "velocity": 31
+          },
+          {
+            "pitch": 108,
+            "start": 12,
+            "length": 1,
+            "velocity": 44
+          },
+          {
+            "pitch": 108,
+            "start": 14,
+            "length": 1,
+            "velocity": 31
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "Afterglow 2 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 77,
+            "start": 0,
+            "length": 5,
+            "velocity": 85
+          },
+          {
+            "pitch": 76,
+            "start": 6,
+            "length": 1,
+            "velocity": 85
+          },
+          {
+            "pitch": 74,
+            "start": 8,
+            "length": 5,
+            "velocity": 85
+          },
+          {
+            "pitch": 72,
+            "start": 14,
+            "length": 1,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "Afterglow Bbmaj7 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 0,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 58,
+            "start": 0,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 57,
+            "start": 1,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 62,
+            "start": 1,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 57,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 58,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 62,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "name": "Afterglow Bbmaj7 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 34,
+            "start": 0,
+            "length": 7,
+            "velocity": 87
+          },
+          {
+            "pitch": 41,
+            "start": 8,
+            "length": 3,
+            "velocity": 70
+          },
+          {
+            "pitch": 34,
+            "start": 12,
+            "length": 3,
+            "velocity": 78
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "name": "Afterglow | kick",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 86
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "name": "Afterglow 3 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 72,
+            "start": 4,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 76,
+            "start": 8,
+            "length": 5,
+            "velocity": 85
+          },
+          {
+            "pitch": 74,
+            "start": 14,
+            "length": 1,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "name": "Afterglow Fmaj7 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 52,
+            "start": 0,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 57,
+            "start": 1,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 65,
+            "start": 1,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 57,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 60,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 65,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "name": "Afterglow Fmaj7 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 41,
+            "start": 0,
+            "length": 7,
+            "velocity": 87
+          },
+          {
+            "pitch": 48,
+            "start": 8,
+            "length": 3,
+            "velocity": 70
+          },
+          {
+            "pitch": 41,
+            "start": 12,
+            "length": 3,
+            "velocity": 78
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "Afterglow 4 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 0,
+            "length": 5,
+            "velocity": 85
+          },
+          {
+            "pitch": 79,
+            "start": 6,
+            "length": 1,
+            "velocity": 85
+          },
+          {
+            "pitch": 76,
+            "start": 8,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 74,
+            "start": 12,
+            "length": 3,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "name": "Afterglow C6 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 52,
+            "start": 0,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 57,
+            "start": 0,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 55,
+            "start": 1,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 62,
+            "start": 1,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 55,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 57,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 62,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "name": "Afterglow C6 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 7,
+            "velocity": 87
+          },
+          {
+            "pitch": 43,
+            "start": 8,
+            "length": 3,
+            "velocity": 70
+          },
+          {
+            "pitch": 36,
+            "start": 12,
+            "length": 3,
+            "velocity": 78
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "name": "Afterglow 5 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 74,
+            "start": 0,
+            "length": 4,
+            "velocity": 85
+          },
+          {
+            "pitch": 70,
+            "start": 6,
+            "length": 2,
+            "velocity": 85
+          },
+          {
+            "pitch": 69,
+            "start": 8,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 67,
+            "start": 12,
+            "length": 3,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "name": "Afterglow Gm9 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 31,
+            "start": 0,
+            "length": 7,
+            "velocity": 87
+          },
+          {
+            "pitch": 38,
+            "start": 8,
+            "length": 3,
+            "velocity": 70
+          },
+          {
+            "pitch": 31,
+            "start": 12,
+            "length": 3,
+            "velocity": 78
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "name": "Afterglow 6 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 72,
+            "start": 4,
+            "length": 1,
+            "velocity": 85
+          },
+          {
+            "pitch": 74,
+            "start": 6,
+            "length": 8,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "name": "Afterglow 7 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 67,
+            "start": 0,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 70,
+            "start": 4,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 74,
+            "start": 8,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 76,
+            "start": 12,
+            "length": 3,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "name": "Afterglow Ehalf | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 55,
+            "start": 0,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 62,
+            "start": 0,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 58,
+            "start": 1,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 64,
+            "start": 1,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 58,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 62,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 64,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "name": "Ehalf | two-note air",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 55,
+            "start": 0,
+            "length": 14,
+            "velocity": 56
+          },
+          {
+            "pitch": 62,
+            "start": 0,
+            "length": 14,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "name": "Afterglow Ehalf | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 40,
+            "start": 0,
+            "length": 7,
+            "velocity": 87
+          },
+          {
+            "pitch": 46,
+            "start": 8,
+            "length": 3,
+            "velocity": 70
+          },
+          {
+            "pitch": 40,
+            "start": 12,
+            "length": 3,
+            "velocity": 78
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "name": "Afterglow 8 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 0,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 74,
+            "start": 4,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 73,
+            "start": 8,
+            "length": 5,
+            "velocity": 85
+          },
+          {
+            "pitch": 69,
+            "start": 14,
+            "length": 1,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "name": "Afterglow A7 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 55,
+            "start": 0,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 57,
+            "start": 1,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 64,
+            "start": 1,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 57,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 61,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 64,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "name": "A7 | two-note air",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 55,
+            "start": 0,
+            "length": 14,
+            "velocity": 56
+          },
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 14,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "name": "Afterglow A7 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 33,
+            "start": 0,
+            "length": 7,
+            "velocity": 87
+          },
+          {
+            "pitch": 40,
+            "start": 8,
+            "length": 3,
+            "velocity": 70
+          },
+          {
+            "pitch": 33,
+            "start": 12,
+            "length": 3,
+            "velocity": 78
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "name": "Turnaround | three toms",
+        "instrument": 14,
+        "notes": [
+          {
+            "pitch": 55,
+            "start": 12,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 53,
+            "start": 14,
+            "length": 1,
+            "velocity": 73
+          },
+          {
+            "pitch": 50,
+            "start": 15,
+            "length": 1,
+            "velocity": 82
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "name": "Circuit 1 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 3,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 6,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 11,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "name": "Circuit Dm9 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 57,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 64,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 57,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 60,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 64,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 57,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          },
+          {
+            "pitch": 60,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          },
+          {
+            "pitch": 64,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "name": "Dm9 | pocket stabs",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 57,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 60,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 53,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 57,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 60,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 53,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          },
+          {
+            "pitch": 57,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          },
+          {
+            "pitch": 60,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "name": "Circuit Dm9 | bass",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 38,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 50,
+            "start": 3,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 38,
+            "start": 6,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 45,
+            "start": 10,
+            "length": 1,
+            "velocity": 87
+          },
+          {
+            "pitch": 38,
+            "start": 12,
+            "length": 2,
+            "velocity": 99
+          },
+          {
+            "pitch": 50,
+            "start": 15,
+            "length": 1,
+            "velocity": 79
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "name": "Funk | open breath",
+        "instrument": 13,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 14,
+            "length": 1,
+            "velocity": 61
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "name": "Circuit | kick",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 113
+          },
+          {
+            "pitch": 36,
+            "start": 6,
+            "length": 1,
+            "velocity": 99
+          },
+          {
+            "pitch": 36,
+            "start": 8,
+            "length": 1,
+            "velocity": 105
+          },
+          {
+            "pitch": 36,
+            "start": 14,
+            "length": 1,
+            "velocity": 93
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "name": "Circuit | backbeat",
+        "instrument": 11,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 4,
+            "length": 1,
+            "velocity": 102
+          },
+          {
+            "pitch": 81,
+            "start": 12,
+            "length": 1,
+            "velocity": 110
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "name": "Circuit | hats",
+        "instrument": 12,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 0,
+            "length": 1,
+            "velocity": 70
+          },
+          {
+            "pitch": 108,
+            "start": 1,
+            "length": 1,
+            "velocity": 35
+          },
+          {
+            "pitch": 108,
+            "start": 2,
+            "length": 1,
+            "velocity": 56
+          },
+          {
+            "pitch": 108,
+            "start": 3,
+            "length": 1,
+            "velocity": 35
+          },
+          {
+            "pitch": 108,
+            "start": 4,
+            "length": 1,
+            "velocity": 70
+          },
+          {
+            "pitch": 108,
+            "start": 5,
+            "length": 1,
+            "velocity": 35
+          },
+          {
+            "pitch": 108,
+            "start": 6,
+            "length": 1,
+            "velocity": 56
+          },
+          {
+            "pitch": 108,
+            "start": 8,
+            "length": 1,
+            "velocity": 70
+          },
+          {
+            "pitch": 108,
+            "start": 9,
+            "length": 1,
+            "velocity": 35
+          },
+          {
+            "pitch": 108,
+            "start": 10,
+            "length": 1,
+            "velocity": 56
+          },
+          {
+            "pitch": 108,
+            "start": 11,
+            "length": 1,
+            "velocity": 35
+          },
+          {
+            "pitch": 108,
+            "start": 12,
+            "length": 1,
+            "velocity": 70
+          },
+          {
+            "pitch": 108,
+            "start": 13,
+            "length": 1,
+            "velocity": 35
+          },
+          {
+            "pitch": 108,
+            "start": 14,
+            "length": 1,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "name": "Arrival | shimmer",
+        "instrument": 15,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 0,
+            "length": 2,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 54,
+        "name": "Circuit 2 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 71,
+            "start": 0,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 3,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 6,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 11,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 71,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 15,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 55,
+        "name": "Circuit G13 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 59,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 62,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 64,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 59,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 62,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 64,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 59,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          },
+          {
+            "pitch": 62,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          },
+          {
+            "pitch": 64,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          }
+        ]
+      },
+      {
+        "id": 56,
+        "name": "G13 | pocket stabs",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 59,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 62,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 53,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 59,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 62,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 53,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          },
+          {
+            "pitch": 59,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          },
+          {
+            "pitch": 62,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 57,
+        "name": "Circuit | glass response",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 83,
+            "start": 12,
+            "length": 1,
+            "velocity": 56
+          },
+          {
+            "pitch": 74,
+            "start": 14,
+            "length": 1,
+            "velocity": 52
+          }
+        ]
+      },
+      {
+        "id": 58,
+        "name": "Circuit G13 | bass",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 31,
+            "start": 0,
+            "length": 3,
+            "velocity": 103
+          },
+          {
+            "pitch": 38,
+            "start": 5,
+            "length": 1,
+            "velocity": 87
+          },
+          {
+            "pitch": 43,
+            "start": 7,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 31,
+            "start": 10,
+            "length": 2,
+            "velocity": 97
+          },
+          {
+            "pitch": 38,
+            "start": 14,
+            "length": 1,
+            "velocity": 86
+          }
+        ]
+      },
+      {
+        "id": 59,
+        "name": "Funk | open breath",
+        "instrument": 13,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 6,
+            "length": 1,
+            "velocity": 64
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "name": "Circuit | kick",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 112
+          },
+          {
+            "pitch": 36,
+            "start": 3,
+            "length": 1,
+            "velocity": 91
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 1,
+            "velocity": 104
+          }
+        ]
+      },
+      {
+        "id": 61,
+        "name": "Circuit | backbeat",
+        "instrument": 11,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 4,
+            "length": 1,
+            "velocity": 102
+          },
+          {
+            "pitch": 81,
+            "start": 11,
+            "length": 1,
+            "velocity": 43
+          },
+          {
+            "pitch": 81,
+            "start": 12,
+            "length": 1,
+            "velocity": 110
+          }
+        ]
+      },
+      {
+        "id": 62,
+        "name": "Circuit 3 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 3,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 6,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 77,
+            "start": 10,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 12,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 63,
+        "name": "Circuit 4 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 71,
+            "start": 0,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 6,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 67,
+            "start": 8,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 64,
+        "name": "G13 | pocket stabs",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 59,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 62,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 53,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 59,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 62,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          }
+        ]
+      },
+      {
+        "id": 65,
+        "name": "Circuit | hats",
+        "instrument": 12,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 0,
+            "length": 1,
+            "velocity": 70
+          },
+          {
+            "pitch": 108,
+            "start": 1,
+            "length": 1,
+            "velocity": 35
+          },
+          {
+            "pitch": 108,
+            "start": 2,
+            "length": 1,
+            "velocity": 56
+          },
+          {
+            "pitch": 108,
+            "start": 3,
+            "length": 1,
+            "velocity": 35
+          },
+          {
+            "pitch": 108,
+            "start": 4,
+            "length": 1,
+            "velocity": 70
+          },
+          {
+            "pitch": 108,
+            "start": 5,
+            "length": 1,
+            "velocity": 35
+          },
+          {
+            "pitch": 108,
+            "start": 6,
+            "length": 1,
+            "velocity": 56
+          },
+          {
+            "pitch": 108,
+            "start": 8,
+            "length": 1,
+            "velocity": 70
+          },
+          {
+            "pitch": 108,
+            "start": 9,
+            "length": 1,
+            "velocity": 35
+          },
+          {
+            "pitch": 108,
+            "start": 10,
+            "length": 1,
+            "velocity": 56
+          },
+          {
+            "pitch": 108,
+            "start": 11,
+            "length": 1,
+            "velocity": 35
+          }
+        ]
+      },
+      {
+        "id": 66,
+        "name": "Circuit 5 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 77,
+            "start": 0,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 3,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 6,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 70,
+            "start": 11,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 67,
+        "name": "Circuit Bbmaj7 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 57,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 58,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 62,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 57,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 58,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 62,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 57,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          },
+          {
+            "pitch": 58,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          },
+          {
+            "pitch": 62,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          }
+        ]
+      },
+      {
+        "id": 68,
+        "name": "Bbmaj7 | pocket stabs",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 57,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 58,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 53,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 57,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 58,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 53,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          },
+          {
+            "pitch": 57,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          },
+          {
+            "pitch": 58,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 69,
+        "name": "Circuit Bbmaj7 | bass",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 34,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 46,
+            "start": 3,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 34,
+            "start": 6,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 41,
+            "start": 10,
+            "length": 1,
+            "velocity": 87
+          },
+          {
+            "pitch": 34,
+            "start": 12,
+            "length": 2,
+            "velocity": 99
+          },
+          {
+            "pitch": 46,
+            "start": 15,
+            "length": 1,
+            "velocity": 79
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "name": "Circuit 6 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 0,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 3,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 6,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 67,
+            "start": 11,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 71,
+        "name": "Circuit C6 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 55,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 57,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 62,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 55,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 57,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 62,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 55,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          },
+          {
+            "pitch": 57,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          },
+          {
+            "pitch": 62,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          }
+        ]
+      },
+      {
+        "id": 72,
+        "name": "C6 | pocket stabs",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 52,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 55,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 57,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 52,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 55,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 57,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 52,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          },
+          {
+            "pitch": 55,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          },
+          {
+            "pitch": 57,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 73,
+        "name": "Circuit | glass response",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 79,
+            "start": 12,
+            "length": 1,
+            "velocity": 56
+          },
+          {
+            "pitch": 69,
+            "start": 14,
+            "length": 1,
+            "velocity": 52
+          }
+        ]
+      },
+      {
+        "id": 74,
+        "name": "Circuit C6 | bass",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 3,
+            "velocity": 103
+          },
+          {
+            "pitch": 43,
+            "start": 5,
+            "length": 1,
+            "velocity": 87
+          },
+          {
+            "pitch": 48,
+            "start": 7,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 36,
+            "start": 10,
+            "length": 2,
+            "velocity": 97
+          },
+          {
+            "pitch": 43,
+            "start": 14,
+            "length": 1,
+            "velocity": 86
+          }
+        ]
+      },
+      {
+        "id": 75,
+        "name": "Circuit 7 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 67,
+            "start": 0,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 70,
+            "start": 3,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 6,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 11,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 76,
+        "name": "Circuit Ehalf | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 58,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 62,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 64,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 58,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 62,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 64,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 58,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          },
+          {
+            "pitch": 62,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          },
+          {
+            "pitch": 64,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          }
+        ]
+      },
+      {
+        "id": 77,
+        "name": "Ehalf | pocket stabs",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 55,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 58,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 62,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 55,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 58,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 62,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 55,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          },
+          {
+            "pitch": 58,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          },
+          {
+            "pitch": 62,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 78,
+        "name": "Circuit Ehalf | bass",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 40,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 52,
+            "start": 3,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 40,
+            "start": 6,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 46,
+            "start": 10,
+            "length": 1,
+            "velocity": 87
+          },
+          {
+            "pitch": 40,
+            "start": 12,
+            "length": 2,
+            "velocity": 99
+          },
+          {
+            "pitch": 52,
+            "start": 15,
+            "length": 1,
+            "velocity": 79
+          }
+        ]
+      },
+      {
+        "id": 79,
+        "name": "Circuit 8 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 73,
+            "start": 0,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 6,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 79,
+            "start": 10,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 13,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 73,
+            "start": 15,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "name": "Circuit A7 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 57,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 64,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 57,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 61,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 64,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 57,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          },
+          {
+            "pitch": 61,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          },
+          {
+            "pitch": 64,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          }
+        ]
+      },
+      {
+        "id": 81,
+        "name": "A7 | pocket stabs",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 55,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 57,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 61,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 55,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 57,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 61,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          }
+        ]
+      },
+      {
+        "id": 82,
+        "name": "Circuit | glass response",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 12,
+            "length": 1,
+            "velocity": 56
+          },
+          {
+            "pitch": 73,
+            "start": 14,
+            "length": 1,
+            "velocity": 52
+          }
+        ]
+      },
+      {
+        "id": 83,
+        "name": "Circuit A7 | bass",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 33,
+            "start": 0,
+            "length": 3,
+            "velocity": 103
+          },
+          {
+            "pitch": 40,
+            "start": 5,
+            "length": 1,
+            "velocity": 87
+          },
+          {
+            "pitch": 45,
+            "start": 7,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 33,
+            "start": 10,
+            "length": 2,
+            "velocity": 97
+          },
+          {
+            "pitch": 40,
+            "start": 14,
+            "length": 1,
+            "velocity": 86
+          }
+        ]
+      },
+      {
+        "id": 84,
+        "name": "Hook 1 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 3,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 6,
+            "length": 5,
+            "velocity": 96
+          },
+          {
+            "pitch": 77,
+            "start": 12,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 15,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 85,
+        "name": "Hook 2 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 74,
+            "start": 0,
+            "length": 5,
+            "velocity": 96
+          },
+          {
+            "pitch": 77,
+            "start": 6,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 4,
+            "velocity": 96
+          },
+          {
+            "pitch": 77,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 86,
+        "name": "Hook | glass response",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 12,
+            "length": 1,
+            "velocity": 56
+          },
+          {
+            "pitch": 70,
+            "start": 14,
+            "length": 1,
+            "velocity": 52
+          }
+        ]
+      },
+      {
+        "id": 87,
+        "name": "Hook Bbmaj7 | bass",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 34,
+            "start": 0,
+            "length": 3,
+            "velocity": 103
+          },
+          {
+            "pitch": 41,
+            "start": 5,
+            "length": 1,
+            "velocity": 87
+          },
+          {
+            "pitch": 46,
+            "start": 7,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 34,
+            "start": 10,
+            "length": 2,
+            "velocity": 97
+          },
+          {
+            "pitch": 41,
+            "start": 14,
+            "length": 1,
+            "velocity": 86
+          }
+        ]
+      },
+      {
+        "id": 88,
+        "name": "Hook 3 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 0,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 4,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 8,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 12,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 15,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 89,
+        "name": "Hook Fmaj7 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 57,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 65,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 57,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 60,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 65,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 57,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          },
+          {
+            "pitch": 60,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          },
+          {
+            "pitch": 65,
+            "start": 10,
+            "length": 2,
+            "velocity": 61
+          }
+        ]
+      },
+      {
+        "id": 90,
+        "name": "Fmaj7 | pocket stabs",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 52,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 57,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 60,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 52,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 57,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 60,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 52,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          },
+          {
+            "pitch": 57,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          },
+          {
+            "pitch": 60,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 91,
+        "name": "Hook Fmaj7 | bass",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 41,
+            "start": 0,
+            "length": 2,
+            "velocity": 105
+          },
+          {
+            "pitch": 53,
+            "start": 3,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 41,
+            "start": 6,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 48,
+            "start": 10,
+            "length": 1,
+            "velocity": 87
+          },
+          {
+            "pitch": 41,
+            "start": 12,
+            "length": 2,
+            "velocity": 99
+          },
+          {
+            "pitch": 53,
+            "start": 15,
+            "length": 1,
+            "velocity": 79
+          }
+        ]
+      },
+      {
+        "id": 92,
+        "name": "Hook 4 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 0,
+            "length": 5,
+            "velocity": 96
+          },
+          {
+            "pitch": 79,
+            "start": 6,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 8,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 12,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 15,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 93,
+        "name": "C6 | pocket stabs",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 52,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 55,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 57,
+            "start": 3,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 52,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 55,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 57,
+            "start": 9,
+            "length": 1,
+            "velocity": 58
+          }
+        ]
+      },
+      {
+        "id": 94,
+        "name": "Hook 5 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 3,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 6,
+            "length": 5,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 12,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 77,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 95,
+        "name": "Hook 6 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 79,
+            "start": 0,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 4,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 8,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 71,
+            "start": 12,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 15,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 96,
+        "name": "Hook 7 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 77,
+            "start": 0,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 4,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 8,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 70,
+            "start": 12,
+            "length": 2,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 97,
+        "name": "Hook 8 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 0,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 4,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 73,
+            "start": 8,
+            "length": 4,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 98,
+        "name": "Still here 1 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 6,
+            "velocity": 85
+          },
+          {
+            "pitch": 67,
+            "start": 8,
+            "length": 2,
+            "velocity": 85
+          },
+          {
+            "pitch": 64,
+            "start": 12,
+            "length": 3,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 99,
+        "name": "Still here Fmaj7 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 41,
+            "start": 0,
+            "length": 10,
+            "velocity": 80
+          },
+          {
+            "pitch": 48,
+            "start": 12,
+            "length": 3,
+            "velocity": 67
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "name": "Still here 2 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 67,
+            "start": 0,
+            "length": 6,
+            "velocity": 85
+          },
+          {
+            "pitch": 64,
+            "start": 8,
+            "length": 6,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 101,
+        "name": "Bridge | single light",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 74,
+            "start": 14,
+            "length": 1,
+            "velocity": 52
+          }
+        ]
+      },
+      {
+        "id": 102,
+        "name": "Still here C6 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 10,
+            "velocity": 80
+          },
+          {
+            "pitch": 43,
+            "start": 12,
+            "length": 3,
+            "velocity": 67
+          }
+        ]
+      },
+      {
+        "id": 103,
+        "name": "Still here Dm9 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 38,
+            "start": 0,
+            "length": 10,
+            "velocity": 80
+          },
+          {
+            "pitch": 45,
+            "start": 12,
+            "length": 3,
+            "velocity": 67
+          }
+        ]
+      },
+      {
+        "id": 104,
+        "name": "Still here 4 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 72,
+            "start": 0,
+            "length": 6,
+            "velocity": 85
+          },
+          {
+            "pitch": 69,
+            "start": 8,
+            "length": 6,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 105,
+        "name": "Still here Am7 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 55,
+            "start": 0,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 57,
+            "start": 1,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 64,
+            "start": 1,
+            "length": 5,
+            "velocity": 71
+          },
+          {
+            "pitch": 57,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 60,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          },
+          {
+            "pitch": 64,
+            "start": 8,
+            "length": 6,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 106,
+        "name": "Am7 | two-note air",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 55,
+            "start": 0,
+            "length": 14,
+            "velocity": 56
+          },
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 14,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 107,
+        "name": "Bridge | single light",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 14,
+            "length": 1,
+            "velocity": 52
+          }
+        ]
+      },
+      {
+        "id": 108,
+        "name": "Still here Am7 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 33,
+            "start": 0,
+            "length": 10,
+            "velocity": 80
+          },
+          {
+            "pitch": 40,
+            "start": 12,
+            "length": 3,
+            "velocity": 67
+          }
+        ]
+      },
+      {
+        "id": 109,
+        "name": "Still here 5 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 74,
+            "start": 0,
+            "length": 7,
+            "velocity": 85
+          },
+          {
+            "pitch": 77,
+            "start": 8,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 76,
+            "start": 12,
+            "length": 3,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 110,
+        "name": "Still here Bbmaj7 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 34,
+            "start": 0,
+            "length": 10,
+            "velocity": 80
+          },
+          {
+            "pitch": 41,
+            "start": 12,
+            "length": 3,
+            "velocity": 67
+          }
+        ]
+      },
+      {
+        "id": 111,
+        "name": "Still here 6 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 74,
+            "start": 0,
+            "length": 7,
+            "velocity": 85
+          },
+          {
+            "pitch": 70,
+            "start": 8,
+            "length": 6,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 112,
+        "name": "Still here Gm9 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 31,
+            "start": 0,
+            "length": 10,
+            "velocity": 80
+          },
+          {
+            "pitch": 38,
+            "start": 12,
+            "length": 3,
+            "velocity": 67
+          }
+        ]
+      },
+      {
+        "id": 113,
+        "name": "Still here 7 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 70,
+            "start": 0,
+            "length": 5,
+            "velocity": 85
+          },
+          {
+            "pitch": 67,
+            "start": 6,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 64,
+            "start": 12,
+            "length": 3,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 114,
+        "name": "Still here Ehalf | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 40,
+            "start": 0,
+            "length": 10,
+            "velocity": 80
+          },
+          {
+            "pitch": 46,
+            "start": 12,
+            "length": 3,
+            "velocity": 67
+          }
+        ]
+      },
+      {
+        "id": 115,
+        "name": "Still here 8 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 74,
+            "start": 0,
+            "length": 7,
+            "velocity": 85
+          },
+          {
+            "pitch": 73,
+            "start": 8,
+            "length": 5,
+            "velocity": 85
+          },
+          {
+            "pitch": 76,
+            "start": 14,
+            "length": 1,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 116,
+        "name": "Reconnect 1 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 72,
+            "start": 4,
+            "length": 1,
+            "velocity": 85
+          },
+          {
+            "pitch": 74,
+            "start": 6,
+            "length": 6,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 117,
+        "name": "Reconnect | kick",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 98
+          },
+          {
+            "pitch": 36,
+            "start": 8,
+            "length": 1,
+            "velocity": 93
+          }
+        ]
+      },
+      {
+        "id": 118,
+        "name": "Reconnect | backbeat",
+        "instrument": 11,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 4,
+            "length": 1,
+            "velocity": 76
+          },
+          {
+            "pitch": 81,
+            "start": 12,
+            "length": 1,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 119,
+        "name": "Reconnect | hats",
+        "instrument": 12,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 0,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 2,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 4,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 6,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 8,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 10,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 12,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 14,
+            "length": 1,
+            "velocity": 48
+          }
+        ]
+      },
+      {
+        "id": 120,
+        "name": "Reconnect 2 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 67,
+            "start": 0,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 69,
+            "start": 4,
+            "length": 1,
+            "velocity": 85
+          },
+          {
+            "pitch": 72,
+            "start": 6,
+            "length": 6,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 121,
+        "name": "Reconnect 3 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 65,
+            "start": 0,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 69,
+            "start": 4,
+            "length": 1,
+            "velocity": 85
+          },
+          {
+            "pitch": 70,
+            "start": 6,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 74,
+            "start": 12,
+            "length": 3,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 122,
+        "name": "Reconnect | hats",
+        "instrument": 12,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 0,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 1,
+            "length": 1,
+            "velocity": 30
+          },
+          {
+            "pitch": 108,
+            "start": 2,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 3,
+            "length": 1,
+            "velocity": 30
+          },
+          {
+            "pitch": 108,
+            "start": 4,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 5,
+            "length": 1,
+            "velocity": 30
+          },
+          {
+            "pitch": 108,
+            "start": 6,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 7,
+            "length": 1,
+            "velocity": 30
+          },
+          {
+            "pitch": 108,
+            "start": 8,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 9,
+            "length": 1,
+            "velocity": 30
+          },
+          {
+            "pitch": 108,
+            "start": 10,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 11,
+            "length": 1,
+            "velocity": 30
+          },
+          {
+            "pitch": 108,
+            "start": 12,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 13,
+            "length": 1,
+            "velocity": 30
+          },
+          {
+            "pitch": 108,
+            "start": 14,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 15,
+            "length": 1,
+            "velocity": 30
+          }
+        ]
+      },
+      {
+        "id": 123,
+        "name": "Reconnect 4 | lead",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 0,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 79,
+            "start": 4,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 76,
+            "start": 8,
+            "length": 2,
+            "velocity": 85
+          },
+          {
+            "pitch": 73,
+            "start": 11,
+            "length": 1,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 124,
+        "name": "Reconnect A7 | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 57,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 64,
+            "start": 0,
+            "length": 2,
+            "velocity": 67
+          },
+          {
+            "pitch": 57,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 61,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          },
+          {
+            "pitch": 64,
+            "start": 6,
+            "length": 2,
+            "velocity": 57
+          }
+        ]
+      },
+      {
+        "id": 125,
+        "name": "Reconnect A7 | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 33,
+            "start": 0,
+            "length": 7,
+            "velocity": 87
+          },
+          {
+            "pitch": 40,
+            "start": 8,
+            "length": 3,
+            "velocity": 70
+          }
+        ]
+      },
+      {
+        "id": 126,
+        "name": "Reconnect | kick",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 102
+          }
+        ]
+      },
+      {
+        "id": 127,
+        "name": "Reconnect | backbeat",
+        "instrument": 11,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 4,
+            "length": 1,
+            "velocity": 88
+          },
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 90
+          },
+          {
+            "pitch": 81,
+            "start": 10,
+            "length": 1,
+            "velocity": 70
+          },
+          {
+            "pitch": 81,
+            "start": 11,
+            "length": 1,
+            "velocity": 76
+          }
+        ]
+      },
+      {
+        "id": 128,
+        "name": "Reconnect | hats",
+        "instrument": 12,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 0,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 1,
+            "length": 1,
+            "velocity": 30
+          },
+          {
+            "pitch": 108,
+            "start": 2,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 3,
+            "length": 1,
+            "velocity": 30
+          },
+          {
+            "pitch": 108,
+            "start": 4,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 5,
+            "length": 1,
+            "velocity": 30
+          },
+          {
+            "pitch": 108,
+            "start": 6,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 7,
+            "length": 1,
+            "velocity": 30
+          },
+          {
+            "pitch": 108,
+            "start": 8,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 9,
+            "length": 1,
+            "velocity": 30
+          },
+          {
+            "pitch": 108,
+            "start": 10,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 108,
+            "start": 11,
+            "length": 1,
+            "velocity": 30
+          }
+        ]
+      },
+      {
+        "id": 129,
+        "name": "Together 1 | lead",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 3,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 6,
+            "length": 5,
+            "velocity": 96
+          },
+          {
+            "pitch": 77,
+            "start": 12,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 15,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 130,
+        "name": "Dm9 | two-note air",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 0,
+            "length": 14,
+            "velocity": 45
+          },
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 14,
+            "velocity": 45
+          }
+        ]
+      },
+      {
+        "id": 131,
+        "name": "Together 2 | lead",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 74,
+            "start": 0,
+            "length": 5,
+            "velocity": 96
+          },
+          {
+            "pitch": 77,
+            "start": 6,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 4,
+            "velocity": 96
+          },
+          {
+            "pitch": 77,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 132,
+        "name": "Bbmaj7 | two-note air",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 0,
+            "length": 14,
+            "velocity": 45
+          },
+          {
+            "pitch": 58,
+            "start": 0,
+            "length": 14,
+            "velocity": 45
+          }
+        ]
+      },
+      {
+        "id": 133,
+        "name": "Together 3 | lead",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 0,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 4,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 8,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 12,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 15,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 134,
+        "name": "Fmaj7 | two-note air",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 52,
+            "start": 0,
+            "length": 14,
+            "velocity": 45
+          },
+          {
+            "pitch": 60,
+            "start": 0,
+            "length": 14,
+            "velocity": 45
+          }
+        ]
+      },
+      {
+        "id": 135,
+        "name": "Together 4 | lead",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 0,
+            "length": 5,
+            "velocity": 96
+          },
+          {
+            "pitch": 79,
+            "start": 6,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 8,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 12,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 15,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 136,
+        "name": "C6 | two-note air",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 52,
+            "start": 0,
+            "length": 14,
+            "velocity": 45
+          },
+          {
+            "pitch": 57,
+            "start": 0,
+            "length": 14,
+            "velocity": 45
+          }
+        ]
+      },
+      {
+        "id": 137,
+        "name": "Together 5 | lead",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 3,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 6,
+            "length": 5,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 12,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 77,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 138,
+        "name": "Together 6 | lead",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 79,
+            "start": 0,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 4,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 8,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 71,
+            "start": 12,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 15,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 139,
+        "name": "G13 | two-note air",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 0,
+            "length": 14,
+            "velocity": 45
+          },
+          {
+            "pitch": 62,
+            "start": 0,
+            "length": 14,
+            "velocity": 45
+          }
+        ]
+      },
+      {
+        "id": 140,
+        "name": "Together 7 | lead",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 77,
+            "start": 0,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 4,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 8,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 70,
+            "start": 12,
+            "length": 2,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 141,
+        "name": "Together 8 | lead",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 0,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 4,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 73,
+            "start": 8,
+            "length": 4,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 142,
+        "name": "A7 | two-note air",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 55,
+            "start": 0,
+            "length": 14,
+            "velocity": 45
+          },
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 14,
+            "velocity": 45
+          }
+        ]
+      },
+      {
+        "id": 143,
+        "name": "Together 9 | lead",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 3,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 6,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 11,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 72,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 144,
+        "name": "Together 10 | lead",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 71,
+            "start": 0,
+            "length": 2,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 3,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 6,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 11,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 71,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 15,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 145,
+        "name": "Together 11 | lead",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 67,
+            "start": 0,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 70,
+            "start": 4,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 8,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 76,
+            "start": 12,
+            "length": 3,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 146,
+        "name": "Together 12 | lead",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 76,
+            "start": 0,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 74,
+            "start": 4,
+            "length": 3,
+            "velocity": 96
+          },
+          {
+            "pitch": 73,
+            "start": 8,
+            "length": 5,
+            "velocity": 96
+          },
+          {
+            "pitch": 69,
+            "start": 14,
+            "length": 1,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 147,
+        "name": "Home 1 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 3,
+            "velocity": 85
+          },
+          {
+            "pitch": 72,
+            "start": 4,
+            "length": 1,
+            "velocity": 85
+          },
+          {
+            "pitch": 74,
+            "start": 6,
+            "length": 7,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 148,
+        "name": "Home | kick",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 91
+          }
+        ]
+      },
+      {
+        "id": 149,
+        "name": "Home 2 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 77,
+            "start": 0,
+            "length": 4,
+            "velocity": 85
+          },
+          {
+            "pitch": 76,
+            "start": 6,
+            "length": 2,
+            "velocity": 85
+          },
+          {
+            "pitch": 74,
+            "start": 10,
+            "length": 4,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 150,
+        "name": "Home 3 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 74,
+            "start": 0,
+            "length": 5,
+            "velocity": 85
+          },
+          {
+            "pitch": 73,
+            "start": 6,
+            "length": 5,
+            "velocity": 85
+          },
+          {
+            "pitch": 69,
+            "start": 12,
+            "length": 2,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 151,
+        "name": "Home 4 | lead",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 74,
+            "start": 0,
+            "length": 13,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 152,
+        "name": "Home DmEnd | piano",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 0,
+            "length": 11,
+            "velocity": 71
+          },
+          {
+            "pitch": 62,
+            "start": 0,
+            "length": 11,
+            "velocity": 71
+          },
+          {
+            "pitch": 57,
+            "start": 1,
+            "length": 11,
+            "velocity": 71
+          },
+          {
+            "pitch": 64,
+            "start": 1,
+            "length": 11,
+            "velocity": 71
+          }
+        ]
+      },
+      {
+        "id": 153,
+        "name": "DmEnd | two-note air",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 53,
+            "start": 0,
+            "length": 15,
+            "velocity": 56
+          },
+          {
+            "pitch": 62,
+            "start": 0,
+            "length": 15,
+            "velocity": 56
+          }
+        ]
+      },
+      {
+        "id": 154,
+        "name": "Home DmEnd | bass",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 38,
+            "start": 0,
+            "length": 14,
+            "velocity": 85
+          }
+        ]
+      },
+      {
+        "id": 155,
+        "name": "Arrival | shimmer",
+        "instrument": 15,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 0,
+            "length": 2,
+            "velocity": 48
+          }
+        ]
+      }
+    ],
+    "tracks": [
+      {
+        "id": 1,
+        "name": "01 | Theme and hook",
+        "muted": false,
+        "volume": 100,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 1
+          },
+          {
+            "bar": 1,
+            "pattern": 5
+          },
+          {
+            "bar": 2,
+            "pattern": 9
+          },
+          {
+            "bar": 3,
+            "pattern": 13
+          },
+          {
+            "bar": 4,
+            "pattern": 17
+          },
+          {
+            "bar": 5,
+            "pattern": 23
+          },
+          {
+            "bar": 6,
+            "pattern": 27
+          },
+          {
+            "bar": 7,
+            "pattern": 30
+          },
+          {
+            "bar": 8,
+            "pattern": 33
+          },
+          {
+            "bar": 9,
+            "pattern": 35
+          },
+          {
+            "bar": 10,
+            "pattern": 36
+          },
+          {
+            "bar": 11,
+            "pattern": 40
+          },
+          {
+            "bar": 12,
+            "pattern": 45
+          },
+          {
+            "bar": 13,
+            "pattern": 54
+          },
+          {
+            "bar": 14,
+            "pattern": 62
+          },
+          {
+            "bar": 15,
+            "pattern": 63
+          },
+          {
+            "bar": 16,
+            "pattern": 66
+          },
+          {
+            "bar": 17,
+            "pattern": 70
+          },
+          {
+            "bar": 18,
+            "pattern": 75
+          },
+          {
+            "bar": 19,
+            "pattern": 79
+          },
+          {
+            "bar": 20,
+            "pattern": 84
+          },
+          {
+            "bar": 21,
+            "pattern": 85
+          },
+          {
+            "bar": 22,
+            "pattern": 88
+          },
+          {
+            "bar": 23,
+            "pattern": 92
+          },
+          {
+            "bar": 24,
+            "pattern": 94
+          },
+          {
+            "bar": 25,
+            "pattern": 95
+          },
+          {
+            "bar": 26,
+            "pattern": 96
+          },
+          {
+            "bar": 27,
+            "pattern": 97
+          },
+          {
+            "bar": 28,
+            "pattern": 98
+          },
+          {
+            "bar": 29,
+            "pattern": 100
+          },
+          {
+            "bar": 30,
+            "pattern": 35
+          },
+          {
+            "bar": 31,
+            "pattern": 104
+          },
+          {
+            "bar": 32,
+            "pattern": 109
+          },
+          {
+            "bar": 33,
+            "pattern": 111
+          },
+          {
+            "bar": 34,
+            "pattern": 113
+          },
+          {
+            "bar": 35,
+            "pattern": 115
+          },
+          {
+            "bar": 36,
+            "pattern": 116
+          },
+          {
+            "bar": 37,
+            "pattern": 120
+          },
+          {
+            "bar": 38,
+            "pattern": 121
+          },
+          {
+            "bar": 39,
+            "pattern": 123
+          },
+          {
+            "bar": 40,
+            "pattern": 129
+          },
+          {
+            "bar": 41,
+            "pattern": 131
+          },
+          {
+            "bar": 42,
+            "pattern": 133
+          },
+          {
+            "bar": 43,
+            "pattern": 135
+          },
+          {
+            "bar": 44,
+            "pattern": 137
+          },
+          {
+            "bar": 45,
+            "pattern": 138
+          },
+          {
+            "bar": 46,
+            "pattern": 140
+          },
+          {
+            "bar": 47,
+            "pattern": 141
+          },
+          {
+            "bar": 48,
+            "pattern": 143
+          },
+          {
+            "bar": 49,
+            "pattern": 144
+          },
+          {
+            "bar": 50,
+            "pattern": 145
+          },
+          {
+            "bar": 51,
+            "pattern": 146
+          },
+          {
+            "bar": 52,
+            "pattern": 147
+          },
+          {
+            "bar": 53,
+            "pattern": 149
+          },
+          {
+            "bar": 54,
+            "pattern": 150
+          },
+          {
+            "bar": 55,
+            "pattern": 151
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "02 | Electric piano",
+        "muted": false,
+        "volume": 100,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 2
+          },
+          {
+            "bar": 1,
+            "pattern": 6
+          },
+          {
+            "bar": 2,
+            "pattern": 10
+          },
+          {
+            "bar": 3,
+            "pattern": 14
+          },
+          {
+            "bar": 4,
+            "pattern": 18
+          },
+          {
+            "bar": 5,
+            "pattern": 24
+          },
+          {
+            "bar": 6,
+            "pattern": 28
+          },
+          {
+            "bar": 7,
+            "pattern": 31
+          },
+          {
+            "bar": 8,
+            "pattern": 24
+          },
+          {
+            "bar": 9,
+            "pattern": 18
+          },
+          {
+            "bar": 10,
+            "pattern": 37
+          },
+          {
+            "bar": 11,
+            "pattern": 41
+          },
+          {
+            "bar": 12,
+            "pattern": 46
+          },
+          {
+            "bar": 13,
+            "pattern": 55
+          },
+          {
+            "bar": 14,
+            "pattern": 46
+          },
+          {
+            "bar": 15,
+            "pattern": 55
+          },
+          {
+            "bar": 16,
+            "pattern": 67
+          },
+          {
+            "bar": 17,
+            "pattern": 71
+          },
+          {
+            "bar": 18,
+            "pattern": 76
+          },
+          {
+            "bar": 19,
+            "pattern": 80
+          },
+          {
+            "bar": 20,
+            "pattern": 46
+          },
+          {
+            "bar": 21,
+            "pattern": 67
+          },
+          {
+            "bar": 22,
+            "pattern": 89
+          },
+          {
+            "bar": 23,
+            "pattern": 71
+          },
+          {
+            "bar": 24,
+            "pattern": 46
+          },
+          {
+            "bar": 25,
+            "pattern": 55
+          },
+          {
+            "bar": 26,
+            "pattern": 67
+          },
+          {
+            "bar": 27,
+            "pattern": 80
+          },
+          {
+            "bar": 28,
+            "pattern": 28
+          },
+          {
+            "bar": 29,
+            "pattern": 31
+          },
+          {
+            "bar": 30,
+            "pattern": 18
+          },
+          {
+            "bar": 31,
+            "pattern": 105
+          },
+          {
+            "bar": 32,
+            "pattern": 24
+          },
+          {
+            "bar": 33,
+            "pattern": 24
+          },
+          {
+            "bar": 34,
+            "pattern": 37
+          },
+          {
+            "bar": 35,
+            "pattern": 41
+          },
+          {
+            "bar": 36,
+            "pattern": 46
+          },
+          {
+            "bar": 37,
+            "pattern": 71
+          },
+          {
+            "bar": 38,
+            "pattern": 67
+          },
+          {
+            "bar": 39,
+            "pattern": 124
+          },
+          {
+            "bar": 40,
+            "pattern": 46
+          },
+          {
+            "bar": 41,
+            "pattern": 67
+          },
+          {
+            "bar": 42,
+            "pattern": 89
+          },
+          {
+            "bar": 43,
+            "pattern": 71
+          },
+          {
+            "bar": 44,
+            "pattern": 46
+          },
+          {
+            "bar": 45,
+            "pattern": 55
+          },
+          {
+            "bar": 46,
+            "pattern": 67
+          },
+          {
+            "bar": 47,
+            "pattern": 80
+          },
+          {
+            "bar": 48,
+            "pattern": 46
+          },
+          {
+            "bar": 49,
+            "pattern": 55
+          },
+          {
+            "bar": 50,
+            "pattern": 76
+          },
+          {
+            "bar": 51,
+            "pattern": 80
+          },
+          {
+            "bar": 52,
+            "pattern": 18
+          },
+          {
+            "bar": 53,
+            "pattern": 24
+          },
+          {
+            "bar": 54,
+            "pattern": 41
+          },
+          {
+            "bar": 55,
+            "pattern": 152
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "03 | Offbeat chords",
+        "muted": false,
+        "volume": 100,
+        "clips": [
+          {
+            "bar": 12,
+            "pattern": 47
+          },
+          {
+            "bar": 13,
+            "pattern": 56
+          },
+          {
+            "bar": 14,
+            "pattern": 47
+          },
+          {
+            "bar": 15,
+            "pattern": 64
+          },
+          {
+            "bar": 16,
+            "pattern": 68
+          },
+          {
+            "bar": 17,
+            "pattern": 72
+          },
+          {
+            "bar": 18,
+            "pattern": 77
+          },
+          {
+            "bar": 19,
+            "pattern": 81
+          },
+          {
+            "bar": 20,
+            "pattern": 47
+          },
+          {
+            "bar": 21,
+            "pattern": 68
+          },
+          {
+            "bar": 22,
+            "pattern": 90
+          },
+          {
+            "bar": 23,
+            "pattern": 93
+          },
+          {
+            "bar": 24,
+            "pattern": 47
+          },
+          {
+            "bar": 25,
+            "pattern": 56
+          },
+          {
+            "bar": 26,
+            "pattern": 68
+          },
+          {
+            "bar": 27,
+            "pattern": 81
+          },
+          {
+            "bar": 40,
+            "pattern": 47
+          },
+          {
+            "bar": 41,
+            "pattern": 68
+          },
+          {
+            "bar": 42,
+            "pattern": 90
+          },
+          {
+            "bar": 43,
+            "pattern": 93
+          },
+          {
+            "bar": 44,
+            "pattern": 47
+          },
+          {
+            "bar": 45,
+            "pattern": 56
+          },
+          {
+            "bar": 46,
+            "pattern": 68
+          },
+          {
+            "bar": 47,
+            "pattern": 81
+          },
+          {
+            "bar": 48,
+            "pattern": 47
+          },
+          {
+            "bar": 49,
+            "pattern": 56
+          },
+          {
+            "bar": 50,
+            "pattern": 77
+          },
+          {
+            "bar": 51,
+            "pattern": 81
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "04 | Warm air",
+        "muted": false,
+        "volume": 100,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 3
+          },
+          {
+            "bar": 1,
+            "pattern": 7
+          },
+          {
+            "bar": 2,
+            "pattern": 11
+          },
+          {
+            "bar": 3,
+            "pattern": 15
+          },
+          {
+            "bar": 4,
+            "pattern": 3
+          },
+          {
+            "bar": 5,
+            "pattern": 7
+          },
+          {
+            "bar": 6,
+            "pattern": 11
+          },
+          {
+            "bar": 7,
+            "pattern": 15
+          },
+          {
+            "bar": 8,
+            "pattern": 7
+          },
+          {
+            "bar": 9,
+            "pattern": 3
+          },
+          {
+            "bar": 10,
+            "pattern": 38
+          },
+          {
+            "bar": 11,
+            "pattern": 42
+          },
+          {
+            "bar": 28,
+            "pattern": 11
+          },
+          {
+            "bar": 29,
+            "pattern": 15
+          },
+          {
+            "bar": 30,
+            "pattern": 3
+          },
+          {
+            "bar": 31,
+            "pattern": 106
+          },
+          {
+            "bar": 32,
+            "pattern": 7
+          },
+          {
+            "bar": 33,
+            "pattern": 7
+          },
+          {
+            "bar": 34,
+            "pattern": 38
+          },
+          {
+            "bar": 35,
+            "pattern": 42
+          },
+          {
+            "bar": 40,
+            "pattern": 130
+          },
+          {
+            "bar": 41,
+            "pattern": 132
+          },
+          {
+            "bar": 42,
+            "pattern": 134
+          },
+          {
+            "bar": 43,
+            "pattern": 136
+          },
+          {
+            "bar": 44,
+            "pattern": 130
+          },
+          {
+            "bar": 45,
+            "pattern": 139
+          },
+          {
+            "bar": 46,
+            "pattern": 132
+          },
+          {
+            "bar": 47,
+            "pattern": 142
+          },
+          {
+            "bar": 52,
+            "pattern": 3
+          },
+          {
+            "bar": 53,
+            "pattern": 7
+          },
+          {
+            "bar": 54,
+            "pattern": 42
+          },
+          {
+            "bar": 55,
+            "pattern": 153
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "05 | Answering glass",
+        "muted": false,
+        "volume": 100,
+        "clips": [
+          {
+            "bar": 13,
+            "pattern": 57
+          },
+          {
+            "bar": 15,
+            "pattern": 57
+          },
+          {
+            "bar": 17,
+            "pattern": 73
+          },
+          {
+            "bar": 19,
+            "pattern": 82
+          },
+          {
+            "bar": 21,
+            "pattern": 86
+          },
+          {
+            "bar": 23,
+            "pattern": 73
+          },
+          {
+            "bar": 25,
+            "pattern": 57
+          },
+          {
+            "bar": 27,
+            "pattern": 82
+          },
+          {
+            "bar": 29,
+            "pattern": 101
+          },
+          {
+            "bar": 31,
+            "pattern": 107
+          },
+          {
+            "bar": 33,
+            "pattern": 101
+          },
+          {
+            "bar": 41,
+            "pattern": 86
+          },
+          {
+            "bar": 43,
+            "pattern": 73
+          },
+          {
+            "bar": 45,
+            "pattern": 57
+          },
+          {
+            "bar": 47,
+            "pattern": 82
+          },
+          {
+            "bar": 49,
+            "pattern": 57
+          },
+          {
+            "bar": 51,
+            "pattern": 82
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "06 | Bass pocket",
+        "muted": false,
+        "volume": 100,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 4
+          },
+          {
+            "bar": 1,
+            "pattern": 8
+          },
+          {
+            "bar": 2,
+            "pattern": 12
+          },
+          {
+            "bar": 3,
+            "pattern": 16
+          },
+          {
+            "bar": 4,
+            "pattern": 19
+          },
+          {
+            "bar": 5,
+            "pattern": 25
+          },
+          {
+            "bar": 6,
+            "pattern": 29
+          },
+          {
+            "bar": 7,
+            "pattern": 32
+          },
+          {
+            "bar": 8,
+            "pattern": 34
+          },
+          {
+            "bar": 9,
+            "pattern": 19
+          },
+          {
+            "bar": 10,
+            "pattern": 39
+          },
+          {
+            "bar": 11,
+            "pattern": 43
+          },
+          {
+            "bar": 12,
+            "pattern": 48
+          },
+          {
+            "bar": 13,
+            "pattern": 58
+          },
+          {
+            "bar": 14,
+            "pattern": 48
+          },
+          {
+            "bar": 15,
+            "pattern": 58
+          },
+          {
+            "bar": 16,
+            "pattern": 69
+          },
+          {
+            "bar": 17,
+            "pattern": 74
+          },
+          {
+            "bar": 18,
+            "pattern": 78
+          },
+          {
+            "bar": 19,
+            "pattern": 83
+          },
+          {
+            "bar": 20,
+            "pattern": 48
+          },
+          {
+            "bar": 21,
+            "pattern": 87
+          },
+          {
+            "bar": 22,
+            "pattern": 91
+          },
+          {
+            "bar": 23,
+            "pattern": 74
+          },
+          {
+            "bar": 24,
+            "pattern": 48
+          },
+          {
+            "bar": 25,
+            "pattern": 58
+          },
+          {
+            "bar": 26,
+            "pattern": 69
+          },
+          {
+            "bar": 27,
+            "pattern": 83
+          },
+          {
+            "bar": 28,
+            "pattern": 99
+          },
+          {
+            "bar": 29,
+            "pattern": 102
+          },
+          {
+            "bar": 30,
+            "pattern": 103
+          },
+          {
+            "bar": 31,
+            "pattern": 108
+          },
+          {
+            "bar": 32,
+            "pattern": 110
+          },
+          {
+            "bar": 33,
+            "pattern": 112
+          },
+          {
+            "bar": 34,
+            "pattern": 114
+          },
+          {
+            "bar": 35,
+            "pattern": 108
+          },
+          {
+            "bar": 36,
+            "pattern": 19
+          },
+          {
+            "bar": 37,
+            "pattern": 32
+          },
+          {
+            "bar": 38,
+            "pattern": 25
+          },
+          {
+            "bar": 39,
+            "pattern": 125
+          },
+          {
+            "bar": 40,
+            "pattern": 48
+          },
+          {
+            "bar": 41,
+            "pattern": 87
+          },
+          {
+            "bar": 42,
+            "pattern": 91
+          },
+          {
+            "bar": 43,
+            "pattern": 74
+          },
+          {
+            "bar": 44,
+            "pattern": 48
+          },
+          {
+            "bar": 45,
+            "pattern": 58
+          },
+          {
+            "bar": 46,
+            "pattern": 69
+          },
+          {
+            "bar": 47,
+            "pattern": 83
+          },
+          {
+            "bar": 48,
+            "pattern": 48
+          },
+          {
+            "bar": 49,
+            "pattern": 58
+          },
+          {
+            "bar": 50,
+            "pattern": 78
+          },
+          {
+            "bar": 51,
+            "pattern": 83
+          },
+          {
+            "bar": 52,
+            "pattern": 19
+          },
+          {
+            "bar": 53,
+            "pattern": 25
+          },
+          {
+            "bar": 54,
+            "pattern": 43
+          },
+          {
+            "bar": 55,
+            "pattern": 154
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "07 | Kick",
+        "muted": false,
+        "volume": 100,
+        "clips": [
+          {
+            "bar": 4,
+            "pattern": 20
+          },
+          {
+            "bar": 5,
+            "pattern": 26
+          },
+          {
+            "bar": 6,
+            "pattern": 20
+          },
+          {
+            "bar": 7,
+            "pattern": 26
+          },
+          {
+            "bar": 8,
+            "pattern": 20
+          },
+          {
+            "bar": 9,
+            "pattern": 26
+          },
+          {
+            "bar": 10,
+            "pattern": 20
+          },
+          {
+            "bar": 11,
+            "pattern": 26
+          },
+          {
+            "bar": 12,
+            "pattern": 50
+          },
+          {
+            "bar": 13,
+            "pattern": 60
+          },
+          {
+            "bar": 14,
+            "pattern": 50
+          },
+          {
+            "bar": 15,
+            "pattern": 60
+          },
+          {
+            "bar": 16,
+            "pattern": 50
+          },
+          {
+            "bar": 17,
+            "pattern": 60
+          },
+          {
+            "bar": 18,
+            "pattern": 50
+          },
+          {
+            "bar": 19,
+            "pattern": 60
+          },
+          {
+            "bar": 20,
+            "pattern": 50
+          },
+          {
+            "bar": 21,
+            "pattern": 60
+          },
+          {
+            "bar": 22,
+            "pattern": 50
+          },
+          {
+            "bar": 23,
+            "pattern": 60
+          },
+          {
+            "bar": 24,
+            "pattern": 50
+          },
+          {
+            "bar": 25,
+            "pattern": 60
+          },
+          {
+            "bar": 26,
+            "pattern": 50
+          },
+          {
+            "bar": 27,
+            "pattern": 60
+          },
+          {
+            "bar": 32,
+            "pattern": 20
+          },
+          {
+            "bar": 33,
+            "pattern": 26
+          },
+          {
+            "bar": 34,
+            "pattern": 20
+          },
+          {
+            "bar": 35,
+            "pattern": 26
+          },
+          {
+            "bar": 36,
+            "pattern": 117
+          },
+          {
+            "bar": 37,
+            "pattern": 117
+          },
+          {
+            "bar": 38,
+            "pattern": 117
+          },
+          {
+            "bar": 39,
+            "pattern": 126
+          },
+          {
+            "bar": 40,
+            "pattern": 50
+          },
+          {
+            "bar": 41,
+            "pattern": 60
+          },
+          {
+            "bar": 42,
+            "pattern": 50
+          },
+          {
+            "bar": 43,
+            "pattern": 60
+          },
+          {
+            "bar": 44,
+            "pattern": 50
+          },
+          {
+            "bar": 45,
+            "pattern": 60
+          },
+          {
+            "bar": 46,
+            "pattern": 50
+          },
+          {
+            "bar": 47,
+            "pattern": 60
+          },
+          {
+            "bar": 48,
+            "pattern": 50
+          },
+          {
+            "bar": 49,
+            "pattern": 60
+          },
+          {
+            "bar": 50,
+            "pattern": 50
+          },
+          {
+            "bar": 51,
+            "pattern": 60
+          },
+          {
+            "bar": 52,
+            "pattern": 148
+          },
+          {
+            "bar": 55,
+            "pattern": 148
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "08 | Snare",
+        "muted": false,
+        "volume": 100,
+        "clips": [
+          {
+            "bar": 4,
+            "pattern": 21
+          },
+          {
+            "bar": 5,
+            "pattern": 21
+          },
+          {
+            "bar": 6,
+            "pattern": 21
+          },
+          {
+            "bar": 7,
+            "pattern": 21
+          },
+          {
+            "bar": 8,
+            "pattern": 21
+          },
+          {
+            "bar": 9,
+            "pattern": 21
+          },
+          {
+            "bar": 10,
+            "pattern": 21
+          },
+          {
+            "bar": 11,
+            "pattern": 21
+          },
+          {
+            "bar": 12,
+            "pattern": 51
+          },
+          {
+            "bar": 13,
+            "pattern": 61
+          },
+          {
+            "bar": 14,
+            "pattern": 51
+          },
+          {
+            "bar": 15,
+            "pattern": 61
+          },
+          {
+            "bar": 16,
+            "pattern": 51
+          },
+          {
+            "bar": 17,
+            "pattern": 61
+          },
+          {
+            "bar": 18,
+            "pattern": 51
+          },
+          {
+            "bar": 19,
+            "pattern": 61
+          },
+          {
+            "bar": 20,
+            "pattern": 51
+          },
+          {
+            "bar": 21,
+            "pattern": 61
+          },
+          {
+            "bar": 22,
+            "pattern": 51
+          },
+          {
+            "bar": 23,
+            "pattern": 61
+          },
+          {
+            "bar": 24,
+            "pattern": 51
+          },
+          {
+            "bar": 25,
+            "pattern": 61
+          },
+          {
+            "bar": 26,
+            "pattern": 51
+          },
+          {
+            "bar": 27,
+            "pattern": 61
+          },
+          {
+            "bar": 32,
+            "pattern": 21
+          },
+          {
+            "bar": 33,
+            "pattern": 21
+          },
+          {
+            "bar": 34,
+            "pattern": 21
+          },
+          {
+            "bar": 35,
+            "pattern": 21
+          },
+          {
+            "bar": 36,
+            "pattern": 118
+          },
+          {
+            "bar": 37,
+            "pattern": 118
+          },
+          {
+            "bar": 38,
+            "pattern": 118
+          },
+          {
+            "bar": 39,
+            "pattern": 127
+          },
+          {
+            "bar": 40,
+            "pattern": 51
+          },
+          {
+            "bar": 41,
+            "pattern": 61
+          },
+          {
+            "bar": 42,
+            "pattern": 51
+          },
+          {
+            "bar": 43,
+            "pattern": 61
+          },
+          {
+            "bar": 44,
+            "pattern": 51
+          },
+          {
+            "bar": 45,
+            "pattern": 61
+          },
+          {
+            "bar": 46,
+            "pattern": 51
+          },
+          {
+            "bar": 47,
+            "pattern": 61
+          },
+          {
+            "bar": 48,
+            "pattern": 51
+          },
+          {
+            "bar": 49,
+            "pattern": 61
+          },
+          {
+            "bar": 50,
+            "pattern": 51
+          },
+          {
+            "bar": 51,
+            "pattern": 61
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "09 | Closed hat",
+        "muted": false,
+        "volume": 100,
+        "clips": [
+          {
+            "bar": 4,
+            "pattern": 22
+          },
+          {
+            "bar": 5,
+            "pattern": 22
+          },
+          {
+            "bar": 6,
+            "pattern": 22
+          },
+          {
+            "bar": 7,
+            "pattern": 22
+          },
+          {
+            "bar": 8,
+            "pattern": 22
+          },
+          {
+            "bar": 9,
+            "pattern": 22
+          },
+          {
+            "bar": 10,
+            "pattern": 22
+          },
+          {
+            "bar": 11,
+            "pattern": 22
+          },
+          {
+            "bar": 12,
+            "pattern": 52
+          },
+          {
+            "bar": 13,
+            "pattern": 52
+          },
+          {
+            "bar": 14,
+            "pattern": 52
+          },
+          {
+            "bar": 15,
+            "pattern": 65
+          },
+          {
+            "bar": 16,
+            "pattern": 52
+          },
+          {
+            "bar": 17,
+            "pattern": 52
+          },
+          {
+            "bar": 18,
+            "pattern": 52
+          },
+          {
+            "bar": 19,
+            "pattern": 65
+          },
+          {
+            "bar": 20,
+            "pattern": 52
+          },
+          {
+            "bar": 21,
+            "pattern": 52
+          },
+          {
+            "bar": 22,
+            "pattern": 52
+          },
+          {
+            "bar": 23,
+            "pattern": 65
+          },
+          {
+            "bar": 24,
+            "pattern": 52
+          },
+          {
+            "bar": 25,
+            "pattern": 52
+          },
+          {
+            "bar": 26,
+            "pattern": 52
+          },
+          {
+            "bar": 27,
+            "pattern": 65
+          },
+          {
+            "bar": 32,
+            "pattern": 22
+          },
+          {
+            "bar": 33,
+            "pattern": 22
+          },
+          {
+            "bar": 34,
+            "pattern": 22
+          },
+          {
+            "bar": 35,
+            "pattern": 22
+          },
+          {
+            "bar": 36,
+            "pattern": 119
+          },
+          {
+            "bar": 37,
+            "pattern": 119
+          },
+          {
+            "bar": 38,
+            "pattern": 122
+          },
+          {
+            "bar": 39,
+            "pattern": 128
+          },
+          {
+            "bar": 40,
+            "pattern": 52
+          },
+          {
+            "bar": 41,
+            "pattern": 52
+          },
+          {
+            "bar": 42,
+            "pattern": 52
+          },
+          {
+            "bar": 43,
+            "pattern": 65
+          },
+          {
+            "bar": 44,
+            "pattern": 52
+          },
+          {
+            "bar": 45,
+            "pattern": 52
+          },
+          {
+            "bar": 46,
+            "pattern": 52
+          },
+          {
+            "bar": 47,
+            "pattern": 65
+          },
+          {
+            "bar": 48,
+            "pattern": 52
+          },
+          {
+            "bar": 49,
+            "pattern": 52
+          },
+          {
+            "bar": 50,
+            "pattern": 52
+          },
+          {
+            "bar": 51,
+            "pattern": 65
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "10 | Open hat",
+        "muted": false,
+        "volume": 100,
+        "clips": [
+          {
+            "bar": 12,
+            "pattern": 49
+          },
+          {
+            "bar": 13,
+            "pattern": 59
+          },
+          {
+            "bar": 14,
+            "pattern": 49
+          },
+          {
+            "bar": 15,
+            "pattern": 59
+          },
+          {
+            "bar": 16,
+            "pattern": 49
+          },
+          {
+            "bar": 17,
+            "pattern": 59
+          },
+          {
+            "bar": 18,
+            "pattern": 49
+          },
+          {
+            "bar": 19,
+            "pattern": 59
+          },
+          {
+            "bar": 20,
+            "pattern": 49
+          },
+          {
+            "bar": 21,
+            "pattern": 59
+          },
+          {
+            "bar": 22,
+            "pattern": 49
+          },
+          {
+            "bar": 23,
+            "pattern": 59
+          },
+          {
+            "bar": 24,
+            "pattern": 49
+          },
+          {
+            "bar": 25,
+            "pattern": 59
+          },
+          {
+            "bar": 26,
+            "pattern": 49
+          },
+          {
+            "bar": 27,
+            "pattern": 59
+          },
+          {
+            "bar": 40,
+            "pattern": 49
+          },
+          {
+            "bar": 41,
+            "pattern": 59
+          },
+          {
+            "bar": 42,
+            "pattern": 49
+          },
+          {
+            "bar": 43,
+            "pattern": 59
+          },
+          {
+            "bar": 44,
+            "pattern": 49
+          },
+          {
+            "bar": 45,
+            "pattern": 59
+          },
+          {
+            "bar": 46,
+            "pattern": 49
+          },
+          {
+            "bar": 47,
+            "pattern": 59
+          },
+          {
+            "bar": 48,
+            "pattern": 49
+          },
+          {
+            "bar": 49,
+            "pattern": 59
+          },
+          {
+            "bar": 50,
+            "pattern": 49
+          },
+          {
+            "bar": 51,
+            "pattern": 59
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "11 | Fills",
+        "muted": false,
+        "volume": 100,
+        "clips": [
+          {
+            "bar": 11,
+            "pattern": 44
+          },
+          {
+            "bar": 19,
+            "pattern": 44
+          },
+          {
+            "bar": 27,
+            "pattern": 44
+          },
+          {
+            "bar": 35,
+            "pattern": 44
+          },
+          {
+            "bar": 47,
+            "pattern": 44
+          },
+          {
+            "bar": 51,
+            "pattern": 44
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "12 | Section accents",
+        "muted": false,
+        "volume": 100,
+        "clips": [
+          {
+            "bar": 12,
+            "pattern": 53
+          },
+          {
+            "bar": 20,
+            "pattern": 53
+          },
+          {
+            "bar": 40,
+            "pattern": 53
+          },
+          {
+            "bar": 48,
+            "pattern": 53
+          },
+          {
+            "bar": 55,
+            "pattern": 155
+          }
+        ]
+      }
+    ],
+    "loop_range": null
+  }
+}

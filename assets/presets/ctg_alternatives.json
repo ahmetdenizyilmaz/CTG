@@ -1,0 +1,669 @@
+{
+  "format": "soundbit-presets",
+  "format_version": 1,
+  "source": "CTG Studio: original sound design and variations of bundled SoundBit presets, GPL-3.0-or-later",
+  "presets": [
+    {
+      "id": "ctg_deep_sub",
+      "category": "bass",
+      "description": "Smooth pure sub for sparse low-end foundations. C2-C3; no pitch scoop.",
+      "instrument": {
+        "name": "CTG Deep Sine Sub",
+        "voice": {
+          "type": "sine"
+        },
+        "envelope": {
+          "attack": 8,
+          "decay": 200,
+          "sustain": 85,
+          "release": 120
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 420,
+          "resonance": 8,
+          "envelope_depth": 0
+        },
+        "volume": 82,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "ctg_finger_bass",
+      "category": "bass",
+      "description": "Rounded finger-style bass with a soft attack and quick release. C2-C4.",
+      "instrument": {
+        "name": "CTG Fingered Triangle",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 9,
+          "decay": 240,
+          "sustain": 50,
+          "release": 70
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1000,
+          "resonance": 8,
+          "envelope_depth": 8
+        },
+        "volume": 78,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "ctg_rubber_bass",
+      "category": "bass",
+      "description": "Bouncy hollow pulse with a moving low-pass filter. Syncopated funk, C2-C4.",
+      "instrument": {
+        "name": "CTG Rubber Pulse",
+        "voice": {
+          "type": "pulse",
+          "duty": "half"
+        },
+        "envelope": {
+          "attack": 3,
+          "decay": 210,
+          "sustain": 38,
+          "release": 85
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 420,
+          "resonance": 28,
+          "envelope_depth": 26
+        },
+        "volume": 65,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "ctg_picked_bass",
+      "category": "bass",
+      "description": "Narrow pulse attack and muted body for walking eighth notes. C2-C4.",
+      "instrument": {
+        "name": "CTG Muted Pick Bass",
+        "voice": {
+          "type": "pulse",
+          "duty": "quarter"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 140,
+          "sustain": 20,
+          "release": 45
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1350,
+          "resonance": 10,
+          "envelope_depth": 10
+        },
+        "volume": 68,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "ctg_acid_bass_soft",
+      "category": "bass",
+      "description": "Controlled resonant saw sweep; punchy arpeggios without pitch randomness. C2-C4.",
+      "instrument": {
+        "name": "CTG Resonant Acid Bass",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "envelope": {
+          "attack": 3,
+          "decay": 180,
+          "sustain": 25,
+          "release": 60
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 350,
+          "resonance": 42,
+          "envelope_depth": 32
+        },
+        "volume": 62,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "ctg_round_fm_bass",
+      "category": "bass",
+      "description": "Gentle FM fundamentals with restrained upper harmonics. C2-C4.",
+      "instrument": {
+        "name": "CTG Round FM Bass",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 1,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 38,
+              "attack_rate": 31,
+              "decay_rate": 12,
+              "sustain_rate": 0,
+              "sustain_level": 6,
+              "release_rate": 10
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 6,
+              "sustain_rate": 2,
+              "sustain_level": 3,
+              "release_rate": 10
+            },
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 54,
+              "attack_rate": 31,
+              "decay_rate": 12,
+              "sustain_rate": 0,
+              "sustain_level": 8,
+              "release_rate": 10
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 12,
+              "attack_rate": 31,
+              "decay_rate": 6,
+              "sustain_rate": 2,
+              "sustain_level": 3,
+              "release_rate": 10
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 5,
+          "decay": 180,
+          "sustain": 65,
+          "release": 90
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1700,
+          "resonance": 8,
+          "envelope_depth": 0
+        },
+        "volume": 72,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "ctg_metal_slap_bass",
+      "category": "bass",
+      "description": "Brief metallic FM transient above a solid bass body. Funk octaves, C2-C4.",
+      "instrument": {
+        "name": "CTG Metallic Slap Bass",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 3,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 20,
+              "attack_rate": 31,
+              "decay_rate": 20,
+              "sustain_rate": 2,
+              "sustain_level": 6,
+              "release_rate": 11
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 7,
+              "sustain_rate": 2,
+              "sustain_level": 3,
+              "release_rate": 10
+            },
+            {
+              "multiple": 5,
+              "detune": 1,
+              "total_level": 40,
+              "attack_rate": 31,
+              "decay_rate": 17,
+              "sustain_rate": 2,
+              "sustain_level": 9,
+              "release_rate": 11
+            },
+            {
+              "multiple": 1,
+              "detune": -1,
+              "total_level": 8,
+              "attack_rate": 31,
+              "decay_rate": 7,
+              "sustain_rate": 2,
+              "sustain_level": 3,
+              "release_rate": 10
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 5,
+          "decay": 180,
+          "sustain": 65,
+          "release": 90
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 3200,
+          "resonance": 8,
+          "envelope_depth": 0
+        },
+        "volume": 66,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "ctg_warm_saw_bass",
+      "category": "bass",
+      "description": "Sustained low-pass saw for longer bass lines; mono and dry. C2-C3.",
+      "instrument": {
+        "name": "CTG Warm Saw Bass",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "envelope": {
+          "attack": 12,
+          "decay": 260,
+          "sustain": 72,
+          "release": 110
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 650,
+          "resonance": 12,
+          "envelope_depth": 5
+        },
+        "volume": 64,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "ctg_singing_pulse",
+      "category": "lead",
+      "description": "Soft rounded pulse lead with delayed vibrato for connected melodies. C4-C6.",
+      "instrument": {
+        "name": "CTG Singing Pulse",
+        "voice": {
+          "type": "pulse",
+          "duty": "half"
+        },
+        "envelope": {
+          "attack": 14,
+          "decay": 180,
+          "sustain": 72,
+          "release": 180
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2600,
+          "resonance": 8,
+          "envelope_depth": 0
+        },
+        "volume": 60,
+        "pan": 0,
+        "reverb_send": 18,
+        "vibrato": {
+          "depth": 9,
+          "rate": 48,
+          "delay": 240
+        }
+      }
+    },
+    {
+      "id": "ctg_velvet_reed",
+      "category": "lead",
+      "description": "Filtered saw reed with a gentle swell. Expressive hooks and bridges, C4-C6.",
+      "instrument": {
+        "name": "CTG Velvet Reed",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "envelope": {
+          "attack": 28,
+          "decay": 220,
+          "sustain": 70,
+          "release": 220
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1500,
+          "resonance": 18,
+          "envelope_depth": 6
+        },
+        "volume": 58,
+        "pan": 0,
+        "reverb_send": 22,
+        "vibrato": {
+          "depth": 7,
+          "rate": 52,
+          "delay": 300
+        }
+      }
+    },
+    {
+      "id": "ctg_glass_keys",
+      "category": "keys",
+      "description": "Bright but restrained glassy FM keys. Sparse arpeggios, C4-C6.",
+      "instrument": {
+        "name": "CTG Glass Keys",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 0,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 40,
+              "attack_rate": 31,
+              "decay_rate": 10,
+              "sustain_rate": 2,
+              "sustain_level": 8,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 4,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            },
+            {
+              "multiple": 7,
+              "detune": 0,
+              "total_level": 48,
+              "attack_rate": 31,
+              "decay_rate": 18,
+              "sustain_rate": 0,
+              "sustain_level": 15,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 6,
+              "attack_rate": 31,
+              "decay_rate": 4,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 5,
+          "decay": 180,
+          "sustain": 65,
+          "release": 90
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 4200,
+          "resonance": 8,
+          "envelope_depth": 0
+        },
+        "volume": 55,
+        "pan": 0,
+        "reverb_send": 24
+      }
+    },
+    {
+      "id": "ctg_soft_ep",
+      "category": "keys",
+      "description": "Mellow FM piano with a subdued bell transient. Chords and gentle hooks, C3-C6.",
+      "instrument": {
+        "name": "CTG Soft Electric Piano",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 0,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 43,
+              "attack_rate": 31,
+              "decay_rate": 10,
+              "sustain_rate": 2,
+              "sustain_level": 8,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 4,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            },
+            {
+              "multiple": 14,
+              "detune": 0,
+              "total_level": 75,
+              "attack_rate": 31,
+              "decay_rate": 18,
+              "sustain_rate": 0,
+              "sustain_level": 15,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 6,
+              "attack_rate": 31,
+              "decay_rate": 4,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 5,
+          "decay": 180,
+          "sustain": 65,
+          "release": 90
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2400,
+          "resonance": 8,
+          "envelope_depth": 0
+        },
+        "volume": 62,
+        "pan": 0,
+        "reverb_send": 24
+      }
+    },
+    {
+      "id": "ctg_wood_pluck",
+      "category": "plucked",
+      "description": "Dry triangle pluck with a short resonant body. Offbeat chords, C3-C6.",
+      "instrument": {
+        "name": "CTG Wooden Pluck",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 3,
+          "decay": 190,
+          "sustain": 5,
+          "release": 85
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2100,
+          "resonance": 20,
+          "envelope_depth": 12
+        },
+        "volume": 75,
+        "pan": 0,
+        "reverb_send": 10
+      }
+    },
+    {
+      "id": "ctg_bell_arp",
+      "category": "keys",
+      "description": "Short rounded FM bell for repeating arpeggios. C4-C6.",
+      "instrument": {
+        "name": "CTG Soft Bell Arp",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 2,
+          "operators": [
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 35,
+              "attack_rate": 31,
+              "decay_rate": 12,
+              "sustain_rate": 0,
+              "sustain_level": 4,
+              "release_rate": 9
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 12,
+              "sustain_rate": 0,
+              "sustain_level": 4,
+              "release_rate": 9
+            },
+            {
+              "multiple": 7,
+              "detune": 0,
+              "total_level": 55,
+              "attack_rate": 31,
+              "decay_rate": 12,
+              "sustain_rate": 0,
+              "sustain_level": 4,
+              "release_rate": 9
+            },
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 6,
+              "attack_rate": 31,
+              "decay_rate": 12,
+              "sustain_rate": 0,
+              "sustain_level": 4,
+              "release_rate": 9
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 5,
+          "decay": 180,
+          "sustain": 65,
+          "release": 90
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 3800,
+          "resonance": 8,
+          "envelope_depth": 0
+        },
+        "volume": 57,
+        "pan": 0,
+        "reverb_send": 28
+      }
+    },
+    {
+      "id": "ctg_slow_strings",
+      "category": "pad",
+      "description": "Slow filtered saw ensemble for held emotional chords. C3-C5.",
+      "instrument": {
+        "name": "CTG Slow String Pad",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "envelope": {
+          "attack": 330,
+          "decay": 600,
+          "sustain": 72,
+          "release": 700
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1400,
+          "resonance": 5,
+          "envelope_depth": 0
+        },
+        "volume": 48,
+        "pan": 0,
+        "reverb_send": 38,
+        "unison": {
+          "voices": 3,
+          "detune": 8
+        }
+      }
+    },
+    {
+      "id": "ctg_air_choir",
+      "category": "pad",
+      "description": "Soft triangle ensemble with subtle motion and a spacious tail. C3-C5.",
+      "instrument": {
+        "name": "CTG Air Choir Pad",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 220,
+          "decay": 450,
+          "sustain": 78,
+          "release": 620
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1600,
+          "resonance": 9,
+          "envelope_depth": 0
+        },
+        "volume": 58,
+        "pan": 0,
+        "reverb_send": 40,
+        "unison": {
+          "voices": 3,
+          "detune": 11
+        },
+        "vibrato": {
+          "depth": 5,
+          "rate": 38,
+          "delay": 400
+        }
+      }
+    }
+  ]
+}

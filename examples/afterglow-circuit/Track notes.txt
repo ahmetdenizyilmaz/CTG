@@ -1,0 +1,56 @@
+AFTERGLOW CIRCUIT
+An original AI-authored instrumental made entirely inside CTG Studio through MCP.
+
+Listen: Afterglow Circuit.wav
+Edit: Afterglow Circuit.sbproj
+Length: 1:50.19 including the natural ending tail; 56 bars, 124 BPM, 4/4.
+Palette: 15 native CTG instruments on 12 tracks; 155 reusable one-bar patterns.
+
+The theme begins A-C-D, reaching up toward F and falling through E to D. It is
+first played slowly by a bowed synth voice, then recast as a syncopated funk
+hook. D minor supplies the emotional center. D Dorian's B natural appears in
+the brighter G13 funk answers; the bridge opens into relative F major. A7's
+C-sharp leads home to D rather than treating every scale as a fixed note pool.
+
+0:00  Window: sparse glass, electric piano, bass and a soft two-note pad.
+0:08  Afterglow: the full bowed theme and a restrained half-time backbeat.
+0:23  Circuit: rubber bass, dry offbeat chords and a clipped version of the hook.
+0:39  Hook: longer melody peaks over the same recognizable rhythmic identity.
+0:54  Still here: a quieter F-major bridge; drums disappear for its first half.
+1:10  Reconnect: four rising phrases and a brief stop before the return.
+1:17  Together: singing pulse hook, wider harmony, then a final turnaround.
+1:41  Home: the bowed voice returns; A7 resolves to a held D-minor/add9 ending.
+
+Harmony labels in the code are compact: C6 means a C6/9 voicing without the
+fifth; Dm9 is voiced F-A-C-E above D bass. Ehalf is E half-diminished. All
+voicings, melody phrases, bass rhythms and section orders were deliberately
+written. A few sustained extensions/suspensions are intentional, including
+the bridge's D resolving to C-sharp over A7.
+
+PROOF OF WORKFLOW
+No Random song button, composition_random, composition_preview, song_compose,
+CLI compose, external synthesizer, sample pack or external audio processing.
+Python is only the score/MCP client and a read-only waveform-analysis tool.
+CTG creates every instrument/pattern/track, saves the project and exports WAV.
+The exact low-level calls and server replies are in mcp-call-audit.jsonl.
+compose.py contains the literal score and final settings, and can recreate it
+against a fresh isolated CTG session on port 17416 rooted at this directory.
+refine_mix.py records the small revision made after the first native render;
+its final settings are already included in compose.py for reproduction.
+
+QUALITY CHECKS
+Final WAV: native CTG export, 48 kHz / 16-bit stereo; no normalization or edits.
+Sample peak -3.07 dBFS; whole-song RMS -20.50 dBFS; zero full-scale samples.
+The final hook's isolated melody RMS is -24.60 dBFS versus bass -26.04 dBFS.
+Native stem inspection prompted a small lead/bell/cello level revision.
+mix-check.json includes section measurements and the full call counts.
+render-report.json includes native per-track levels. qa/ contains native
+inspection stems only; they are not alternate finished mixes.
+
+No subjective listening was available to this agent. These are composition,
+structural and numerical checks, not a claim that musical taste can be proved.
+CTG's native soft clipping remains part of its sound engine; zero full-scale
+samples alone does not prove absence of saturation.
+
+The user's desktop session and existing songs were not changed. This project
+was composed in a separate headless CTG session. No application code was edited.
