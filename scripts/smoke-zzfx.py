@@ -1,5 +1,6 @@
 """ZzFX and expression QA against the disposable desktop at CDP 9241 only."""
 import json
+import sys
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
@@ -9,6 +10,9 @@ with sync_playwright() as p:
     browser=p.chromium.connect_over_cdp('http://127.0.0.1:9241')
     page=browser.contexts[0].pages[0]
     page.set_default_timeout(15000)
+    if '--local-frontend' in sys.argv:
+        bundle=next((ROOT/'apps/desktop/dist/assets').glob('index-*.js'))
+        page.route('**/assets/index-*.js',lambda route:route.fulfill(path=str(bundle),content_type='text/javascript'))
     errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
     def call(cmd,args=None):return page.evaluate(INVOKE,[cmd,args or {}])
     def state():return call('get_state')
@@ -46,8 +50,8 @@ with sync_playwright() as p:
     assert next(p for p in reopened['song']['patterns'] if p['id']==pattern['id'])['notes'][0]==edited
     page.get_by_role('button',name='Compose',exact=True).click()
     page.get_by_role('button',name='Neon Pixel Funk recipe',exact=True).click()
-    assert page.get_by_label('Key',exact=True).input_value()=='E'
-    assert page.get_by_label('Scale',exact=True).input_value()=='dorian'
+    assert page.locator('.composer select').nth(2).input_value()=='E'
+    assert page.locator('.composer select').nth(3).input_value()=='dorian'
     page.get_by_role('button',name='Generate song',exact=True).click()
     page.wait_for_function("async()=> (await window.__TAURI_INTERNALS__.invoke('get_state')).song.meta.title==='Midnight Pixel Groove'")
     generated=state()['song'];assert all(i['voice']['type']=='zzfx' for i in generated['instruments'])
