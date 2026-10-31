@@ -16,12 +16,12 @@ synth, arrange a song, or invite an MCP-compatible AI to compose in the same ses
 - **168 factory instruments:** the existing chip, FM, orchestral and custom packs,
   58 ZzFX sounds, and 24 original-song instruments. Edit synthesis, envelopes, filters, vibrato, unison and reverb.
 - **Reset and Save preset:** restore a sound or keep it in your reusable local library.
-- **Composition lab:** seeded 16/32/48-bar arrangements with rhythmic hooks, answering
-  phrases, melodic look-ahead, spacious bridges, developed finales and recurring bass/drum grooves.
-  [Composer v3 details and research](docs/composer-v3.txt).
+- **Composition lab:** original seeded 16/32/48-bar arrangements using the restored
+  v2 generator, with motifs, voice leading, contrasting sections, swing and Euclidean bass.
+  Generate song and Random song create playable arrangements directly.
 - **Demo library:** 25 editable songs, including Neon Pixel Funk, Gravity Glissando, Pixel Sunrise, First Light and Clash of Banners. Original mastered previews are retained.
 - **ZzFX import:** open Studio `.zzfx`, literal `.js`, or `song.json`; save an editable `.sbproj`. Full procedural synthesis and tracker effects run inside CTG.
-- **Note expression:** click a note to edit slides, stepped glissando, velocity, held tails and ZzFX effects. Compose has a Neon Pixel Funk recipe for E-Dorian octave-bass funk with a reflective bridge.
+- **Note expression:** click a note to edit slides, stepped glissando, velocity, held tails and ZzFX effects.
 - Undo/redo, native `.sbproj` projects, offline stereo WAV rendering, and a CLI.
 
 The composer uses musical heuristics, not an AI model. Connected AI agents can
@@ -78,10 +78,8 @@ in the desktop and undoable. `CTG_MCP_PORT` selects another HTTP port.
 **325 native MCP calls, with no random-song or song_compose calls**. The native
 project, WAV, score script and audit are in [examples/afterglow-circuit](examples/afterglow-circuit).
 Technical checks cover score validity and audio levels; musical taste remains a
-listening judgment. [Three new generated previews](examples/composer-v3) demonstrate
-composer v3, with editable projects and reproducible recipes. Earlier featured
-examples retain their v2 arrangements. The library also preserves earlier
-Antigravity, Claude and Codex sessions.
+listening judgment. The archive preserves earlier compositions. Version 0.3.2
+restores the v2 generator; the v3 example files are historical saved projects.
 
 ## Build and verify
 

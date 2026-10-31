@@ -1,6 +1,9 @@
+HISTORICAL EXPERIMENT: shipped in 0.3.1; reverted in 0.3.2 after listening feedback.
+The active generator is v2. Song-specific recipe buttons have been removed.
+
 CTG composer v3 — phrase and melody development
 
-Use Compose > Generate song, Random song, or the Neon Pixel Funk recipe.
+This document records the previous experimental implementation.
 CLI compose and MCP song_compose / composition_random use the same engine.
 Keep Develop a recurring hook and Smooth melodic and chord movement enabled.
 New variation changes the seed while retaining your selected sounds and settings.

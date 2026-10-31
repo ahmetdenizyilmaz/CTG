@@ -13,8 +13,7 @@ you make is undoable (history_undo) and is shown to the user as an 'AI:' step.
 
 Composition: composition_defaults -> composition_preview -> song_compose with the editor_id
 and revision from song_get. The seed and full recipe are reproducible across CLI, desktop and
-MCP. For Neon Pixel Funk style use key E, scale dorian, vibe funk, neon_funk true,
-expressive_slides true, and zzfx_neon_lead/chords/bass, zzfx_midnight_keys, zzfx_neon_kick/snare/hat.
+MCP. Compose original material using the user's chosen style and instruments.
 MCP song_open imports .zzfx, literal .js and Studio .json safely; save the result as .sbproj.
 Generation replaces the song in one undo step and does not write files. pattern_develop
 inverts or shifts a motif in scale degrees. The full factory and saved-sound library, including Aloboi, PC-98,

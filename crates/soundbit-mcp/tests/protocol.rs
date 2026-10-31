@@ -382,10 +382,10 @@ async fn native_composer_previews_checks_concurrency_and_undoes() {
     let before = ok(&client, "song_get", json!({})).await;
     let recipe = json!({"seed":73,"form":"short","key":"F#","scale":"harmonic_minor"});
     let preview = ok(&client, "composition_preview", recipe.clone()).await;
-    assert_eq!(preview["composer_version"], 3);
+    assert_eq!(preview["composer_version"], 2);
     assert_eq!(
         ok(&client, "composition_defaults", json!({})).await["composer_version"],
-        3
+        2
     );
     assert_eq!(preview["bars"].as_array().expect("bars").len(), 16);
     assert_eq!(ok(&client, "song_get", json!({})).await, before);

@@ -148,14 +148,12 @@ earlier Pixel Sunrise, First Light and Clash of Banners. Original mastered previ
 a fresh native render in mastering or tail length. Starting a preview pauses
 other previews and native playback. Compose stays docked while menus are used.
 
-NEON FUNK AND NOTE EXPRESSION
-In Compose choose Neon Pixel Funk recipe, then Generate song. It loads E Dorian,
-130 BPM, syncopated octave bass, offbeat stabs and the ZzFX Neon palette. Each seed
-develops a motif through contrasting sections, a midnight bridge and a climax.
-Pickups and glissando are occasional phrase ornaments. You can change every sound.
+COMPOSING AND NOTE EXPRESSION
+In Compose use Generate song for your settings, or Random song for new settings
+and a new arrangement. Then press Play. Song-specific recipe buttons are removed.
+Version 0.3.2 restores the earlier v2 generator.
 Click a piano-roll note to edit velocity, Slide (semitones), Stepped glissando,
 Hold after block, and (for ZzFX voices) tracker effect and amount. Shift-click or
 Delete note removes it. All expression changes can be undone.
-AI can author the same notes through pattern_set_notes, or use song_compose with
-neon_funk:true and expressive_slides:true. examples/neon-funk/recipe.json is a
-complete reusable recipe for CLI or MCP. See zzfx-compatibility.txt for import.
+AI can author original notes through pattern_set_notes, or use song_compose
+with its own settings. expressive_slides:true enables generated ornaments.

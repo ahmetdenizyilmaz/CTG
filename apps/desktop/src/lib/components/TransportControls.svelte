@@ -28,7 +28,8 @@
     class="play"
     class:playing={transport.playing}
     onclick={() => void transport.toggle()}
-    title={transport.playing ? 'Stop (Space)' : 'Play (Space)'}
+    disabled={!transport.playing && !editor.state?.length_bars}
+    title={transport.playing ? 'Stop (Space)' : !editor.state?.length_bars ? 'Generate or open a song first' : 'Play (Space)'}
     aria-label={transport.playing ? 'Stop' : 'Play'}
   >
     <Icon name={transport.playing ? 'stop' : 'play'} size={18} />

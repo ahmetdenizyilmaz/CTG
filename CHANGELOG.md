@@ -1,5 +1,12 @@
 # CTG releases
 
+## 0.3.2
+
+- Restore the v2 composition algorithm after listening feedback; the same settings produce the earlier notes and arrangement.
+- Remove named-song recipe shortcuts and imitation guidance from Compose and MCP.
+- Put Generate song at the top of Compose and explain Generate -> Play.
+- Disable Play for an empty arrangement and handle the Space shortcut with a clear message.
+
 ## 0.3.1
 
 - Composer v3 builds rhythmic cells, answering phrases, phrase-end rests and developed hook returns.

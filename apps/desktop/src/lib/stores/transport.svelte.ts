@@ -14,6 +14,10 @@ class TransportStore {
   private polling = false;
 
   async play(fromBar = 0): Promise<void> {
+    if (!editor.state?.length_bars) {
+      editor.notify('Generate or open a song first.');
+      return;
+    }
     try {
       this.update(await backend.play(fromBar, this.looping));
       this.poll();

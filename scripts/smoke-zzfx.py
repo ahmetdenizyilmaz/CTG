@@ -48,19 +48,11 @@ with sync_playwright() as p:
     call('save_project',{'path':str(ROOT/'out/zzfx-expression-roundtrip.sbproj')})
     reopened=call('open_project',{'path':str(ROOT/'out/zzfx-expression-roundtrip.sbproj')})
     assert next(p for p in reopened['song']['patterns'] if p['id']==pattern['id'])['notes'][0]==edited
-    page.get_by_role('button',name='Compose',exact=True).click()
-    page.get_by_role('button',name='Neon Pixel Funk recipe',exact=True).click()
-    assert page.locator('.composer select').nth(2).input_value()=='E'
-    assert page.locator('.composer select').nth(3).input_value()=='dorian'
-    page.get_by_role('button',name='Generate song',exact=True).click()
-    page.wait_for_function("async()=> (await window.__TAURI_INTERNALS__.invoke('get_state')).song.meta.title==='Midnight Pixel Groove'")
-    generated=state()['song'];assert all(i['voice']['type']=='zzfx' for i in generated['instruments'])
-    assert any(n.get('glissando') for p in generated['patterns'] for n in p['notes'])
     page.get_by_role('button',name='Play',exact=True).click()
     page.get_by_role('button',name='Stop',exact=True).wait_for();assert call('playback_state')['playing']
     page.get_by_role('button',name='Stop',exact=True).click()
     assert not errors,errors
     report=dict(import_editable=True,zzfx_sound_edit_and_reset=True,note_expression_ui=True,
-        expression_saved_and_reopened=True,neon_recipe=True,zzfx_playback=True,javascript_errors=errors)
+        expression_saved_and_reopened=True,zzfx_playback=True,javascript_errors=errors)
     (ROOT/'out/zzfx-desktop-check.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     print(json.dumps(report,indent=2))

@@ -40,14 +40,10 @@ Shift-click deletes. Expression changes are undoable and saved in format 3.
 MCP pattern_set_notes accepts the same fields. Older projects load with slides,
 glissando and held tails off unless explicitly present.
 
-NEW FUNK SONGS
-Compose > Neon Pixel Funk recipe > Generate song. The preset sets E Dorian,
-130 BPM, syncopated octave bass, offbeat chord stabs and a ZzFX palette. A slower
-bridge and energetic climax develop the motif. Selected phrase endings/pickups
-use slides and stepped glissando. Different seeds change the composed notes.
-The same configuration is in examples/neon-funk/recipe.json for CLI and MCP.
-For deliberate AI authorship, an agent can choose these instruments and write
-its own notes/sections through the normal editing tools, without the generator.
+ORIGINAL SONGS
+Choose your own sounds in Compose and use Generate song or Random song.
+Song-specific recipe shortcuts are removed. Imported projects remain editable,
+and AI can author original notes through the normal editing tools.
 
 COMPATIBILITY LIMITS
 Uniform patterns of 4-64 rows (multiples of four), MIDI-range notes, up to 128

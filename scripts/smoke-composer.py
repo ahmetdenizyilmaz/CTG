@@ -1,4 +1,4 @@
-"""Exercise composer v3 in the isolated QA desktop (CDP 9241), never user sessions."""
+"""Generate -> Play regression in the disposable desktop at CDP 9241 only."""
 import json
 from pathlib import Path
 from playwright.sync_api import sync_playwright
@@ -13,40 +13,43 @@ with sync_playwright() as p:
     def call(cmd, args=None):
         return page.evaluate('async ([c,a])=>window.__TAURI_INTERNALS__.invoke(c,a)', [cmd,args or {}])
     def state(): return call('get_state')
-    examples = json.loads((ROOT/'examples/composer-v3/manifest.json').read_text(encoding='utf-8'))
-    for example in examples:
-        call('open_project', {'path': str(ROOT/'examples/composer-v3'/example['project'])})
-        page.reload()
-        page.get_by_role('button', name='Play', exact=True).click()
-        page.get_by_role('button', name='Stop', exact=True).wait_for()
-        assert call('playback_state')['playing']
+    def play_and_check():
+        play = page.get_by_role('button', name='Play', exact=True)
+        assert play.is_enabled()
+        play.click()
+        page.wait_for_function("async()=>{const s=await window.__TAURI_INTERNALS__.invoke('playback_state');return s.playing && s.position_seconds>0.5;}")
         page.get_by_role('button', name='Stop', exact=True).click()
-        assert state()['song']['meta']['title'] == example['title']
+    call('new_song', {'title':'Empty playback check'})
+    page.reload()
+    page.get_by_role('button', name='Compose', exact=True).wait_for()
+    assert page.get_by_role('button', name='Play', exact=True).is_disabled()
+    page.get_by_role('button', name='Compose', exact=True).click()
+    assert page.get_by_role('button', name='Neon Pixel Funk recipe', exact=True).count() == 0
     saved = state()['song']
     config = call('composition_defaults')
-    preview = call('composition_preview', {'config': config})
-    assert preview['composer_version'] == 3
-    assert state()['song'] == saved, 'Preview must not replace music'
-    page.get_by_role('button', name='Compose', exact=True).click()
-    page.get_by_role('button', name='Neon Pixel Funk recipe', exact=True).click()
-    page.get_by_label('Seed', exact=True).fill('73')
+    preview = call('composition_preview', {'config':config})
+    assert preview['composer_version'] == 2
+    assert state()['song'] == saved
+    page.locator('.composer').get_by_label('Song title', exact=True).fill('Original playback check')
+    page.get_by_label('Seed', exact=True).fill('42')
     page.get_by_role('button', name='Generate song', exact=True).click()
-    page.wait_for_function("async()=> (await window.__TAURI_INTERNALS__.invoke('get_state')).song.meta.title==='Midnight Pixel Groove'")
-    assert state()['song']['meta']['description'].startswith('CTG composer v3')
+    page.wait_for_function("async()=> (await window.__TAURI_INTERNALS__.invoke('get_state')).song.meta.title==='Original playback check'")
     generated = state()['song']
+    assert generated['patterns']
+    play_and_check()
     page.get_by_role('button', name='Random song', exact=True).click()
-    page.wait_for_function("async()=> (await window.__TAURI_INTERNALS__.invoke('get_state')).song.meta.title!=='Midnight Pixel Groove'")
-    assert state()['song']['meta']['description'].startswith('CTG composer v3')
+    page.wait_for_function("async()=> (await window.__TAURI_INTERNALS__.invoke('get_state')).song.meta.title!=='Original playback check'")
+    play_and_check()
     call('undo')
     assert state()['song'] == generated
-    call('save_project', {'path': str(ROOT/'out/composer-v3-desktop.sbproj')})
-    call('open_project', {'path': str(ROOT/'out/composer-v3-desktop.sbproj')})
+    call('save_project', {'path': str(ROOT/'out/restored-composer-desktop.sbproj')})
+    call('open_project', {'path': str(ROOT/'out/restored-composer-desktop.sbproj')})
     assert state()['song'] == generated
-    page.screenshot(path=str(ROOT/'out/composer-v3-desktop.png'))
+    page.screenshot(path=str(ROOT/'out/restored-composer-desktop.png'))
     assert not errors, errors
-    report = dict(composer_version=3, preview_non_mutating=True, generate_button=True,
-        random_song_button=True, undo=True, save_roundtrip=True,
-        example_playback=[e['title'] for e in examples], javascript_errors=errors)
-    (ROOT/'out/composer-v3-desktop-check.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
+    report = dict(composer_version=2, empty_play_disabled=True, named_recipe_removed=True,
+        preview_non_mutating=True, generate_then_play=True, random_then_play=True,
+        playback_clock_advances=True, undo=True, save_roundtrip=True, javascript_errors=errors)
+    (ROOT/'out/restored-composer-desktop-check.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
     print(json.dumps(report,indent=2))
     browser.close()

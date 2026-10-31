@@ -5,11 +5,10 @@
   import type { ComposeConfig } from '../ipc/composition';
 
   onMount(() => { void composer.init(); });
-  const features: { key: keyof Pick<ComposeConfig, 'motif_development' | 'voice_leading' | 'cadences' | 'chord_colors' | 'modal_mixture' | 'secondary_dominants' | 'suspensions' | 'neon_funk' | 'expressive_slides'>; name: string; help: string }[] = [
-    {key:'neon_funk',name:'Neon funk groove',help:'Syncopated octave bass and offbeat chord stabs.'},
+  const features: { key: keyof Pick<ComposeConfig, 'motif_development' | 'voice_leading' | 'cadences' | 'chord_colors' | 'modal_mixture' | 'secondary_dominants' | 'suspensions' | 'expressive_slides'>; name: string; help: string }[] = [
     {key:'expressive_slides',name:'Slides and glissando',help:'Pitch scoops and a rising stepped solo in the climax.'},
-    { key: 'motif_development', name: 'Develop a recurring hook', help: 'Rhythmic cells, answering phrases, a spacious bridge and a developed final chorus.' },
-    { key: 'voice_leading', name: 'Smooth melodic and chord movement', help: 'Plan a melodic route to each destination, resolve passing notes and recover from leaps.' },
+    { key: 'motif_development', name: 'Develop a recurring hook', help: 'Related variations, a slower bridge and a faster climax.' },
+    { key: 'voice_leading', name: 'Smooth melodic and chord movement', help: 'Prefer nearby notes and connected chord inversions.' },
     { key: 'cadences', name: 'Build tension and resolve endings', help: 'Coordinated phrase endings and a final home chord.' },
     { key: 'chord_colors', name: 'Sevenths and added ninths', help: 'Richer harmony for funk and reflective passages.' },
     { key: 'modal_mixture', name: 'Borrow a minor chord', help: 'A bittersweet minor iv in major-key bridges.' },
@@ -21,16 +20,15 @@
 
 <div class="composer">
   <h2>Compose with CTG</h2>
-  <p class="muted">Build a hook with answering phrases, breathing space and a developing finale. Choose your sounds, then edit every note.</p>
+  <p class="muted">Create an original song with your chosen sounds and settings, then edit every note.</p>
   {#if composer.config}
     {@const config = composer.config}
-    <button class="primary" disabled={composer.busy} onclick={()=>composer.neonFunk()}>Neon Pixel Funk recipe</button>
-    <p class="muted">Load E Dorian, the original ZzFX sounds, octave bass and expressive slides, then Generate song for a new composition.</p>
     <div class="actions discovery">
+      <button disabled={composer.busy} onclick={() => void composer.generate()}>{composer.busy ? 'Composing…' : 'Generate song'}</button>
       <button disabled={composer.busy} onclick={() => void composer.randomSong()}>Random song</button>
       <button class="ghost" disabled={composer.busy} onclick={() => void composer.randomInstruments()}>Random instruments</button>
     </div>
-    <p class="muted">Random song creates a new arrangement and sounds with a recurring hook, connected chords and a resolving ending. Undo restores your song.</p>
+    <p class="muted">Generate song uses your settings. Random song chooses new settings and creates the song. Then press Play. Undo restores your previous song.</p>
     <p class="muted">Random instruments chooses suitable sounds for the next generation. Open Instruments to see them, then Generate song to apply.</p>
     <div class="fields">
       <label class="wide">Song title<input bind:value={config.title} maxlength="160" /></label>
@@ -50,7 +48,7 @@
       <label>Bass rhythm<select bind:value={config.bass_rhythm}><option value="mixed">Mixed</option><option value="template">Groove templates</option><option value="euclidean">Euclidean</option></select></label>
       <label>Bass hits / bar<input type="number" min="0" max="16" bind:value={config.bass_hits} /></label>
       <label>Seed<input type="number" min="0" max="4294967295" step="1" bind:value={config.seed} /></label>
-      <button class="ghost" onclick={() => { config.seed = Math.floor(Math.random() * 4294967296); }}>New variation</button>
+      <button class="ghost" onclick={() => { config.seed = Math.floor(Math.random() * 4294967296); }}>New seed</button>
     </div>
     <details open><summary>Musical ideas</summary>
       <div class="features">{#each features as feature (feature.key)}
@@ -67,7 +65,6 @@
     <p class="muted">Generate replaces the current arrangement. Undo restores it; files change only when you save.</p>
     <div class="actions">
       <button class="ghost" disabled={composer.busy} onclick={() => void composer.preview()}>Preview chords</button>
-      <button disabled={composer.busy} onclick={() => void composer.generate()}>{composer.busy ? 'Composing…' : 'Generate song'}</button>
     </div>
     {#if composer.report}
       <details><summary>Last result · {composer.report.bars.length} bars · {composer.report.duration_seconds.toFixed(1)} seconds</summary>
@@ -95,7 +92,7 @@
   .features label { display: flex; align-items: center; gap: 8px; font-size: 12px; }
   .features input { width: auto; }
   .actions { display: flex; justify-content: flex-end; gap: 8px; }
-  .discovery { justify-content: flex-start; margin-top: 12px; }
+  .discovery { justify-content: flex-start; flex-wrap: wrap; margin-top: 12px; }
   .analysis { max-height: 200px; overflow: auto; font-size: 12px; }
   .analysis div { display: flex; justify-content: space-between; padding: 4px; }
   [role='alert'] { color: var(--danger, #e77777); }
