@@ -2574,7 +2574,7 @@ expression: summary
   },
   {
     "annotations": null,
-    "description": "Replaces the open song with a fully editable CTG composition in one undo step. Uses native preset instruments, not ZzFX audio. Supply editor_id and revision from `song_get`. Does not save or overwrite a file; history_undo restores the previous complete song.",
+    "description": "Replaces the open song with a fully editable CTG composition in one undo step. Uses CTG's native and ZzFX preset instruments with phrase development and melodic look-ahead. Supply editor_id and revision from `song_get`. Does not save or overwrite a file; history_undo restores the previous complete song.",
     "input_schema": {
       "$defs": {
         "BassRhythm": {

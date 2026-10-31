@@ -8,8 +8,8 @@
   const features: { key: keyof Pick<ComposeConfig, 'motif_development' | 'voice_leading' | 'cadences' | 'chord_colors' | 'modal_mixture' | 'secondary_dominants' | 'suspensions' | 'neon_funk' | 'expressive_slides'>; name: string; help: string }[] = [
     {key:'neon_funk',name:'Neon funk groove',help:'Syncopated octave bass and offbeat chord stabs.'},
     {key:'expressive_slides',name:'Slides and glissando',help:'Pitch scoops and a rising stepped solo in the climax.'},
-    { key: 'motif_development', name: 'Develop a recurring hook', help: 'Related variations, a slower bridge and a faster climax.' },
-    { key: 'voice_leading', name: 'Smooth melodic and chord movement', help: 'Prefer nearby notes and connected chord inversions.' },
+    { key: 'motif_development', name: 'Develop a recurring hook', help: 'Rhythmic cells, answering phrases, a spacious bridge and a developed final chorus.' },
+    { key: 'voice_leading', name: 'Smooth melodic and chord movement', help: 'Plan a melodic route to each destination, resolve passing notes and recover from leaps.' },
     { key: 'cadences', name: 'Build tension and resolve endings', help: 'Coordinated phrase endings and a final home chord.' },
     { key: 'chord_colors', name: 'Sevenths and added ninths', help: 'Richer harmony for funk and reflective passages.' },
     { key: 'modal_mixture', name: 'Borrow a minor chord', help: 'A bittersweet minor iv in major-key bridges.' },
@@ -21,7 +21,7 @@
 
 <div class="composer">
   <h2>Compose with CTG</h2>
-  <p class="muted">Shape a recurring hook, choose your sounds, then edit every note.</p>
+  <p class="muted">Build a hook with answering phrases, breathing space and a developing finale. Choose your sounds, then edit every note.</p>
   {#if composer.config}
     {@const config = composer.config}
     <button class="primary" disabled={composer.busy} onclick={()=>composer.neonFunk()}>Neon Pixel Funk recipe</button>

@@ -67,7 +67,8 @@ impl SoundBitServer {
     fn composition_defaults(&self) -> ToolResult {
         reply(
             &json!({"config":ComposeConfig::default(),"engine":"CTG Studio native synthesis",
-            "features":["weighted progressions","motif development","voice leading","Euclidean bass","independent drums","arpeggios","section contrast","cadences","optional extensions, mixture and secondary dominants","native swing"],
+            "composer_version":3,
+            "features":["weighted progressions","rhythmic cells and answering phrases","melodic look-ahead","phrase breathing and developed returns","recurring bass/drum pocket","Euclidean bass","arpeggios","section contrast","cadences","optional extensions, mixture and secondary dominants","native swing"],
             "workflow":"song_get -> composition_preview -> song_compose (editor_id + revision) -> song_save / export_wav; history_undo restores the previous song"}),
         )
     }
@@ -82,7 +83,7 @@ impl SoundBitServer {
     }
 
     #[tool(
-        description = "Replaces the open song with a fully editable CTG composition in one undo step. Uses native preset instruments, not ZzFX audio. Supply editor_id and revision from `song_get`. Does not save or overwrite a file; history_undo restores the previous complete song."
+        description = "Replaces the open song with a fully editable CTG composition in one undo step. Uses CTG's native and ZzFX preset instruments with phrase development and melodic look-ahead. Supply editor_id and revision from `song_get`. Does not save or overwrite a file; history_undo restores the previous complete song."
     )]
     fn song_compose(&self, Parameters(input): Parameters<ComposeInput>) -> ToolResult {
         let composition = attempt!(generate(&input.config));

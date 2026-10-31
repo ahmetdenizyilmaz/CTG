@@ -23,6 +23,7 @@ export interface ComposeConfig {
   instruments: Record<'lead' | 'harmony' | 'bass' | 'emotional' | 'kick' | 'snare' | 'hat', string>;
 }
 export interface CompositionReport {
+  composer_version?: number;
   config: ComposeConfig;
   motif: number[];
   design: { groove: string; accompaniment: string; bass_motion: string; phrase_bars: number; bars_per_chord: number; sections: { role: string; bars: number }[] };

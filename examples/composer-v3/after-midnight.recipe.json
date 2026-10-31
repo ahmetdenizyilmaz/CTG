@@ -1,0 +1,12 @@
+{
+  "title": "After Midnight",
+  "seed": 256,
+  "key": "A",
+  "scale": "dorian",
+  "vibe": "funk",
+  "bpm": 110,
+  "swing": 16,
+  "form": "standard",
+  "neon_funk": true,
+  "expressive_slides": true
+}

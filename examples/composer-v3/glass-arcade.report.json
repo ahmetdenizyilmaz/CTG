@@ -1,0 +1,731 @@
+{
+  "composer_version": 3,
+  "config": {
+    "title": "Glass Arcade",
+    "seed": 118,
+    "vibe": "adventure",
+    "key": "D",
+    "scale": "major",
+    "bpm": 128,
+    "form": "standard",
+    "swing": 0,
+    "bass_rhythm": "mixed",
+    "bass_hits": 7,
+    "motif_development": true,
+    "voice_leading": true,
+    "cadences": true,
+    "chord_colors": true,
+    "modal_mixture": false,
+    "secondary_dominants": false,
+    "suspensions": true,
+    "neon_funk": false,
+    "expressive_slides": true,
+    "instruments": {
+      "lead": "aloboi_warm_lead",
+      "harmony": "trig_velvet_chord_pluck",
+      "bass": "pc98_opna_slap_bass",
+      "emotional": "aloboi_cello_solo",
+      "kick": "kick",
+      "snare": "snare",
+      "hat": "hihat_closed"
+    }
+  },
+  "motif": [
+    0,
+    -1,
+    -2,
+    -2,
+    0,
+    -1,
+    -2,
+    -2,
+    -1,
+    2,
+    1,
+    2,
+    2
+  ],
+  "design": {
+    "groove": "tresillo",
+    "accompaniment": "broken_chords",
+    "bass_motion": "octave",
+    "phrase_bars": 2,
+    "bars_per_chord": 2,
+    "sections": [
+      {
+        "role": "verse",
+        "bars": 4
+      },
+      {
+        "role": "contrast",
+        "bars": 4
+      },
+      {
+        "role": "verse",
+        "bars": 4
+      },
+      {
+        "role": "bridge",
+        "bars": 4
+      },
+      {
+        "role": "contrast",
+        "bars": 4
+      },
+      {
+        "role": "verse",
+        "bars": 4
+      },
+      {
+        "role": "climax",
+        "bars": 8
+      }
+    ],
+    "answer": 3,
+    "register": 60,
+    "articulation": 0
+  },
+  "bars": [
+    {
+      "bar": 0,
+      "role": "verse",
+      "chord": "Dadd9",
+      "voicing": [
+        50,
+        54,
+        57,
+        64
+      ],
+      "attacks": [
+        8,
+        4,
+        7,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 1,
+      "role": "verse",
+      "chord": "Dadd9",
+      "voicing": [
+        50,
+        54,
+        57,
+        64
+      ],
+      "attacks": [
+        5,
+        6,
+        7,
+        0,
+        4,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 2,
+      "role": "verse",
+      "chord": "A7",
+      "voicing": [
+        52,
+        55,
+        57,
+        61
+      ],
+      "attacks": [
+        8,
+        4,
+        7,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 3,
+      "role": "verse",
+      "chord": "A7",
+      "voicing": [
+        52,
+        55,
+        57,
+        61
+      ],
+      "attacks": [
+        5,
+        6,
+        7,
+        0,
+        4,
+        4,
+        8
+      ]
+    },
+    {
+      "bar": 4,
+      "role": "contrast",
+      "chord": "Dadd9",
+      "voicing": [
+        50,
+        54,
+        57,
+        64
+      ],
+      "attacks": [
+        8,
+        4,
+        7,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 5,
+      "role": "contrast",
+      "chord": "Bm7",
+      "voicing": [
+        50,
+        54,
+        57,
+        59
+      ],
+      "attacks": [
+        5,
+        6,
+        7,
+        0,
+        4,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 6,
+      "role": "contrast",
+      "chord": "Gmaj7",
+      "voicing": [
+        50,
+        54,
+        55,
+        59
+      ],
+      "attacks": [
+        8,
+        4,
+        7,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 7,
+      "role": "contrast",
+      "chord": "A7 (half cadence)",
+      "voicing": [
+        49,
+        52,
+        55,
+        57
+      ],
+      "attacks": [
+        5,
+        6,
+        7,
+        0,
+        4,
+        4,
+        8
+      ]
+    },
+    {
+      "bar": 8,
+      "role": "verse",
+      "chord": "Dadd9",
+      "voicing": [
+        50,
+        54,
+        57,
+        64
+      ],
+      "attacks": [
+        8,
+        4,
+        7,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 9,
+      "role": "verse",
+      "chord": "Dadd9",
+      "voicing": [
+        50,
+        54,
+        57,
+        64
+      ],
+      "attacks": [
+        5,
+        6,
+        7,
+        0,
+        4,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 10,
+      "role": "verse",
+      "chord": "A7",
+      "voicing": [
+        52,
+        55,
+        57,
+        61
+      ],
+      "attacks": [
+        8,
+        4,
+        7,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 11,
+      "role": "verse",
+      "chord": "A7",
+      "voicing": [
+        52,
+        55,
+        57,
+        61
+      ],
+      "attacks": [
+        5,
+        6,
+        7,
+        0,
+        4,
+        4,
+        8
+      ]
+    },
+    {
+      "bar": 12,
+      "role": "bridge",
+      "chord": "Dadd9",
+      "voicing": [
+        50,
+        54,
+        57,
+        64
+      ],
+      "attacks": [
+        0,
+        4,
+        5,
+        3,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "bar": 13,
+      "role": "bridge",
+      "chord": "Dadd9",
+      "voicing": [
+        50,
+        54,
+        57,
+        64
+      ],
+      "attacks": [
+        0,
+        4,
+        5,
+        3,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "bar": 14,
+      "role": "bridge",
+      "chord": "A7",
+      "voicing": [
+        52,
+        55,
+        57,
+        61
+      ],
+      "attacks": [
+        0,
+        4,
+        5,
+        4,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "bar": 15,
+      "role": "bridge",
+      "chord": "A7",
+      "voicing": [
+        52,
+        55,
+        57,
+        61
+      ],
+      "attacks": [
+        0,
+        4,
+        5,
+        1,
+        2,
+        1,
+        4
+      ]
+    },
+    {
+      "bar": 16,
+      "role": "contrast",
+      "chord": "Dadd9",
+      "voicing": [
+        50,
+        54,
+        57,
+        64
+      ],
+      "attacks": [
+        8,
+        4,
+        7,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 17,
+      "role": "contrast",
+      "chord": "Bm7",
+      "voicing": [
+        50,
+        54,
+        57,
+        59
+      ],
+      "attacks": [
+        5,
+        6,
+        7,
+        0,
+        4,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 18,
+      "role": "contrast",
+      "chord": "Gmaj7",
+      "voicing": [
+        50,
+        54,
+        55,
+        59
+      ],
+      "attacks": [
+        8,
+        4,
+        7,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 19,
+      "role": "contrast",
+      "chord": "A7 (half cadence)",
+      "voicing": [
+        49,
+        52,
+        55,
+        57
+      ],
+      "attacks": [
+        5,
+        6,
+        7,
+        0,
+        4,
+        4,
+        8
+      ]
+    },
+    {
+      "bar": 20,
+      "role": "verse",
+      "chord": "Dadd9",
+      "voicing": [
+        50,
+        54,
+        57,
+        64
+      ],
+      "attacks": [
+        8,
+        4,
+        7,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 21,
+      "role": "verse",
+      "chord": "Dadd9",
+      "voicing": [
+        50,
+        54,
+        57,
+        64
+      ],
+      "attacks": [
+        5,
+        6,
+        7,
+        0,
+        4,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 22,
+      "role": "verse",
+      "chord": "A7",
+      "voicing": [
+        52,
+        55,
+        57,
+        61
+      ],
+      "attacks": [
+        8,
+        4,
+        7,
+        0,
+        3,
+        2,
+        8
+      ]
+    },
+    {
+      "bar": 23,
+      "role": "verse",
+      "chord": "A7",
+      "voicing": [
+        52,
+        55,
+        57,
+        61
+      ],
+      "attacks": [
+        5,
+        6,
+        7,
+        0,
+        4,
+        4,
+        8
+      ]
+    },
+    {
+      "bar": 24,
+      "role": "climax",
+      "chord": "Dadd9",
+      "voicing": [
+        50,
+        54,
+        57,
+        64
+      ],
+      "attacks": [
+        7,
+        4,
+        8,
+        0,
+        3,
+        2,
+        16
+      ]
+    },
+    {
+      "bar": 25,
+      "role": "climax",
+      "chord": "F#m7",
+      "voicing": [
+        52,
+        54,
+        57,
+        61
+      ],
+      "attacks": [
+        5,
+        6,
+        8,
+        0,
+        3,
+        2,
+        16
+      ]
+    },
+    {
+      "bar": 26,
+      "role": "climax",
+      "chord": "Bm7",
+      "voicing": [
+        50,
+        54,
+        57,
+        59
+      ],
+      "attacks": [
+        7,
+        4,
+        8,
+        0,
+        3,
+        2,
+        16
+      ]
+    },
+    {
+      "bar": 27,
+      "role": "climax",
+      "chord": "Gmaj7",
+      "voicing": [
+        50,
+        54,
+        55,
+        59
+      ],
+      "attacks": [
+        5,
+        6,
+        8,
+        0,
+        3,
+        2,
+        16
+      ]
+    },
+    {
+      "bar": 28,
+      "role": "climax",
+      "chord": "Dadd9",
+      "voicing": [
+        50,
+        54,
+        57,
+        64
+      ],
+      "attacks": [
+        7,
+        4,
+        8,
+        0,
+        3,
+        2,
+        16
+      ]
+    },
+    {
+      "bar": 29,
+      "role": "climax",
+      "chord": "F#m7",
+      "voicing": [
+        52,
+        54,
+        57,
+        61
+      ],
+      "attacks": [
+        5,
+        6,
+        8,
+        0,
+        3,
+        2,
+        16
+      ]
+    },
+    {
+      "bar": 30,
+      "role": "climax",
+      "chord": "A7 (V7)",
+      "voicing": [
+        52,
+        55,
+        57,
+        61
+      ],
+      "attacks": [
+        7,
+        4,
+        8,
+        0,
+        3,
+        2,
+        16
+      ]
+    },
+    {
+      "bar": 31,
+      "role": "climax",
+      "chord": "Dadd9",
+      "voicing": [
+        50,
+        54,
+        57,
+        64
+      ],
+      "attacks": [
+        5,
+        4,
+        8,
+        0,
+        3,
+        4,
+        16
+      ]
+    }
+  ],
+  "duration_seconds": 60.0
+}

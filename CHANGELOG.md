@@ -1,5 +1,13 @@
 # CTG releases
 
+## 0.3.1
+
+- Composer v3 builds rhythmic cells, answering phrases, phrase-end rests and developed hook returns.
+- Bounded melodic look-ahead coordinates chord targets, leap recovery and passing-note resolution.
+- Spacious bridges, rising climax contours, phrase accents and a recurring bass/drum pocket.
+- Shared by desktop Generate/Random song, CLI and MCP; existing saved notes remain unchanged.
+- Three editable generated previews and reproducible MIDI-reference/structural comparison scripts.
+
 ## 0.3.0
 
 - Editable ZzFX Studio JSON, .zzfx and literal .js import through desktop, CLI and MCP.

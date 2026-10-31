@@ -1,0 +1,12 @@
+Generated entirely by CTG composer v3.
+
+Open Listen.m3u for the three MP3 previews. Open any .sbproj in CTG to edit
+the composition. Each .recipe.json regenerates it through desktop, CLI or MCP.
+MP3 previews are loudness-normalized; editable projects retain native mix gains.
+
+Pocket Comet: E-Dorian ZzFX chiptune funk, 130 BPM.
+Glass Arcade: D-major native-synth adventure, 128 BPM.
+After Midnight: A-Dorian warm native-synth funk, 110 BPM.
+
+Each contains a reflective bridge and a developed finale. These are generator
+examples, not manually rewritten or claims of perceptual quality.

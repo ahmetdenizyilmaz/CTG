@@ -1,0 +1,51 @@
+CTG composer v3 — phrase and melody development
+
+Use Compose > Generate song, Random song, or the Neon Pixel Funk recipe.
+CLI compose and MCP song_compose / composition_random use the same engine.
+Keep Develop a recurring hook and Smooth melodic and chord movement enabled.
+New variation changes the seed while retaining your selected sounds and settings.
+All results are normal editable notes. Existing projects keep their saved notes;
+regenerating an older recipe now produces the v3 interpretation. Reports include
+composer_version: 3 so callers can record which algorithm produced a score.
+
+What changed
+- Short rhythmic cells form a one- or two-bar idea, with an ending and a breath.
+- The opening gesture returns; answering endings and later fragments develop it.
+- A bounded search plans each bar's pitch route toward its destination. It weighs
+  contour, chord membership, repeated-note runs, leap recovery and stepwise
+  resolution of passing notes. These are preferences, not rigid species rules.
+- Sustained/accented notes use the actual chord, including borrowed/secondary
+  harmonies. Four-bar answers target the chord root; the last cadence finds a
+  nearby tonic instead of jumping automatically to a high octave.
+- Bridges stretch and thin the theme. The climax uses fragments and short runs,
+  with a rising register arc instead of shifting every note up an octave.
+- Phrase-end rests give the rhythm section space; accents distinguish attacks
+  from connecting notes. Bass and drums remember a two-bar pocket by section.
+
+Reference study (31 October 2026)
+I inspected MIDI editions of Scott Joplin's Maple Leaf Rag and Bach's Invention 1,
+plus phrase-structure examples in the University of Puget Sound theory text.
+The implementation uses general compositional principles, not copied melodies,
+MIDI fragments, a trained model, or a bank of famous-song hooks.
+
+Sources:
+https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=23
+https://www.mutopiaproject.org/ftp/BachJS/BWV772/bach-invention-01/
+https://musictheory.pugetsound.edu/mt21c/SentenceStructure.html
+
+Reproducible study: scripts/analyze-midi-references.py (optional mido dependency).
+Downloaded files stay in ignored out/reference-analysis; no reference MIDI is
+distributed. Analysis selects the highest-average-pitch track and highest pitch
+at simultaneous attacks. This is a crude upper-staff proxy, not voice separation.
+It found 762 upper-staff attacks in Maple Leaf Rag and 238 in the Invention.
+Repeated four-interval cells: 206 of 247 distinct cells in the Rag; 41 of 147 in
+the Invention. Step/repeat fractions differ: 0.302 vs 0.650. These two pieces do
+not establish universal musical rules. Their differences argue against one fixed
+stepwise recipe; shared small ideas and controlled variation are more useful.
+
+Validation
+Tests cover rhythmic recurrence, phrase breathing, bridge/climax density,
+consistent bass/kick pockets, harmony compatibility, non-overlapping lead notes,
+repeatable seeds, varied compositions, editable round trips and all scale/style
+combinations. Render checks detect invalid or clipped samples. These checks do
+not establish that every song will sound good; taste still requires listening.

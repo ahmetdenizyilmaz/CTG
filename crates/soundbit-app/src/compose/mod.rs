@@ -8,6 +8,8 @@ mod harmony;
 mod melody;
 mod parts;
 mod percussion;
+mod phrase;
+mod pitch_path;
 mod random;
 mod rhythm;
 
@@ -42,6 +44,8 @@ pub struct BarReport {
 /// Recipe and analysis returned by every composition interface.
 #[derive(Debug, Clone, Serialize)]
 pub struct CompositionReport {
+    /// Composition algorithm revision; saved projects retain their actual notes.
+    pub composer_version: u8,
     /// Complete repeatable recipe, including instruments.
     pub config: ComposeConfig,
     /// Hook contour in scale degrees (zero based).
@@ -110,9 +114,14 @@ pub fn generate(config: &ComposeConfig) -> Result<Composition, String> {
         let mut lead = melody.bar(&context, &mut rng)?;
         express_lead(&mut lead, &context)?;
         let harmony = accompaniment::harmony(&context, &voiced, &lead)?;
+        // The rhythm section remembers its two-bar pocket across returning sections.
+        let groove_seed = config.seed
+            ^ 0x7268_7974
+            ^ u32::try_from(role_index(role) * 16 + local_bar % 2).unwrap_or(0);
+        let mut groove_rng = Rng::new(groove_seed);
         let (drums, kicks) =
-            percussion::drums(&design, role, local_bar, plan.section_end, &mut rng)?;
-        let bass_notes = parts::bass(&context, &kicks, &mut rng)?;
+            percussion::drums(&design, role, local_bar, plan.section_end, &mut groove_rng)?;
+        let bass_notes = parts::bass(&context, &kicks, &mut Rng::new(groove_seed ^ 0xba55))?;
         let [kick, snare, hat] = drums;
         let (lead, emotional) = if role == Role::Bridge {
             (Vec::new(), lead)
@@ -131,13 +140,11 @@ pub fn generate(config: &ComposeConfig) -> Result<Composition, String> {
         previous_voicing = voiced;
     }
     let duration_seconds = song.length_seconds();
-    let recipe = serde_json::to_string(config).map_err(|e| e.to_string())?;
-    let mut meta = song.meta().clone();
-    meta.description = format!("CTG Studio / ChipTuneGen v2 recipe: {recipe}");
-    song.set_meta(meta);
+    record_recipe(&mut song, config)?;
     Ok(Composition {
         song,
         report: CompositionReport {
+            composer_version: 3,
             config: config.clone(),
             motif,
             design,
@@ -145,6 +152,14 @@ pub fn generate(config: &ComposeConfig) -> Result<Composition, String> {
             duration_seconds,
         },
     })
+}
+
+fn record_recipe(song: &mut Song, config: &ComposeConfig) -> Result<(), String> {
+    let recipe = serde_json::to_string(config).map_err(|e| e.to_string())?;
+    let mut meta = song.meta().clone();
+    meta.description = format!("CTG composer v3 recipe: {recipe}");
+    song.set_meta(meta);
+    Ok(())
 }
 
 const fn role_index(role: Role) -> usize {

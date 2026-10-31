@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Pocket Comet",
+    "seed": 73,
+    "project": "pocket-comet.sbproj",
+    "audio": "pocket-comet.mp3",
+    "duration_seconds": 59.07692307692308,
+    "raw_peak": 0.1049,
+    "raw_rms": 0.0215,
+    "composer_version": 3
+  },
+  {
+    "title": "Glass Arcade",
+    "seed": 118,
+    "project": "glass-arcade.sbproj",
+    "audio": "glass-arcade.mp3",
+    "duration_seconds": 60.0,
+    "raw_peak": 0.5662,
+    "raw_rms": 0.1085,
+    "composer_version": 3
+  },
+  {
+    "title": "After Midnight",
+    "seed": 256,
+    "project": "after-midnight.sbproj",
+    "audio": "after-midnight.mp3",
+    "duration_seconds": 69.81818181818181,
+    "raw_peak": 0.6358,
+    "raw_rms": 0.1078,
+    "composer_version": 3
+  }
+]
