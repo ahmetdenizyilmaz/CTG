@@ -66,23 +66,15 @@ impl Session {
             path: path.to_owned(),
             source,
         })?;
-        let imported = path
-            .extension()
-            .is_some_and(|e| matches!(e.to_str(), Some("zzfx" | "js" | "json")));
-        let song = if imported {
-            soundbit_formats::from_zzfx(&text)
-        } else {
-            from_project_json(&text)
+        if let Ok(song) = from_project_json(&text) {
+            return Ok(Self {
+                editor: Editor::new(song),
+                path: Some(path.to_owned()),
+                saved_revision: Some(0),
+            });
         }
-        .map_err(|source| format_error(path, source))?;
-        if imported {
-            return Ok(Self::new(song));
-        }
-        Ok(Self {
-            editor: Editor::new(song),
-            path: Some(path.to_owned()),
-            saved_revision: Some(0),
-        })
+        let song = soundbit_formats::from_zzfx(&text).map_err(|source| format_error(path, source))?;
+        Ok(Self::new(song))
     }
 
     /// The open song.

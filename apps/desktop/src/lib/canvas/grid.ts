@@ -36,7 +36,8 @@ export function gridSize(grid: Grid): { width: number; height: number } {
 /** Sizes a canvas for sharp drawing on high-DPI screens and returns its 2D context. */
 export function prepareCanvas(canvas: HTMLCanvasElement, grid: Grid): CanvasRenderingContext2D | null {
   const { width, height } = gridSize(grid);
-  const ratio = window.devicePixelRatio || 1;
+  const maxDim = Math.max(width, height, 1);
+  const ratio = Math.min(window.devicePixelRatio || 1, 32760 / maxDim);
   canvas.width = Math.round(width * ratio);
   canvas.height = Math.round(height * ratio);
   canvas.style.width = `${width}px`;

@@ -12,7 +12,9 @@
   }
 </script>
 
-<div class="head" class:muted={track.muted} style:height={`${TRACK_HEIGHT}px`} style:--color={color}>
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<div class="head" class:muted={track.muted} class:selected={editor.selectedTrack === track.id} style:height={`${TRACK_HEIGHT}px`} style:--color={color} onclick={() => { editor.selectedTrack = track.id; }}>
   <div class="label">
     <input value={track.name} onchange={rename} aria-label="Track name" spellcheck="false" />
     <small>{channel ?? `${track.clips.length} clip${track.clips.length === 1 ? '' : 's'}`}</small>
@@ -48,6 +50,10 @@
 
   .head.muted {
     border-left-color: var(--border);
+  }
+
+  .head.selected {
+    background: color-mix(in srgb, var(--color) 12%, var(--panel));
   }
 
   .head.muted .label {

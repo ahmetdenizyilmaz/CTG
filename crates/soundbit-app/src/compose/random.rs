@@ -11,12 +11,19 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
     let mut rng = Rng::new(seed ^ 0xa17e_381d);
     let leads: &[&str] = match vibe {
         Vibe::Dungeon | Vibe::TitleScreen => &[
+            "acoustic_grand_piano",
+            "studio_felt_piano",
+            "acoustic_solo_violin",
+            "acoustic_concert_flute",
             "aloboi_warm_lead",
             "flute",
             "aloboi_nostalgic_pluck",
             "fm_electric_piano",
         ],
         Vibe::Funk => &[
+            "acoustic_upright_piano",
+            "vintage_rhodes_mark1",
+            "warm_wurlitzer_200a",
             "ctg_singing_pulse",
             "zzfx_neon_lead",
             "ctg_soft_ep",
@@ -26,6 +33,9 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
             "fm_electric_piano",
         ],
         _ => &[
+            "acoustic_grand_piano",
+            "acoustic_solo_violin",
+            "acoustic_nylon_guitar",
             "pulse_lead",
             "aloboi_warm_lead",
             "pc98_ssg_pulse_hook",
@@ -34,6 +44,7 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
     };
     let basses: &[&str] = match vibe {
         Vibe::Funk => &[
+            "acoustic_upright_bass",
             "pc98_opna_slap_bass",
             "zzfx_neon_bass",
             "fm_bass",
@@ -43,6 +54,7 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
             "ctg_metal_slap_bass",
         ],
         _ => &[
+            "acoustic_upright_bass",
             "triangle_bass",
             "fm_bass",
             "trig_minimal_sub_pulse",
@@ -56,6 +68,12 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
         harmony: choose(
             &mut rng,
             &[
+                "acoustic_grand_piano",
+                "studio_felt_piano",
+                "vintage_rhodes_mark1",
+                "acoustic_concert_harp",
+                "acoustic_nylon_guitar",
+                "acoustic_string_quartet",
                 "trig_velvet_chord_pluck",
                 "ctg_soft_ep",
                 "zzfx_neon_chords",
@@ -73,6 +91,12 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
         emotional: choose(
             &mut rng,
             &[
+                "acoustic_solo_cello",
+                "acoustic_solo_violin",
+                "studio_felt_piano",
+                "acoustic_concert_flute",
+                "acoustic_warm_clarinet",
+                "acoustic_vibraphone",
                 "aloboi_cello_solo",
                 "ctg_velvet_reed",
                 "zzfx_midnight_keys",
@@ -84,7 +108,7 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
         )
         .into(),
         kick: "kick".into(),
-        snare: choose(&mut rng, &["snare", "clap"]).into(),
+        snare: choose(&mut rng, &["snare", "clap", "acoustic_brush_snare"]).into(),
         hat: "hihat_closed".into(),
     }
 }

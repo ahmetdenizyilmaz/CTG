@@ -24,6 +24,7 @@ mod engine;
 mod error;
 mod meter;
 mod patch;
+mod physical_model;
 pub mod realtime;
 mod render;
 mod sample_bank;

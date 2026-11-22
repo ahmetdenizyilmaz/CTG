@@ -109,8 +109,29 @@ fn sections(form: Form, rng: &mut Rng) -> Vec<Section> {
     ];
     let choices = if form == Form::Short { short } else { long };
     let mut chosen = choices[rng.pick(choices.len())].to_vec();
-    if form == Form::Extended {
-        chosen.extend([(A, 4), (B, 4), (C, 4), (D, 4)]);
+    match form {
+        Form::Short | Form::Standard => {}
+        Form::Extended => {
+            chosen.extend([(A, 4), (B, 4), (C, 4), (D, 4)]);
+        }
+        Form::Long => {
+            chosen.extend([(A, 4), (B, 4), (C, 4), (D, 4), (X, 4), (A, 4), (B, 4), (D, 4)]);
+        }
+        Form::Epic => {
+            chosen.extend([
+                (A, 4), (B, 4), (C, 4), (D, 4),
+                (X, 4), (A, 4), (B, 4), (D, 4),
+                (A, 8), (C, 8), (B, 8), (D, 8),
+            ]);
+        }
+        Form::Marathon => {
+            chosen.extend([
+                (A, 4), (B, 4), (C, 4), (D, 4),
+                (X, 4), (A, 4), (B, 4), (D, 4),
+                (A, 8), (C, 8), (B, 8), (D, 8),
+                (X, 4), (A, 8), (B, 4), (C, 8), (D, 8),
+            ]);
+        }
     }
     chosen
         .into_iter()

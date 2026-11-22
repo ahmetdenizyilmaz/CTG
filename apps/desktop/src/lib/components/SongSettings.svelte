@@ -10,24 +10,47 @@
   type Field = Event & { currentTarget: HTMLInputElement | HTMLSelectElement };
 
   const ROOTS = Array.from({ length: 12 }, (_, index) => index);
+  let transposeNotes = $state(true);
 
   const update = (change: Change): void => void editor.act({ kind: 'update_song', ...change });
   const number = (event: Field): number => Number(event.currentTarget.value);
 </script>
 
 <div class="settings">
-  <h3>Key</h3>
+  <h3>Tempo</h3>
   <div class="pair">
-    <select value={String(song.scale.root)} onchange={(e: Field) => update({ scale_root: number(e) })} aria-label="Root">
+    <label>BPM
+      <input type="number" min="20" max="400" value={song.timing.bpm}
+        onchange={(e: Field) => update({ bpm: number(e) })} aria-label="Tempo BPM" />
+    </label>
+    <label class="swing">Speed <span>{song.timing.bpm} BPM</span>
+      <input type="range" min="40" max="240" value={song.timing.bpm}
+        onchange={(e: Field) => update({ bpm: number(e) })} aria-label="Tempo slider" />
+    </label>
+  </div>
+
+  <h3>Key &amp; Scale</h3>
+  <div class="pair">
+    <select value={String(song.scale.root)} onchange={(e: Field) => update({ scale_root: number(e), transpose_notes: transposeNotes })} aria-label="Root">
       {#each ROOTS as root (root)}<option value={String(root)}>{className(root)}</option>{/each}
     </select>
     <select
       value={song.scale.kind}
-      onchange={(e: Field) => update({ scale_kind: e.currentTarget.value as ScaleKind })}
+      onchange={(e: Field) => update({ scale_kind: e.currentTarget.value as ScaleKind, transpose_notes: transposeNotes })}
       aria-label="Scale"
     >
       {#each SCALE_KINDS as kind (kind)}<option value={kind}>{scaleLabel(kind)}</option>{/each}
     </select>
+  </div>
+  <label class="check">
+    <input type="checkbox" bind:checked={transposeNotes} />
+    Transpose &amp; remap song notes to Key / Scale
+  </label>
+  <div class="transpose-row">
+    <button class="ghost" onclick={() => update({ semitone_offset: -12, transpose_notes: true })} title="Transpose down 1 octave">-12</button>
+    <button class="ghost" onclick={() => update({ semitone_offset: -1, transpose_notes: true })} title="Transpose down 1 semitone">-1 st</button>
+    <button class="ghost" onclick={() => update({ semitone_offset: 1, transpose_notes: true })} title="Transpose up 1 semitone">+1 st</button>
+    <button class="ghost" onclick={() => update({ semitone_offset: 12, transpose_notes: true })} title="Transpose up 1 octave">+12</button>
   </div>
 
   <h3>Hardware</h3>
@@ -111,5 +134,28 @@
     margin: 0;
     font-size: 11px;
     color: var(--muted);
+  }
+
+  .check {
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    color: var(--text);
+    cursor: pointer;
+  }
+
+  .check input {
+    width: auto;
+  }
+
+  .transpose-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+  }
+
+  .transpose-row button {
+    font-size: 11px;
+    padding: 3px 6px;
   }
 </style>

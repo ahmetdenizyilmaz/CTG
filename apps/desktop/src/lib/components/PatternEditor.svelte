@@ -60,6 +60,21 @@
     scroller.scrollTop = (rowOfPitch(Math.round(middle)) + 0.5) * grid.cellHeight - scroller.clientHeight / 2;
   });
 
+  /** Auto-track the currently sounding note in the piano roll when Follow Current Note is enabled. */
+  $effect(() => {
+    if (!scroller || !pattern || !editor.followPlayback || playStep === null) return;
+    const activeNotes = pattern.notes.filter((n) => playStep >= n.start && playStep < n.start + n.length);
+    if (activeNotes.length === 0) return;
+    const avgPitch = activeNotes.reduce((sum, n) => sum + n.pitch, 0) / activeNotes.length;
+    const noteY = (rowOfPitch(Math.round(avgPitch)) + 0.5) * grid.cellHeight;
+    const viewTop = scroller.scrollTop;
+    const viewHeight = scroller.clientHeight;
+    const margin = grid.cellHeight * 3;
+    if (noteY < viewTop + margin || noteY > viewTop + viewHeight - margin) {
+      scroller.scrollTop = Math.max(0, noteY - viewHeight / 2);
+    }
+  });
+
   const steps = $derived(Array.from({ length: grid.columns }, (_, step) => step));
 
   function onClick(event: MouseEvent): void {
@@ -102,6 +117,15 @@
         {/each}
       </select>
       <span class="spacer"></span>
+      <button
+        class="ghost follow-btn"
+        class:active={editor.followPlayback}
+        aria-pressed={editor.followPlayback}
+        title="Automatically follow the current bar, active pattern, and sounding note during playback"
+        onclick={() => (editor.followPlayback = !editor.followPlayback)}
+      >
+        {editor.followPlayback ? '● Follow note: ON' : '○ Follow note: OFF'}
+      </button>
       <span class="group-label">Note</span>
       <Segmented label="Note length" options={LENGTHS} value={editor.noteLength} onchange={(length) => (editor.noteLength = length)} />
       <span class="group-label">Transpose</span>
@@ -205,5 +229,17 @@
 
   .empty {
     margin: auto;
+  }
+
+  .follow-btn {
+    font-size: 11px;
+    padding: 3px 8px;
+    border: 1px solid var(--border);
+  }
+
+  .follow-btn.active {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
   }
 </style>

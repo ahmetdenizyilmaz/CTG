@@ -3,6 +3,7 @@
 use soundbit_core::{FmOperator, FmVoice, Instrument, NoiseMode, Pan, Voice, Wavetable};
 use soundbit_dsp::{AdsrParams, FmParams, PitchModParams, WAVETABLE_LEN, YmOperator};
 
+use crate::physical_model::PhysicalModelKind;
 use crate::shaping::{FilterPatch, UnisonPatch, pitch_params, reverb_send};
 
 /// Highest value of a 4-bit wavetable sample.
@@ -19,6 +20,7 @@ pub(crate) enum SourcePatch {
     Wavetable([f32; WAVETABLE_LEN]),
     Fm(FmParams),
     Zzfx(soundbit_core::ZzfxParameters),
+    PhysicalModel(PhysicalModelKind),
 }
 
 /// Left and right gain factors.
@@ -65,6 +67,17 @@ impl Patch {
     pub(crate) fn compile(instrument: &Instrument, sample_rate: u32) -> Self {
         let envelope = instrument.envelope;
         let volume = f32::from(instrument.volume.get()) / 100.0;
+        if let Some(kind) = PhysicalModelKind::from_instrument(instrument) {
+            return Self {
+                source: SourcePatch::PhysicalModel(kind),
+                envelope: AdsrParams::from_millis(0, 0, 1.0, 50, sample_rate),
+                gain: StereoGain::from_pan(instrument.pan).scaled(volume),
+                pitch: PitchModParams::default(),
+                unison: UnisonPatch::compile(soundbit_core::Unison::default(), &instrument.voice),
+                filter: None,
+                reverb_send: reverb_send(instrument),
+            };
+        }
         Self {
             source: source_patch(&instrument.voice, sample_rate),
             envelope: AdsrParams::from_millis(

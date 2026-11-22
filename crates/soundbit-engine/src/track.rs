@@ -5,7 +5,7 @@ use crate::schedule::TrackPlan;
 use crate::voice::{Voice, VoiceFrame};
 
 /// Notes a single track can sound at once. When all are busy, the oldest note is cut.
-pub(crate) const VOICES_PER_TRACK: usize = 8;
+pub(crate) const VOICES_PER_TRACK: usize = 24;
 
 /// Playback state of one track. Holds a fixed voice pool, so playing never allocates.
 #[derive(Debug, Clone, PartialEq)]

@@ -50,9 +50,20 @@ pub(crate) struct AppState {
 
 impl AppState {
     /// Opens the audio device and the MCP endpoint. Failures are reported in the UI rather
-    /// than preventing the app from starting.
-    pub(crate) fn start(workspace: PathBuf) -> Self {
-        let session: SharedSession = Arc::new(Mutex::new(Session::new(Song::new("Untitled"))));
+    /// than preventing the app from starting. If a project file path was passed on the
+    /// command line (e.g. by double-clicking a `.ctg` or `.sbproj` file in Windows Explorer),
+    /// loads it directly as the initial session.
+    pub(crate) fn start(workspace: PathBuf, initial_file: Option<PathBuf>) -> Self {
+        let initial_session = initial_file
+            .and_then(|path| match Session::open(&path) {
+                Ok(opened) => Some(opened),
+                Err(error) => {
+                    eprintln!("ctg-studio: could not open {}: {error}", path.display());
+                    None
+                }
+            })
+            .unwrap_or_else(|| Session::new(Song::new("Untitled")));
+        let session: SharedSession = Arc::new(Mutex::new(initial_session));
         let (playback, audio) = open_audio();
         let mcp = open_mcp(&session, &workspace);
         Self {

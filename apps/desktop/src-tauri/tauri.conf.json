@@ -29,7 +29,7 @@
     "publisher": "CTG contributors",
     "copyright": "Copyright (C) 2026 Renas Demirbas. GPL-3.0-or-later.",
     "category": "Music",
-    "shortDescription": "ChipTuneGenerator MCP ? compose together",
+    "shortDescription": "ChipTuneGenerator MCP - compose together",
     "longDescription": "A chiptune workstation for people and AI agents, with native synthesis, editable songs and Model Context Protocol tools.",
     "homepage": "https://github.com/ahmetdenizyilmaz/CTG",
     "license": "GPL-3.0-or-later",
@@ -39,6 +39,15 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
+    ],
+    "fileAssociations": [
+      {
+        "ext": ["ctg", "sbproj"],
+        "name": "CTG Studio Song",
+        "description": "CTG Studio Song Project",
+        "role": "Editor",
+        "mimeType": "application/x-ctg-song"
+      }
     ]
   }
 }

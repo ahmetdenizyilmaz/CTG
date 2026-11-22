@@ -1,0 +1,1228 @@
+{
+  "format": "soundbit-presets",
+  "format_version": 1,
+  "source": "CTG Studio: Realistic Acoustic Piano, Strings & Chamber Studio Pack, GPL-3.0-or-later",
+  "presets": [
+    {
+      "id": "acoustic_grand_piano",
+      "category": "piano",
+      "description": "Steinway-style Concert Grand Piano: 4-operator hammer+string FM with 3-string trichord unison and warm spruce soundboard filter. Octaves 2-6.",
+      "instrument": {
+        "name": "Acoustic Grand Piano",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 2,
+          "operators": [
+            {
+              "multiple": 2,
+              "detune": 1,
+              "total_level": 28,
+              "attack_rate": 31,
+              "decay_rate": 11,
+              "sustain_rate": 3,
+              "sustain_level": 8,
+              "release_rate": 7
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 6,
+              "sustain_rate": 2,
+              "sustain_level": 5,
+              "release_rate": 6
+            },
+            {
+              "multiple": 4,
+              "detune": 2,
+              "total_level": 36,
+              "attack_rate": 31,
+              "decay_rate": 17,
+              "sustain_rate": 4,
+              "sustain_level": 13,
+              "release_rate": 9
+            },
+            {
+              "multiple": 1,
+              "detune": -1,
+              "total_level": 6,
+              "attack_rate": 31,
+              "decay_rate": 7,
+              "sustain_rate": 2,
+              "sustain_level": 6,
+              "release_rate": 6
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 650,
+          "sustain": 35,
+          "release": 320
+        },
+        "unison": {
+          "voices": 3,
+          "detune": 5
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 3800,
+          "resonance": 8,
+          "envelope_depth": 24
+        },
+        "volume": 68,
+        "pan": 0,
+        "reverb_send": 28
+      }
+    },
+    {
+      "id": "studio_felt_piano",
+      "category": "piano",
+      "description": "Intimate Studio Felt Piano (Nils Frahm / Olafur Arnalds style): soft felt-damped hammer attack, warm low-pass body, and lush room tail. Octaves 2-6.",
+      "instrument": {
+        "name": "Intimate Felt Piano",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 1,
+          "operators": [
+            {
+              "multiple": 2,
+              "detune": 1,
+              "total_level": 38,
+              "attack_rate": 28,
+              "decay_rate": 12,
+              "sustain_rate": 3,
+              "sustain_level": 10,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 29,
+              "decay_rate": 6,
+              "sustain_rate": 2,
+              "sustain_level": 5,
+              "release_rate": 6
+            },
+            {
+              "multiple": 3,
+              "detune": -1,
+              "total_level": 46,
+              "attack_rate": 29,
+              "decay_rate": 16,
+              "sustain_rate": 4,
+              "sustain_level": 14,
+              "release_rate": 7
+            },
+            {
+              "multiple": 1,
+              "detune": 1,
+              "total_level": 8,
+              "attack_rate": 29,
+              "decay_rate": 6,
+              "sustain_rate": 2,
+              "sustain_level": 6,
+              "release_rate": 6
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 6,
+          "decay": 720,
+          "sustain": 30,
+          "release": 420
+        },
+        "unison": {
+          "voices": 3,
+          "detune": 7
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1750,
+          "resonance": 10,
+          "envelope_depth": 16
+        },
+        "volume": 72,
+        "pan": 0,
+        "reverb_send": 38
+      }
+    },
+    {
+      "id": "acoustic_upright_piano",
+      "category": "piano",
+      "description": "Warm Studio Upright Piano with woody cabinet resonance and natural 3-string unison chorus. Ideal for jazz, lo-fi, and explainers. Octaves 2-6.",
+      "instrument": {
+        "name": "Studio Upright Piano",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 3,
+          "operators": [
+            {
+              "multiple": 2,
+              "detune": 2,
+              "total_level": 26,
+              "attack_rate": 31,
+              "decay_rate": 12,
+              "sustain_rate": 3,
+              "sustain_level": 8,
+              "release_rate": 7
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 7,
+              "sustain_rate": 2,
+              "sustain_level": 5,
+              "release_rate": 7
+            },
+            {
+              "multiple": 3,
+              "detune": -2,
+              "total_level": 32,
+              "attack_rate": 31,
+              "decay_rate": 15,
+              "sustain_rate": 4,
+              "sustain_level": 12,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 1,
+              "total_level": 6,
+              "attack_rate": 31,
+              "decay_rate": 7,
+              "sustain_rate": 2,
+              "sustain_level": 5,
+              "release_rate": 7
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 540,
+          "sustain": 32,
+          "release": 260
+        },
+        "unison": {
+          "voices": 3,
+          "detune": 9
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 3100,
+          "resonance": 12,
+          "envelope_depth": 22
+        },
+        "volume": 66,
+        "pan": 0,
+        "reverb_send": 24
+      }
+    },
+    {
+      "id": "acoustic_celesta",
+      "category": "piano",
+      "description": "Orchestral Celesta: felt hammers striking steel tone-bars over wooden resonators. Magical melodies and arpeggios, octaves 4-6.",
+      "instrument": {
+        "name": "Orchestral Celesta",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 1,
+          "operators": [
+            {
+              "multiple": 4,
+              "detune": 1,
+              "total_level": 30,
+              "attack_rate": 31,
+              "decay_rate": 14,
+              "sustain_rate": 3,
+              "sustain_level": 11,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 8,
+              "sustain_rate": 2,
+              "sustain_level": 6,
+              "release_rate": 7
+            },
+            {
+              "multiple": 6,
+              "detune": -1,
+              "total_level": 40,
+              "attack_rate": 31,
+              "decay_rate": 18,
+              "sustain_rate": 4,
+              "sustain_level": 14,
+              "release_rate": 9
+            },
+            {
+              "multiple": 2,
+              "detune": 1,
+              "total_level": 10,
+              "attack_rate": 31,
+              "decay_rate": 9,
+              "sustain_rate": 2,
+              "sustain_level": 7,
+              "release_rate": 7
+            }
+          ]
+        },
+        "unison": {
+          "voices": 2,
+          "detune": 4
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 5200,
+          "resonance": 6,
+          "envelope_depth": 18
+        },
+        "volume": 64,
+        "pan": 0,
+        "reverb_send": 36
+      }
+    },
+    {
+      "id": "vintage_rhodes_mark1",
+      "category": "keys",
+      "description": "1973 Fender Rhodes Mark I Suitcase Electric Piano: warm tonebar fundamental with bell-tine transient and stereo chorus. Octaves 2-5.",
+      "instrument": {
+        "name": "Vintage Rhodes Mark I",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 1,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 30,
+              "attack_rate": 31,
+              "decay_rate": 10,
+              "sustain_rate": 2,
+              "sustain_level": 8,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 5,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            },
+            {
+              "multiple": 12,
+              "detune": 1,
+              "total_level": 50,
+              "attack_rate": 31,
+              "decay_rate": 18,
+              "sustain_rate": 0,
+              "sustain_level": 15,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": -1,
+              "total_level": 6,
+              "attack_rate": 31,
+              "decay_rate": 5,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            }
+          ]
+        },
+        "vibrato": {
+          "depth": 6,
+          "rate": 42,
+          "delay": 120
+        },
+        "unison": {
+          "voices": 2,
+          "detune": 8
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2900,
+          "resonance": 8,
+          "envelope_depth": 18
+        },
+        "volume": 66,
+        "pan": 0,
+        "reverb_send": 28
+      }
+    },
+    {
+      "id": "warm_wurlitzer_200a",
+      "category": "keys",
+      "description": "Wurlitzer 200A Reed Electric Piano: soulful vibrating steel reed bark with warm tube preamp filtering. Octaves 2-5.",
+      "instrument": {
+        "name": "Wurlitzer 200A Reed EP",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 4,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 1,
+              "total_level": 24,
+              "attack_rate": 31,
+              "decay_rate": 11,
+              "sustain_rate": 2,
+              "sustain_level": 7,
+              "release_rate": 7
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 6,
+              "sustain_rate": 2,
+              "sustain_level": 4,
+              "release_rate": 7
+            },
+            {
+              "multiple": 3,
+              "detune": -1,
+              "total_level": 34,
+              "attack_rate": 31,
+              "decay_rate": 14,
+              "sustain_rate": 3,
+              "sustain_level": 11,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 8,
+              "attack_rate": 31,
+              "decay_rate": 6,
+              "sustain_rate": 2,
+              "sustain_level": 5,
+              "release_rate": 7
+            }
+          ]
+        },
+        "vibrato": {
+          "depth": 8,
+          "rate": 54,
+          "delay": 80
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2600,
+          "resonance": 12,
+          "envelope_depth": 22
+        },
+        "volume": 66,
+        "pan": 0,
+        "reverb_send": 22
+      }
+    },
+    {
+      "id": "acoustic_nylon_guitar",
+      "category": "plucked",
+      "description": "Classical Spanish Nylon Guitar: crisp finger-plucked transient decaying into warm cedar soundboard resonance. Octaves 2-5.",
+      "instrument": {
+        "name": "Acoustic Nylon Guitar",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 2,
+          "operators": [
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 28,
+              "attack_rate": 31,
+              "decay_rate": 15,
+              "sustain_rate": 4,
+              "sustain_level": 11,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 8,
+              "sustain_rate": 3,
+              "sustain_level": 6,
+              "release_rate": 7
+            },
+            {
+              "multiple": 3,
+              "detune": 1,
+              "total_level": 34,
+              "attack_rate": 31,
+              "decay_rate": 19,
+              "sustain_rate": 5,
+              "sustain_level": 14,
+              "release_rate": 9
+            },
+            {
+              "multiple": 1,
+              "detune": -1,
+              "total_level": 8,
+              "attack_rate": 31,
+              "decay_rate": 9,
+              "sustain_rate": 3,
+              "sustain_level": 7,
+              "release_rate": 7
+            }
+          ]
+        },
+        "unison": {
+          "voices": 2,
+          "detune": 4
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2500,
+          "resonance": 10,
+          "envelope_depth": 28
+        },
+        "volume": 70,
+        "pan": 0,
+        "reverb_send": 26
+      }
+    },
+    {
+      "id": "acoustic_steel_guitar",
+      "category": "plucked",
+      "description": "Acoustic Steel-String Dreadnought Guitar: bright bronze-wound pick transient with shimmering acoustic body. Octaves 2-5.",
+      "instrument": {
+        "name": "Acoustic Steel Guitar",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 3,
+          "operators": [
+            {
+              "multiple": 2,
+              "detune": 1,
+              "total_level": 22,
+              "attack_rate": 31,
+              "decay_rate": 13,
+              "sustain_rate": 3,
+              "sustain_level": 9,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 7,
+              "sustain_rate": 2,
+              "sustain_level": 5,
+              "release_rate": 7
+            },
+            {
+              "multiple": 5,
+              "detune": -1,
+              "total_level": 32,
+              "attack_rate": 31,
+              "decay_rate": 17,
+              "sustain_rate": 4,
+              "sustain_level": 13,
+              "release_rate": 9
+            },
+            {
+              "multiple": 1,
+              "detune": 1,
+              "total_level": 6,
+              "attack_rate": 31,
+              "decay_rate": 8,
+              "sustain_rate": 2,
+              "sustain_level": 6,
+              "release_rate": 7
+            }
+          ]
+        },
+        "unison": {
+          "voices": 3,
+          "detune": 6
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 4200,
+          "resonance": 8,
+          "envelope_depth": 26
+        },
+        "volume": 66,
+        "pan": 0,
+        "reverb_send": 28
+      }
+    },
+    {
+      "id": "acoustic_concert_harp",
+      "category": "plucked",
+      "description": "Orchestral Concert Harp: warm finger-plucked gut/nylon string bloom with long concert-hall sympathetic resonance. Octaves 3-6.",
+      "instrument": {
+        "name": "Orchestral Concert Harp",
+        "voice": {
+          "type": "fm",
+          "algorithm": 5,
+          "feedback": 1,
+          "operators": [
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 32,
+              "attack_rate": 31,
+              "decay_rate": 16,
+              "sustain_rate": 4,
+              "sustain_level": 12,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 30,
+              "decay_rate": 7,
+              "sustain_rate": 2,
+              "sustain_level": 5,
+              "release_rate": 6
+            },
+            {
+              "multiple": 2,
+              "detune": 1,
+              "total_level": 14,
+              "attack_rate": 30,
+              "decay_rate": 9,
+              "sustain_rate": 3,
+              "sustain_level": 7,
+              "release_rate": 6
+            },
+            {
+              "multiple": 3,
+              "detune": -1,
+              "total_level": 24,
+              "attack_rate": 31,
+              "decay_rate": 12,
+              "sustain_rate": 4,
+              "sustain_level": 9,
+              "release_rate": 7
+            }
+          ]
+        },
+        "unison": {
+          "voices": 2,
+          "detune": 5
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 3400,
+          "resonance": 8,
+          "envelope_depth": 20
+        },
+        "volume": 68,
+        "pan": 0,
+        "reverb_send": 42
+      }
+    },
+    {
+      "id": "acoustic_vibraphone",
+      "category": "keys",
+      "description": "Jazz & Chamber Vibraphone: tuned 1:4:10 aluminum bar overtones with soft yarn mallet strike and motor tremolo. Octaves 3-6.",
+      "instrument": {
+        "name": "Concert Vibraphone",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 0,
+          "operators": [
+            {
+              "multiple": 4,
+              "detune": 0,
+              "total_level": 34,
+              "attack_rate": 31,
+              "decay_rate": 12,
+              "sustain_rate": 3,
+              "sustain_level": 10,
+              "release_rate": 7
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 30,
+              "decay_rate": 6,
+              "sustain_rate": 2,
+              "sustain_level": 4,
+              "release_rate": 6
+            },
+            {
+              "multiple": 10,
+              "detune": 1,
+              "total_level": 48,
+              "attack_rate": 31,
+              "decay_rate": 20,
+              "sustain_rate": 0,
+              "sustain_level": 15,
+              "release_rate": 9
+            },
+            {
+              "multiple": 1,
+              "detune": -1,
+              "total_level": 8,
+              "attack_rate": 30,
+              "decay_rate": 6,
+              "sustain_rate": 2,
+              "sustain_level": 4,
+              "release_rate": 6
+            }
+          ]
+        },
+        "vibrato": {
+          "depth": 10,
+          "rate": 56,
+          "delay": 60
+        },
+        "unison": {
+          "voices": 2,
+          "detune": 5
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 4600,
+          "resonance": 6,
+          "envelope_depth": 14
+        },
+        "volume": 66,
+        "pan": 0,
+        "reverb_send": 35
+      }
+    },
+    {
+      "id": "acoustic_marimba",
+      "category": "plucked",
+      "description": "Concert Rosewood Marimba: warm hollow 1:4 bar-and-gourd resonator acoustics with woody mallet transient. Octaves 3-5.",
+      "instrument": {
+        "name": "Concert Rosewood Marimba",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 1,
+          "operators": [
+            {
+              "multiple": 4,
+              "detune": 0,
+              "total_level": 28,
+              "attack_rate": 31,
+              "decay_rate": 18,
+              "sustain_rate": 5,
+              "sustain_level": 13,
+              "release_rate": 9
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 11,
+              "sustain_rate": 4,
+              "sustain_level": 8,
+              "release_rate": 8
+            },
+            {
+              "multiple": 10,
+              "detune": 0,
+              "total_level": 46,
+              "attack_rate": 31,
+              "decay_rate": 24,
+              "sustain_rate": 0,
+              "sustain_level": 15,
+              "release_rate": 11
+            },
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 14,
+              "attack_rate": 31,
+              "decay_rate": 13,
+              "sustain_rate": 4,
+              "sustain_level": 10,
+              "release_rate": 8
+            }
+          ]
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2400,
+          "resonance": 10,
+          "envelope_depth": 24
+        },
+        "volume": 72,
+        "pan": 0,
+        "reverb_send": 26
+      }
+    },
+    {
+      "id": "acoustic_solo_violin",
+      "category": "strings",
+      "description": "Stradivari Solo Violin: expressive bowed articulation with rosin bow friction, spruce body resonance, and delayed human vibrato. Octaves 4-6.",
+      "instrument": {
+        "name": "Acoustic Solo Violin",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 5,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 1,
+              "total_level": 24,
+              "attack_rate": 19,
+              "decay_rate": 6,
+              "sustain_rate": 1,
+              "sustain_level": 3,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 18,
+              "decay_rate": 4,
+              "sustain_rate": 0,
+              "sustain_level": 2,
+              "release_rate": 6
+            },
+            {
+              "multiple": 2,
+              "detune": -1,
+              "total_level": 30,
+              "attack_rate": 20,
+              "decay_rate": 7,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": 2,
+              "total_level": 8,
+              "attack_rate": 18,
+              "decay_rate": 4,
+              "sustain_rate": 0,
+              "sustain_level": 2,
+              "release_rate": 6
+            }
+          ]
+        },
+        "vibrato": {
+          "depth": 15,
+          "rate": 56,
+          "delay": 240
+        },
+        "unison": {
+          "voices": 2,
+          "detune": 6
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 3500,
+          "resonance": 14,
+          "envelope_depth": 12
+        },
+        "volume": 68,
+        "pan": -8,
+        "reverb_send": 34
+      }
+    },
+    {
+      "id": "acoustic_solo_cello",
+      "category": "strings",
+      "description": "Concert Solo Cello: deep woody bowed chest resonance with warm harmonic overtones and lyrical delayed vibrato. Octaves 2-5.",
+      "instrument": {
+        "name": "Acoustic Solo Cello",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 4,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 1,
+              "total_level": 22,
+              "attack_rate": 18,
+              "decay_rate": 5,
+              "sustain_rate": 1,
+              "sustain_level": 3,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 17,
+              "decay_rate": 4,
+              "sustain_rate": 0,
+              "sustain_level": 2,
+              "release_rate": 6
+            },
+            {
+              "multiple": 2,
+              "detune": -1,
+              "total_level": 28,
+              "attack_rate": 19,
+              "decay_rate": 6,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            },
+            {
+              "multiple": 1,
+              "detune": -1,
+              "total_level": 6,
+              "attack_rate": 17,
+              "decay_rate": 4,
+              "sustain_rate": 0,
+              "sustain_level": 2,
+              "release_rate": 6
+            }
+          ]
+        },
+        "vibrato": {
+          "depth": 14,
+          "rate": 50,
+          "delay": 260
+        },
+        "unison": {
+          "voices": 2,
+          "detune": 6
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2200,
+          "resonance": 16,
+          "envelope_depth": 14
+        },
+        "volume": 72,
+        "pan": 10,
+        "reverb_send": 34
+      }
+    },
+    {
+      "id": "acoustic_string_quartet",
+      "category": "strings",
+      "description": "Chamber String Quartet: 4-voice bowed string ensemble with warm wooden resonance and concert-hall stereo bloom. Octaves 3-5.",
+      "instrument": {
+        "name": "Chamber String Quartet",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 4,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 1,
+              "total_level": 26,
+              "attack_rate": 16,
+              "decay_rate": 5,
+              "sustain_rate": 0,
+              "sustain_level": 3,
+              "release_rate": 5
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 15,
+              "decay_rate": 4,
+              "sustain_rate": 0,
+              "sustain_level": 2,
+              "release_rate": 5
+            },
+            {
+              "multiple": 2,
+              "detune": -1,
+              "total_level": 32,
+              "attack_rate": 16,
+              "decay_rate": 6,
+              "sustain_rate": 0,
+              "sustain_level": 4,
+              "release_rate": 5
+            },
+            {
+              "multiple": 1,
+              "detune": 2,
+              "total_level": 6,
+              "attack_rate": 15,
+              "decay_rate": 4,
+              "sustain_rate": 0,
+              "sustain_level": 2,
+              "release_rate": 5
+            }
+          ]
+        },
+        "vibrato": {
+          "depth": 12,
+          "rate": 52,
+          "delay": 280
+        },
+        "unison": {
+          "voices": 4,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2900,
+          "resonance": 12,
+          "envelope_depth": 10
+        },
+        "volume": 62,
+        "pan": 0,
+        "reverb_send": 44
+      }
+    },
+    {
+      "id": "acoustic_concert_flute",
+      "category": "woodwinds",
+      "description": "Silver Concert Flute: breathy embouchure chiff transient opening into pure singing overblown tube harmonics. Octaves 4-6.",
+      "instrument": {
+        "name": "Silver Concert Flute",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 3,
+          "operators": [
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 36,
+              "attack_rate": 24,
+              "decay_rate": 12,
+              "sustain_rate": 2,
+              "sustain_level": 8,
+              "release_rate": 7
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 20,
+              "decay_rate": 5,
+              "sustain_rate": 0,
+              "sustain_level": 2,
+              "release_rate": 7
+            },
+            {
+              "multiple": 3,
+              "detune": 1,
+              "total_level": 44,
+              "attack_rate": 28,
+              "decay_rate": 18,
+              "sustain_rate": 4,
+              "sustain_level": 13,
+              "release_rate": 8
+            },
+            {
+              "multiple": 2,
+              "detune": -1,
+              "total_level": 14,
+              "attack_rate": 20,
+              "decay_rate": 6,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 7
+            }
+          ]
+        },
+        "vibrato": {
+          "depth": 14,
+          "rate": 58,
+          "delay": 220
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 4200,
+          "resonance": 8,
+          "envelope_depth": 10
+        },
+        "volume": 68,
+        "pan": -6,
+        "reverb_send": 32
+      }
+    },
+    {
+      "id": "acoustic_warm_clarinet",
+      "category": "woodwinds",
+      "description": "Grenadilla Wood Clarinet: authentic cylindrical-bore odd-harmonic (1:3:5) woody reed tone with expressive warmth. Octaves 3-5.",
+      "instrument": {
+        "name": "Wood Clarinet",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 2,
+          "operators": [
+            {
+              "multiple": 3,
+              "detune": 0,
+              "total_level": 26,
+              "attack_rate": 23,
+              "decay_rate": 7,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 7
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 22,
+              "decay_rate": 4,
+              "sustain_rate": 0,
+              "sustain_level": 2,
+              "release_rate": 7
+            },
+            {
+              "multiple": 5,
+              "detune": 0,
+              "total_level": 36,
+              "attack_rate": 24,
+              "decay_rate": 10,
+              "sustain_rate": 2,
+              "sustain_level": 6,
+              "release_rate": 7
+            },
+            {
+              "multiple": 1,
+              "detune": 1,
+              "total_level": 8,
+              "attack_rate": 22,
+              "decay_rate": 4,
+              "sustain_rate": 0,
+              "sustain_level": 2,
+              "release_rate": 7
+            }
+          ]
+        },
+        "vibrato": {
+          "depth": 8,
+          "rate": 52,
+          "delay": 260
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2800,
+          "resonance": 10,
+          "envelope_depth": 12
+        },
+        "volume": 68,
+        "pan": 6,
+        "reverb_send": 28
+      }
+    },
+    {
+      "id": "acoustic_upright_bass",
+      "category": "bass",
+      "description": "Acoustic Double Bass (Pizzicato): carved-maple upright bass with woody fingerboard pluck and deep acoustic room sustain. Octaves 1-3.",
+      "instrument": {
+        "name": "Acoustic Upright Bass",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 2,
+          "operators": [
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 28,
+              "attack_rate": 31,
+              "decay_rate": 14,
+              "sustain_rate": 4,
+              "sustain_level": 10,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 30,
+              "decay_rate": 8,
+              "sustain_rate": 2,
+              "sustain_level": 5,
+              "release_rate": 7
+            },
+            {
+              "multiple": 3,
+              "detune": 1,
+              "total_level": 38,
+              "attack_rate": 31,
+              "decay_rate": 18,
+              "sustain_rate": 5,
+              "sustain_level": 13,
+              "release_rate": 9
+            },
+            {
+              "multiple": 1,
+              "detune": -1,
+              "total_level": 8,
+              "attack_rate": 30,
+              "decay_rate": 8,
+              "sustain_rate": 2,
+              "sustain_level": 6,
+              "release_rate": 7
+            }
+          ]
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1150,
+          "resonance": 12,
+          "envelope_depth": 22
+        },
+        "volume": 78,
+        "pan": 0,
+        "reverb_send": 12
+      }
+    },
+    {
+      "id": "acoustic_brush_snare",
+      "category": "drums",
+      "description": "Studio Acoustic Brush Snare: warm wire-brush sweep on a coated jazz snare drumhead. Play A5.",
+      "instrument": {
+        "name": "Acoustic Brush Snare",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 12,
+          "decay": 190,
+          "sustain": 0,
+          "release": 90
+        },
+        "filter": {
+          "mode": "band_pass",
+          "cutoff": 2400,
+          "resonance": 18,
+          "envelope_depth": 12
+        },
+        "volume": 64,
+        "pan": 0,
+        "reverb_send": 22
+      }
+    }
+  ]
+}

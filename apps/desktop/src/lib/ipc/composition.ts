@@ -7,7 +7,7 @@ export interface ComposeConfig {
   key: string;
   scale: string;
   bpm: number;
-  form: 'short' | 'standard' | 'extended';
+  form: 'short' | 'standard' | 'extended' | 'long' | 'epic' | 'marathon';
   swing: number;
   bass_rhythm: 'mixed' | 'template' | 'euclidean';
   bass_hits: number;

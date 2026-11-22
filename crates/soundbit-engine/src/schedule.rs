@@ -101,8 +101,8 @@ impl Schedule {
             .tracks()
             .map(|(_, track)| plan_track(song, track, &clock, &instrument_ids))
             .collect();
-        let samples = crate::sample_bank::compile(&mut tracks, &patches)?;
         let end = clock.sample_at(u64::from(song.length_bars()) * steps_per_bar);
+        let samples = crate::sample_bank::compile(&mut tracks, &patches, sample_rate, end)?;
         let loop_region = song.loop_range().map(|range| {
             let bar = |bar: u16| clock.sample_at(u64::from(bar) * steps_per_bar);
             (bar(range.start()), bar(range.end()))

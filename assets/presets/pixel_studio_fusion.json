@@ -1,0 +1,1524 @@
+{
+  "format": "soundbit-presets",
+  "format_version": 1,
+  "source": "CTG Studio: Pixel Studio Fusion (Chiptune + Studio Hybrid) pack, GPL-3.0-or-later",
+  "presets": [
+    {
+      "id": "bw_bright_pulse_lead",
+      "category": "lead",
+      "description": "Crisp 25 % chiptune pulse lead with a subtle pitch attack and delayed vibrato for pixel-art video hooks. Octaves 4-6.",
+      "instrument": {
+        "name": "Fusion Bright Pulse Lead",
+        "voice": {
+          "type": "pulse",
+          "duty": "quarter"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 150,
+          "sustain": 72,
+          "release": 85
+        },
+        "pitch_envelope": {
+          "semitones": -2,
+          "time": 16
+        },
+        "vibrato": {
+          "depth": 18,
+          "rate": 58,
+          "delay": 190
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 74,
+        "pan": 0,
+        "reverb_send": 12
+      }
+    },
+    {
+      "id": "bw_dual_chip_lead",
+      "category": "lead",
+      "description": "Wide stereo 50 % square hook lead with tight 2-voice unison detune for energetic chiptune choruses. Octaves 4-6.",
+      "instrument": {
+        "name": "Fusion Dual Square Lead",
+        "voice": {
+          "type": "pulse",
+          "duty": "half"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 170,
+          "sustain": 68,
+          "release": 95
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 14,
+          "rate": 55,
+          "delay": 210
+        },
+        "unison": {
+          "voices": 2,
+          "detune": 9
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 66,
+        "pan": 0,
+        "reverb_send": 16
+      }
+    },
+    {
+      "id": "bw_gameboy_crystal_wave",
+      "category": "lead",
+      "description": "Bright stepped Game Boy / FDS wavetable melody lead with clear upper harmonics that cut over real bass. Octaves 4-6.",
+      "instrument": {
+        "name": "Fusion Crystal Wave Lead",
+        "voice": {
+          "type": "wavetable",
+          "samples": [
+            15,
+            15,
+            14,
+            13,
+            12,
+            14,
+            15,
+            12,
+            9,
+            7,
+            10,
+            11,
+            8,
+            5,
+            3,
+            2,
+            0,
+            0,
+            1,
+            2,
+            3,
+            1,
+            0,
+            3,
+            6,
+            8,
+            5,
+            4,
+            7,
+            10,
+            12,
+            14
+          ]
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 180,
+          "sustain": 66,
+          "release": 90
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 16,
+          "rate": 60,
+          "delay": 180
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 74,
+        "pan": 0,
+        "reverb_send": 14
+      }
+    },
+    {
+      "id": "bw_octaver_chip_hook",
+      "category": "lead",
+      "description": "Octave-doubled 4-operator FM chiptune synth lead for high-energy hybrid verses and climaxes. Octaves 4-6.",
+      "instrument": {
+        "name": "Fusion Octaver Chip Hook",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 3,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 24,
+              "attack_rate": 31,
+              "decay_rate": 10,
+              "sustain_rate": 1,
+              "sustain_level": 5,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 2,
+              "attack_rate": 31,
+              "decay_rate": 6,
+              "sustain_rate": 1,
+              "sustain_level": 3,
+              "release_rate": 8
+            },
+            {
+              "multiple": 2,
+              "detune": 1,
+              "total_level": 28,
+              "attack_rate": 31,
+              "decay_rate": 12,
+              "sustain_rate": 1,
+              "sustain_level": 6,
+              "release_rate": 8
+            },
+            {
+              "multiple": 2,
+              "detune": -1,
+              "total_level": 10,
+              "attack_rate": 31,
+              "decay_rate": 7,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 8
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 15,
+          "rate": 58,
+          "delay": 180
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 62,
+        "pan": 0,
+        "reverb_send": 18
+      }
+    },
+    {
+      "id": "bw_chip_arp_pluck",
+      "category": "keys",
+      "description": "Tight 12.5 % pulse pluck for sparkling chiptune chord arpeggios and funky offbeat stabs. Octaves 3-5.",
+      "instrument": {
+        "name": "Fusion Chip Arp Pluck",
+        "voice": {
+          "type": "pulse",
+          "duty": "eighth"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 125,
+          "sustain": 18,
+          "release": 55
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 3400,
+          "resonance": 14,
+          "envelope_depth": 18
+        },
+        "volume": 62,
+        "pan": 0,
+        "reverb_send": 14
+      }
+    },
+    {
+      "id": "bw_studio_rhodes_ep",
+      "category": "keys",
+      "description": "Warm studio Rhodes tine electric piano for jazzy dorian/funk chords underneath 8-bit chiptune leads. Octaves 3-5.",
+      "instrument": {
+        "name": "Fusion Studio Rhodes EP",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 1,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 36,
+              "attack_rate": 31,
+              "decay_rate": 9,
+              "sustain_rate": 2,
+              "sustain_level": 7,
+              "release_rate": 7
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 4,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            },
+            {
+              "multiple": 7,
+              "detune": 1,
+              "total_level": 52,
+              "attack_rate": 31,
+              "decay_rate": 16,
+              "sustain_rate": 0,
+              "sustain_level": 13,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": -1,
+              "total_level": 8,
+              "attack_rate": 31,
+              "decay_rate": 5,
+              "sustain_rate": 1,
+              "sustain_level": 4,
+              "release_rate": 6
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 58,
+        "pan": 0,
+        "reverb_send": 24
+      }
+    },
+    {
+      "id": "bw_funky_clavinet",
+      "category": "keys",
+      "description": "Snappy D6 Clavinet-style funky chord stab that locks with slap and fingered electric bass. Octaves 3-5.",
+      "instrument": {
+        "name": "Fusion Funky Clavinet",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 5,
+          "operators": [
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 24,
+              "attack_rate": 31,
+              "decay_rate": 14,
+              "sustain_rate": 2,
+              "sustain_level": 7,
+              "release_rate": 9
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 8,
+              "sustain_rate": 2,
+              "sustain_level": 5,
+              "release_rate": 8
+            },
+            {
+              "multiple": 3,
+              "detune": 1,
+              "total_level": 30,
+              "attack_rate": 31,
+              "decay_rate": 16,
+              "sustain_rate": 2,
+              "sustain_level": 9,
+              "release_rate": 9
+            },
+            {
+              "multiple": 1,
+              "detune": -1,
+              "total_level": 8,
+              "attack_rate": 31,
+              "decay_rate": 8,
+              "sustain_rate": 2,
+              "sustain_level": 5,
+              "release_rate": 8
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 58,
+        "pan": 0,
+        "reverb_send": 12
+      }
+    },
+    {
+      "id": "bw_wurlitzer_warm_keys",
+      "category": "keys",
+      "description": "Warm reed electric piano with a gentle bark for soulful chiptune-fusion chord progressions. Octaves 3-5.",
+      "instrument": {
+        "name": "Fusion Wurlitzer Reed Keys",
+        "voice": {
+          "type": "wavetable",
+          "samples": [
+            8,
+            11,
+            13,
+            15,
+            14,
+            12,
+            11,
+            13,
+            14,
+            12,
+            9,
+            8,
+            6,
+            4,
+            2,
+            1,
+            7,
+            4,
+            2,
+            0,
+            1,
+            3,
+            4,
+            2,
+            1,
+            3,
+            6,
+            7,
+            9,
+            10,
+            9,
+            8
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 240,
+          "sustain": 52,
+          "release": 110
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 8,
+          "rate": 48,
+          "delay": 120
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1900,
+          "resonance": 12,
+          "envelope_depth": 16
+        },
+        "volume": 64,
+        "pan": 0,
+        "reverb_send": 20
+      }
+    },
+    {
+      "id": "bw_nostalgic_ocarina",
+      "category": "woodwinds",
+      "description": "Sweet rounded ocarina / flute lead for emotional bridge melodies in pixel-art explainers. Octaves 4-6.",
+      "instrument": {
+        "name": "Fusion Nostalgic Ocarina",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 18,
+          "decay": 220,
+          "sustain": 78,
+          "release": 160
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 18,
+          "rate": 52,
+          "delay": 160
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 74,
+        "pan": 0,
+        "reverb_send": 32
+      }
+    },
+    {
+      "id": "bw_tape_cello_lead",
+      "category": "strings",
+      "description": "Warm analog-filtered solo cello for lyrical, emotional bridge contrast against bright 8-bit hooks. Octaves 3-5.",
+      "instrument": {
+        "name": "Fusion Warm Tape Cello",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "envelope": {
+          "attack": 24,
+          "decay": 260,
+          "sustain": 76,
+          "release": 180
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 16,
+          "rate": 50,
+          "delay": 180
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1350,
+          "resonance": 14,
+          "envelope_depth": 14
+        },
+        "volume": 64,
+        "pan": 0,
+        "reverb_send": 30
+      }
+    },
+    {
+      "id": "bw_punch_studio_kick",
+      "category": "drums",
+      "description": "Punchy modern studio kick drum tuned to lock with real electric bass. Play C2.",
+      "instrument": {
+        "name": "Fusion Studio Punch Kick",
+        "voice": {
+          "type": "sine"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 190,
+          "sustain": 0,
+          "release": 28
+        },
+        "pitch_envelope": {
+          "semitones": 28,
+          "time": 42
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 74,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "bw_crisp_snare_clap",
+      "category": "drums",
+      "description": "Tight studio snare with crisp upper snap for funky chiptune-fusion backbeats. Play A5.",
+      "instrument": {
+        "name": "Fusion Crisp Studio Snare",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 135,
+          "sustain": 0,
+          "release": 38
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "band_pass",
+          "cutoff": 1350,
+          "resonance": 22,
+          "envelope_depth": 0
+        },
+        "volume": 64,
+        "pan": 0,
+        "reverb_send": 14
+      }
+    },
+    {
+      "id": "bw_tight_pocket_hat",
+      "category": "drums",
+      "description": "Crisp studio closed hi-hat for 16th-note funk pockets. Play C8.",
+      "instrument": {
+        "name": "Fusion Tight Pocket Hat",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 38,
+          "sustain": 0,
+          "release": 16
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 5600,
+          "resonance": 5,
+          "envelope_depth": 0
+        },
+        "volume": 48,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "real_slap_jazz_bass",
+      "category": "bass",
+      "description": "Marcus-style active Jazz Bass thumb slap and pop: crisp fret snap decaying into a round, punchy low end. Octaves 2-3.",
+      "instrument": {
+        "name": "Real Slap Jazz Bass",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 5,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 22,
+              "attack_rate": 31,
+              "decay_rate": 13,
+              "sustain_rate": 2,
+              "sustain_level": 6,
+              "release_rate": 10
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 6,
+              "sustain_rate": 2,
+              "sustain_level": 3,
+              "release_rate": 10
+            },
+            {
+              "multiple": 4,
+              "detune": 1,
+              "total_level": 32,
+              "attack_rate": 31,
+              "decay_rate": 18,
+              "sustain_rate": 3,
+              "sustain_level": 11,
+              "release_rate": 11
+            },
+            {
+              "multiple": 1,
+              "detune": -1,
+              "total_level": 6,
+              "attack_rate": 31,
+              "decay_rate": 7,
+              "sustain_rate": 2,
+              "sustain_level": 4,
+              "release_rate": 10
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 2400,
+          "resonance": 14,
+          "envelope_depth": 18
+        },
+        "volume": 72,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "real_finger_pbass",
+      "category": "bass",
+      "description": "Classic fingerstyle electric P-Bass with woody low-mid warmth and tight finger attack. Ideal under 8-bit chiptune leads. Octaves 2-3.",
+      "instrument": {
+        "name": "Real Fingered P-Bass",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 2,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 30,
+              "attack_rate": 31,
+              "decay_rate": 11,
+              "sustain_rate": 1,
+              "sustain_level": 6,
+              "release_rate": 9
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 5,
+              "sustain_rate": 1,
+              "sustain_level": 3,
+              "release_rate": 9
+            },
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 44,
+              "attack_rate": 31,
+              "decay_rate": 15,
+              "sustain_rate": 2,
+              "sustain_level": 9,
+              "release_rate": 10
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 8,
+              "attack_rate": 31,
+              "decay_rate": 6,
+              "sustain_rate": 1,
+              "sustain_level": 3,
+              "release_rate": 9
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1450,
+          "resonance": 10,
+          "envelope_depth": 12
+        },
+        "volume": 74,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "real_picked_indie_bass",
+      "category": "bass",
+      "description": "Crisp plectrum-picked electric bass with a tight palm-muted body for fast driving 8th and 16th-note grooves. Octaves 2-3.",
+      "instrument": {
+        "name": "Real Picked Rock/Indie Bass",
+        "voice": {
+          "type": "sawtooth"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 155,
+          "sustain": 34,
+          "release": 55
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 620,
+          "resonance": 20,
+          "envelope_depth": 28
+        },
+        "volume": 68,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "real_fretless_mwah_bass",
+      "category": "bass",
+      "description": "Expressive Jaco-style fretless electric bass with warm vocal mid-range bloom and subtle chorus width. Octaves 2-3.",
+      "instrument": {
+        "name": "Real Fretless Mwah Bass",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 3,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 1,
+              "total_level": 28,
+              "attack_rate": 24,
+              "decay_rate": 9,
+              "sustain_rate": 1,
+              "sustain_level": 5,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 28,
+              "decay_rate": 5,
+              "sustain_rate": 1,
+              "sustain_level": 3,
+              "release_rate": 8
+            },
+            {
+              "multiple": 3,
+              "detune": -1,
+              "total_level": 38,
+              "attack_rate": 22,
+              "decay_rate": 11,
+              "sustain_rate": 1,
+              "sustain_level": 7,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 1,
+              "total_level": 8,
+              "attack_rate": 26,
+              "decay_rate": 5,
+              "sustain_rate": 1,
+              "sustain_level": 3,
+              "release_rate": 8
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": -1,
+          "time": 28
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 2,
+          "detune": 7
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 68,
+        "pan": 0,
+        "reverb_send": 8
+      }
+    },
+    {
+      "id": "real_upright_pizz_bass",
+      "category": "bass",
+      "description": "Acoustic double-bass pizzicato with a natural wooden pluck and warm acoustic resonance. Octaves 2-3.",
+      "instrument": {
+        "name": "Real Upright Acoustic Bass",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 1,
+          "operators": [
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 34,
+              "attack_rate": 31,
+              "decay_rate": 14,
+              "sustain_rate": 3,
+              "sustain_level": 9,
+              "release_rate": 8
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 30,
+              "decay_rate": 9,
+              "sustain_rate": 2,
+              "sustain_level": 6,
+              "release_rate": 8
+            },
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 48,
+              "attack_rate": 31,
+              "decay_rate": 18,
+              "sustain_rate": 4,
+              "sustain_level": 12,
+              "release_rate": 9
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 10,
+              "attack_rate": 30,
+              "decay_rate": 10,
+              "sustain_rate": 2,
+              "sustain_level": 7,
+              "release_rate": 8
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 1100,
+          "resonance": 8,
+          "envelope_depth": 10
+        },
+        "volume": 74,
+        "pan": 0,
+        "reverb_send": 6
+      }
+    },
+    {
+      "id": "real_active_funk_bass",
+      "category": "bass",
+      "description": "Modern active 5-string MusicMan-style funk bass with tight punch and articulate octave pops. Octaves 2-3.",
+      "instrument": {
+        "name": "Real Active Funk Bass",
+        "voice": {
+          "type": "fm",
+          "algorithm": 4,
+          "feedback": 4,
+          "operators": [
+            {
+              "multiple": 2,
+              "detune": 0,
+              "total_level": 26,
+              "attack_rate": 31,
+              "decay_rate": 13,
+              "sustain_rate": 2,
+              "sustain_level": 6,
+              "release_rate": 10
+            },
+            {
+              "multiple": 1,
+              "detune": 0,
+              "total_level": 0,
+              "attack_rate": 31,
+              "decay_rate": 6,
+              "sustain_rate": 1,
+              "sustain_level": 3,
+              "release_rate": 10
+            },
+            {
+              "multiple": 3,
+              "detune": 1,
+              "total_level": 34,
+              "attack_rate": 31,
+              "decay_rate": 16,
+              "sustain_rate": 2,
+              "sustain_level": 9,
+              "release_rate": 10
+            },
+            {
+              "multiple": 1,
+              "detune": -1,
+              "total_level": 6,
+              "attack_rate": 31,
+              "decay_rate": 6,
+              "sustain_rate": 1,
+              "sustain_level": 3,
+              "release_rate": 10
+            }
+          ]
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 70,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "real_muted_soul_bass",
+      "category": "bass",
+      "description": "Motown / soul foam-muted flatwound electric bass with deep thump and short warm sustain. Octaves 2-3.",
+      "instrument": {
+        "name": "Real Muted Soul Bass",
+        "voice": {
+          "type": "pulse",
+          "duty": "half"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 150,
+          "sustain": 22,
+          "release": 50
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 480,
+          "resonance": 14,
+          "envelope_depth": 18
+        },
+        "volume": 72,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "real_sub_hybrid_bass",
+      "category": "bass",
+      "description": "Studio DI sub-bass with clean 2nd and 3rd harmonic warmth so basslines stay audible on laptop and phone speakers. Octaves 2-3.",
+      "instrument": {
+        "name": "Real Studio Sub-DI Bass",
+        "voice": {
+          "type": "wavetable",
+          "samples": [
+            8,
+            12,
+            14,
+            15,
+            15,
+            14,
+            13,
+            12,
+            11,
+            10,
+            9,
+            8,
+            7,
+            6,
+            5,
+            4,
+            8,
+            4,
+            2,
+            1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            9
+          ]
+        },
+        "envelope": {
+          "attack": 3,
+          "decay": 210,
+          "sustain": 68,
+          "release": 80
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 780,
+          "resonance": 10,
+          "envelope_depth": 12
+        },
+        "volume": 74,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "chip_nes_eighth_lead",
+      "category": "lead",
+      "description": "Sharp 12.5 % NES pulse lead with snappy decay and bright upper harmonics for retro pixel-art hooks. Octaves 4-6.",
+      "instrument": {
+        "name": "NES 12.5% Pulse Lead",
+        "voice": {
+          "type": "pulse",
+          "duty": "eighth"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 150,
+          "sustain": 64,
+          "release": 75
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 16,
+          "rate": 60,
+          "delay": 180
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 72,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "chip_gbc_chime_arp",
+      "category": "keys",
+      "description": "Crystalline Game Boy Color square chime for fast 8-bit chord arpeggios and stabs. Octaves 4-6.",
+      "instrument": {
+        "name": "GBC Chime Arp",
+        "voice": {
+          "type": "pulse",
+          "duty": "quarter"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 115,
+          "sustain": 24,
+          "release": 65
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 64,
+        "pan": 0,
+        "reverb_send": 10
+      }
+    },
+    {
+      "id": "chip_famicom_warm_pad",
+      "category": "pad",
+      "description": "Soft Famicom triangle voice with gentle vibrato for nostalgic 8-bit bridge melodies. Octaves 4-5.",
+      "instrument": {
+        "name": "Famicom Warm Triangle",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 16,
+          "decay": 220,
+          "sustain": 78,
+          "release": 140
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 14,
+          "rate": 50,
+          "delay": 160
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 76,
+        "pan": 0,
+        "reverb_send": 16
+      }
+    },
+    {
+      "id": "chip_nes_tri_kick",
+      "category": "drums",
+      "description": "Authentic 8-bit NES triangle pitch-drop kick drum. Play C2.",
+      "instrument": {
+        "name": "NES Triangle Kick",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 150,
+          "sustain": 0,
+          "release": 24
+        },
+        "pitch_envelope": {
+          "semitones": 30,
+          "time": 38
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "off",
+          "cutoff": 2000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 76,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    },
+    {
+      "id": "chip_nes_noise_snare",
+      "category": "drums",
+      "description": "Authentic 8-bit short/long noise channel snare drum. Play A5.",
+      "instrument": {
+        "name": "NES Noise Snare",
+        "voice": {
+          "type": "noise",
+          "mode": "short"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 125,
+          "sustain": 0,
+          "release": 30
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 700,
+          "resonance": 8,
+          "envelope_depth": 0
+        },
+        "volume": 58,
+        "pan": 0,
+        "reverb_send": 6
+      }
+    },
+    {
+      "id": "chip_nes_noise_hat",
+      "category": "drums",
+      "description": "Crisp 8-bit noise channel closed hi-hat. Play C8.",
+      "instrument": {
+        "name": "NES Noise Hat",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 32,
+          "sustain": 0,
+          "release": 14
+        },
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 55,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 12
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 5800,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 44,
+        "pan": 0,
+        "reverb_send": 0
+      }
+    }
+  ]
+}

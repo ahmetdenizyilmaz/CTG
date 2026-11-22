@@ -33,6 +33,12 @@ pub enum Form {
     Standard,
     /// Twelve sections, 48 bars.
     Extended,
+    /// Sixteen sections, 64 bars.
+    Long,
+    /// Twenty-four sections, 96 bars.
+    Epic,
+    /// Thirty-two sections, 128 bars.
+    Marathon,
 }
 
 /// Bass onset selection, always respecting the section's attack budget.

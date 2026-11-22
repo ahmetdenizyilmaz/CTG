@@ -23,5 +23,9 @@ soundbit-mcp.workspace = true
 tauri.workspace = true
 tauri-plugin-dialog.workspace = true
 
+[features]
+default = ["custom-protocol"]
+custom-protocol = ["tauri/custom-protocol"]
+
 [lints]
 workspace = true

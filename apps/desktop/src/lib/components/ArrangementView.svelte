@@ -11,14 +11,15 @@
   import TrackHeader from './TrackHeader.svelte';
 
   /** Empty bars shown after the last clip, so there is room to extend the song. */
-  const SPARE_BARS = 8;
+  const SPARE_BARS = 32;
 
   let canvas = $state<HTMLCanvasElement>();
+  let scroller = $state<HTMLDivElement>();
   let hover = $state<Cell | null>(null);
   const editorState = $derived(editor.state);
   const song = $derived(editorState?.song);
   const tracks = $derived(song?.tracks ?? []);
-  const bars = $derived(Math.max((editorState?.length_bars ?? 0) + SPARE_BARS, 16));
+  const bars = $derived(Math.max((editorState?.length_bars ?? 0) + SPARE_BARS, 32));
   const grid = $derived(arrangementGrid(bars, tracks.length));
 
   const colorOf = (instrument: number): string =>
@@ -57,6 +58,36 @@
     });
   });
 
+  $effect(() => {
+    const pos = transport.position;
+    if (pos === null || !editor.followPlayback || !song) return;
+    const bar = Math.floor(pos);
+    if (scroller) {
+      const playX = bar * BAR_WIDTH;
+      const viewLeft = scroller.scrollLeft;
+      const viewWidth = Math.max(scroller.clientWidth - 210, BAR_WIDTH * 2);
+      if (playX < viewLeft + BAR_WIDTH * 0.5 || playX > viewLeft + viewWidth - BAR_WIDTH * 1.5) {
+        scroller.scrollLeft = Math.max(0, playX - BAR_WIDTH * 2);
+      }
+    }
+    const preferredTrack =
+      tracks.find((t) => t.id === editor.selectedTrack && !t.muted && t.clips.some((c) => c.bar === bar)) ??
+      tracks.find(
+        (t) =>
+          !t.muted &&
+          t.clips.some(
+            (c) =>
+              c.bar === bar &&
+              song.patterns.find((p) => p.id === c.pattern)?.instrument === editor.selectedInstrument,
+          ),
+      ) ??
+      tracks.find((t) => !t.muted && t.clips.some((c) => c.bar === bar));
+    const clip = preferredTrack?.clips.find((c) => c.bar === bar);
+    if (clip && clip.pattern !== editor.selectedPattern) {
+      editor.selectedPattern = clip.pattern;
+    }
+  });
+
   function setClip(track: Track, bar: number, pattern: number | null): void {
     void editor.act({ kind: 'set_clip', track: track.id, bar, pattern });
   }
@@ -65,6 +96,7 @@
     const cell = cellAt(grid, event.offsetX, event.offsetY);
     const track = cell ? tracks[cell.row] : undefined;
     if (!cell || !track) return;
+    editor.selectedTrack = track.id;
     const current = track.clips.find((clip) => clip.bar === cell.column)?.pattern ?? null;
     const action = clipAction(current, editor.selectedPattern, event.altKey);
     if (action.kind === 'select') editor.selectedPattern = action.pattern;
@@ -87,7 +119,7 @@
 </script>
 
 <section class="panel arrangement">
-  <div class="scroll">
+  <div class="scroll" bind:this={scroller}>
     <div class="layout" style:grid-template-columns={`var(--head-width) ${bars * BAR_WIDTH}px`}>
       <div class="corner"><ArrangementCorner trackCount={tracks.length} /></div>
       <div class="ruler">

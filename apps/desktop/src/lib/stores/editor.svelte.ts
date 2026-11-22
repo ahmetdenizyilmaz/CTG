@@ -19,6 +19,9 @@ class EditorStore {
   presets = $state<PresetInfo[]>([]);
   selectedPattern = $state<number | null>(null);
   selectedInstrument = $state<number | null>(null);
+  selectedTrack = $state<number | null>(null);
+  /** Automatically follow the playhead bar, active pattern, and active note during playback. */
+  followPlayback = $state(true);
   /** Length in steps of notes added in the pattern editor. */
   noteLength = $state(2);
   message = $state<Message | null>(null);
@@ -126,12 +129,15 @@ class EditorStore {
     }
     this.instrumentCheckpoints.observe(state.editor_id, state.song.instruments);
     this.state = state;
-    const { patterns, instruments } = state.song;
+    const { patterns, instruments, tracks } = state.song;
     if (!patterns.some((p) => p.id === this.selectedPattern)) {
       this.selectedPattern = patterns[0]?.id ?? null;
     }
     if (!instruments.some((i) => i.id === this.selectedInstrument)) {
       this.selectedInstrument = instruments[0]?.id ?? null;
+    }
+    if (!tracks.some((t) => t.id === this.selectedTrack)) {
+      this.selectedTrack = tracks[0]?.id ?? null;
     }
   }
 

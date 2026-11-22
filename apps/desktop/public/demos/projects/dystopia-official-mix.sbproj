@@ -1,0 +1,6742 @@
+{
+  "format": "soundbit-project",
+  "format_version": 2,
+  "song": {
+    "meta": {
+      "title": "Dystopia (Full 2m45s Official Arrangement)",
+      "author": "Pixelwright Tracker",
+      "description": "Dystopia (Full 2m45s Official Arrangement) (Shuric Scan / Keygen style, 140 BPM, swing=0)"
+    },
+    "timing": {
+      "bpm": 140,
+      "steps_per_beat": 4,
+      "beats_per_bar": 4,
+      "swing": 0
+    },
+    "scale": {
+      "root": 1,
+      "kind": "natural_minor"
+    },
+    "chip_profile": "free",
+    "reverb": {
+      "size": 42,
+      "damping": 70
+    },
+    "instruments": [
+      {
+        "name": "01 Arpeg (Melody 1)",
+        "voice": {
+          "type": "pulse",
+          "duty": "eighth"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 125,
+          "sustain": 18,
+          "release": 55
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 3400,
+          "resonance": 14,
+          "envelope_depth": 18
+        },
+        "volume": 72,
+        "pan": 14,
+        "reverb_send": 14,
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 0
+        },
+        "id": 1
+      },
+      {
+        "name": "02 Tromp (Melody 2)",
+        "voice": {
+          "type": "pulse",
+          "duty": "quarter"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "volume": 86,
+        "pan": -8,
+        "reverb_send": 16,
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 0
+        },
+        "id": 2
+      },
+      {
+        "name": "03 Pizzi (Melody 3)",
+        "voice": {
+          "type": "pulse",
+          "duty": "half"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 140,
+          "sustain": 0,
+          "release": 60
+        },
+        "volume": 62,
+        "pan": -18,
+        "reverb_send": 12,
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 0
+        },
+        "id": 3
+      },
+      {
+        "name": "04 Organ (Melody 4)",
+        "voice": {
+          "type": "pulse",
+          "duty": "eighth"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 140,
+          "sustain": 60,
+          "release": 80
+        },
+        "volume": 64,
+        "pan": 10,
+        "reverb_send": 16,
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 0
+        },
+        "id": 4
+      },
+      {
+        "name": "05 Synth Glitch (Melody 5)",
+        "voice": {
+          "type": "pulse",
+          "duty": "eighth"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 125,
+          "sustain": 18,
+          "release": 55
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 3400,
+          "resonance": 14,
+          "envelope_depth": 18
+        },
+        "volume": 68,
+        "pan": -22,
+        "reverb_send": 12,
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 0
+        },
+        "id": 5
+      },
+      {
+        "name": "06 Follow Vocal (Voice 1)",
+        "voice": {
+          "type": "pulse",
+          "duty": "quarter"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "volume": 88,
+        "pan": 6,
+        "reverb_send": 14,
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 0
+        },
+        "id": 6
+      },
+      {
+        "name": "07 Choir Pad (Voice 2)",
+        "voice": {
+          "type": "pulse",
+          "duty": "eighth"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 140,
+          "sustain": 60,
+          "release": 80
+        },
+        "volume": 66,
+        "pan": -10,
+        "reverb_send": 18,
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 0
+        },
+        "id": 7
+      },
+      {
+        "name": "08 Choir High (Voice 2)",
+        "voice": {
+          "type": "pulse",
+          "duty": "quarter"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 120,
+          "sustain": 70,
+          "release": 80
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "volume": 76,
+        "pan": 12,
+        "reverb_send": 18,
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 0
+        },
+        "id": 8
+      },
+      {
+        "name": "09 Bass 808 (Effect 1)",
+        "voice": {
+          "type": "triangle"
+        },
+        "envelope": {
+          "attack": 2,
+          "decay": 80,
+          "sustain": 90,
+          "release": 40
+        },
+        "volume": 92,
+        "pan": 0,
+        "reverb_send": 0,
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 0
+        },
+        "id": 9
+      },
+      {
+        "name": "10 Monk Growl (Effect 2)",
+        "voice": {
+          "type": "pulse",
+          "duty": "half"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 140,
+          "sustain": 0,
+          "release": 60
+        },
+        "volume": 70,
+        "pan": -6,
+        "reverb_send": 6,
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 0
+        },
+        "id": 10
+      },
+      {
+        "name": "11 Sonar Ping (Effect 3)",
+        "voice": {
+          "type": "pulse",
+          "duty": "eighth"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 125,
+          "sustain": 18,
+          "release": 55
+        },
+        "filter": {
+          "mode": "low_pass",
+          "cutoff": 3400,
+          "resonance": 14,
+          "envelope_depth": 18
+        },
+        "volume": 54,
+        "pan": 22,
+        "reverb_send": 20,
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 0
+        },
+        "id": 11
+      },
+      {
+        "name": "12 Koungou Perc (Beat 5)",
+        "voice": {
+          "type": "pulse",
+          "duty": "half"
+        },
+        "envelope": {
+          "attack": 1,
+          "decay": 140,
+          "sustain": 0,
+          "release": 60
+        },
+        "volume": 50,
+        "pan": -14,
+        "reverb_send": 4,
+        "pitch_envelope": {
+          "semitones": 0,
+          "time": 0
+        },
+        "vibrato": {
+          "depth": 0,
+          "rate": 50,
+          "delay": 0
+        },
+        "unison": {
+          "voices": 1,
+          "detune": 0
+        },
+        "id": 12
+      },
+      {
+        "name": "13 Atlanta Kick (Beat 1)",
+        "voice": {
+          "type": "sine"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 190,
+          "sustain": 0,
+          "release": 28
+        },
+        "pitch_envelope": {
+          "semitones": 28,
+          "time": 42
+        },
+        "volume": 94,
+        "pan": 0,
+        "reverb_send": 0,
+        "id": 13
+      },
+      {
+        "name": "14 Atlanta Snare (Beat 1)",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 135,
+          "sustain": 0,
+          "release": 38
+        },
+        "filter": {
+          "mode": "band_pass",
+          "cutoff": 1350,
+          "resonance": 22,
+          "envelope_depth": 0
+        },
+        "volume": 78,
+        "pan": 0,
+        "reverb_send": 8,
+        "id": 14
+      },
+      {
+        "name": "15 Tuctom Hat (Beat 2)",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 38,
+          "sustain": 0,
+          "release": 16
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 5600,
+          "resonance": 5,
+          "envelope_depth": 0
+        },
+        "volume": 44,
+        "pan": 14,
+        "reverb_send": 4,
+        "id": 15
+      },
+      {
+        "name": "16 Open Hat (Beat 2)",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 320,
+          "sustain": 0,
+          "release": 120
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 5000,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 38,
+        "pan": -14,
+        "reverb_send": 6,
+        "id": 16
+      },
+      {
+        "name": "17 Foubreak Toms (Beat 3)",
+        "voice": {
+          "type": "sine"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 320,
+          "sustain": 0,
+          "release": 60
+        },
+        "pitch_envelope": {
+          "semitones": 12,
+          "time": 120
+        },
+        "volume": 70,
+        "pan": 16,
+        "reverb_send": 10,
+        "id": 17
+      },
+      {
+        "name": "18 Crash",
+        "voice": {
+          "type": "noise",
+          "mode": "long"
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 1500,
+          "sustain": 0,
+          "release": 600
+        },
+        "filter": {
+          "mode": "high_pass",
+          "cutoff": 3500,
+          "resonance": 0,
+          "envelope_depth": 0
+        },
+        "volume": 48,
+        "pan": -20,
+        "reverb_send": 20,
+        "id": 18
+      }
+    ],
+    "patterns": [
+      {
+        "id": 1,
+        "name": "01 Arpeg (Melody 1) 1",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 64,
+            "start": 2,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 73,
+            "start": 4,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 76,
+            "start": 6,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 80,
+            "start": 8,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 85,
+            "start": 10,
+            "length": 2,
+            "velocity": 94
+          },
+          {
+            "pitch": 61,
+            "start": 12,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 64,
+            "start": 14,
+            "length": 2,
+            "velocity": 82
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "01 Arpeg (Melody 1) 2",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 73,
+            "start": 0,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 76,
+            "start": 2,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 80,
+            "start": 4,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 85,
+            "start": 6,
+            "length": 2,
+            "velocity": 94
+          },
+          {
+            "pitch": 61,
+            "start": 8,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 64,
+            "start": 10,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 73,
+            "start": 12,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 76,
+            "start": 14,
+            "length": 2,
+            "velocity": 82
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "01 Arpeg (Melody 1) 3",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 66,
+            "start": 2,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 73,
+            "start": 4,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 78,
+            "start": 6,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 85,
+            "start": 10,
+            "length": 2,
+            "velocity": 94
+          },
+          {
+            "pitch": 61,
+            "start": 12,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 66,
+            "start": 14,
+            "length": 2,
+            "velocity": 82
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "01 Arpeg (Melody 1) 4",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 73,
+            "start": 0,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 78,
+            "start": 2,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 81,
+            "start": 4,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 85,
+            "start": 6,
+            "length": 2,
+            "velocity": 94
+          },
+          {
+            "pitch": 61,
+            "start": 8,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 66,
+            "start": 10,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 73,
+            "start": 12,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 78,
+            "start": 14,
+            "length": 2,
+            "velocity": 82
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "01 Arpeg (Melody 1) 5",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 59,
+            "start": 0,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 63,
+            "start": 2,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 71,
+            "start": 4,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 75,
+            "start": 6,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 78,
+            "start": 8,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 83,
+            "start": 10,
+            "length": 2,
+            "velocity": 94
+          },
+          {
+            "pitch": 59,
+            "start": 12,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 63,
+            "start": 14,
+            "length": 2,
+            "velocity": 82
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "01 Arpeg (Melody 1) 6",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 71,
+            "start": 0,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 75,
+            "start": 2,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 78,
+            "start": 4,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 83,
+            "start": 6,
+            "length": 2,
+            "velocity": 94
+          },
+          {
+            "pitch": 59,
+            "start": 8,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 63,
+            "start": 10,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 71,
+            "start": 12,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 75,
+            "start": 14,
+            "length": 2,
+            "velocity": 82
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "01 Arpeg (Melody 1) 7",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 56,
+            "start": 0,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 59,
+            "start": 2,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 68,
+            "start": 4,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 71,
+            "start": 6,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 75,
+            "start": 8,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 80,
+            "start": 10,
+            "length": 2,
+            "velocity": 94
+          },
+          {
+            "pitch": 56,
+            "start": 12,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 59,
+            "start": 14,
+            "length": 2,
+            "velocity": 82
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "01 Arpeg (Melody 1) 8",
+        "instrument": 1,
+        "notes": [
+          {
+            "pitch": 68,
+            "start": 0,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 71,
+            "start": 2,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 75,
+            "start": 4,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 80,
+            "start": 6,
+            "length": 2,
+            "velocity": 94
+          },
+          {
+            "pitch": 56,
+            "start": 8,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 59,
+            "start": 10,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 68,
+            "start": 12,
+            "length": 2,
+            "velocity": 88
+          },
+          {
+            "pitch": 71,
+            "start": 14,
+            "length": 2,
+            "velocity": 82
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "02 Tromp (Melody 2) 25",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 80,
+            "start": 8,
+            "length": 4,
+            "velocity": 114
+          },
+          {
+            "pitch": 73,
+            "start": 12,
+            "length": 4,
+            "velocity": 112
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "02 Tromp (Melody 2) 26",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 73,
+            "start": 0,
+            "length": 7,
+            "velocity": 104
+          },
+          {
+            "pitch": 76,
+            "start": 8,
+            "length": 4,
+            "velocity": 114
+          },
+          {
+            "pitch": 78,
+            "start": 12,
+            "length": 4,
+            "velocity": 118
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "02 Tromp (Melody 2) 27",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 78,
+            "start": 0,
+            "length": 12,
+            "velocity": 110
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "02 Tromp (Melody 2) 29",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 78,
+            "start": 8,
+            "length": 4,
+            "velocity": 114
+          },
+          {
+            "pitch": 71,
+            "start": 12,
+            "length": 4,
+            "velocity": 112
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "02 Tromp (Melody 2) 30",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 71,
+            "start": 0,
+            "length": 15,
+            "velocity": 104
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "02 Tromp (Melody 2) 31",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 75,
+            "start": 0,
+            "length": 11,
+            "velocity": 114
+          },
+          {
+            "pitch": 80,
+            "start": 12,
+            "length": 4,
+            "velocity": 118
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "02 Tromp (Melody 2) 32",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 80,
+            "start": 0,
+            "length": 11,
+            "velocity": 110
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "02 Tromp (Melody 2) 97",
+        "instrument": 2,
+        "notes": [
+          {
+            "pitch": 73,
+            "start": 0,
+            "length": 16,
+            "velocity": 114
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "03 Pizzi (Melody 3) 41",
+        "instrument": 3,
+        "notes": [
+          {
+            "pitch": 68,
+            "start": 0,
+            "length": 2,
+            "velocity": 72
+          },
+          {
+            "pitch": 66,
+            "start": 2,
+            "length": 2,
+            "velocity": 72
+          },
+          {
+            "pitch": 64,
+            "start": 4,
+            "length": 2,
+            "velocity": 72
+          },
+          {
+            "pitch": 73,
+            "start": 6,
+            "length": 2,
+            "velocity": 82
+          },
+          {
+            "pitch": 68,
+            "start": 8,
+            "length": 2,
+            "velocity": 72
+          },
+          {
+            "pitch": 66,
+            "start": 10,
+            "length": 2,
+            "velocity": 72
+          },
+          {
+            "pitch": 64,
+            "start": 12,
+            "length": 2,
+            "velocity": 72
+          },
+          {
+            "pitch": 73,
+            "start": 14,
+            "length": 2,
+            "velocity": 82
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "04 Organ (Melody 4) 33",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 16,
+            "velocity": 74
+          },
+          {
+            "pitch": 64,
+            "start": 2,
+            "length": 14,
+            "velocity": 74
+          },
+          {
+            "pitch": 68,
+            "start": 4,
+            "length": 12,
+            "velocity": 74
+          },
+          {
+            "pitch": 73,
+            "start": 6,
+            "length": 10,
+            "velocity": 74
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "04 Organ (Melody 4) 34",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 7,
+            "velocity": 66
+          },
+          {
+            "pitch": 64,
+            "start": 0,
+            "length": 7,
+            "velocity": 66
+          },
+          {
+            "pitch": 68,
+            "start": 0,
+            "length": 7,
+            "velocity": 66
+          },
+          {
+            "pitch": 73,
+            "start": 0,
+            "length": 7,
+            "velocity": 66
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "04 Organ (Melody 4) 35",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 16,
+            "velocity": 74
+          },
+          {
+            "pitch": 66,
+            "start": 2,
+            "length": 14,
+            "velocity": 74
+          },
+          {
+            "pitch": 69,
+            "start": 4,
+            "length": 12,
+            "velocity": 74
+          },
+          {
+            "pitch": 73,
+            "start": 6,
+            "length": 10,
+            "velocity": 74
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "name": "04 Organ (Melody 4) 36",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 7,
+            "velocity": 66
+          },
+          {
+            "pitch": 66,
+            "start": 0,
+            "length": 7,
+            "velocity": 66
+          },
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 7,
+            "velocity": 66
+          },
+          {
+            "pitch": 73,
+            "start": 0,
+            "length": 7,
+            "velocity": 66
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "name": "04 Organ (Melody 4) 37",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 59,
+            "start": 0,
+            "length": 16,
+            "velocity": 74
+          },
+          {
+            "pitch": 63,
+            "start": 2,
+            "length": 14,
+            "velocity": 74
+          },
+          {
+            "pitch": 66,
+            "start": 4,
+            "length": 12,
+            "velocity": 74
+          },
+          {
+            "pitch": 71,
+            "start": 6,
+            "length": 10,
+            "velocity": 74
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "name": "04 Organ (Melody 4) 38",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 59,
+            "start": 0,
+            "length": 7,
+            "velocity": 66
+          },
+          {
+            "pitch": 63,
+            "start": 0,
+            "length": 7,
+            "velocity": 66
+          },
+          {
+            "pitch": 66,
+            "start": 0,
+            "length": 7,
+            "velocity": 66
+          },
+          {
+            "pitch": 71,
+            "start": 0,
+            "length": 7,
+            "velocity": 66
+          }
+        ]
+      },
+      {
+        "id": 24,
+        "name": "04 Organ (Melody 4) 39",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 56,
+            "start": 0,
+            "length": 11,
+            "velocity": 74
+          },
+          {
+            "pitch": 59,
+            "start": 0,
+            "length": 11,
+            "velocity": 74
+          },
+          {
+            "pitch": 63,
+            "start": 0,
+            "length": 11,
+            "velocity": 74
+          },
+          {
+            "pitch": 68,
+            "start": 0,
+            "length": 11,
+            "velocity": 74
+          },
+          {
+            "pitch": 75,
+            "start": 12,
+            "length": 2,
+            "velocity": 86
+          },
+          {
+            "pitch": 75,
+            "start": 14,
+            "length": 2,
+            "velocity": 86
+          }
+        ]
+      },
+      {
+        "id": 25,
+        "name": "04 Organ (Melody 4) 40",
+        "instrument": 4,
+        "notes": [
+          {
+            "pitch": 75,
+            "start": 0,
+            "length": 1,
+            "velocity": 78
+          },
+          {
+            "pitch": 75,
+            "start": 2,
+            "length": 3,
+            "velocity": 86
+          },
+          {
+            "pitch": 75,
+            "start": 6,
+            "length": 2,
+            "velocity": 86
+          },
+          {
+            "pitch": 75,
+            "start": 8,
+            "length": 2,
+            "velocity": 86
+          },
+          {
+            "pitch": 73,
+            "start": 10,
+            "length": 2,
+            "velocity": 86
+          },
+          {
+            "pitch": 75,
+            "start": 12,
+            "length": 2,
+            "velocity": 86
+          },
+          {
+            "pitch": 76,
+            "start": 14,
+            "length": 2,
+            "velocity": 86
+          }
+        ]
+      },
+      {
+        "id": 26,
+        "name": "05 Synth Glitch (Melody 5) 41",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 85,
+            "start": 0,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 85,
+            "start": 1,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 88,
+            "start": 2,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 88,
+            "start": 3,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 85,
+            "start": 4,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 85,
+            "start": 5,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 88,
+            "start": 6,
+            "length": 2,
+            "velocity": 84
+          }
+        ]
+      },
+      {
+        "id": 27,
+        "name": "05 Synth Glitch (Melody 5) 43",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 85,
+            "start": 0,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 85,
+            "start": 1,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 90,
+            "start": 2,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 90,
+            "start": 3,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 85,
+            "start": 4,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 85,
+            "start": 5,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 90,
+            "start": 6,
+            "length": 2,
+            "velocity": 84
+          }
+        ]
+      },
+      {
+        "id": 28,
+        "name": "05 Synth Glitch (Melody 5) 45",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 83,
+            "start": 0,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 83,
+            "start": 1,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 87,
+            "start": 2,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 87,
+            "start": 3,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 83,
+            "start": 4,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 83,
+            "start": 5,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 87,
+            "start": 6,
+            "length": 2,
+            "velocity": 84
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "name": "05 Synth Glitch (Melody 5) 47",
+        "instrument": 5,
+        "notes": [
+          {
+            "pitch": 80,
+            "start": 0,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 80,
+            "start": 1,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 83,
+            "start": 2,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 83,
+            "start": 3,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 80,
+            "start": 4,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 80,
+            "start": 5,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 83,
+            "start": 6,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 83,
+            "start": 7,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 80,
+            "start": 8,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 80,
+            "start": 9,
+            "length": 1,
+            "velocity": 84
+          },
+          {
+            "pitch": 83,
+            "start": 10,
+            "length": 2,
+            "velocity": 84
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "name": "06 Follow Vocal (Voice 1) 33",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 80,
+            "start": 8,
+            "length": 2,
+            "velocity": 116
+          },
+          {
+            "pitch": 80,
+            "start": 10,
+            "length": 4,
+            "velocity": 118
+          },
+          {
+            "pitch": 73,
+            "start": 14,
+            "length": 2,
+            "velocity": 114
+          }
+        ]
+      },
+      {
+        "id": 31,
+        "name": "06 Follow Vocal (Voice 1) 34",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 73,
+            "start": 0,
+            "length": 7,
+            "velocity": 116
+          },
+          {
+            "pitch": 80,
+            "start": 8,
+            "length": 2,
+            "velocity": 116
+          },
+          {
+            "pitch": 80,
+            "start": 10,
+            "length": 2,
+            "velocity": 118
+          },
+          {
+            "pitch": 81,
+            "start": 12,
+            "length": 4,
+            "velocity": 120
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "name": "06 Follow Vocal (Voice 1) 35",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 0,
+            "length": 12,
+            "velocity": 112
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "name": "06 Follow Vocal (Voice 1) 39",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 80,
+            "start": 0,
+            "length": 2,
+            "velocity": 118
+          },
+          {
+            "pitch": 80,
+            "start": 2,
+            "length": 4,
+            "velocity": 120
+          },
+          {
+            "pitch": 75,
+            "start": 6,
+            "length": 2,
+            "velocity": 114
+          },
+          {
+            "pitch": 75,
+            "start": 8,
+            "length": 4,
+            "velocity": 116
+          },
+          {
+            "pitch": 75,
+            "start": 12,
+            "length": 2,
+            "velocity": 114
+          },
+          {
+            "pitch": 75,
+            "start": 14,
+            "length": 2,
+            "velocity": 116
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "name": "06 Follow Vocal (Voice 1) 40",
+        "instrument": 6,
+        "notes": [
+          {
+            "pitch": 75,
+            "start": 0,
+            "length": 2,
+            "velocity": 108
+          },
+          {
+            "pitch": 75,
+            "start": 2,
+            "length": 4,
+            "velocity": 116
+          },
+          {
+            "pitch": 75,
+            "start": 6,
+            "length": 2,
+            "velocity": 114
+          },
+          {
+            "pitch": 75,
+            "start": 8,
+            "length": 2,
+            "velocity": 116
+          },
+          {
+            "pitch": 73,
+            "start": 10,
+            "length": 2,
+            "velocity": 114
+          },
+          {
+            "pitch": 75,
+            "start": 12,
+            "length": 2,
+            "velocity": 116
+          },
+          {
+            "pitch": 76,
+            "start": 14,
+            "length": 2,
+            "velocity": 118
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "name": "07 Choir Pad (Voice 2) 17",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 64,
+            "start": 0,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 68,
+            "start": 0,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 61,
+            "start": 8,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 64,
+            "start": 8,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 68,
+            "start": 8,
+            "length": 7,
+            "velocity": 78
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "name": "07 Choir Pad (Voice 2) 19",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 66,
+            "start": 0,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 61,
+            "start": 8,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 66,
+            "start": 8,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 69,
+            "start": 8,
+            "length": 7,
+            "velocity": 78
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "name": "07 Choir Pad (Voice 2) 20",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 15,
+            "velocity": 78
+          },
+          {
+            "pitch": 66,
+            "start": 0,
+            "length": 15,
+            "velocity": 78
+          },
+          {
+            "pitch": 69,
+            "start": 0,
+            "length": 15,
+            "velocity": 78
+          }
+        ]
+      },
+      {
+        "id": 38,
+        "name": "07 Choir Pad (Voice 2) 21",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 59,
+            "start": 8,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 63,
+            "start": 8,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 66,
+            "start": 8,
+            "length": 7,
+            "velocity": 78
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "name": "07 Choir Pad (Voice 2) 22",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 59,
+            "start": 0,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 63,
+            "start": 0,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 66,
+            "start": 0,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 59,
+            "start": 8,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 63,
+            "start": 8,
+            "length": 7,
+            "velocity": 78
+          },
+          {
+            "pitch": 66,
+            "start": 8,
+            "length": 7,
+            "velocity": 78
+          }
+        ]
+      },
+      {
+        "id": 40,
+        "name": "07 Choir Pad (Voice 2) 23",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 56,
+            "start": 0,
+            "length": 16,
+            "velocity": 80
+          },
+          {
+            "pitch": 59,
+            "start": 0,
+            "length": 16,
+            "velocity": 80
+          },
+          {
+            "pitch": 63,
+            "start": 0,
+            "length": 16,
+            "velocity": 80
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "name": "07 Choir Pad (Voice 2) 24",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 56,
+            "start": 0,
+            "length": 8,
+            "velocity": 72
+          },
+          {
+            "pitch": 59,
+            "start": 0,
+            "length": 8,
+            "velocity": 72
+          },
+          {
+            "pitch": 63,
+            "start": 0,
+            "length": 8,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 42,
+        "name": "07 Choir Pad (Voice 2) 97",
+        "instrument": 7,
+        "notes": [
+          {
+            "pitch": 61,
+            "start": 0,
+            "length": 16,
+            "velocity": 96
+          },
+          {
+            "pitch": 64,
+            "start": 0,
+            "length": 16,
+            "velocity": 96
+          },
+          {
+            "pitch": 68,
+            "start": 0,
+            "length": 16,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 43,
+        "name": "08 Choir High (Voice 2) 17",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 73,
+            "start": 0,
+            "length": 7,
+            "velocity": 94
+          },
+          {
+            "pitch": 80,
+            "start": 8,
+            "length": 7,
+            "velocity": 94
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "name": "08 Choir High (Voice 2) 18",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 85,
+            "start": 0,
+            "length": 7,
+            "velocity": 94
+          },
+          {
+            "pitch": 80,
+            "start": 8,
+            "length": 7,
+            "velocity": 94
+          }
+        ]
+      },
+      {
+        "id": 45,
+        "name": "08 Choir High (Voice 2) 19",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 83,
+            "start": 0,
+            "length": 7,
+            "velocity": 96
+          },
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 5,
+            "velocity": 92
+          },
+          {
+            "pitch": 80,
+            "start": 14,
+            "length": 2,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "name": "08 Choir High (Voice 2) 20",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 0,
+            "length": 15,
+            "velocity": 94
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "name": "08 Choir High (Voice 2) 21",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 71,
+            "start": 8,
+            "length": 7,
+            "velocity": 94
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "name": "08 Choir High (Voice 2) 22",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 75,
+            "start": 0,
+            "length": 7,
+            "velocity": 94
+          },
+          {
+            "pitch": 83,
+            "start": 8,
+            "length": 7,
+            "velocity": 94
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "name": "08 Choir High (Voice 2) 23",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 80,
+            "start": 0,
+            "length": 16,
+            "velocity": 96
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "name": "08 Choir High (Voice 2) 24",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 80,
+            "start": 0,
+            "length": 8,
+            "velocity": 88
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "name": "08 Choir High (Voice 2) 97",
+        "instrument": 8,
+        "notes": [
+          {
+            "pitch": 85,
+            "start": 0,
+            "length": 16,
+            "velocity": 116
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "name": "09 Bass 808 (Effect 1) 1",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 37,
+            "start": 0,
+            "length": 7,
+            "velocity": 118
+          },
+          {
+            "pitch": 44,
+            "start": 8,
+            "length": 7,
+            "velocity": 118
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "name": "09 Bass 808 (Effect 1) 2",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 49,
+            "start": 0,
+            "length": 7,
+            "velocity": 118
+          },
+          {
+            "pitch": 44,
+            "start": 8,
+            "length": 7,
+            "velocity": 118
+          }
+        ]
+      },
+      {
+        "id": 54,
+        "name": "09 Bass 808 (Effect 1) 3",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 35,
+            "start": 0,
+            "length": 7,
+            "velocity": 118
+          },
+          {
+            "pitch": 42,
+            "start": 8,
+            "length": 7,
+            "velocity": 118
+          }
+        ]
+      },
+      {
+        "id": 55,
+        "name": "09 Bass 808 (Effect 1) 4",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 45,
+            "start": 0,
+            "length": 15,
+            "velocity": 118
+          }
+        ]
+      },
+      {
+        "id": 56,
+        "name": "09 Bass 808 (Effect 1) 5",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 35,
+            "start": 8,
+            "length": 7,
+            "velocity": 118
+          }
+        ]
+      },
+      {
+        "id": 57,
+        "name": "09 Bass 808 (Effect 1) 6",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 39,
+            "start": 0,
+            "length": 7,
+            "velocity": 118
+          },
+          {
+            "pitch": 47,
+            "start": 8,
+            "length": 7,
+            "velocity": 118
+          }
+        ]
+      },
+      {
+        "id": 58,
+        "name": "09 Bass 808 (Effect 1) 7",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 44,
+            "start": 0,
+            "length": 16,
+            "velocity": 118
+          }
+        ]
+      },
+      {
+        "id": 59,
+        "name": "09 Bass 808 (Effect 1) 8",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 44,
+            "start": 0,
+            "length": 7,
+            "velocity": 110
+          },
+          {
+            "pitch": 42,
+            "start": 8,
+            "length": 4,
+            "velocity": 118
+          },
+          {
+            "pitch": 44,
+            "start": 12,
+            "length": 4,
+            "velocity": 118
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "name": "09 Bass 808 (Effect 1) 97",
+        "instrument": 9,
+        "notes": [
+          {
+            "pitch": 37,
+            "start": 0,
+            "length": 16,
+            "velocity": 122
+          }
+        ]
+      },
+      {
+        "id": 61,
+        "name": "10 Monk Growl (Effect 2) 1",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 49,
+            "start": 0,
+            "length": 4,
+            "velocity": 100
+          },
+          {
+            "pitch": 51,
+            "start": 4,
+            "length": 4,
+            "velocity": 100
+          },
+          {
+            "pitch": 52,
+            "start": 8,
+            "length": 4,
+            "velocity": 100
+          },
+          {
+            "pitch": 61,
+            "start": 12,
+            "length": 4,
+            "velocity": 100
+          }
+        ]
+      },
+      {
+        "id": 62,
+        "name": "10 Monk Growl (Effect 2) 2",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 49,
+            "start": 0,
+            "length": 7,
+            "velocity": 100
+          }
+        ]
+      },
+      {
+        "id": 63,
+        "name": "10 Monk Growl (Effect 2) 3",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 54,
+            "start": 8,
+            "length": 4,
+            "velocity": 100
+          },
+          {
+            "pitch": 56,
+            "start": 12,
+            "length": 4,
+            "velocity": 100
+          }
+        ]
+      },
+      {
+        "id": 64,
+        "name": "10 Monk Growl (Effect 2) 4",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 57,
+            "start": 0,
+            "length": 7,
+            "velocity": 100
+          }
+        ]
+      },
+      {
+        "id": 65,
+        "name": "10 Monk Growl (Effect 2) 5",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 47,
+            "start": 8,
+            "length": 4,
+            "velocity": 100
+          },
+          {
+            "pitch": 49,
+            "start": 12,
+            "length": 4,
+            "velocity": 100
+          }
+        ]
+      },
+      {
+        "id": 66,
+        "name": "10 Monk Growl (Effect 2) 6",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 51,
+            "start": 0,
+            "length": 4,
+            "velocity": 100
+          },
+          {
+            "pitch": 59,
+            "start": 4,
+            "length": 11,
+            "velocity": 100
+          }
+        ]
+      },
+      {
+        "id": 67,
+        "name": "10 Monk Growl (Effect 2) 97",
+        "instrument": 10,
+        "notes": [
+          {
+            "pitch": 49,
+            "start": 0,
+            "length": 16,
+            "velocity": 104
+          }
+        ]
+      },
+      {
+        "id": 68,
+        "name": "11 Sonar Ping (Effect 3) 17",
+        "instrument": 11,
+        "notes": [
+          {
+            "pitch": 68,
+            "start": 0,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 68,
+            "start": 4,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 68,
+            "start": 8,
+            "length": 2,
+            "velocity": 62
+          },
+          {
+            "pitch": 80,
+            "start": 8,
+            "length": 3,
+            "velocity": 76
+          },
+          {
+            "pitch": 68,
+            "start": 12,
+            "length": 2,
+            "velocity": 62
+          }
+        ]
+      },
+      {
+        "id": 69,
+        "name": "12 Koungou Perc (Beat 5) 25",
+        "instrument": 12,
+        "notes": [
+          {
+            "pitch": 51,
+            "start": 0,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 49,
+            "start": 2,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 51,
+            "start": 4,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 49,
+            "start": 6,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 51,
+            "start": 8,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 49,
+            "start": 10,
+            "length": 1,
+            "velocity": 48
+          },
+          {
+            "pitch": 51,
+            "start": 12,
+            "length": 1,
+            "velocity": 58
+          },
+          {
+            "pitch": 49,
+            "start": 14,
+            "length": 1,
+            "velocity": 48
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "name": "13 Atlanta Kick (Beat 1) 9",
+        "instrument": 13,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 122
+          },
+          {
+            "pitch": 36,
+            "start": 12,
+            "length": 1,
+            "velocity": 114
+          }
+        ]
+      },
+      {
+        "id": 71,
+        "name": "13 Atlanta Kick (Beat 1) 11",
+        "instrument": 13,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 122
+          },
+          {
+            "pitch": 36,
+            "start": 2,
+            "length": 1,
+            "velocity": 114
+          },
+          {
+            "pitch": 36,
+            "start": 12,
+            "length": 1,
+            "velocity": 114
+          }
+        ]
+      },
+      {
+        "id": 72,
+        "name": "13 Atlanta Kick (Beat 1) 12",
+        "instrument": 13,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 2,
+            "length": 1,
+            "velocity": 114
+          }
+        ]
+      },
+      {
+        "id": 73,
+        "name": "13 Atlanta Kick (Beat 1) 15",
+        "instrument": 13,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 1,
+            "velocity": 122
+          }
+        ]
+      },
+      {
+        "id": 74,
+        "name": "13 Atlanta Kick (Beat 1) 16",
+        "instrument": 13,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 7,
+            "length": 1,
+            "velocity": 114
+          },
+          {
+            "pitch": 36,
+            "start": 12,
+            "length": 1,
+            "velocity": 114
+          }
+        ]
+      },
+      {
+        "id": 75,
+        "name": "13 Atlanta Kick (Beat 1) 97",
+        "instrument": 13,
+        "notes": [
+          {
+            "pitch": 36,
+            "start": 0,
+            "length": 4,
+            "velocity": 126
+          }
+        ]
+      },
+      {
+        "id": 76,
+        "name": "14 Atlanta Snare (Beat 1) 9",
+        "instrument": 14,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 118
+          }
+        ]
+      },
+      {
+        "id": 77,
+        "name": "14 Atlanta Snare (Beat 1) 10",
+        "instrument": 14,
+        "notes": [
+          {
+            "pitch": 81,
+            "start": 8,
+            "length": 1,
+            "velocity": 122
+          }
+        ]
+      },
+      {
+        "id": 78,
+        "name": "15 Tuctom Hat (Beat 2) 9",
+        "instrument": 15,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 0,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 108,
+            "start": 2,
+            "length": 1,
+            "velocity": 54
+          },
+          {
+            "pitch": 108,
+            "start": 4,
+            "length": 1,
+            "velocity": 66
+          },
+          {
+            "pitch": 108,
+            "start": 10,
+            "length": 1,
+            "velocity": 74
+          },
+          {
+            "pitch": 108,
+            "start": 11,
+            "length": 1,
+            "velocity": 74
+          },
+          {
+            "pitch": 108,
+            "start": 12,
+            "length": 1,
+            "velocity": 66
+          }
+        ]
+      },
+      {
+        "id": 79,
+        "name": "16 Open Hat (Beat 2) 9",
+        "instrument": 16,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 14,
+            "length": 1,
+            "velocity": 72
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "name": "17 Foubreak Toms (Beat 3) 26",
+        "instrument": 17,
+        "notes": [
+          {
+            "pitch": 65,
+            "start": 12,
+            "length": 1,
+            "velocity": 110
+          },
+          {
+            "pitch": 59,
+            "start": 13,
+            "length": 1,
+            "velocity": 114
+          },
+          {
+            "pitch": 52,
+            "start": 14,
+            "length": 1,
+            "velocity": 118
+          }
+        ]
+      },
+      {
+        "id": 81,
+        "name": "18 Crash 9",
+        "instrument": 18,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 0,
+            "length": 8,
+            "velocity": 92
+          }
+        ]
+      },
+      {
+        "id": 82,
+        "name": "18 Crash 97",
+        "instrument": 18,
+        "notes": [
+          {
+            "pitch": 108,
+            "start": 0,
+            "length": 16,
+            "velocity": 100
+          }
+        ]
+      }
+    ],
+    "tracks": [
+      {
+        "id": 1,
+        "name": "01 Arpeg (Melody 1)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 1
+          },
+          {
+            "bar": 1,
+            "pattern": 2
+          },
+          {
+            "bar": 2,
+            "pattern": 3
+          },
+          {
+            "bar": 3,
+            "pattern": 4
+          },
+          {
+            "bar": 4,
+            "pattern": 5
+          },
+          {
+            "bar": 5,
+            "pattern": 6
+          },
+          {
+            "bar": 6,
+            "pattern": 7
+          },
+          {
+            "bar": 7,
+            "pattern": 8
+          },
+          {
+            "bar": 8,
+            "pattern": 1
+          },
+          {
+            "bar": 9,
+            "pattern": 2
+          },
+          {
+            "bar": 10,
+            "pattern": 3
+          },
+          {
+            "bar": 11,
+            "pattern": 4
+          },
+          {
+            "bar": 12,
+            "pattern": 5
+          },
+          {
+            "bar": 13,
+            "pattern": 6
+          },
+          {
+            "bar": 14,
+            "pattern": 7
+          },
+          {
+            "bar": 15,
+            "pattern": 8
+          },
+          {
+            "bar": 16,
+            "pattern": 1
+          },
+          {
+            "bar": 17,
+            "pattern": 2
+          },
+          {
+            "bar": 18,
+            "pattern": 3
+          },
+          {
+            "bar": 19,
+            "pattern": 4
+          },
+          {
+            "bar": 20,
+            "pattern": 5
+          },
+          {
+            "bar": 21,
+            "pattern": 6
+          },
+          {
+            "bar": 22,
+            "pattern": 7
+          },
+          {
+            "bar": 23,
+            "pattern": 8
+          },
+          {
+            "bar": 24,
+            "pattern": 1
+          },
+          {
+            "bar": 25,
+            "pattern": 2
+          },
+          {
+            "bar": 26,
+            "pattern": 3
+          },
+          {
+            "bar": 27,
+            "pattern": 4
+          },
+          {
+            "bar": 28,
+            "pattern": 5
+          },
+          {
+            "bar": 29,
+            "pattern": 6
+          },
+          {
+            "bar": 30,
+            "pattern": 7
+          },
+          {
+            "bar": 31,
+            "pattern": 8
+          },
+          {
+            "bar": 32,
+            "pattern": 1
+          },
+          {
+            "bar": 33,
+            "pattern": 2
+          },
+          {
+            "bar": 34,
+            "pattern": 3
+          },
+          {
+            "bar": 35,
+            "pattern": 4
+          },
+          {
+            "bar": 36,
+            "pattern": 5
+          },
+          {
+            "bar": 37,
+            "pattern": 6
+          },
+          {
+            "bar": 38,
+            "pattern": 7
+          },
+          {
+            "bar": 39,
+            "pattern": 8
+          },
+          {
+            "bar": 40,
+            "pattern": 1
+          },
+          {
+            "bar": 41,
+            "pattern": 2
+          },
+          {
+            "bar": 42,
+            "pattern": 3
+          },
+          {
+            "bar": 43,
+            "pattern": 4
+          },
+          {
+            "bar": 44,
+            "pattern": 5
+          },
+          {
+            "bar": 45,
+            "pattern": 6
+          },
+          {
+            "bar": 46,
+            "pattern": 7
+          },
+          {
+            "bar": 47,
+            "pattern": 8
+          },
+          {
+            "bar": 48,
+            "pattern": 1
+          },
+          {
+            "bar": 49,
+            "pattern": 2
+          },
+          {
+            "bar": 50,
+            "pattern": 3
+          },
+          {
+            "bar": 51,
+            "pattern": 4
+          },
+          {
+            "bar": 52,
+            "pattern": 5
+          },
+          {
+            "bar": 53,
+            "pattern": 6
+          },
+          {
+            "bar": 54,
+            "pattern": 7
+          },
+          {
+            "bar": 55,
+            "pattern": 8
+          },
+          {
+            "bar": 56,
+            "pattern": 1
+          },
+          {
+            "bar": 57,
+            "pattern": 2
+          },
+          {
+            "bar": 58,
+            "pattern": 3
+          },
+          {
+            "bar": 59,
+            "pattern": 4
+          },
+          {
+            "bar": 60,
+            "pattern": 5
+          },
+          {
+            "bar": 61,
+            "pattern": 6
+          },
+          {
+            "bar": 62,
+            "pattern": 7
+          },
+          {
+            "bar": 63,
+            "pattern": 8
+          },
+          {
+            "bar": 64,
+            "pattern": 1
+          },
+          {
+            "bar": 65,
+            "pattern": 2
+          },
+          {
+            "bar": 66,
+            "pattern": 3
+          },
+          {
+            "bar": 67,
+            "pattern": 4
+          },
+          {
+            "bar": 68,
+            "pattern": 5
+          },
+          {
+            "bar": 69,
+            "pattern": 6
+          },
+          {
+            "bar": 70,
+            "pattern": 7
+          },
+          {
+            "bar": 71,
+            "pattern": 8
+          },
+          {
+            "bar": 72,
+            "pattern": 1
+          },
+          {
+            "bar": 73,
+            "pattern": 2
+          },
+          {
+            "bar": 74,
+            "pattern": 3
+          },
+          {
+            "bar": 75,
+            "pattern": 4
+          },
+          {
+            "bar": 76,
+            "pattern": 5
+          },
+          {
+            "bar": 77,
+            "pattern": 6
+          },
+          {
+            "bar": 78,
+            "pattern": 7
+          },
+          {
+            "bar": 79,
+            "pattern": 8
+          },
+          {
+            "bar": 80,
+            "pattern": 1
+          },
+          {
+            "bar": 81,
+            "pattern": 2
+          },
+          {
+            "bar": 82,
+            "pattern": 3
+          },
+          {
+            "bar": 83,
+            "pattern": 4
+          },
+          {
+            "bar": 84,
+            "pattern": 5
+          },
+          {
+            "bar": 85,
+            "pattern": 6
+          },
+          {
+            "bar": 86,
+            "pattern": 7
+          },
+          {
+            "bar": 87,
+            "pattern": 8
+          },
+          {
+            "bar": 88,
+            "pattern": 1
+          },
+          {
+            "bar": 89,
+            "pattern": 2
+          },
+          {
+            "bar": 90,
+            "pattern": 3
+          },
+          {
+            "bar": 91,
+            "pattern": 4
+          },
+          {
+            "bar": 92,
+            "pattern": 5
+          },
+          {
+            "bar": 93,
+            "pattern": 6
+          },
+          {
+            "bar": 94,
+            "pattern": 7
+          },
+          {
+            "bar": 95,
+            "pattern": 8
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "02 Tromp (Melody 2)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 24,
+            "pattern": 9
+          },
+          {
+            "bar": 25,
+            "pattern": 10
+          },
+          {
+            "bar": 26,
+            "pattern": 11
+          },
+          {
+            "bar": 28,
+            "pattern": 12
+          },
+          {
+            "bar": 29,
+            "pattern": 13
+          },
+          {
+            "bar": 30,
+            "pattern": 14
+          },
+          {
+            "bar": 31,
+            "pattern": 15
+          },
+          {
+            "bar": 32,
+            "pattern": 9
+          },
+          {
+            "bar": 33,
+            "pattern": 10
+          },
+          {
+            "bar": 34,
+            "pattern": 11
+          },
+          {
+            "bar": 36,
+            "pattern": 12
+          },
+          {
+            "bar": 37,
+            "pattern": 13
+          },
+          {
+            "bar": 38,
+            "pattern": 14
+          },
+          {
+            "bar": 39,
+            "pattern": 15
+          },
+          {
+            "bar": 40,
+            "pattern": 9
+          },
+          {
+            "bar": 41,
+            "pattern": 10
+          },
+          {
+            "bar": 42,
+            "pattern": 11
+          },
+          {
+            "bar": 44,
+            "pattern": 12
+          },
+          {
+            "bar": 45,
+            "pattern": 13
+          },
+          {
+            "bar": 46,
+            "pattern": 14
+          },
+          {
+            "bar": 47,
+            "pattern": 15
+          },
+          {
+            "bar": 56,
+            "pattern": 9
+          },
+          {
+            "bar": 57,
+            "pattern": 10
+          },
+          {
+            "bar": 58,
+            "pattern": 11
+          },
+          {
+            "bar": 60,
+            "pattern": 12
+          },
+          {
+            "bar": 61,
+            "pattern": 13
+          },
+          {
+            "bar": 62,
+            "pattern": 14
+          },
+          {
+            "bar": 63,
+            "pattern": 15
+          },
+          {
+            "bar": 72,
+            "pattern": 9
+          },
+          {
+            "bar": 73,
+            "pattern": 10
+          },
+          {
+            "bar": 74,
+            "pattern": 11
+          },
+          {
+            "bar": 76,
+            "pattern": 12
+          },
+          {
+            "bar": 77,
+            "pattern": 13
+          },
+          {
+            "bar": 78,
+            "pattern": 14
+          },
+          {
+            "bar": 79,
+            "pattern": 15
+          },
+          {
+            "bar": 80,
+            "pattern": 9
+          },
+          {
+            "bar": 81,
+            "pattern": 10
+          },
+          {
+            "bar": 82,
+            "pattern": 11
+          },
+          {
+            "bar": 84,
+            "pattern": 12
+          },
+          {
+            "bar": 85,
+            "pattern": 13
+          },
+          {
+            "bar": 86,
+            "pattern": 14
+          },
+          {
+            "bar": 87,
+            "pattern": 15
+          },
+          {
+            "bar": 88,
+            "pattern": 9
+          },
+          {
+            "bar": 89,
+            "pattern": 10
+          },
+          {
+            "bar": 90,
+            "pattern": 11
+          },
+          {
+            "bar": 92,
+            "pattern": 12
+          },
+          {
+            "bar": 93,
+            "pattern": 13
+          },
+          {
+            "bar": 94,
+            "pattern": 14
+          },
+          {
+            "bar": 95,
+            "pattern": 15
+          },
+          {
+            "bar": 96,
+            "pattern": 16
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "03 Pizzi (Melody 3)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 40,
+            "pattern": 17
+          },
+          {
+            "bar": 41,
+            "pattern": 17
+          },
+          {
+            "bar": 42,
+            "pattern": 17
+          },
+          {
+            "bar": 43,
+            "pattern": 17
+          },
+          {
+            "bar": 44,
+            "pattern": 17
+          },
+          {
+            "bar": 45,
+            "pattern": 17
+          },
+          {
+            "bar": 46,
+            "pattern": 17
+          },
+          {
+            "bar": 47,
+            "pattern": 17
+          },
+          {
+            "bar": 64,
+            "pattern": 17
+          },
+          {
+            "bar": 65,
+            "pattern": 17
+          },
+          {
+            "bar": 66,
+            "pattern": 17
+          },
+          {
+            "bar": 67,
+            "pattern": 17
+          },
+          {
+            "bar": 68,
+            "pattern": 17
+          },
+          {
+            "bar": 69,
+            "pattern": 17
+          },
+          {
+            "bar": 70,
+            "pattern": 17
+          },
+          {
+            "bar": 71,
+            "pattern": 17
+          },
+          {
+            "bar": 72,
+            "pattern": 17
+          },
+          {
+            "bar": 73,
+            "pattern": 17
+          },
+          {
+            "bar": 74,
+            "pattern": 17
+          },
+          {
+            "bar": 75,
+            "pattern": 17
+          },
+          {
+            "bar": 76,
+            "pattern": 17
+          },
+          {
+            "bar": 77,
+            "pattern": 17
+          },
+          {
+            "bar": 78,
+            "pattern": 17
+          },
+          {
+            "bar": 79,
+            "pattern": 17
+          },
+          {
+            "bar": 80,
+            "pattern": 17
+          },
+          {
+            "bar": 81,
+            "pattern": 17
+          },
+          {
+            "bar": 82,
+            "pattern": 17
+          },
+          {
+            "bar": 83,
+            "pattern": 17
+          },
+          {
+            "bar": 84,
+            "pattern": 17
+          },
+          {
+            "bar": 85,
+            "pattern": 17
+          },
+          {
+            "bar": 86,
+            "pattern": 17
+          },
+          {
+            "bar": 87,
+            "pattern": 17
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "04 Organ (Melody 4)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 32,
+            "pattern": 18
+          },
+          {
+            "bar": 33,
+            "pattern": 19
+          },
+          {
+            "bar": 34,
+            "pattern": 20
+          },
+          {
+            "bar": 35,
+            "pattern": 21
+          },
+          {
+            "bar": 36,
+            "pattern": 22
+          },
+          {
+            "bar": 37,
+            "pattern": 23
+          },
+          {
+            "bar": 38,
+            "pattern": 24
+          },
+          {
+            "bar": 39,
+            "pattern": 25
+          },
+          {
+            "bar": 40,
+            "pattern": 18
+          },
+          {
+            "bar": 41,
+            "pattern": 19
+          },
+          {
+            "bar": 42,
+            "pattern": 20
+          },
+          {
+            "bar": 43,
+            "pattern": 21
+          },
+          {
+            "bar": 44,
+            "pattern": 22
+          },
+          {
+            "bar": 45,
+            "pattern": 23
+          },
+          {
+            "bar": 46,
+            "pattern": 24
+          },
+          {
+            "bar": 47,
+            "pattern": 25
+          },
+          {
+            "bar": 48,
+            "pattern": 18
+          },
+          {
+            "bar": 49,
+            "pattern": 19
+          },
+          {
+            "bar": 50,
+            "pattern": 20
+          },
+          {
+            "bar": 51,
+            "pattern": 21
+          },
+          {
+            "bar": 52,
+            "pattern": 22
+          },
+          {
+            "bar": 53,
+            "pattern": 23
+          },
+          {
+            "bar": 54,
+            "pattern": 24
+          },
+          {
+            "bar": 55,
+            "pattern": 25
+          },
+          {
+            "bar": 56,
+            "pattern": 18
+          },
+          {
+            "bar": 57,
+            "pattern": 19
+          },
+          {
+            "bar": 58,
+            "pattern": 20
+          },
+          {
+            "bar": 59,
+            "pattern": 21
+          },
+          {
+            "bar": 60,
+            "pattern": 22
+          },
+          {
+            "bar": 61,
+            "pattern": 23
+          },
+          {
+            "bar": 62,
+            "pattern": 24
+          },
+          {
+            "bar": 63,
+            "pattern": 25
+          },
+          {
+            "bar": 72,
+            "pattern": 18
+          },
+          {
+            "bar": 73,
+            "pattern": 19
+          },
+          {
+            "bar": 74,
+            "pattern": 20
+          },
+          {
+            "bar": 75,
+            "pattern": 21
+          },
+          {
+            "bar": 76,
+            "pattern": 22
+          },
+          {
+            "bar": 77,
+            "pattern": 23
+          },
+          {
+            "bar": 78,
+            "pattern": 24
+          },
+          {
+            "bar": 79,
+            "pattern": 25
+          },
+          {
+            "bar": 80,
+            "pattern": 18
+          },
+          {
+            "bar": 81,
+            "pattern": 19
+          },
+          {
+            "bar": 82,
+            "pattern": 20
+          },
+          {
+            "bar": 83,
+            "pattern": 21
+          },
+          {
+            "bar": 84,
+            "pattern": 22
+          },
+          {
+            "bar": 85,
+            "pattern": 23
+          },
+          {
+            "bar": 86,
+            "pattern": 24
+          },
+          {
+            "bar": 87,
+            "pattern": 25
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "05 Synth Glitch (Melody 5)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 40,
+            "pattern": 26
+          },
+          {
+            "bar": 42,
+            "pattern": 27
+          },
+          {
+            "bar": 44,
+            "pattern": 28
+          },
+          {
+            "bar": 46,
+            "pattern": 29
+          },
+          {
+            "bar": 56,
+            "pattern": 26
+          },
+          {
+            "bar": 58,
+            "pattern": 27
+          },
+          {
+            "bar": 60,
+            "pattern": 28
+          },
+          {
+            "bar": 62,
+            "pattern": 29
+          },
+          {
+            "bar": 72,
+            "pattern": 26
+          },
+          {
+            "bar": 74,
+            "pattern": 27
+          },
+          {
+            "bar": 76,
+            "pattern": 28
+          },
+          {
+            "bar": 78,
+            "pattern": 29
+          },
+          {
+            "bar": 80,
+            "pattern": 26
+          },
+          {
+            "bar": 82,
+            "pattern": 27
+          },
+          {
+            "bar": 84,
+            "pattern": 28
+          },
+          {
+            "bar": 86,
+            "pattern": 29
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "06 Follow Vocal (Voice 1)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 32,
+            "pattern": 30
+          },
+          {
+            "bar": 33,
+            "pattern": 31
+          },
+          {
+            "bar": 34,
+            "pattern": 32
+          },
+          {
+            "bar": 38,
+            "pattern": 33
+          },
+          {
+            "bar": 39,
+            "pattern": 34
+          },
+          {
+            "bar": 40,
+            "pattern": 30
+          },
+          {
+            "bar": 41,
+            "pattern": 31
+          },
+          {
+            "bar": 42,
+            "pattern": 32
+          },
+          {
+            "bar": 46,
+            "pattern": 33
+          },
+          {
+            "bar": 47,
+            "pattern": 34
+          },
+          {
+            "bar": 64,
+            "pattern": 30
+          },
+          {
+            "bar": 65,
+            "pattern": 31
+          },
+          {
+            "bar": 66,
+            "pattern": 32
+          },
+          {
+            "bar": 70,
+            "pattern": 33
+          },
+          {
+            "bar": 71,
+            "pattern": 34
+          },
+          {
+            "bar": 72,
+            "pattern": 30
+          },
+          {
+            "bar": 73,
+            "pattern": 31
+          },
+          {
+            "bar": 74,
+            "pattern": 32
+          },
+          {
+            "bar": 78,
+            "pattern": 33
+          },
+          {
+            "bar": 79,
+            "pattern": 34
+          },
+          {
+            "bar": 80,
+            "pattern": 30
+          },
+          {
+            "bar": 81,
+            "pattern": 31
+          },
+          {
+            "bar": 82,
+            "pattern": 32
+          },
+          {
+            "bar": 86,
+            "pattern": 33
+          },
+          {
+            "bar": 87,
+            "pattern": 34
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "07 Choir Pad (Voice 2)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 16,
+            "pattern": 35
+          },
+          {
+            "bar": 17,
+            "pattern": 35
+          },
+          {
+            "bar": 18,
+            "pattern": 36
+          },
+          {
+            "bar": 19,
+            "pattern": 37
+          },
+          {
+            "bar": 20,
+            "pattern": 38
+          },
+          {
+            "bar": 21,
+            "pattern": 39
+          },
+          {
+            "bar": 22,
+            "pattern": 40
+          },
+          {
+            "bar": 23,
+            "pattern": 41
+          },
+          {
+            "bar": 24,
+            "pattern": 35
+          },
+          {
+            "bar": 25,
+            "pattern": 35
+          },
+          {
+            "bar": 26,
+            "pattern": 36
+          },
+          {
+            "bar": 27,
+            "pattern": 37
+          },
+          {
+            "bar": 28,
+            "pattern": 38
+          },
+          {
+            "bar": 29,
+            "pattern": 39
+          },
+          {
+            "bar": 30,
+            "pattern": 40
+          },
+          {
+            "bar": 31,
+            "pattern": 41
+          },
+          {
+            "bar": 32,
+            "pattern": 35
+          },
+          {
+            "bar": 33,
+            "pattern": 35
+          },
+          {
+            "bar": 34,
+            "pattern": 36
+          },
+          {
+            "bar": 35,
+            "pattern": 37
+          },
+          {
+            "bar": 36,
+            "pattern": 38
+          },
+          {
+            "bar": 37,
+            "pattern": 39
+          },
+          {
+            "bar": 38,
+            "pattern": 40
+          },
+          {
+            "bar": 39,
+            "pattern": 41
+          },
+          {
+            "bar": 40,
+            "pattern": 35
+          },
+          {
+            "bar": 41,
+            "pattern": 35
+          },
+          {
+            "bar": 42,
+            "pattern": 36
+          },
+          {
+            "bar": 43,
+            "pattern": 37
+          },
+          {
+            "bar": 44,
+            "pattern": 38
+          },
+          {
+            "bar": 45,
+            "pattern": 39
+          },
+          {
+            "bar": 46,
+            "pattern": 40
+          },
+          {
+            "bar": 47,
+            "pattern": 41
+          },
+          {
+            "bar": 48,
+            "pattern": 35
+          },
+          {
+            "bar": 49,
+            "pattern": 35
+          },
+          {
+            "bar": 50,
+            "pattern": 36
+          },
+          {
+            "bar": 51,
+            "pattern": 37
+          },
+          {
+            "bar": 52,
+            "pattern": 38
+          },
+          {
+            "bar": 53,
+            "pattern": 39
+          },
+          {
+            "bar": 54,
+            "pattern": 40
+          },
+          {
+            "bar": 55,
+            "pattern": 41
+          },
+          {
+            "bar": 56,
+            "pattern": 35
+          },
+          {
+            "bar": 57,
+            "pattern": 35
+          },
+          {
+            "bar": 58,
+            "pattern": 36
+          },
+          {
+            "bar": 59,
+            "pattern": 37
+          },
+          {
+            "bar": 60,
+            "pattern": 38
+          },
+          {
+            "bar": 61,
+            "pattern": 39
+          },
+          {
+            "bar": 62,
+            "pattern": 40
+          },
+          {
+            "bar": 63,
+            "pattern": 41
+          },
+          {
+            "bar": 64,
+            "pattern": 35
+          },
+          {
+            "bar": 65,
+            "pattern": 35
+          },
+          {
+            "bar": 66,
+            "pattern": 36
+          },
+          {
+            "bar": 67,
+            "pattern": 37
+          },
+          {
+            "bar": 68,
+            "pattern": 38
+          },
+          {
+            "bar": 69,
+            "pattern": 39
+          },
+          {
+            "bar": 70,
+            "pattern": 40
+          },
+          {
+            "bar": 71,
+            "pattern": 41
+          },
+          {
+            "bar": 72,
+            "pattern": 35
+          },
+          {
+            "bar": 73,
+            "pattern": 35
+          },
+          {
+            "bar": 74,
+            "pattern": 36
+          },
+          {
+            "bar": 75,
+            "pattern": 37
+          },
+          {
+            "bar": 76,
+            "pattern": 38
+          },
+          {
+            "bar": 77,
+            "pattern": 39
+          },
+          {
+            "bar": 78,
+            "pattern": 40
+          },
+          {
+            "bar": 79,
+            "pattern": 41
+          },
+          {
+            "bar": 80,
+            "pattern": 35
+          },
+          {
+            "bar": 81,
+            "pattern": 35
+          },
+          {
+            "bar": 82,
+            "pattern": 36
+          },
+          {
+            "bar": 83,
+            "pattern": 37
+          },
+          {
+            "bar": 84,
+            "pattern": 38
+          },
+          {
+            "bar": 85,
+            "pattern": 39
+          },
+          {
+            "bar": 86,
+            "pattern": 40
+          },
+          {
+            "bar": 87,
+            "pattern": 41
+          },
+          {
+            "bar": 88,
+            "pattern": 35
+          },
+          {
+            "bar": 89,
+            "pattern": 35
+          },
+          {
+            "bar": 90,
+            "pattern": 36
+          },
+          {
+            "bar": 91,
+            "pattern": 37
+          },
+          {
+            "bar": 92,
+            "pattern": 38
+          },
+          {
+            "bar": 93,
+            "pattern": 39
+          },
+          {
+            "bar": 94,
+            "pattern": 40
+          },
+          {
+            "bar": 95,
+            "pattern": 41
+          },
+          {
+            "bar": 96,
+            "pattern": 42
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "08 Choir High (Voice 2)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 16,
+            "pattern": 43
+          },
+          {
+            "bar": 17,
+            "pattern": 44
+          },
+          {
+            "bar": 18,
+            "pattern": 45
+          },
+          {
+            "bar": 19,
+            "pattern": 46
+          },
+          {
+            "bar": 20,
+            "pattern": 47
+          },
+          {
+            "bar": 21,
+            "pattern": 48
+          },
+          {
+            "bar": 22,
+            "pattern": 49
+          },
+          {
+            "bar": 23,
+            "pattern": 50
+          },
+          {
+            "bar": 24,
+            "pattern": 43
+          },
+          {
+            "bar": 25,
+            "pattern": 44
+          },
+          {
+            "bar": 26,
+            "pattern": 45
+          },
+          {
+            "bar": 27,
+            "pattern": 46
+          },
+          {
+            "bar": 28,
+            "pattern": 47
+          },
+          {
+            "bar": 29,
+            "pattern": 48
+          },
+          {
+            "bar": 30,
+            "pattern": 49
+          },
+          {
+            "bar": 31,
+            "pattern": 50
+          },
+          {
+            "bar": 32,
+            "pattern": 43
+          },
+          {
+            "bar": 33,
+            "pattern": 44
+          },
+          {
+            "bar": 34,
+            "pattern": 45
+          },
+          {
+            "bar": 35,
+            "pattern": 46
+          },
+          {
+            "bar": 36,
+            "pattern": 47
+          },
+          {
+            "bar": 37,
+            "pattern": 48
+          },
+          {
+            "bar": 38,
+            "pattern": 49
+          },
+          {
+            "bar": 39,
+            "pattern": 50
+          },
+          {
+            "bar": 40,
+            "pattern": 43
+          },
+          {
+            "bar": 41,
+            "pattern": 44
+          },
+          {
+            "bar": 42,
+            "pattern": 45
+          },
+          {
+            "bar": 43,
+            "pattern": 46
+          },
+          {
+            "bar": 44,
+            "pattern": 47
+          },
+          {
+            "bar": 45,
+            "pattern": 48
+          },
+          {
+            "bar": 46,
+            "pattern": 49
+          },
+          {
+            "bar": 47,
+            "pattern": 50
+          },
+          {
+            "bar": 48,
+            "pattern": 43
+          },
+          {
+            "bar": 49,
+            "pattern": 44
+          },
+          {
+            "bar": 50,
+            "pattern": 45
+          },
+          {
+            "bar": 51,
+            "pattern": 46
+          },
+          {
+            "bar": 52,
+            "pattern": 47
+          },
+          {
+            "bar": 53,
+            "pattern": 48
+          },
+          {
+            "bar": 54,
+            "pattern": 49
+          },
+          {
+            "bar": 55,
+            "pattern": 50
+          },
+          {
+            "bar": 56,
+            "pattern": 43
+          },
+          {
+            "bar": 57,
+            "pattern": 44
+          },
+          {
+            "bar": 58,
+            "pattern": 45
+          },
+          {
+            "bar": 59,
+            "pattern": 46
+          },
+          {
+            "bar": 60,
+            "pattern": 47
+          },
+          {
+            "bar": 61,
+            "pattern": 48
+          },
+          {
+            "bar": 62,
+            "pattern": 49
+          },
+          {
+            "bar": 63,
+            "pattern": 50
+          },
+          {
+            "bar": 64,
+            "pattern": 43
+          },
+          {
+            "bar": 65,
+            "pattern": 44
+          },
+          {
+            "bar": 66,
+            "pattern": 45
+          },
+          {
+            "bar": 67,
+            "pattern": 46
+          },
+          {
+            "bar": 68,
+            "pattern": 47
+          },
+          {
+            "bar": 69,
+            "pattern": 48
+          },
+          {
+            "bar": 70,
+            "pattern": 49
+          },
+          {
+            "bar": 71,
+            "pattern": 50
+          },
+          {
+            "bar": 72,
+            "pattern": 43
+          },
+          {
+            "bar": 73,
+            "pattern": 44
+          },
+          {
+            "bar": 74,
+            "pattern": 45
+          },
+          {
+            "bar": 75,
+            "pattern": 46
+          },
+          {
+            "bar": 76,
+            "pattern": 47
+          },
+          {
+            "bar": 77,
+            "pattern": 48
+          },
+          {
+            "bar": 78,
+            "pattern": 49
+          },
+          {
+            "bar": 79,
+            "pattern": 50
+          },
+          {
+            "bar": 80,
+            "pattern": 43
+          },
+          {
+            "bar": 81,
+            "pattern": 44
+          },
+          {
+            "bar": 82,
+            "pattern": 45
+          },
+          {
+            "bar": 83,
+            "pattern": 46
+          },
+          {
+            "bar": 84,
+            "pattern": 47
+          },
+          {
+            "bar": 85,
+            "pattern": 48
+          },
+          {
+            "bar": 86,
+            "pattern": 49
+          },
+          {
+            "bar": 87,
+            "pattern": 50
+          },
+          {
+            "bar": 88,
+            "pattern": 43
+          },
+          {
+            "bar": 89,
+            "pattern": 44
+          },
+          {
+            "bar": 90,
+            "pattern": 45
+          },
+          {
+            "bar": 91,
+            "pattern": 46
+          },
+          {
+            "bar": 92,
+            "pattern": 47
+          },
+          {
+            "bar": 93,
+            "pattern": 48
+          },
+          {
+            "bar": 94,
+            "pattern": 49
+          },
+          {
+            "bar": 95,
+            "pattern": 50
+          },
+          {
+            "bar": 96,
+            "pattern": 51
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "09 Bass 808 (Effect 1)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 52
+          },
+          {
+            "bar": 1,
+            "pattern": 53
+          },
+          {
+            "bar": 2,
+            "pattern": 54
+          },
+          {
+            "bar": 3,
+            "pattern": 55
+          },
+          {
+            "bar": 4,
+            "pattern": 56
+          },
+          {
+            "bar": 5,
+            "pattern": 57
+          },
+          {
+            "bar": 6,
+            "pattern": 58
+          },
+          {
+            "bar": 7,
+            "pattern": 59
+          },
+          {
+            "bar": 8,
+            "pattern": 52
+          },
+          {
+            "bar": 9,
+            "pattern": 53
+          },
+          {
+            "bar": 10,
+            "pattern": 54
+          },
+          {
+            "bar": 11,
+            "pattern": 55
+          },
+          {
+            "bar": 12,
+            "pattern": 56
+          },
+          {
+            "bar": 13,
+            "pattern": 57
+          },
+          {
+            "bar": 14,
+            "pattern": 58
+          },
+          {
+            "bar": 15,
+            "pattern": 59
+          },
+          {
+            "bar": 16,
+            "pattern": 52
+          },
+          {
+            "bar": 17,
+            "pattern": 53
+          },
+          {
+            "bar": 18,
+            "pattern": 54
+          },
+          {
+            "bar": 19,
+            "pattern": 55
+          },
+          {
+            "bar": 20,
+            "pattern": 56
+          },
+          {
+            "bar": 21,
+            "pattern": 57
+          },
+          {
+            "bar": 22,
+            "pattern": 58
+          },
+          {
+            "bar": 23,
+            "pattern": 59
+          },
+          {
+            "bar": 24,
+            "pattern": 52
+          },
+          {
+            "bar": 25,
+            "pattern": 53
+          },
+          {
+            "bar": 26,
+            "pattern": 54
+          },
+          {
+            "bar": 27,
+            "pattern": 55
+          },
+          {
+            "bar": 28,
+            "pattern": 56
+          },
+          {
+            "bar": 29,
+            "pattern": 57
+          },
+          {
+            "bar": 30,
+            "pattern": 58
+          },
+          {
+            "bar": 31,
+            "pattern": 59
+          },
+          {
+            "bar": 32,
+            "pattern": 52
+          },
+          {
+            "bar": 33,
+            "pattern": 53
+          },
+          {
+            "bar": 34,
+            "pattern": 54
+          },
+          {
+            "bar": 35,
+            "pattern": 55
+          },
+          {
+            "bar": 36,
+            "pattern": 56
+          },
+          {
+            "bar": 37,
+            "pattern": 57
+          },
+          {
+            "bar": 38,
+            "pattern": 58
+          },
+          {
+            "bar": 39,
+            "pattern": 59
+          },
+          {
+            "bar": 40,
+            "pattern": 52
+          },
+          {
+            "bar": 41,
+            "pattern": 53
+          },
+          {
+            "bar": 42,
+            "pattern": 54
+          },
+          {
+            "bar": 43,
+            "pattern": 55
+          },
+          {
+            "bar": 44,
+            "pattern": 56
+          },
+          {
+            "bar": 45,
+            "pattern": 57
+          },
+          {
+            "bar": 46,
+            "pattern": 58
+          },
+          {
+            "bar": 47,
+            "pattern": 59
+          },
+          {
+            "bar": 56,
+            "pattern": 52
+          },
+          {
+            "bar": 57,
+            "pattern": 53
+          },
+          {
+            "bar": 58,
+            "pattern": 54
+          },
+          {
+            "bar": 59,
+            "pattern": 55
+          },
+          {
+            "bar": 60,
+            "pattern": 56
+          },
+          {
+            "bar": 61,
+            "pattern": 57
+          },
+          {
+            "bar": 62,
+            "pattern": 58
+          },
+          {
+            "bar": 63,
+            "pattern": 59
+          },
+          {
+            "bar": 64,
+            "pattern": 52
+          },
+          {
+            "bar": 65,
+            "pattern": 53
+          },
+          {
+            "bar": 66,
+            "pattern": 54
+          },
+          {
+            "bar": 67,
+            "pattern": 55
+          },
+          {
+            "bar": 68,
+            "pattern": 56
+          },
+          {
+            "bar": 69,
+            "pattern": 57
+          },
+          {
+            "bar": 70,
+            "pattern": 58
+          },
+          {
+            "bar": 71,
+            "pattern": 59
+          },
+          {
+            "bar": 72,
+            "pattern": 52
+          },
+          {
+            "bar": 73,
+            "pattern": 53
+          },
+          {
+            "bar": 74,
+            "pattern": 54
+          },
+          {
+            "bar": 75,
+            "pattern": 55
+          },
+          {
+            "bar": 76,
+            "pattern": 56
+          },
+          {
+            "bar": 77,
+            "pattern": 57
+          },
+          {
+            "bar": 78,
+            "pattern": 58
+          },
+          {
+            "bar": 79,
+            "pattern": 59
+          },
+          {
+            "bar": 80,
+            "pattern": 52
+          },
+          {
+            "bar": 81,
+            "pattern": 53
+          },
+          {
+            "bar": 82,
+            "pattern": 54
+          },
+          {
+            "bar": 83,
+            "pattern": 55
+          },
+          {
+            "bar": 84,
+            "pattern": 56
+          },
+          {
+            "bar": 85,
+            "pattern": 57
+          },
+          {
+            "bar": 86,
+            "pattern": 58
+          },
+          {
+            "bar": 87,
+            "pattern": 59
+          },
+          {
+            "bar": 88,
+            "pattern": 52
+          },
+          {
+            "bar": 89,
+            "pattern": 53
+          },
+          {
+            "bar": 90,
+            "pattern": 54
+          },
+          {
+            "bar": 91,
+            "pattern": 55
+          },
+          {
+            "bar": 92,
+            "pattern": 56
+          },
+          {
+            "bar": 93,
+            "pattern": 57
+          },
+          {
+            "bar": 94,
+            "pattern": 58
+          },
+          {
+            "bar": 95,
+            "pattern": 59
+          },
+          {
+            "bar": 96,
+            "pattern": 60
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "10 Monk Growl (Effect 2)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 0,
+            "pattern": 61
+          },
+          {
+            "bar": 1,
+            "pattern": 62
+          },
+          {
+            "bar": 2,
+            "pattern": 63
+          },
+          {
+            "bar": 3,
+            "pattern": 64
+          },
+          {
+            "bar": 4,
+            "pattern": 65
+          },
+          {
+            "bar": 5,
+            "pattern": 66
+          },
+          {
+            "bar": 8,
+            "pattern": 61
+          },
+          {
+            "bar": 9,
+            "pattern": 62
+          },
+          {
+            "bar": 10,
+            "pattern": 63
+          },
+          {
+            "bar": 11,
+            "pattern": 64
+          },
+          {
+            "bar": 12,
+            "pattern": 65
+          },
+          {
+            "bar": 13,
+            "pattern": 66
+          },
+          {
+            "bar": 16,
+            "pattern": 61
+          },
+          {
+            "bar": 17,
+            "pattern": 62
+          },
+          {
+            "bar": 18,
+            "pattern": 63
+          },
+          {
+            "bar": 19,
+            "pattern": 64
+          },
+          {
+            "bar": 20,
+            "pattern": 65
+          },
+          {
+            "bar": 21,
+            "pattern": 66
+          },
+          {
+            "bar": 24,
+            "pattern": 61
+          },
+          {
+            "bar": 25,
+            "pattern": 62
+          },
+          {
+            "bar": 26,
+            "pattern": 63
+          },
+          {
+            "bar": 27,
+            "pattern": 64
+          },
+          {
+            "bar": 28,
+            "pattern": 65
+          },
+          {
+            "bar": 29,
+            "pattern": 66
+          },
+          {
+            "bar": 32,
+            "pattern": 61
+          },
+          {
+            "bar": 33,
+            "pattern": 62
+          },
+          {
+            "bar": 34,
+            "pattern": 63
+          },
+          {
+            "bar": 35,
+            "pattern": 64
+          },
+          {
+            "bar": 36,
+            "pattern": 65
+          },
+          {
+            "bar": 37,
+            "pattern": 66
+          },
+          {
+            "bar": 40,
+            "pattern": 61
+          },
+          {
+            "bar": 41,
+            "pattern": 62
+          },
+          {
+            "bar": 42,
+            "pattern": 63
+          },
+          {
+            "bar": 43,
+            "pattern": 64
+          },
+          {
+            "bar": 44,
+            "pattern": 65
+          },
+          {
+            "bar": 45,
+            "pattern": 66
+          },
+          {
+            "bar": 56,
+            "pattern": 61
+          },
+          {
+            "bar": 57,
+            "pattern": 62
+          },
+          {
+            "bar": 58,
+            "pattern": 63
+          },
+          {
+            "bar": 59,
+            "pattern": 64
+          },
+          {
+            "bar": 60,
+            "pattern": 65
+          },
+          {
+            "bar": 61,
+            "pattern": 66
+          },
+          {
+            "bar": 64,
+            "pattern": 61
+          },
+          {
+            "bar": 65,
+            "pattern": 62
+          },
+          {
+            "bar": 66,
+            "pattern": 63
+          },
+          {
+            "bar": 67,
+            "pattern": 64
+          },
+          {
+            "bar": 68,
+            "pattern": 65
+          },
+          {
+            "bar": 69,
+            "pattern": 66
+          },
+          {
+            "bar": 72,
+            "pattern": 61
+          },
+          {
+            "bar": 73,
+            "pattern": 62
+          },
+          {
+            "bar": 74,
+            "pattern": 63
+          },
+          {
+            "bar": 75,
+            "pattern": 64
+          },
+          {
+            "bar": 76,
+            "pattern": 65
+          },
+          {
+            "bar": 77,
+            "pattern": 66
+          },
+          {
+            "bar": 80,
+            "pattern": 61
+          },
+          {
+            "bar": 81,
+            "pattern": 62
+          },
+          {
+            "bar": 82,
+            "pattern": 63
+          },
+          {
+            "bar": 83,
+            "pattern": 64
+          },
+          {
+            "bar": 84,
+            "pattern": 65
+          },
+          {
+            "bar": 85,
+            "pattern": 66
+          },
+          {
+            "bar": 88,
+            "pattern": 61
+          },
+          {
+            "bar": 89,
+            "pattern": 62
+          },
+          {
+            "bar": 90,
+            "pattern": 63
+          },
+          {
+            "bar": 91,
+            "pattern": 64
+          },
+          {
+            "bar": 92,
+            "pattern": 65
+          },
+          {
+            "bar": 93,
+            "pattern": 66
+          },
+          {
+            "bar": 96,
+            "pattern": 67
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "name": "11 Sonar Ping (Effect 3)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 16,
+            "pattern": 68
+          },
+          {
+            "bar": 17,
+            "pattern": 68
+          },
+          {
+            "bar": 18,
+            "pattern": 68
+          },
+          {
+            "bar": 19,
+            "pattern": 68
+          },
+          {
+            "bar": 20,
+            "pattern": 68
+          },
+          {
+            "bar": 21,
+            "pattern": 68
+          },
+          {
+            "bar": 22,
+            "pattern": 68
+          },
+          {
+            "bar": 23,
+            "pattern": 68
+          },
+          {
+            "bar": 40,
+            "pattern": 68
+          },
+          {
+            "bar": 41,
+            "pattern": 68
+          },
+          {
+            "bar": 42,
+            "pattern": 68
+          },
+          {
+            "bar": 43,
+            "pattern": 68
+          },
+          {
+            "bar": 44,
+            "pattern": 68
+          },
+          {
+            "bar": 45,
+            "pattern": 68
+          },
+          {
+            "bar": 46,
+            "pattern": 68
+          },
+          {
+            "bar": 47,
+            "pattern": 68
+          },
+          {
+            "bar": 48,
+            "pattern": 68
+          },
+          {
+            "bar": 49,
+            "pattern": 68
+          },
+          {
+            "bar": 50,
+            "pattern": 68
+          },
+          {
+            "bar": 51,
+            "pattern": 68
+          },
+          {
+            "bar": 52,
+            "pattern": 68
+          },
+          {
+            "bar": 53,
+            "pattern": 68
+          },
+          {
+            "bar": 54,
+            "pattern": 68
+          },
+          {
+            "bar": 55,
+            "pattern": 68
+          },
+          {
+            "bar": 72,
+            "pattern": 68
+          },
+          {
+            "bar": 73,
+            "pattern": 68
+          },
+          {
+            "bar": 74,
+            "pattern": 68
+          },
+          {
+            "bar": 75,
+            "pattern": 68
+          },
+          {
+            "bar": 76,
+            "pattern": 68
+          },
+          {
+            "bar": 77,
+            "pattern": 68
+          },
+          {
+            "bar": 78,
+            "pattern": 68
+          },
+          {
+            "bar": 79,
+            "pattern": 68
+          },
+          {
+            "bar": 80,
+            "pattern": 68
+          },
+          {
+            "bar": 81,
+            "pattern": 68
+          },
+          {
+            "bar": 82,
+            "pattern": 68
+          },
+          {
+            "bar": 83,
+            "pattern": 68
+          },
+          {
+            "bar": 84,
+            "pattern": 68
+          },
+          {
+            "bar": 85,
+            "pattern": 68
+          },
+          {
+            "bar": 86,
+            "pattern": 68
+          },
+          {
+            "bar": 87,
+            "pattern": 68
+          },
+          {
+            "bar": 88,
+            "pattern": 68
+          },
+          {
+            "bar": 89,
+            "pattern": 68
+          },
+          {
+            "bar": 90,
+            "pattern": 68
+          },
+          {
+            "bar": 91,
+            "pattern": 68
+          },
+          {
+            "bar": 92,
+            "pattern": 68
+          },
+          {
+            "bar": 93,
+            "pattern": 68
+          },
+          {
+            "bar": 94,
+            "pattern": 68
+          },
+          {
+            "bar": 95,
+            "pattern": 68
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "12 Koungou Perc (Beat 5)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 24,
+            "pattern": 69
+          },
+          {
+            "bar": 25,
+            "pattern": 69
+          },
+          {
+            "bar": 26,
+            "pattern": 69
+          },
+          {
+            "bar": 27,
+            "pattern": 69
+          },
+          {
+            "bar": 28,
+            "pattern": 69
+          },
+          {
+            "bar": 29,
+            "pattern": 69
+          },
+          {
+            "bar": 30,
+            "pattern": 69
+          },
+          {
+            "bar": 31,
+            "pattern": 69
+          },
+          {
+            "bar": 32,
+            "pattern": 69
+          },
+          {
+            "bar": 33,
+            "pattern": 69
+          },
+          {
+            "bar": 34,
+            "pattern": 69
+          },
+          {
+            "bar": 35,
+            "pattern": 69
+          },
+          {
+            "bar": 36,
+            "pattern": 69
+          },
+          {
+            "bar": 37,
+            "pattern": 69
+          },
+          {
+            "bar": 38,
+            "pattern": 69
+          },
+          {
+            "bar": 39,
+            "pattern": 69
+          },
+          {
+            "bar": 40,
+            "pattern": 69
+          },
+          {
+            "bar": 41,
+            "pattern": 69
+          },
+          {
+            "bar": 42,
+            "pattern": 69
+          },
+          {
+            "bar": 43,
+            "pattern": 69
+          },
+          {
+            "bar": 44,
+            "pattern": 69
+          },
+          {
+            "bar": 45,
+            "pattern": 69
+          },
+          {
+            "bar": 46,
+            "pattern": 69
+          },
+          {
+            "bar": 47,
+            "pattern": 69
+          },
+          {
+            "bar": 64,
+            "pattern": 69
+          },
+          {
+            "bar": 65,
+            "pattern": 69
+          },
+          {
+            "bar": 66,
+            "pattern": 69
+          },
+          {
+            "bar": 67,
+            "pattern": 69
+          },
+          {
+            "bar": 68,
+            "pattern": 69
+          },
+          {
+            "bar": 69,
+            "pattern": 69
+          },
+          {
+            "bar": 70,
+            "pattern": 69
+          },
+          {
+            "bar": 71,
+            "pattern": 69
+          },
+          {
+            "bar": 72,
+            "pattern": 69
+          },
+          {
+            "bar": 73,
+            "pattern": 69
+          },
+          {
+            "bar": 74,
+            "pattern": 69
+          },
+          {
+            "bar": 75,
+            "pattern": 69
+          },
+          {
+            "bar": 76,
+            "pattern": 69
+          },
+          {
+            "bar": 77,
+            "pattern": 69
+          },
+          {
+            "bar": 78,
+            "pattern": 69
+          },
+          {
+            "bar": 79,
+            "pattern": 69
+          },
+          {
+            "bar": 80,
+            "pattern": 69
+          },
+          {
+            "bar": 81,
+            "pattern": 69
+          },
+          {
+            "bar": 82,
+            "pattern": 69
+          },
+          {
+            "bar": 83,
+            "pattern": 69
+          },
+          {
+            "bar": 84,
+            "pattern": 69
+          },
+          {
+            "bar": 85,
+            "pattern": 69
+          },
+          {
+            "bar": 86,
+            "pattern": 69
+          },
+          {
+            "bar": 87,
+            "pattern": 69
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "13 Atlanta Kick (Beat 1)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 8,
+            "pattern": 70
+          },
+          {
+            "bar": 10,
+            "pattern": 71
+          },
+          {
+            "bar": 11,
+            "pattern": 72
+          },
+          {
+            "bar": 12,
+            "pattern": 70
+          },
+          {
+            "bar": 14,
+            "pattern": 73
+          },
+          {
+            "bar": 15,
+            "pattern": 74
+          },
+          {
+            "bar": 16,
+            "pattern": 70
+          },
+          {
+            "bar": 18,
+            "pattern": 71
+          },
+          {
+            "bar": 19,
+            "pattern": 72
+          },
+          {
+            "bar": 20,
+            "pattern": 70
+          },
+          {
+            "bar": 22,
+            "pattern": 73
+          },
+          {
+            "bar": 23,
+            "pattern": 74
+          },
+          {
+            "bar": 24,
+            "pattern": 70
+          },
+          {
+            "bar": 26,
+            "pattern": 71
+          },
+          {
+            "bar": 27,
+            "pattern": 72
+          },
+          {
+            "bar": 28,
+            "pattern": 70
+          },
+          {
+            "bar": 30,
+            "pattern": 73
+          },
+          {
+            "bar": 31,
+            "pattern": 74
+          },
+          {
+            "bar": 32,
+            "pattern": 70
+          },
+          {
+            "bar": 34,
+            "pattern": 71
+          },
+          {
+            "bar": 35,
+            "pattern": 72
+          },
+          {
+            "bar": 36,
+            "pattern": 70
+          },
+          {
+            "bar": 38,
+            "pattern": 73
+          },
+          {
+            "bar": 39,
+            "pattern": 74
+          },
+          {
+            "bar": 40,
+            "pattern": 70
+          },
+          {
+            "bar": 42,
+            "pattern": 71
+          },
+          {
+            "bar": 43,
+            "pattern": 72
+          },
+          {
+            "bar": 44,
+            "pattern": 70
+          },
+          {
+            "bar": 46,
+            "pattern": 73
+          },
+          {
+            "bar": 47,
+            "pattern": 74
+          },
+          {
+            "bar": 64,
+            "pattern": 70
+          },
+          {
+            "bar": 66,
+            "pattern": 71
+          },
+          {
+            "bar": 67,
+            "pattern": 72
+          },
+          {
+            "bar": 68,
+            "pattern": 70
+          },
+          {
+            "bar": 70,
+            "pattern": 73
+          },
+          {
+            "bar": 71,
+            "pattern": 74
+          },
+          {
+            "bar": 72,
+            "pattern": 70
+          },
+          {
+            "bar": 74,
+            "pattern": 71
+          },
+          {
+            "bar": 75,
+            "pattern": 72
+          },
+          {
+            "bar": 76,
+            "pattern": 70
+          },
+          {
+            "bar": 78,
+            "pattern": 73
+          },
+          {
+            "bar": 79,
+            "pattern": 74
+          },
+          {
+            "bar": 80,
+            "pattern": 70
+          },
+          {
+            "bar": 82,
+            "pattern": 71
+          },
+          {
+            "bar": 83,
+            "pattern": 72
+          },
+          {
+            "bar": 84,
+            "pattern": 70
+          },
+          {
+            "bar": 86,
+            "pattern": 73
+          },
+          {
+            "bar": 87,
+            "pattern": 74
+          },
+          {
+            "bar": 96,
+            "pattern": 75
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "14 Atlanta Snare (Beat 1)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 8,
+            "pattern": 76
+          },
+          {
+            "bar": 9,
+            "pattern": 77
+          },
+          {
+            "bar": 10,
+            "pattern": 76
+          },
+          {
+            "bar": 11,
+            "pattern": 77
+          },
+          {
+            "bar": 12,
+            "pattern": 76
+          },
+          {
+            "bar": 13,
+            "pattern": 77
+          },
+          {
+            "bar": 14,
+            "pattern": 76
+          },
+          {
+            "bar": 15,
+            "pattern": 77
+          },
+          {
+            "bar": 16,
+            "pattern": 76
+          },
+          {
+            "bar": 17,
+            "pattern": 77
+          },
+          {
+            "bar": 18,
+            "pattern": 76
+          },
+          {
+            "bar": 19,
+            "pattern": 77
+          },
+          {
+            "bar": 20,
+            "pattern": 76
+          },
+          {
+            "bar": 21,
+            "pattern": 77
+          },
+          {
+            "bar": 22,
+            "pattern": 76
+          },
+          {
+            "bar": 23,
+            "pattern": 77
+          },
+          {
+            "bar": 24,
+            "pattern": 76
+          },
+          {
+            "bar": 25,
+            "pattern": 77
+          },
+          {
+            "bar": 26,
+            "pattern": 76
+          },
+          {
+            "bar": 27,
+            "pattern": 77
+          },
+          {
+            "bar": 28,
+            "pattern": 76
+          },
+          {
+            "bar": 29,
+            "pattern": 77
+          },
+          {
+            "bar": 30,
+            "pattern": 76
+          },
+          {
+            "bar": 31,
+            "pattern": 77
+          },
+          {
+            "bar": 32,
+            "pattern": 76
+          },
+          {
+            "bar": 33,
+            "pattern": 77
+          },
+          {
+            "bar": 34,
+            "pattern": 76
+          },
+          {
+            "bar": 35,
+            "pattern": 77
+          },
+          {
+            "bar": 36,
+            "pattern": 76
+          },
+          {
+            "bar": 37,
+            "pattern": 77
+          },
+          {
+            "bar": 38,
+            "pattern": 76
+          },
+          {
+            "bar": 39,
+            "pattern": 77
+          },
+          {
+            "bar": 40,
+            "pattern": 76
+          },
+          {
+            "bar": 41,
+            "pattern": 77
+          },
+          {
+            "bar": 42,
+            "pattern": 76
+          },
+          {
+            "bar": 43,
+            "pattern": 77
+          },
+          {
+            "bar": 44,
+            "pattern": 76
+          },
+          {
+            "bar": 45,
+            "pattern": 77
+          },
+          {
+            "bar": 46,
+            "pattern": 76
+          },
+          {
+            "bar": 47,
+            "pattern": 77
+          },
+          {
+            "bar": 64,
+            "pattern": 76
+          },
+          {
+            "bar": 65,
+            "pattern": 77
+          },
+          {
+            "bar": 66,
+            "pattern": 76
+          },
+          {
+            "bar": 67,
+            "pattern": 77
+          },
+          {
+            "bar": 68,
+            "pattern": 76
+          },
+          {
+            "bar": 69,
+            "pattern": 77
+          },
+          {
+            "bar": 70,
+            "pattern": 76
+          },
+          {
+            "bar": 71,
+            "pattern": 77
+          },
+          {
+            "bar": 72,
+            "pattern": 76
+          },
+          {
+            "bar": 73,
+            "pattern": 77
+          },
+          {
+            "bar": 74,
+            "pattern": 76
+          },
+          {
+            "bar": 75,
+            "pattern": 77
+          },
+          {
+            "bar": 76,
+            "pattern": 76
+          },
+          {
+            "bar": 77,
+            "pattern": 77
+          },
+          {
+            "bar": 78,
+            "pattern": 76
+          },
+          {
+            "bar": 79,
+            "pattern": 77
+          },
+          {
+            "bar": 80,
+            "pattern": 76
+          },
+          {
+            "bar": 81,
+            "pattern": 77
+          },
+          {
+            "bar": 82,
+            "pattern": 76
+          },
+          {
+            "bar": 83,
+            "pattern": 77
+          },
+          {
+            "bar": 84,
+            "pattern": 76
+          },
+          {
+            "bar": 85,
+            "pattern": 77
+          },
+          {
+            "bar": 86,
+            "pattern": 76
+          },
+          {
+            "bar": 87,
+            "pattern": 77
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "15 Tuctom Hat (Beat 2)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 8,
+            "pattern": 78
+          },
+          {
+            "bar": 9,
+            "pattern": 78
+          },
+          {
+            "bar": 10,
+            "pattern": 78
+          },
+          {
+            "bar": 11,
+            "pattern": 78
+          },
+          {
+            "bar": 12,
+            "pattern": 78
+          },
+          {
+            "bar": 13,
+            "pattern": 78
+          },
+          {
+            "bar": 14,
+            "pattern": 78
+          },
+          {
+            "bar": 15,
+            "pattern": 78
+          },
+          {
+            "bar": 16,
+            "pattern": 78
+          },
+          {
+            "bar": 17,
+            "pattern": 78
+          },
+          {
+            "bar": 18,
+            "pattern": 78
+          },
+          {
+            "bar": 19,
+            "pattern": 78
+          },
+          {
+            "bar": 20,
+            "pattern": 78
+          },
+          {
+            "bar": 21,
+            "pattern": 78
+          },
+          {
+            "bar": 22,
+            "pattern": 78
+          },
+          {
+            "bar": 23,
+            "pattern": 78
+          },
+          {
+            "bar": 24,
+            "pattern": 78
+          },
+          {
+            "bar": 25,
+            "pattern": 78
+          },
+          {
+            "bar": 26,
+            "pattern": 78
+          },
+          {
+            "bar": 27,
+            "pattern": 78
+          },
+          {
+            "bar": 28,
+            "pattern": 78
+          },
+          {
+            "bar": 29,
+            "pattern": 78
+          },
+          {
+            "bar": 30,
+            "pattern": 78
+          },
+          {
+            "bar": 31,
+            "pattern": 78
+          },
+          {
+            "bar": 32,
+            "pattern": 78
+          },
+          {
+            "bar": 33,
+            "pattern": 78
+          },
+          {
+            "bar": 34,
+            "pattern": 78
+          },
+          {
+            "bar": 35,
+            "pattern": 78
+          },
+          {
+            "bar": 36,
+            "pattern": 78
+          },
+          {
+            "bar": 37,
+            "pattern": 78
+          },
+          {
+            "bar": 38,
+            "pattern": 78
+          },
+          {
+            "bar": 39,
+            "pattern": 78
+          },
+          {
+            "bar": 40,
+            "pattern": 78
+          },
+          {
+            "bar": 41,
+            "pattern": 78
+          },
+          {
+            "bar": 42,
+            "pattern": 78
+          },
+          {
+            "bar": 43,
+            "pattern": 78
+          },
+          {
+            "bar": 44,
+            "pattern": 78
+          },
+          {
+            "bar": 45,
+            "pattern": 78
+          },
+          {
+            "bar": 46,
+            "pattern": 78
+          },
+          {
+            "bar": 47,
+            "pattern": 78
+          },
+          {
+            "bar": 64,
+            "pattern": 78
+          },
+          {
+            "bar": 65,
+            "pattern": 78
+          },
+          {
+            "bar": 66,
+            "pattern": 78
+          },
+          {
+            "bar": 67,
+            "pattern": 78
+          },
+          {
+            "bar": 68,
+            "pattern": 78
+          },
+          {
+            "bar": 69,
+            "pattern": 78
+          },
+          {
+            "bar": 70,
+            "pattern": 78
+          },
+          {
+            "bar": 71,
+            "pattern": 78
+          },
+          {
+            "bar": 72,
+            "pattern": 78
+          },
+          {
+            "bar": 73,
+            "pattern": 78
+          },
+          {
+            "bar": 74,
+            "pattern": 78
+          },
+          {
+            "bar": 75,
+            "pattern": 78
+          },
+          {
+            "bar": 76,
+            "pattern": 78
+          },
+          {
+            "bar": 77,
+            "pattern": 78
+          },
+          {
+            "bar": 78,
+            "pattern": 78
+          },
+          {
+            "bar": 79,
+            "pattern": 78
+          },
+          {
+            "bar": 80,
+            "pattern": 78
+          },
+          {
+            "bar": 81,
+            "pattern": 78
+          },
+          {
+            "bar": 82,
+            "pattern": 78
+          },
+          {
+            "bar": 83,
+            "pattern": 78
+          },
+          {
+            "bar": 84,
+            "pattern": 78
+          },
+          {
+            "bar": 85,
+            "pattern": 78
+          },
+          {
+            "bar": 86,
+            "pattern": 78
+          },
+          {
+            "bar": 87,
+            "pattern": 78
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "16 Open Hat (Beat 2)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 8,
+            "pattern": 79
+          },
+          {
+            "bar": 9,
+            "pattern": 79
+          },
+          {
+            "bar": 10,
+            "pattern": 79
+          },
+          {
+            "bar": 11,
+            "pattern": 79
+          },
+          {
+            "bar": 12,
+            "pattern": 79
+          },
+          {
+            "bar": 13,
+            "pattern": 79
+          },
+          {
+            "bar": 14,
+            "pattern": 79
+          },
+          {
+            "bar": 15,
+            "pattern": 79
+          },
+          {
+            "bar": 16,
+            "pattern": 79
+          },
+          {
+            "bar": 17,
+            "pattern": 79
+          },
+          {
+            "bar": 18,
+            "pattern": 79
+          },
+          {
+            "bar": 19,
+            "pattern": 79
+          },
+          {
+            "bar": 20,
+            "pattern": 79
+          },
+          {
+            "bar": 21,
+            "pattern": 79
+          },
+          {
+            "bar": 22,
+            "pattern": 79
+          },
+          {
+            "bar": 23,
+            "pattern": 79
+          },
+          {
+            "bar": 24,
+            "pattern": 79
+          },
+          {
+            "bar": 25,
+            "pattern": 79
+          },
+          {
+            "bar": 26,
+            "pattern": 79
+          },
+          {
+            "bar": 27,
+            "pattern": 79
+          },
+          {
+            "bar": 28,
+            "pattern": 79
+          },
+          {
+            "bar": 29,
+            "pattern": 79
+          },
+          {
+            "bar": 30,
+            "pattern": 79
+          },
+          {
+            "bar": 31,
+            "pattern": 79
+          },
+          {
+            "bar": 32,
+            "pattern": 79
+          },
+          {
+            "bar": 33,
+            "pattern": 79
+          },
+          {
+            "bar": 34,
+            "pattern": 79
+          },
+          {
+            "bar": 35,
+            "pattern": 79
+          },
+          {
+            "bar": 36,
+            "pattern": 79
+          },
+          {
+            "bar": 37,
+            "pattern": 79
+          },
+          {
+            "bar": 38,
+            "pattern": 79
+          },
+          {
+            "bar": 39,
+            "pattern": 79
+          },
+          {
+            "bar": 40,
+            "pattern": 79
+          },
+          {
+            "bar": 41,
+            "pattern": 79
+          },
+          {
+            "bar": 42,
+            "pattern": 79
+          },
+          {
+            "bar": 43,
+            "pattern": 79
+          },
+          {
+            "bar": 44,
+            "pattern": 79
+          },
+          {
+            "bar": 45,
+            "pattern": 79
+          },
+          {
+            "bar": 46,
+            "pattern": 79
+          },
+          {
+            "bar": 47,
+            "pattern": 79
+          },
+          {
+            "bar": 64,
+            "pattern": 79
+          },
+          {
+            "bar": 65,
+            "pattern": 79
+          },
+          {
+            "bar": 66,
+            "pattern": 79
+          },
+          {
+            "bar": 67,
+            "pattern": 79
+          },
+          {
+            "bar": 68,
+            "pattern": 79
+          },
+          {
+            "bar": 69,
+            "pattern": 79
+          },
+          {
+            "bar": 70,
+            "pattern": 79
+          },
+          {
+            "bar": 71,
+            "pattern": 79
+          },
+          {
+            "bar": 72,
+            "pattern": 79
+          },
+          {
+            "bar": 73,
+            "pattern": 79
+          },
+          {
+            "bar": 74,
+            "pattern": 79
+          },
+          {
+            "bar": 75,
+            "pattern": 79
+          },
+          {
+            "bar": 76,
+            "pattern": 79
+          },
+          {
+            "bar": 77,
+            "pattern": 79
+          },
+          {
+            "bar": 78,
+            "pattern": 79
+          },
+          {
+            "bar": 79,
+            "pattern": 79
+          },
+          {
+            "bar": 80,
+            "pattern": 79
+          },
+          {
+            "bar": 81,
+            "pattern": 79
+          },
+          {
+            "bar": 82,
+            "pattern": 79
+          },
+          {
+            "bar": 83,
+            "pattern": 79
+          },
+          {
+            "bar": 84,
+            "pattern": 79
+          },
+          {
+            "bar": 85,
+            "pattern": 79
+          },
+          {
+            "bar": 86,
+            "pattern": 79
+          },
+          {
+            "bar": 87,
+            "pattern": 79
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "17 Foubreak Toms (Beat 3)",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 25,
+            "pattern": 80
+          },
+          {
+            "bar": 29,
+            "pattern": 80
+          },
+          {
+            "bar": 33,
+            "pattern": 80
+          },
+          {
+            "bar": 37,
+            "pattern": 80
+          },
+          {
+            "bar": 41,
+            "pattern": 80
+          },
+          {
+            "bar": 45,
+            "pattern": 80
+          },
+          {
+            "bar": 65,
+            "pattern": 80
+          },
+          {
+            "bar": 69,
+            "pattern": 80
+          },
+          {
+            "bar": 73,
+            "pattern": 80
+          },
+          {
+            "bar": 77,
+            "pattern": 80
+          },
+          {
+            "bar": 81,
+            "pattern": 80
+          },
+          {
+            "bar": 85,
+            "pattern": 80
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "18 Crash",
+        "muted": false,
+        "volume": 84,
+        "clips": [
+          {
+            "bar": 8,
+            "pattern": 81
+          },
+          {
+            "bar": 32,
+            "pattern": 81
+          },
+          {
+            "bar": 40,
+            "pattern": 81
+          },
+          {
+            "bar": 64,
+            "pattern": 81
+          },
+          {
+            "bar": 72,
+            "pattern": 81
+          },
+          {
+            "bar": 96,
+            "pattern": 82
+          }
+        ]
+      }
+    ],
+    "loop_range": null
+  }
+}

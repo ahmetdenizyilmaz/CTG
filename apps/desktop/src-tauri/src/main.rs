@@ -21,7 +21,11 @@ fn main() {
         .plugin(tauri_plugin_dialog::init())
         .setup(|app| {
             let workspace = state::workspace_dir(app.handle())?;
-            app.manage(AppState::start(workspace));
+            let initial_file = std::env::args_os()
+                .skip(1)
+                .map(std::path::PathBuf::from)
+                .find(|path| path.is_file());
+            app.manage(AppState::start(workspace, initial_file));
             sync::spawn(app.handle().clone());
             Ok(())
         })

@@ -2,16 +2,16 @@
 
 import { ask, open, save } from '@tauri-apps/plugin-dialog';
 
-const PROJECT_FILTER = { name: 'CTG Studio project', extensions: ['sbproj'] };
+const PROJECT_FILTER = { name: 'CTG Studio Song (.ctg, .sbproj)', extensions: ['ctg', 'sbproj'] };
 const WAV_FILTER = { name: 'WAV audio', extensions: ['wav'] };
 
 export async function chooseProjectToOpen(): Promise<string | null> {
-  const path = await open({ multiple: false, directory: false, filters: [{ name: 'CTG / ZzFX projects', extensions: ['sbproj', 'zzfx', 'js', 'json'] }] });
+  const path = await open({ multiple: false, directory: false, filters: [{ name: 'CTG / ZzFX projects', extensions: ['ctg', 'sbproj', 'zzfx', 'js', 'json'] }] });
   return typeof path === 'string' ? path : null;
 }
 
 export function chooseProjectToSave(): Promise<string | null> {
-  return save({ filters: [PROJECT_FILTER], defaultPath: 'song.sbproj' });
+  return save({ filters: [PROJECT_FILTER], defaultPath: 'song.ctg' });
 }
 
 export function chooseWavToSave(): Promise<string | null> {

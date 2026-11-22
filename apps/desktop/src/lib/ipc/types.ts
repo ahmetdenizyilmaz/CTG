@@ -170,6 +170,9 @@ export interface PresetInfo {
   id: string;
   name: string;
   category: string;
+  family?: string;
+  family_label?: string;
+  roles?: string[];
   description: string;
   voice: VoiceKind;
 }
@@ -193,6 +196,8 @@ export type Action =
       chip_profile?: ChipProfile;
       scale_root?: number;
       scale_kind?: ScaleKind;
+      transpose_notes?: boolean;
+      semitone_offset?: number;
       reverb_size?: number;
       reverb_damping?: number;
     }

@@ -4,16 +4,16 @@
 //! (for example from an AI agent stuck in a loop).
 
 /// Maximum number of instruments in a song.
-pub const MAX_INSTRUMENTS: usize = 128;
+pub const MAX_INSTRUMENTS: usize = 256;
 
 /// Maximum number of patterns in a song.
-pub const MAX_PATTERNS: usize = 1024;
+pub const MAX_PATTERNS: usize = 4096;
 
 /// Maximum number of tracks in a song.
-pub const MAX_TRACKS: usize = 128;
+pub const MAX_TRACKS: usize = 256;
 
 /// Maximum number of notes in one pattern.
-pub const MAX_NOTES_PER_PATTERN: usize = 512;
+pub const MAX_NOTES_PER_PATTERN: usize = 1024;
 
 /// Maximum arrangement length in bars.
-pub const MAX_BARS: u16 = 512;
+pub const MAX_BARS: u16 = 4096;

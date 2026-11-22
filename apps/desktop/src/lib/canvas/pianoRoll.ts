@@ -86,19 +86,25 @@ function drawColumns(context: CanvasRenderingContext2D, view: RollView, height: 
 }
 
 function drawNotes(context: CanvasRenderingContext2D, view: RollView): void {
-  const { grid, colors } = view;
+  const { grid, colors, playStep } = view;
   for (const note of view.notes) {
     const row = rowOfPitch(note.pitch);
     if (row < 0 || row >= grid.rows) continue;
+    const active = playStep !== null && playStep >= note.start && playStep < note.start + note.length;
     const x = grid.labelWidth + note.start * grid.cellWidth + 2;
     const y = grid.headerHeight + row * grid.cellHeight + 2;
     const width = Math.max(2, note.length * grid.cellWidth - 4);
     const height = grid.cellHeight - 4;
-    context.globalAlpha = 0.65 + 0.35 * (note.velocity / 127);
-    context.fillStyle = view.color;
+    context.globalAlpha = active ? 1 : 0.65 + 0.35 * (note.velocity / 127);
+    context.fillStyle = active ? colors.playhead : view.color;
     context.beginPath();
     context.roundRect(x, y, width, height, 3);
     context.fill();
+    if (active) {
+      context.lineWidth = 1.5;
+      context.strokeStyle = '#ffffff';
+      context.stroke();
+    }
     context.globalAlpha = 1;
     context.fillStyle = colors.noteEdge;
     context.fillRect(x + 3, y + height - 3, Math.max(1, (width - 6) * note.velocity / 127), 1);
