@@ -1,7 +1,7 @@
 //! Songs compiled into sample-accurate playback plans.
 
 use soundbit_core::{InstrumentId, Song, Track};
-use soundbit_dsp::ReverbParams;
+use soundbit_dsp::{DelayParams, ReverbParams};
 
 use crate::clock::StepClock;
 use crate::error::{EngineError, check_sample_rate};
@@ -35,6 +35,9 @@ pub(crate) struct NoteEvent {
 #[derive(Debug, Clone, PartialEq)]
 pub(crate) struct TrackPlan {
     pub(crate) gain: f32,
+    pub(crate) is_kick: bool,
+    pub(crate) sidechain_duck: f32,
+    pub(crate) delay_send: f32,
     pub(crate) events: Vec<NoteEvent>,
 }
 
@@ -73,6 +76,8 @@ pub struct Schedule {
     loop_region: Option<(u64, u64)>,
     reverb: ReverbParams,
     uses_reverb: bool,
+    delay_params: DelayParams,
+    uses_delay: bool,
 }
 
 impl Schedule {
@@ -101,6 +106,17 @@ impl Schedule {
             .tracks()
             .map(|(_, track)| plan_track(song, track, &clock, &instrument_ids))
             .collect();
+        let step_samples = ((f64::from(sample_rate) * 60.0)
+            / (f64::from(song.timing().bpm.get()) * 4.0))
+            .round() as usize;
+        let max_d = sample_rate.saturating_sub(1).max(64) as usize;
+        let delay_params = DelayParams {
+            left_samples: (step_samples * 3).clamp(64, max_d),
+            right_samples: (step_samples * 4).clamp(64, max_d),
+            feedback: 0.34,
+            wet: 0.28,
+        };
+        let uses_delay = tracks.iter().any(|track| track.delay_send > 0.0);
         let end = clock.sample_at(u64::from(song.length_bars()) * steps_per_bar);
         let samples = crate::sample_bank::compile(&mut tracks, &patches, sample_rate, end)?;
         let loop_region = song.loop_range().map(|range| {
@@ -119,6 +135,8 @@ impl Schedule {
             loop_region,
             reverb,
             uses_reverb,
+            delay_params,
+            uses_delay,
         })
     }
 
@@ -156,6 +174,14 @@ impl Schedule {
         self.uses_reverb
     }
 
+    pub(crate) fn delay_params(&self) -> DelayParams {
+        self.delay_params
+    }
+
+    pub(crate) fn uses_delay(&self) -> bool {
+        self.uses_delay
+    }
+
     pub(crate) fn samples(&self) -> &[Vec<f32>] {
         &self.samples
     }
@@ -179,9 +205,17 @@ fn plan_track(
     if settings.muted {
         return TrackPlan {
             gain: 0.0,
+            is_kick: false,
+            sidechain_duck: 0.0,
+            delay_send: 0.0,
             events: Vec::new(),
         };
     }
+
+    let track_name = settings.name.trim().to_ascii_lowercase();
+    let mut is_kick = track_name.contains("kick");
+    let mut sidechain_duck = 0.0_f32;
+    let mut delay_send = 0.0_f32;
 
     let steps_per_bar = u64::from(song.timing().steps_per_bar());
     let mut events = Vec::new();
@@ -195,6 +229,85 @@ fn plan_track(
         else {
             continue;
         };
+        if let Some(inst) = song.instrument(pattern.instrument) {
+            let iname = format!("{track_name} {}", inst.name.to_ascii_lowercase());
+            let is_perc = iname.contains("cowbell")
+                || iname.contains("crash")
+                || iname.contains("cymbal")
+                || iname.contains("snare")
+                || iname.contains("clap")
+                || iname.contains("hat");
+            if iname.contains("kick") || iname.contains("taiko") {
+                is_kick = true;
+            } else if !is_perc
+                && !iname.contains("zurna")
+                && !iname.contains("eurobeat synth brass")
+                && !iname.contains("initial d brass")
+                && (iname.contains("pad")
+                    || iname.contains("chord")
+                    || iname.contains("harmony")
+                    || iname.contains("string")
+                    || iname.contains("choir")
+                    || iname.contains("brass")
+                    || iname.contains("bass")
+                    || iname.contains("sub")
+                    || iname.contains("rhodes")
+                    || iname.contains("ep")
+                    || iname.contains("organ")
+                    || iname.contains("donk")
+                    || iname.contains("house piano")
+                    || iname.contains("padsynth")
+                    || iname.contains("pizz"))
+            {
+                sidechain_duck = sidechain_duck.max(0.42);
+            } else if !is_perc
+                && (iname.contains("lead")
+                    || iname.contains("hook")
+                    || iname.contains("guitar")
+                    || iname.contains("brass")
+                    || iname.contains("trance")
+                    || iname.contains("sabi")
+                    || iname.contains("arp")
+                    || iname.contains("pluck")
+                    || iname.contains("vocal")
+                    || iname.contains("talkbox")
+                    || iname.contains("hoover")
+                    || iname.contains("acid")
+                    || iname.contains("303")
+                    || iname.contains("zurna")
+                    || iname.contains("shamisen")
+                    || iname.contains("whistle")
+                    || iname.contains("oud")
+                    || iname.contains("cz")
+                    || iname.contains("wavetable"))
+            {
+                sidechain_duck = sidechain_duck.max(0.14);
+            }
+            let bass_like = iname.contains("bass")
+                || iname.contains("sub")
+                || iname.contains("organ")
+                || iname.contains("donk");
+            if !is_kick
+                && !is_perc
+                && !bass_like
+                && inst.reverb_send.get() > 0
+                && (iname.contains("lead")
+                    || iname.contains("brass")
+                    || iname.contains("guitar")
+                    || iname.contains("arp")
+                    || iname.contains("trance")
+                    || iname.contains("sabi")
+                    || iname.contains("hook")
+                    || iname.contains("solo")
+                    || iname.contains("emotional")
+                    || iname.contains("pluck")
+                    || iname.contains("vocal")
+                    || iname.contains("talkbox")
+                    || iname.contains("cz"))
+            {
+                delay_send = delay_send.max(0.26);
+            }
+        }
         let bar_start = u64::from(bar) * steps_per_bar;
         for note in pattern.notes() {
             let start = bar_start + u64::from(note.start);
@@ -214,11 +327,17 @@ fn plan_track(
             });
         }
     }
+    if is_kick {
+        sidechain_duck = 0.0;
+    }
     // Clips come in bar order and notes in start order, but a stable sort keeps the invariant
     // explicit.
     events.sort_by_key(|event| event.on);
     TrackPlan {
         gain: f32::from(settings.volume.get()) / 100.0,
+        is_kick,
+        sidechain_duck,
+        delay_send,
         events,
     }
 }

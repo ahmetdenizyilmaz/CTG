@@ -72,9 +72,9 @@ impl Patch {
                 source: SourcePatch::PhysicalModel(kind),
                 envelope: AdsrParams::from_millis(0, 0, 1.0, 50, sample_rate),
                 gain: StereoGain::from_pan(instrument.pan).scaled(volume),
-                pitch: PitchModParams::default(),
-                unison: UnisonPatch::compile(soundbit_core::Unison::default(), &instrument.voice),
-                filter: None,
+                pitch: pitch_params(instrument.pitch_envelope, instrument.vibrato, sample_rate),
+                unison: UnisonPatch::compile(instrument.unison, &instrument.voice),
+                filter: FilterPatch::compile(instrument.filter),
                 reverb_send: reverb_send(instrument),
             };
         }

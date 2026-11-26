@@ -24,6 +24,10 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
             "acoustic_upright_piano",
             "vintage_rhodes_mark1",
             "warm_wurlitzer_200a",
+            "m1_house_piano",
+            "vocal_formant_chop",
+            "daft_talkbox_lead",
+            "cz_phase_lead",
             "ctg_singing_pulse",
             "zzfx_neon_lead",
             "ctg_soft_ep",
@@ -36,6 +40,12 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
             "acoustic_grand_piano",
             "acoustic_solo_violin",
             "acoustic_nylon_guitar",
+            "jp8000_festival_supersaw",
+            "alpha_juno_hoover",
+            "acid_303_lead",
+            "insomnia_rave_pizz",
+            "balkan_zurna_lead",
+            "celtic_whistle_lead",
             "pulse_lead",
             "aloboi_warm_lead",
             "pc98_ssg_pulse_hook",
@@ -45,6 +55,9 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
     let basses: &[&str] = match vibe {
         Vibe::Funk => &[
             "acoustic_upright_bass",
+            "m1_organ_bass",
+            "uk_bassline_donk",
+            "garage_sub_sine",
             "pc98_opna_slap_bass",
             "zzfx_neon_bass",
             "fm_bass",
@@ -55,6 +68,9 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
         ],
         _ => &[
             "acoustic_upright_bass",
+            "devilfish_303_acid",
+            "cyber_reese_neuro_bass",
+            "melbourne_offbeat_bass",
             "triangle_bass",
             "fm_bass",
             "trig_minimal_sub_pulse",
@@ -70,7 +86,13 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
             &[
                 "acoustic_grand_piano",
                 "studio_felt_piano",
+                "m1_house_piano",
                 "vintage_rhodes_mark1",
+                "french_disco_clav",
+                "wt_modern_pluck",
+                "afterlife_techno_pluck",
+                "cyber_shamisen_pluck",
+                "arabic_oud_pluck",
                 "acoustic_concert_harp",
                 "acoustic_nylon_guitar",
                 "acoustic_string_quartet",
@@ -93,8 +115,12 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
             &[
                 "acoustic_solo_cello",
                 "acoustic_solo_violin",
+                "padsynth_lush_choir",
+                "padsynth_ethereal_strings",
                 "studio_felt_piano",
                 "acoustic_concert_flute",
+                "celtic_whistle_lead",
+                "arabic_oud_pluck",
                 "acoustic_warm_clarinet",
                 "acoustic_vibraphone",
                 "aloboi_cello_solo",
@@ -107,9 +133,10 @@ pub fn random_palette(seed: u32, vibe: Vibe) -> Palette {
             ],
         )
         .into(),
-        kick: "kick".into(),
-        snare: choose(&mut rng, &["snare", "clap", "acoustic_brush_snare"]).into(),
+        kick: choose(&mut rng, &["kick", "tr909_club_kick"]).into(),
+        snare: choose(&mut rng, &["snare", "clap", "tr909_club_snare", "tr909_club_clap", "acoustic_brush_snare"]).into(),
         hat: "hihat_closed".into(),
+        ..Palette::default()
     }
 }
 

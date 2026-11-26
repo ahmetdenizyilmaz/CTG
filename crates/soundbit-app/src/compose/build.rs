@@ -5,7 +5,7 @@ use soundbit_core::{
     Bpm, InstrumentId, Note, Pattern, Scale, Song, Swing, TimeSettings, TrackId, TrackSettings,
     Volume,
 };
-const NAMES: [&str; 7] = [
+const NAMES: [&str; 10] = [
     "Hook",
     "Harmony",
     "Bass",
@@ -13,6 +13,9 @@ const NAMES: [&str; 7] = [
     "Kick",
     "Snare",
     "Hi-hat",
+    "Sparkle Arp",
+    "Cowbell",
+    "Crash",
 ];
 pub(super) struct Lanes {
     instruments: Vec<InstrumentId>,
@@ -29,28 +32,28 @@ pub(super) fn prepare(config: &ComposeConfig, scale: Scale) -> Result<(Song, Lan
     })
     .map_err(|e| e.to_string())?;
     let p = &config.instruments;
-    let preset_ids = [
-        &p.lead,
-        &p.harmony,
-        &p.bass,
-        &p.emotional,
-        &p.kick,
-        &p.snare,
-        &p.hat,
+    let studio = config.studio_layers
+        || config.genre_style.is_semi_pro()
+        || !config.custom_sections.is_empty();
+    let mut lane_defs: Vec<(&str, &str, u8)> = vec![
+        (&p.lead, NAMES[0], 72),
+        (&p.harmony, NAMES[1], 50),
+        (&p.bass, NAMES[2], 78),
+        (&p.emotional, NAMES[3], 70),
+        (&p.kick, NAMES[4], 88),
+        (&p.snare, NAMES[5], 64),
+        (&p.hat, NAMES[6], 40),
     ];
-    let names = [
-        "Hook",
-        "Harmony",
-        "Bass",
-        "Emotional theme",
-        "Kick",
-        "Snare",
-        "Hi-hat",
-    ];
-    let levels = [72, 48, 78, 68, 85, 62, 40];
+    if studio {
+        lane_defs.extend([
+            (p.arp.as_str(), NAMES[7], 50),
+            (p.cowbell.as_str(), NAMES[8], 64),
+            (p.crash.as_str(), NAMES[9], 62),
+        ]);
+    }
     let mut instruments = Vec::new();
     let mut tracks = Vec::new();
-    for (i, id) in preset_ids.iter().enumerate() {
+    for (id, name, level) in lane_defs {
         let preset = library
             .find(id)
             .ok_or_else(|| format!("unknown preset '{id}'; use preset_list or ctg presets"))?;
@@ -58,8 +61,8 @@ pub(super) fn prepare(config: &ComposeConfig, scale: Scale) -> Result<(Song, Lan
             song.add_instrument(preset.instrument.clone())
                 .map_err(|e| e.to_string())?,
         );
-        let mut settings = TrackSettings::new(names[i]);
-        settings.volume = Volume::new(levels[i]).map_err(|e| e.to_string())?;
+        let mut settings = TrackSettings::new(name);
+        settings.volume = Volume::new(level).map_err(|e| e.to_string())?;
         tracks.push(song.add_track(settings).map_err(|e| e.to_string())?);
     }
     Ok((
@@ -76,10 +79,10 @@ pub(super) fn place(
     role: Role,
     local_bar: usize,
     bar: usize,
-    lanes: [Vec<Note>; 7],
+    lanes: Vec<Vec<Note>>,
 ) -> Result<(), String> {
     for (i, notes) in lanes.into_iter().enumerate() {
-        if notes.is_empty() {
+        if notes.is_empty() || i >= lanes_index.tracks.len() {
             continue;
         }
         let mut pattern = Pattern::new(

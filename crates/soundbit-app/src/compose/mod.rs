@@ -11,14 +11,17 @@ mod percussion;
 mod random;
 mod rhythm;
 
-pub use config::{BassRhythm, ComposeConfig, Form, Palette, Vibe};
+pub use config::{
+    AccompanimentStyle, BassRhythm, ChordProgressionStyle, ComposeConfig, Form, GenreStyle,
+    GrooveTemplate, MelodyContour, MotifForm, Palette, SectionKind, SectionSpec, Vibe,
+};
 pub use design::SongDesign;
 pub use harmony::Role;
 pub use random::{random_palette, random_recipe, randomize};
 pub use rhythm::euclidean;
 
-use harmony::{bar_chord, progression, voicing};
-use melody::Melody;
+use harmony::{bar_chord, progression, semi_pro_bar_chord, semi_pro_progression, voicing};
+use melody::{Melody, SemiProMelodyBank};
 use parts::BarContext;
 use rhythm::Rng;
 use serde::Serialize;
@@ -74,7 +77,10 @@ pub fn generate(config: &ComposeConfig) -> Result<Composition, String> {
     let (mut song, lanes_index) = build::prepare(config, scale)?;
     let mut rng = Rng::new(config.seed);
     let design = SongDesign::new(config);
-    let mut melody = Melody::new(&mut rng, &design);
+    let mut melody = Melody::new(&mut rng, &design, config);
+    let mut semi_pro_bank = SemiProMelodyBank::new(config.seed);
+    let semi_pro = config.genre_style.is_semi_pro() || !config.custom_sections.is_empty();
+    let studio_layers = config.studio_layers || semi_pro;
     let motif = melody.motif();
     let planned = design.bars();
     let progressions: Vec<_> = (0..5).map(|_| progression(config.vibe, &mut rng)).collect();
@@ -83,22 +89,28 @@ pub fn generate(config: &ComposeConfig) -> Result<Composition, String> {
     for (bar, plan) in planned.iter().enumerate() {
         let role = plan.role;
         let local_bar = plan.local_bar;
-        let span = if matches!(role, Role::Verse | Role::Bridge) {
-            design.bars_per_chord
+        let final_bar = bar + 1 == planned.len();
+        let chord = if semi_pro {
+            let deg8 = semi_pro_progression(plan.progression, plan.kind, scale);
+            semi_pro_bar_chord(config, scale, deg8, plan.kind, local_bar, plan.section_bars, final_bar)
         } else {
-            1
+            let span = if matches!(role, Role::Verse | Role::Bridge) {
+                design.bars_per_chord
+            } else {
+                1
+            };
+            let source = progressions[role_index(role)];
+            let degrees = std::array::from_fn(|i| source[((local_bar / 4 * 4 + i) / span) % 4]);
+            bar_chord(
+                config,
+                scale,
+                degrees,
+                role,
+                local_bar % 4,
+                plan.final_phrase,
+                plan.section_bars,
+            )
         };
-        let source = progressions[role_index(role)];
-        let degrees = std::array::from_fn(|i| source[((local_bar / 4 * 4 + i) / span) % 4]);
-        let chord = bar_chord(
-            config,
-            scale,
-            degrees,
-            role,
-            local_bar % 4,
-            plan.final_phrase,
-            plan.section_bars,
-        );
         let voiced = voicing(&chord, &previous_voicing, config.voice_leading);
         let context = BarContext {
             config,
@@ -107,21 +119,64 @@ pub fn generate(config: &ComposeConfig) -> Result<Composition, String> {
             scale,
             role,
             bar: local_bar,
-            final_bar: bar + 1 == planned.len(),
+            final_bar,
         };
-        let mut lead = melody.bar(&context, &mut rng)?;
-        express_lead(&mut lead, &context)?;
-        let harmony = accompaniment::harmony(&context, &voiced, &lead)?;
-        let (drums, kicks) =
-            percussion::drums(&design, role, local_bar, plan.section_end, &mut rng)?;
-        let bass_notes = parts::bass(&context, &kicks, &mut rng)?;
+        let mut lead = if semi_pro {
+            semi_pro_bank.bar(&context, plan.melody_theme, plan.seed_offset, plan.kind)?
+        } else {
+            let mut l = melody.bar(&context, &mut rng)?;
+            express_lead(&mut l, &context, &mut rng)?;
+            l
+        };
+        let mut harmony = accompaniment::harmony(&context, &voiced, &lead)?;
+        let (drums, kicks) = percussion::drums_with_section(
+            &design,
+            role,
+            plan.kind,
+            local_bar,
+            plan.section_bars,
+            plan.section_end,
+            config.riser_builds || semi_pro,
+            &mut rng,
+        )?;
+        let mut bass_notes = parts::bass(&context, &kicks, &mut rng)?;
+        let mut arp_notes = if studio_layers {
+            accompaniment::sparkle_arp(&voiced, plan.kind, plan.energy)?
+        } else {
+            Vec::new()
+        };
+        // Apply per-section modulation / key-change finale transposition to pitched lanes
+        let trans = plan.transpose_semitones;
+        if trans != 0 {
+            for list in [&mut lead, &mut harmony, &mut bass_notes, &mut arp_notes] {
+                for n in list.iter_mut() {
+                    let next = (i16::from(n.pitch.get()) + i16::from(trans)).clamp(24, 108);
+                    if let Ok(midi) = u8::try_from(next)
+                        && let Ok(p) = soundbit_core::Pitch::new(midi)
+                    {
+                        n.pitch = p;
+                    }
+                }
+            }
+        }
         let [kick, snare, hat] = drums;
-        let (lead, emotional) = if role == Role::Bridge {
+        let is_solo = semi_pro && plan.kind == SectionKind::Solo && !final_bar;
+        let is_dual_answer = !semi_pro
+            && design.melody_contour == "dual_call_response"
+            && role != Role::Bridge
+            && !final_bar
+            && local_bar % 2 == 1;
+        let (lead, emotional) = if role == Role::Bridge || is_dual_answer || is_solo {
             (Vec::new(), lead)
         } else {
             (lead, Vec::new())
         };
-        let lanes = [lead, harmony, bass_notes, emotional, kick, snare, hat];
+        let mut lanes = vec![lead, harmony, bass_notes, emotional, kick, snare, hat];
+        if studio_layers {
+            let [cowbell, crash] =
+                percussion::studio_percussion(plan.kind, local_bar, plan.energy)?;
+            lanes.extend([arp_notes, cowbell, crash]);
+        }
         bars.push(BarReport {
             bar,
             role,
@@ -203,14 +258,38 @@ pub fn transform_notes(
         .collect()
 }
 
-fn express_lead(lead: &mut [Note], context: &BarContext<'_>) -> Result<(), String> {
-    if (context.bar % 4 == 3 || (context.role == Role::Climax && context.bar % 4 == 1))
-        && context.config.expressive_slides
-        && !context.final_bar
-        && context.role != Role::Bridge
+fn express_lead(
+    lead: &mut [Note],
+    context: &BarContext<'_>,
+    rng: &mut Rng,
+) -> Result<(), String> {
+    if context.final_bar || context.role == Role::Bridge {
+        return Ok(());
+    }
+    let style_slides = matches!(
+        context.design.melody_contour.as_str(),
+        "vocal_chop_syllabic" | "exotic_ornamental"
+    ) || matches!(
+        context.config.genre_style,
+        GenreStyle::AcidWarehouse303 | GenreStyle::UkGarage2Step | GenreStyle::BalkanFestivalBrass
+    );
+    if !context.config.expressive_slides && !style_slides {
+        return Ok(());
+    }
+    let prob = usize::from(if context.config.expressive_slides {
+        context.config.slide_probability.max(45)
+    } else {
+        context.config.slide_probability
+    });
+    if ((context.bar % 4 == 3 || (context.role == Role::Climax && context.bar % 4 == 1))
+        || rng.chance(prob))
         && let Some(note) = lead.iter_mut().find(|n| n.length.get() >= 2)
     {
-        let interval = if context.role == Role::Climax { 12 } else { 2 };
+        let interval = if context.role == Role::Climax && context.config.expressive_slides {
+            12
+        } else {
+            2
+        };
         if note.pitch.get() >= interval {
             note.pitch = soundbit_core::Pitch::new(note.pitch.get() - interval)
                 .map_err(|e| e.to_string())?;

@@ -1,5 +1,9 @@
 //! Weighted progressions, functional color and economical chord voicings.
-use super::{ComposeConfig, config::Vibe, rhythm::Rng};
+use super::{
+    ComposeConfig,
+    config::{ChordProgressionStyle, SectionKind, Vibe},
+    rhythm::Rng,
+};
 use serde::Serialize;
 use soundbit_core::{Scale, ScaleKind};
 
@@ -95,20 +99,21 @@ pub(super) fn progression(vibe: Vibe, rng: &mut Rng) -> [usize; 4] {
 }
 
 pub(super) fn harmonic_scale(scale: Scale) -> &'static [u8] {
-    // Pentatonic is a melody palette, not a seven-degree chord spelling system.
+    // Pentatonic and Blues are melody palettes; map chord spelling onto heptatonic parent scales.
     match scale.kind {
-        ScaleKind::MajorPentatonic => ScaleKind::Major.intervals(),
-        ScaleKind::MinorPentatonic => ScaleKind::NaturalMinor.intervals(),
+        ScaleKind::MajorPentatonic | ScaleKind::WholeTone => ScaleKind::Major.intervals(),
+        ScaleKind::MinorPentatonic | ScaleKind::Blues => ScaleKind::NaturalMinor.intervals(),
         _ => scale.kind.intervals(),
     }
 }
 
 pub(super) fn chord(scale: Scale, degree: usize, colors: bool) -> Chord {
     let intervals = harmonic_scale(scale);
-    let root = (i16::from(scale.root.get()) + i16::from(intervals[degree % 7])) % 12;
+    let len = intervals.len().max(1);
+    let root = (i16::from(scale.root.get()) + i16::from(intervals[degree % len])) % 12;
     let mut tones: Vec<_> = [degree, degree + 2, degree + 4]
         .into_iter()
-        .map(|d| (i16::from(scale.root.get()) + i16::from(intervals[d % 7])) % 12)
+        .map(|d| (i16::from(scale.root.get()) + i16::from(intervals[d % len])) % 12)
         .collect();
     let third = (tones[1] - root).rem_euclid(12);
     let fifth = (tones[2] - root).rem_euclid(12);
@@ -126,7 +131,7 @@ pub(super) fn chord(scale: Scale, degree: usize, colors: bool) -> Chord {
         let extra = if degree == 0 {
             (root + 2) % 12
         } else {
-            (i16::from(scale.root.get()) + i16::from(intervals[(degree + 6) % 7])) % 12
+            (i16::from(scale.root.get()) + i16::from(intervals[(degree + 6) % len])) % 12
         };
         tones.push(extra);
         label.push_str(if degree == 0 {
@@ -183,6 +188,79 @@ pub(super) fn bar_chord(
         return dominant(i16::from(scale.root.get()), "half cadence");
     }
     chord(scale, degrees[bar], config.chord_colors)
+}
+
+pub(super) fn semi_pro_progression(
+    style: ChordProgressionStyle,
+    kind: SectionKind,
+    scale: Scale,
+) -> [usize; 8] {
+    let major_family = matches!(
+        scale.kind,
+        ScaleKind::Major | ScaleKind::Lydian | ScaleKind::Mixolydian | ScaleKind::MajorPentatonic
+    );
+    let effective = if style == ChordProgressionStyle::Auto {
+        match kind {
+            SectionKind::IntroRiff | SectionKind::Solo => ChordProgressionStyle::EurobeatCircle,
+            SectionKind::PreChorus => ChordProgressionStyle::DramaticMinor,
+            SectionKind::VerseB => ChordProgressionStyle::KomuroDrive,
+            SectionKind::Chorus | SectionKind::FinalChorus | SectionKind::Breakdown => {
+                ChordProgressionStyle::RoyalRoad
+            }
+            _ => ChordProgressionStyle::UprisingAnthem,
+        }
+    } else {
+        style
+    };
+    if major_family {
+        match effective {
+            ChordProgressionStyle::RoyalRoad | ChordProgressionStyle::Auto => {
+                [3, 4, 2, 5, 3, 4, 5, 0]
+            }
+            ChordProgressionStyle::EurobeatCircle => [5, 1, 4, 0, 3, 1, 4, 0],
+            ChordProgressionStyle::UprisingAnthem => [5, 3, 0, 4, 5, 3, 4, 0],
+            ChordProgressionStyle::KomuroDrive => [5, 3, 4, 0, 3, 4, 5, 4],
+            ChordProgressionStyle::DramaticMinor => [3, 4, 5, 2, 3, 4, 4, 4],
+        }
+    } else {
+        // Minor keys (0=i, 1=ii°, 2=III, 3=iv, 4=v, 5=VI, 6=VII)
+        match effective {
+            // Minor Royal Road ("Anime Sabi"): VI -> VII -> v -> i
+            ChordProgressionStyle::RoyalRoad | ChordProgressionStyle::Auto => {
+                [5, 6, 4, 0, 5, 6, 2, 0]
+            }
+            // Initial D Circle of Fifths: i -> iv -> VII -> III -> VI -> iv -> V7 -> i
+            ChordProgressionStyle::EurobeatCircle => [0, 3, 6, 2, 5, 3, 4, 0],
+            // Uprising Anthem: i -> VI -> III -> VII
+            ChordProgressionStyle::UprisingAnthem => [0, 5, 2, 6, 0, 5, 6, 4],
+            // Komuro Drive: VI -> VII -> i -> i / VI -> VII -> III -> v
+            ChordProgressionStyle::KomuroDrive => [5, 6, 0, 0, 5, 6, 2, 4],
+            // Climbing Pre-Chorus Ascent: iv -> v -> VI -> VII -> VI -> VII -> V7 -> V7
+            ChordProgressionStyle::DramaticMinor => [3, 4, 5, 6, 5, 6, 4, 4],
+        }
+    }
+}
+
+pub(super) fn semi_pro_bar_chord(
+    config: &ComposeConfig,
+    scale: Scale,
+    degrees: [usize; 8],
+    kind: SectionKind,
+    local_bar: usize,
+    section_bars: usize,
+    final_bar: bool,
+) -> Chord {
+    let idx = local_bar % 8;
+    if config.cadences && final_bar {
+        return chord(scale, 0, config.chord_colors);
+    }
+    if local_bar + 1 == section_bars && matches!(kind, SectionKind::PreChorus | SectionKind::Breakdown | SectionKind::IntroRiff) {
+        return dominant(i16::from(scale.root.get()), "V7");
+    }
+    if degrees[idx] == 4 && idx == 6 && !matches!(scale.kind, ScaleKind::Major) {
+        return dominant(i16::from(scale.root.get()), "V7");
+    }
+    chord(scale, degrees[idx], config.chord_colors)
 }
 
 fn dominant(target: i16, function: &str) -> Chord {

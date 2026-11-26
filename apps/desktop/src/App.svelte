@@ -9,6 +9,7 @@
   import StatusBar from './lib/components/StatusBar.svelte';
   import TopBar from './lib/components/TopBar.svelte';
   import ComposerPanel from './lib/components/ComposerPanel.svelte';
+  import SongStudio from './lib/components/SongStudio.svelte';
   import DemoLibrary from './lib/components/DemoLibrary.svelte';
   import AgentConnect from './lib/components/AgentConnect.svelte';
   import Icon from './lib/ui/Icon.svelte';
@@ -37,12 +38,14 @@
   <main class="workstation" class:hide-library={!workspace.library} class:hide-inspector={!workspace.inspector}>
     <nav class="rail" aria-label="Workspace">
       <button class:chosen={workspace.view === 'studio'} aria-label="Studio" onclick={() => workspace.view = 'studio'}><Icon name="sliders" size={20}/><span>Studio</span></button>
+      <button class:chosen={workspace.view === 'arranger'} aria-label="Song Studio" onclick={() => workspace.view = 'arranger'}><Icon name="loop" size={20}/><span>Song Lab</span></button>
       <button class:chosen={workspace.view === 'compose'} aria-label="Compose" onclick={() => { workspace.view = 'compose'; workspace.inspector = true; }}><Icon name="plus" size={20}/><span>Compose</span></button>
       <button class:chosen={workspace.view === 'demos'} aria-label="Demo library" onclick={() => workspace.view = 'demos'}><Icon name="play" size={18}/><span>Demos</span></button>
       <button class:chosen={workspace.view === 'connect'} aria-label="Connect AI" onclick={() => workspace.view = 'connect'}><Icon name="loop" size={20}/><span>AI / MCP</span></button>
       <div class="rail-end"><span class="vertical-label">CHIPTUNE GENERATOR</span><span>{version}</span></div>
     </nav>
-    {#if workspace.view === 'demos'}<div class="full-stage"><DemoLibrary /></div>
+    {#if workspace.view === 'arranger'}<div class="full-stage"><SongStudio /></div>
+    {:else if workspace.view === 'demos'}<div class="full-stage"><DemoLibrary /></div>
     {:else if workspace.view === 'connect'}<div class="full-stage"><AgentConnect /></div>
     {:else if editor.song}
       <aside class="library" aria-label="Sound library">

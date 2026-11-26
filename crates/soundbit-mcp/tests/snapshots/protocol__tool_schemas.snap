@@ -212,6 +212,61 @@ expression: summary
     "description": "Plans a full composition and returns its bar-by-bar chords, voicings and attack counts without changing the open song. Same config and seed produce the same project in desktop, CLI and MCP.",
     "input_schema": {
       "$defs": {
+        "AccompanimentStyle": {
+          "description": "Accompaniment / chord texture behavior.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Let vibe or genre_style select accompaniment texture.",
+              "type": "string"
+            },
+            {
+              "const": "chord_pulses",
+              "description": "Half-bar stereo chord swells.",
+              "type": "string"
+            },
+            {
+              "const": "offbeat_stabs",
+              "description": "Offbeat rave chord stabs.",
+              "type": "string"
+            },
+            {
+              "const": "broken_chords",
+              "description": "Syncopated dyad comping.",
+              "type": "string"
+            },
+            {
+              "const": "pendulum",
+              "description": "Interlocking answer notes in melody rests.",
+              "type": "string"
+            },
+            {
+              "const": "rising_arp",
+              "description": "Polyrhythmic 3-over-4 rising pluck pattern.",
+              "type": "string"
+            },
+            {
+              "const": "falling_arp",
+              "description": "Phrase-end turnaround cascade.",
+              "type": "string"
+            },
+            {
+              "const": "sidechain_pad",
+              "description": "Full-bar stereo pad pumped by the kick sidechain bus.",
+              "type": "string"
+            },
+            {
+              "const": "piano_house_stabs",
+              "description": "90s Korg M1 syncopated house piano stabs.",
+              "type": "string"
+            },
+            {
+              "const": "minimal_gap_answer",
+              "description": "Minimal gap chord stabs playing only where the lead rests.",
+              "type": "string"
+            }
+          ]
+        },
         "BassRhythm": {
           "description": "Bass onset selection, always respecting the section's attack budget.",
           "oneOf": [
@@ -228,6 +283,41 @@ expression: summary
             {
               "const": "euclidean",
               "description": "Distribute attacks evenly and rotate toward the kick.",
+              "type": "string"
+            }
+          ]
+        },
+        "ChordProgressionStyle": {
+          "description": "Chord progression vocabulary for multi-section semi-pro songwriting.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Let section role and genre choose the optimal harmonic progression.",
+              "type": "string"
+            },
+            {
+              "const": "royal_road",
+              "description": "Iconic Japanese anime & pop progression (`VI -> VII -> v -> i` / `IV -> V -> iii -> vi`).",
+              "type": "string"
+            },
+            {
+              "const": "eurobeat_circle",
+              "description": "Relentless Initial D circle-of-fifths motion (`i -> iv -> VII -> III -> VI -> iv -> V7 -> i`).",
+              "type": "string"
+            },
+            {
+              "const": "uprising_anthem",
+              "description": "Soaring 4-chord uprising anthem (`i -> VI -> III -> VII`).",
+              "type": "string"
+            },
+            {
+              "const": "komuro_drive",
+              "description": "J-pop / Eurodance driving lift (`VI -> VII -> i -> i` / `VI -> VII -> III -> v`).",
+              "type": "string"
+            },
+            {
+              "const": "dramatic_minor",
+              "description": "Dramatic minor climb into V7 dominant tension (`iv -> v -> VI -> VII -> V7`).",
               "type": "string"
             }
           ]
@@ -249,6 +339,286 @@ expression: summary
               "const": "extended",
               "description": "Twelve sections, 48 bars.",
               "type": "string"
+            },
+            {
+              "const": "long",
+              "description": "Sixteen sections, 64 bars.",
+              "type": "string"
+            },
+            {
+              "const": "epic",
+              "description": "Twenty-four sections, 96 bars.",
+              "type": "string"
+            },
+            {
+              "const": "marathon",
+              "description": "Thirty-two sections, 128 bars.",
+              "type": "string"
+            }
+          ]
+        },
+        "GenreStyle": {
+          "description": "High-level electronic/rave/world style preset driving default groove, contour and bass feel.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Let vibe and seed choose freely.",
+              "type": "string"
+            },
+            {
+              "const": "euphoric_trance",
+              "description": "138 BPM soaring supersaw festival trance.",
+              "type": "string"
+            },
+            {
+              "const": "acid_warehouse_303",
+              "description": "303 diode-ladder warehouse acid rave.",
+              "type": "string"
+            },
+            {
+              "const": "liquid_dnb",
+              "description": "174 BPM 2-step drum & bass with sustained Reese lead/bass.",
+              "type": "string"
+            },
+            {
+              "const": "uk_garage_2step",
+              "description": "Skipped 2-step UK Garage shuffle with pitched vocal chops.",
+              "type": "string"
+            },
+            {
+              "const": "french_touch_disco",
+              "description": "French-touch electro-funk & talkbox disco bounce.",
+              "type": "string"
+            },
+            {
+              "const": "melbourne_bounce",
+              "description": "Offbeat Melbourne bounce / FM donk festival drop.",
+              "type": "string"
+            },
+            {
+              "const": "midtempo_cyberpunk",
+              "description": "Heavy midtempo cyberpunk stomp with wide leaps.",
+              "type": "string"
+            },
+            {
+              "const": "piano_house_90s",
+              "description": "90s Korg M1 piano house & organ bass.",
+              "type": "string"
+            },
+            {
+              "const": "afterlife_techno",
+              "description": "Hypnotic melodic techno call-and-response.",
+              "type": "string"
+            },
+            {
+              "const": "balkan_festival_brass",
+              "description": "Balkan brass / Phrygian ornamental festival rave.",
+              "type": "string"
+            },
+            {
+              "const": "initial_d_eurobeat",
+              "description": "High-octane 150-162 BPM Initial D Super Eurobeat with synth brass & solo guitar.",
+              "type": "string"
+            },
+            {
+              "const": "anime_opening_techno",
+              "description": "Fast 160-175 BPM anime opening techno with Royal Road sabi & sparkle arps.",
+              "type": "string"
+            },
+            {
+              "const": "uprising_melodic_techno",
+              "description": "Uprising melodic techno with rising buildups & key-change finale.",
+              "type": "string"
+            },
+            {
+              "const": "hyper_eurodance_rave",
+              "description": "90s Hyper Eurodance rave with M1 chords, cowbell & explosive choruses.",
+              "type": "string"
+            }
+          ]
+        },
+        "GrooveTemplate": {
+          "description": "Drum groove pattern template.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Let vibe or genre_style select the drum groove.",
+              "type": "string"
+            },
+            {
+              "const": "four_on_floor",
+              "description": "Four-on-the-floor kick with offbeat club hats.",
+              "type": "string"
+            },
+            {
+              "const": "syncopated",
+              "description": "Syncopated funk pocket.",
+              "type": "string"
+            },
+            {
+              "const": "breakbeat",
+              "description": "Classic broken-beat pattern.",
+              "type": "string"
+            },
+            {
+              "const": "tresillo",
+              "description": "3+3+2 Afro-Cuban/dancehall groove.",
+              "type": "string"
+            },
+            {
+              "const": "half_time",
+              "description": "Spacious half-time snare on beat 3.",
+              "type": "string"
+            },
+            {
+              "const": "driving",
+              "description": "High-energy driving 16th-hat groove.",
+              "type": "string"
+            },
+            {
+              "const": "acid_warehouse",
+              "description": "909 warehouse acid kick and crisp offbeat claps.",
+              "type": "string"
+            },
+            {
+              "const": "liquid_dnb_174",
+              "description": "174 BPM two-step Liquid DnB breakbeat.",
+              "type": "string"
+            },
+            {
+              "const": "uk_garage_2step",
+              "description": "Skipped UK Garage two-step shuffle hats.",
+              "type": "string"
+            },
+            {
+              "const": "french_disco",
+              "description": "French Touch four-on-the-floor disco pocket.",
+              "type": "string"
+            },
+            {
+              "const": "melbourne_offbeat",
+              "description": "Melbourne Bounce heavy kick and clean offbeat groove.",
+              "type": "string"
+            },
+            {
+              "const": "midtempo_stomp",
+              "description": "Midtempo cyberpunk stomp with heavy halftime snare.",
+              "type": "string"
+            },
+            {
+              "const": "house_m1",
+              "description": "90s M1 Piano House swinging club groove.",
+              "type": "string"
+            },
+            {
+              "const": "melodic_techno",
+              "description": "Hypnotic Afterlife melodic techno rolling 16ths.",
+              "type": "string"
+            },
+            {
+              "const": "balkan_brass",
+              "description": "High-energy Balkan festival brass groove.",
+              "type": "string"
+            },
+            {
+              "const": "eurobeat_156",
+              "description": "150-162 BPM Super Eurobeat four-on-floor & driving 16th offbeats.",
+              "type": "string"
+            },
+            {
+              "const": "anime_techno_166",
+              "description": "Fast anime opening techno groove with accelerating risers.",
+              "type": "string"
+            }
+          ]
+        },
+        "MelodyContour": {
+          "description": "Melodic contour & rhythmic phrasing archetype.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Vary archetype deterministically from the seed and genre.",
+              "type": "string"
+            },
+            {
+              "const": "pedal_pivot",
+              "description": "Rapid alternation between a fixed anchor pedal note and upper chord tones.",
+              "type": "string"
+            },
+            {
+              "const": "descending_cascade",
+              "description": "Starts on a high 7th/9th peak and cascades downward in sequential terraces.",
+              "type": "string"
+            },
+            {
+              "const": "anacrusis_pickup",
+              "description": "Phrase begins with a late-bar pickup resolving into a long downbeat note.",
+              "type": "string"
+            },
+            {
+              "const": "offbeat_syncopated",
+              "description": "Deliberately rests on beat 1 and punches syncopated offbeats.",
+              "type": "string"
+            },
+            {
+              "const": "dual_call_response",
+              "description": "Bar 1 Question on Lead answered in Bar 2 by the Answer / Bridge instrument.",
+              "type": "string"
+            },
+            {
+              "const": "vocal_chop_syllabic",
+              "description": "Staccato vocal syllables grouped into bursts with generous rests.",
+              "type": "string"
+            },
+            {
+              "const": "exotic_ornamental",
+              "description": "Tight modal half-step / augmented-2nd turns with ornament pairs.",
+              "type": "string"
+            },
+            {
+              "const": "rhythmic_morse_hook",
+              "description": "Hypnotic 2-to-3 pitch Morse-code syncopated hook.",
+              "type": "string"
+            },
+            {
+              "const": "wide_interval_leap",
+              "description": "Cinematic octave, 6th and 7th interval leaps with sustained hold.",
+              "type": "string"
+            },
+            {
+              "const": "blues_funk_riff",
+              "description": "Pocketed pentatonic/blues turnaround lick with grace anticipations.",
+              "type": "string"
+            }
+          ]
+        },
+        "MotifForm": {
+          "description": "4-bar phrase structure grammar.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Choose motif structure deterministically from seed or genre.",
+              "type": "string"
+            },
+            {
+              "const": "aaba",
+              "description": "Statement, repeat, contrasting B bar, resolved return.",
+              "type": "string"
+            },
+            {
+              "const": "abac",
+              "description": "Alternating A and B phrases ending on a C turnaround.",
+              "type": "string"
+            },
+            {
+              "const": "aabb",
+              "description": "Paired Question statements followed by paired elevated Answer bars.",
+              "type": "string"
+            },
+            {
+              "const": "call_response",
+              "description": "Even bars call, odd bars answer and resolve.",
+              "type": "string"
             }
           ]
         },
@@ -256,9 +626,24 @@ expression: summary
           "additionalProperties": false,
           "description": "Native preset ids for the seven lanes. Every built-in preset is selectable.",
           "properties": {
+            "arp": {
+              "default": "anime_sparkle_arp",
+              "description": "Upper-register sparkle arpeggio (10-track studio mode).",
+              "type": "string"
+            },
             "bass": {
               "default": "pc98_opna_slap_bass",
               "description": "Bass instrument.",
+              "type": "string"
+            },
+            "cowbell": {
+              "default": "eurobeat_cowbell",
+              "description": "Offbeat Eurobeat / Initial D cowbell (10-track studio mode).",
+              "type": "string"
+            },
+            "crash": {
+              "default": "club_crash_cymbal",
+              "description": "Section-drop crash cymbal (10-track studio mode).",
               "type": "string"
             },
             "emotional": {
@@ -290,6 +675,112 @@ expression: summary
               "default": "snare",
               "description": "Snare drum.",
               "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "SectionKind": {
+          "description": "Musical role of a custom or generated arrangement section.",
+          "oneOf": [
+            {
+              "const": "intro_riff",
+              "description": "High-energy opening synth brass or hook riff.",
+              "type": "string"
+            },
+            {
+              "const": "verse_a",
+              "description": "First lyrical verse melody.",
+              "type": "string"
+            },
+            {
+              "const": "verse_b",
+              "description": "Answering higher verse continuation melody.",
+              "type": "string"
+            },
+            {
+              "const": "pre_chorus",
+              "description": "Climbing tension builder with snare rolls into Chorus.",
+              "type": "string"
+            },
+            {
+              "const": "chorus",
+              "description": "Main high-altitude soaring sabi/chorus hook.",
+              "type": "string"
+            },
+            {
+              "const": "solo",
+              "description": "Blazing guitar / synth solo showcase section.",
+              "type": "string"
+            },
+            {
+              "const": "breakdown",
+              "description": "Stripped emotional breakdown before the final drop.",
+              "type": "string"
+            },
+            {
+              "const": "final_chorus",
+              "description": "Maximum energy finale chorus (optionally +2 st key change).",
+              "type": "string"
+            },
+            {
+              "const": "outro",
+              "description": "Punchy closing turnaround.",
+              "type": "string"
+            }
+          ]
+        },
+        "SectionSpec": {
+          "additionalProperties": false,
+          "description": "One customizable song section inside a multi-section arrangement.",
+          "properties": {
+            "bars": {
+              "default": 8,
+              "description": "Number of four-beat bars (2-16).",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "energy": {
+              "default": 4,
+              "description": "Section energy intensity (1-5).",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "kind": {
+              "$ref": "#/$defs/SectionKind",
+              "default": "chorus",
+              "description": "Musical function of this section."
+            },
+            "melody_theme": {
+              "default": 4,
+              "description": "Independent melodic theme slot (0-5) so different sections sing different melodies.",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "progression": {
+              "$ref": "#/$defs/ChordProgressionStyle",
+              "default": "auto",
+              "description": "Chord progression blueprint (Auto adapts to `kind`)."
+            },
+            "seed_offset": {
+              "default": 0,
+              "description": "Per-section seed tweak allowing individual section melody rerolls.",
+              "format": "uint32",
+              "minimum": 0,
+              "type": "integer"
+            },
+            "transpose_semitones": {
+              "default": 0,
+              "description": "Section transposition shift in semitones (-12 to +12).",
+              "format": "int8",
+              "maximum": 127,
+              "minimum": -128,
+              "type": "integer"
             }
           },
           "type": "object"
@@ -333,6 +824,11 @@ expression: summary
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "additionalProperties": false,
       "properties": {
+        "accompaniment_style": {
+          "$ref": "#/$defs/AccompanimentStyle",
+          "default": "auto",
+          "description": "Explicit chord / accompaniment texture override."
+        },
         "bass_hits": {
           "default": 7,
           "description": "Bass attacks per 16-step verse bar, 0-16. Sections scale this budget.",
@@ -364,6 +860,14 @@ expression: summary
           "description": "Add sevenths or ninths to suitable chords.",
           "type": "boolean"
         },
+        "custom_sections": {
+          "default": [],
+          "description": "Custom multi-section song timeline (overrides default Form sections when non-empty).",
+          "items": {
+            "$ref": "#/$defs/SectionSpec"
+          },
+          "type": "array"
+        },
         "expressive_slides": {
           "default": false,
           "description": "Add deliberate pickups, slides and glissando to selected phrases.",
@@ -374,10 +878,23 @@ expression: summary
           "default": "standard",
           "description": "Short (16), standard (32), or extended (48) bars."
         },
+        "genre_style": {
+          "$ref": "#/$defs/GenreStyle",
+          "default": "auto",
+          "description": "Electronic, rave or world style blueprint (auto preserves classic vibe behavior)."
+        },
+        "groove_template": {
+          "$ref": "#/$defs/GrooveTemplate",
+          "default": "auto",
+          "description": "Explicit drum groove override."
+        },
         "instruments": {
           "$ref": "#/$defs/Palette",
           "default": {
+            "arp": "anime_sparkle_arp",
             "bass": "pc98_opna_slap_bass",
+            "cowbell": "eurobeat_cowbell",
+            "crash": "club_crash_cymbal",
             "emotional": "aloboi_cello_solo",
             "harmony": "trig_velvet_chord_pluck",
             "hat": "hihat_closed",
@@ -392,6 +909,16 @@ expression: summary
           "description": "Root note name, e.g. C, F#, Bb.",
           "type": "string"
         },
+        "key_change_finale": {
+          "default": false,
+          "description": "Modulate FinalChorus +2 semitones upward for an uprising climax.",
+          "type": "boolean"
+        },
+        "melody_contour": {
+          "$ref": "#/$defs/MelodyContour",
+          "default": "auto",
+          "description": "Melodic contour and rhythmic phrasing archetype (auto varies across all 10 modes)."
+        },
         "modal_mixture": {
           "default": false,
           "description": "Borrow minor iv in a major-key bridge.",
@@ -402,9 +929,32 @@ expression: summary
           "description": "Reuse and develop one melodic motif across sections.",
           "type": "boolean"
         },
+        "motif_form": {
+          "$ref": "#/$defs/MotifForm",
+          "default": "auto",
+          "description": "Four-bar motif development grammar (AABA, ABAC, AABB or Call/Response)."
+        },
         "neon_funk": {
           "default": false,
           "description": "Lock in syncopated octave bass and offbeat stabs for neon chiptune funk.",
+          "type": "boolean"
+        },
+        "progression_style": {
+          "$ref": "#/$defs/ChordProgressionStyle",
+          "default": "auto",
+          "description": "Semi-pro harmonic chord progression family."
+        },
+        "rest_density": {
+          "default": 35,
+          "description": "Target melody breathing space / silence percentage, 0-80.",
+          "format": "uint8",
+          "maximum": 255,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "riser_builds": {
+          "default": false,
+          "description": "Add accelerating 8th->16th snare buildup rolls before choruses.",
           "type": "boolean"
         },
         "scale": {
@@ -424,6 +974,19 @@ expression: summary
           "minimum": 0,
           "type": "integer"
         },
+        "slide_probability": {
+          "default": 25,
+          "description": "Probability of pitch glides/scoops on expressive notes, 0-100.",
+          "format": "uint8",
+          "maximum": 255,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "studio_layers": {
+          "default": false,
+          "description": "Enable 10-track studio arrangement layers (Sparkle Arp, Cowbell, Crash Cymbal).",
+          "type": "boolean"
+        },
         "suspensions": {
           "default": true,
           "description": "Prepare and resolve a suspension at suitable bridge chord changes.",
@@ -432,6 +995,14 @@ expression: summary
         "swing": {
           "default": 12,
           "description": "Native swing percentage, 0-60. Zero is straight.",
+          "format": "uint8",
+          "maximum": 255,
+          "minimum": 0,
+          "type": "integer"
+        },
+        "syncopation": {
+          "default": 40,
+          "description": "Preference for offbeat & upbeat rhythmic syncopation, 0-100.",
           "format": "uint8",
           "maximum": 255,
           "minimum": 0,
@@ -464,6 +1035,61 @@ expression: summary
     "description": "Discover a random song recipe with style-compatible scale, tempo, density and role-appropriate native sounds. Keeps motifs, voice leading and cadences enabled. Supply instruments_for to change only a recipe's sounds. Does not change the open song; apply the returned recipe with song_compose.",
     "input_schema": {
       "$defs": {
+        "AccompanimentStyle": {
+          "description": "Accompaniment / chord texture behavior.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Let vibe or genre_style select accompaniment texture.",
+              "type": "string"
+            },
+            {
+              "const": "chord_pulses",
+              "description": "Half-bar stereo chord swells.",
+              "type": "string"
+            },
+            {
+              "const": "offbeat_stabs",
+              "description": "Offbeat rave chord stabs.",
+              "type": "string"
+            },
+            {
+              "const": "broken_chords",
+              "description": "Syncopated dyad comping.",
+              "type": "string"
+            },
+            {
+              "const": "pendulum",
+              "description": "Interlocking answer notes in melody rests.",
+              "type": "string"
+            },
+            {
+              "const": "rising_arp",
+              "description": "Polyrhythmic 3-over-4 rising pluck pattern.",
+              "type": "string"
+            },
+            {
+              "const": "falling_arp",
+              "description": "Phrase-end turnaround cascade.",
+              "type": "string"
+            },
+            {
+              "const": "sidechain_pad",
+              "description": "Full-bar stereo pad pumped by the kick sidechain bus.",
+              "type": "string"
+            },
+            {
+              "const": "piano_house_stabs",
+              "description": "90s Korg M1 syncopated house piano stabs.",
+              "type": "string"
+            },
+            {
+              "const": "minimal_gap_answer",
+              "description": "Minimal gap chord stabs playing only where the lead rests.",
+              "type": "string"
+            }
+          ]
+        },
         "BassRhythm": {
           "description": "Bass onset selection, always respecting the section's attack budget.",
           "oneOf": [
@@ -484,10 +1110,50 @@ expression: summary
             }
           ]
         },
+        "ChordProgressionStyle": {
+          "description": "Chord progression vocabulary for multi-section semi-pro songwriting.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Let section role and genre choose the optimal harmonic progression.",
+              "type": "string"
+            },
+            {
+              "const": "royal_road",
+              "description": "Iconic Japanese anime & pop progression (`VI -> VII -> v -> i` / `IV -> V -> iii -> vi`).",
+              "type": "string"
+            },
+            {
+              "const": "eurobeat_circle",
+              "description": "Relentless Initial D circle-of-fifths motion (`i -> iv -> VII -> III -> VI -> iv -> V7 -> i`).",
+              "type": "string"
+            },
+            {
+              "const": "uprising_anthem",
+              "description": "Soaring 4-chord uprising anthem (`i -> VI -> III -> VII`).",
+              "type": "string"
+            },
+            {
+              "const": "komuro_drive",
+              "description": "J-pop / Eurodance driving lift (`VI -> VII -> i -> i` / `VI -> VII -> III -> v`).",
+              "type": "string"
+            },
+            {
+              "const": "dramatic_minor",
+              "description": "Dramatic minor climb into V7 dominant tension (`iv -> v -> VI -> VII -> V7`).",
+              "type": "string"
+            }
+          ]
+        },
         "ComposeConfig": {
           "additionalProperties": false,
           "description": "Repeatable composition recipe. Omitted fields use the documented defaults.",
           "properties": {
+            "accompaniment_style": {
+              "$ref": "#/$defs/AccompanimentStyle",
+              "default": "auto",
+              "description": "Explicit chord / accompaniment texture override."
+            },
             "bass_hits": {
               "default": 7,
               "description": "Bass attacks per 16-step verse bar, 0-16. Sections scale this budget.",
@@ -519,6 +1185,14 @@ expression: summary
               "description": "Add sevenths or ninths to suitable chords.",
               "type": "boolean"
             },
+            "custom_sections": {
+              "default": [],
+              "description": "Custom multi-section song timeline (overrides default Form sections when non-empty).",
+              "items": {
+                "$ref": "#/$defs/SectionSpec"
+              },
+              "type": "array"
+            },
             "expressive_slides": {
               "default": false,
               "description": "Add deliberate pickups, slides and glissando to selected phrases.",
@@ -529,10 +1203,23 @@ expression: summary
               "default": "standard",
               "description": "Short (16), standard (32), or extended (48) bars."
             },
+            "genre_style": {
+              "$ref": "#/$defs/GenreStyle",
+              "default": "auto",
+              "description": "Electronic, rave or world style blueprint (auto preserves classic vibe behavior)."
+            },
+            "groove_template": {
+              "$ref": "#/$defs/GrooveTemplate",
+              "default": "auto",
+              "description": "Explicit drum groove override."
+            },
             "instruments": {
               "$ref": "#/$defs/Palette",
               "default": {
+                "arp": "anime_sparkle_arp",
                 "bass": "pc98_opna_slap_bass",
+                "cowbell": "eurobeat_cowbell",
+                "crash": "club_crash_cymbal",
                 "emotional": "aloboi_cello_solo",
                 "harmony": "trig_velvet_chord_pluck",
                 "hat": "hihat_closed",
@@ -547,6 +1234,16 @@ expression: summary
               "description": "Root note name, e.g. C, F#, Bb.",
               "type": "string"
             },
+            "key_change_finale": {
+              "default": false,
+              "description": "Modulate FinalChorus +2 semitones upward for an uprising climax.",
+              "type": "boolean"
+            },
+            "melody_contour": {
+              "$ref": "#/$defs/MelodyContour",
+              "default": "auto",
+              "description": "Melodic contour and rhythmic phrasing archetype (auto varies across all 10 modes)."
+            },
             "modal_mixture": {
               "default": false,
               "description": "Borrow minor iv in a major-key bridge.",
@@ -557,9 +1254,32 @@ expression: summary
               "description": "Reuse and develop one melodic motif across sections.",
               "type": "boolean"
             },
+            "motif_form": {
+              "$ref": "#/$defs/MotifForm",
+              "default": "auto",
+              "description": "Four-bar motif development grammar (AABA, ABAC, AABB or Call/Response)."
+            },
             "neon_funk": {
               "default": false,
               "description": "Lock in syncopated octave bass and offbeat stabs for neon chiptune funk.",
+              "type": "boolean"
+            },
+            "progression_style": {
+              "$ref": "#/$defs/ChordProgressionStyle",
+              "default": "auto",
+              "description": "Semi-pro harmonic chord progression family."
+            },
+            "rest_density": {
+              "default": 35,
+              "description": "Target melody breathing space / silence percentage, 0-80.",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "riser_builds": {
+              "default": false,
+              "description": "Add accelerating 8th->16th snare buildup rolls before choruses.",
               "type": "boolean"
             },
             "scale": {
@@ -579,6 +1299,19 @@ expression: summary
               "minimum": 0,
               "type": "integer"
             },
+            "slide_probability": {
+              "default": 25,
+              "description": "Probability of pitch glides/scoops on expressive notes, 0-100.",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "studio_layers": {
+              "default": false,
+              "description": "Enable 10-track studio arrangement layers (Sparkle Arp, Cowbell, Crash Cymbal).",
+              "type": "boolean"
+            },
             "suspensions": {
               "default": true,
               "description": "Prepare and resolve a suspension at suitable bridge chord changes.",
@@ -587,6 +1320,14 @@ expression: summary
             "swing": {
               "default": 12,
               "description": "Native swing percentage, 0-60. Zero is straight.",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "syncopation": {
+              "default": 40,
+              "description": "Preference for offbeat & upbeat rhythmic syncopation, 0-100.",
               "format": "uint8",
               "maximum": 255,
               "minimum": 0,
@@ -627,6 +1368,286 @@ expression: summary
               "const": "extended",
               "description": "Twelve sections, 48 bars.",
               "type": "string"
+            },
+            {
+              "const": "long",
+              "description": "Sixteen sections, 64 bars.",
+              "type": "string"
+            },
+            {
+              "const": "epic",
+              "description": "Twenty-four sections, 96 bars.",
+              "type": "string"
+            },
+            {
+              "const": "marathon",
+              "description": "Thirty-two sections, 128 bars.",
+              "type": "string"
+            }
+          ]
+        },
+        "GenreStyle": {
+          "description": "High-level electronic/rave/world style preset driving default groove, contour and bass feel.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Let vibe and seed choose freely.",
+              "type": "string"
+            },
+            {
+              "const": "euphoric_trance",
+              "description": "138 BPM soaring supersaw festival trance.",
+              "type": "string"
+            },
+            {
+              "const": "acid_warehouse_303",
+              "description": "303 diode-ladder warehouse acid rave.",
+              "type": "string"
+            },
+            {
+              "const": "liquid_dnb",
+              "description": "174 BPM 2-step drum & bass with sustained Reese lead/bass.",
+              "type": "string"
+            },
+            {
+              "const": "uk_garage_2step",
+              "description": "Skipped 2-step UK Garage shuffle with pitched vocal chops.",
+              "type": "string"
+            },
+            {
+              "const": "french_touch_disco",
+              "description": "French-touch electro-funk & talkbox disco bounce.",
+              "type": "string"
+            },
+            {
+              "const": "melbourne_bounce",
+              "description": "Offbeat Melbourne bounce / FM donk festival drop.",
+              "type": "string"
+            },
+            {
+              "const": "midtempo_cyberpunk",
+              "description": "Heavy midtempo cyberpunk stomp with wide leaps.",
+              "type": "string"
+            },
+            {
+              "const": "piano_house_90s",
+              "description": "90s Korg M1 piano house & organ bass.",
+              "type": "string"
+            },
+            {
+              "const": "afterlife_techno",
+              "description": "Hypnotic melodic techno call-and-response.",
+              "type": "string"
+            },
+            {
+              "const": "balkan_festival_brass",
+              "description": "Balkan brass / Phrygian ornamental festival rave.",
+              "type": "string"
+            },
+            {
+              "const": "initial_d_eurobeat",
+              "description": "High-octane 150-162 BPM Initial D Super Eurobeat with synth brass & solo guitar.",
+              "type": "string"
+            },
+            {
+              "const": "anime_opening_techno",
+              "description": "Fast 160-175 BPM anime opening techno with Royal Road sabi & sparkle arps.",
+              "type": "string"
+            },
+            {
+              "const": "uprising_melodic_techno",
+              "description": "Uprising melodic techno with rising buildups & key-change finale.",
+              "type": "string"
+            },
+            {
+              "const": "hyper_eurodance_rave",
+              "description": "90s Hyper Eurodance rave with M1 chords, cowbell & explosive choruses.",
+              "type": "string"
+            }
+          ]
+        },
+        "GrooveTemplate": {
+          "description": "Drum groove pattern template.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Let vibe or genre_style select the drum groove.",
+              "type": "string"
+            },
+            {
+              "const": "four_on_floor",
+              "description": "Four-on-the-floor kick with offbeat club hats.",
+              "type": "string"
+            },
+            {
+              "const": "syncopated",
+              "description": "Syncopated funk pocket.",
+              "type": "string"
+            },
+            {
+              "const": "breakbeat",
+              "description": "Classic broken-beat pattern.",
+              "type": "string"
+            },
+            {
+              "const": "tresillo",
+              "description": "3+3+2 Afro-Cuban/dancehall groove.",
+              "type": "string"
+            },
+            {
+              "const": "half_time",
+              "description": "Spacious half-time snare on beat 3.",
+              "type": "string"
+            },
+            {
+              "const": "driving",
+              "description": "High-energy driving 16th-hat groove.",
+              "type": "string"
+            },
+            {
+              "const": "acid_warehouse",
+              "description": "909 warehouse acid kick and crisp offbeat claps.",
+              "type": "string"
+            },
+            {
+              "const": "liquid_dnb_174",
+              "description": "174 BPM two-step Liquid DnB breakbeat.",
+              "type": "string"
+            },
+            {
+              "const": "uk_garage_2step",
+              "description": "Skipped UK Garage two-step shuffle hats.",
+              "type": "string"
+            },
+            {
+              "const": "french_disco",
+              "description": "French Touch four-on-the-floor disco pocket.",
+              "type": "string"
+            },
+            {
+              "const": "melbourne_offbeat",
+              "description": "Melbourne Bounce heavy kick and clean offbeat groove.",
+              "type": "string"
+            },
+            {
+              "const": "midtempo_stomp",
+              "description": "Midtempo cyberpunk stomp with heavy halftime snare.",
+              "type": "string"
+            },
+            {
+              "const": "house_m1",
+              "description": "90s M1 Piano House swinging club groove.",
+              "type": "string"
+            },
+            {
+              "const": "melodic_techno",
+              "description": "Hypnotic Afterlife melodic techno rolling 16ths.",
+              "type": "string"
+            },
+            {
+              "const": "balkan_brass",
+              "description": "High-energy Balkan festival brass groove.",
+              "type": "string"
+            },
+            {
+              "const": "eurobeat_156",
+              "description": "150-162 BPM Super Eurobeat four-on-floor & driving 16th offbeats.",
+              "type": "string"
+            },
+            {
+              "const": "anime_techno_166",
+              "description": "Fast anime opening techno groove with accelerating risers.",
+              "type": "string"
+            }
+          ]
+        },
+        "MelodyContour": {
+          "description": "Melodic contour & rhythmic phrasing archetype.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Vary archetype deterministically from the seed and genre.",
+              "type": "string"
+            },
+            {
+              "const": "pedal_pivot",
+              "description": "Rapid alternation between a fixed anchor pedal note and upper chord tones.",
+              "type": "string"
+            },
+            {
+              "const": "descending_cascade",
+              "description": "Starts on a high 7th/9th peak and cascades downward in sequential terraces.",
+              "type": "string"
+            },
+            {
+              "const": "anacrusis_pickup",
+              "description": "Phrase begins with a late-bar pickup resolving into a long downbeat note.",
+              "type": "string"
+            },
+            {
+              "const": "offbeat_syncopated",
+              "description": "Deliberately rests on beat 1 and punches syncopated offbeats.",
+              "type": "string"
+            },
+            {
+              "const": "dual_call_response",
+              "description": "Bar 1 Question on Lead answered in Bar 2 by the Answer / Bridge instrument.",
+              "type": "string"
+            },
+            {
+              "const": "vocal_chop_syllabic",
+              "description": "Staccato vocal syllables grouped into bursts with generous rests.",
+              "type": "string"
+            },
+            {
+              "const": "exotic_ornamental",
+              "description": "Tight modal half-step / augmented-2nd turns with ornament pairs.",
+              "type": "string"
+            },
+            {
+              "const": "rhythmic_morse_hook",
+              "description": "Hypnotic 2-to-3 pitch Morse-code syncopated hook.",
+              "type": "string"
+            },
+            {
+              "const": "wide_interval_leap",
+              "description": "Cinematic octave, 6th and 7th interval leaps with sustained hold.",
+              "type": "string"
+            },
+            {
+              "const": "blues_funk_riff",
+              "description": "Pocketed pentatonic/blues turnaround lick with grace anticipations.",
+              "type": "string"
+            }
+          ]
+        },
+        "MotifForm": {
+          "description": "4-bar phrase structure grammar.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Choose motif structure deterministically from seed or genre.",
+              "type": "string"
+            },
+            {
+              "const": "aaba",
+              "description": "Statement, repeat, contrasting B bar, resolved return.",
+              "type": "string"
+            },
+            {
+              "const": "abac",
+              "description": "Alternating A and B phrases ending on a C turnaround.",
+              "type": "string"
+            },
+            {
+              "const": "aabb",
+              "description": "Paired Question statements followed by paired elevated Answer bars.",
+              "type": "string"
+            },
+            {
+              "const": "call_response",
+              "description": "Even bars call, odd bars answer and resolve.",
+              "type": "string"
             }
           ]
         },
@@ -634,9 +1655,24 @@ expression: summary
           "additionalProperties": false,
           "description": "Native preset ids for the seven lanes. Every built-in preset is selectable.",
           "properties": {
+            "arp": {
+              "default": "anime_sparkle_arp",
+              "description": "Upper-register sparkle arpeggio (10-track studio mode).",
+              "type": "string"
+            },
             "bass": {
               "default": "pc98_opna_slap_bass",
               "description": "Bass instrument.",
+              "type": "string"
+            },
+            "cowbell": {
+              "default": "eurobeat_cowbell",
+              "description": "Offbeat Eurobeat / Initial D cowbell (10-track studio mode).",
+              "type": "string"
+            },
+            "crash": {
+              "default": "club_crash_cymbal",
+              "description": "Section-drop crash cymbal (10-track studio mode).",
               "type": "string"
             },
             "emotional": {
@@ -668,6 +1704,112 @@ expression: summary
               "default": "snare",
               "description": "Snare drum.",
               "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "SectionKind": {
+          "description": "Musical role of a custom or generated arrangement section.",
+          "oneOf": [
+            {
+              "const": "intro_riff",
+              "description": "High-energy opening synth brass or hook riff.",
+              "type": "string"
+            },
+            {
+              "const": "verse_a",
+              "description": "First lyrical verse melody.",
+              "type": "string"
+            },
+            {
+              "const": "verse_b",
+              "description": "Answering higher verse continuation melody.",
+              "type": "string"
+            },
+            {
+              "const": "pre_chorus",
+              "description": "Climbing tension builder with snare rolls into Chorus.",
+              "type": "string"
+            },
+            {
+              "const": "chorus",
+              "description": "Main high-altitude soaring sabi/chorus hook.",
+              "type": "string"
+            },
+            {
+              "const": "solo",
+              "description": "Blazing guitar / synth solo showcase section.",
+              "type": "string"
+            },
+            {
+              "const": "breakdown",
+              "description": "Stripped emotional breakdown before the final drop.",
+              "type": "string"
+            },
+            {
+              "const": "final_chorus",
+              "description": "Maximum energy finale chorus (optionally +2 st key change).",
+              "type": "string"
+            },
+            {
+              "const": "outro",
+              "description": "Punchy closing turnaround.",
+              "type": "string"
+            }
+          ]
+        },
+        "SectionSpec": {
+          "additionalProperties": false,
+          "description": "One customizable song section inside a multi-section arrangement.",
+          "properties": {
+            "bars": {
+              "default": 8,
+              "description": "Number of four-beat bars (2-16).",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "energy": {
+              "default": 4,
+              "description": "Section energy intensity (1-5).",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "kind": {
+              "$ref": "#/$defs/SectionKind",
+              "default": "chorus",
+              "description": "Musical function of this section."
+            },
+            "melody_theme": {
+              "default": 4,
+              "description": "Independent melodic theme slot (0-5) so different sections sing different melodies.",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "progression": {
+              "$ref": "#/$defs/ChordProgressionStyle",
+              "default": "auto",
+              "description": "Chord progression blueprint (Auto adapts to `kind`)."
+            },
+            "seed_offset": {
+              "default": 0,
+              "description": "Per-section seed tweak allowing individual section melody rerolls.",
+              "format": "uint32",
+              "minimum": 0,
+              "type": "integer"
+            },
+            "transpose_semitones": {
+              "default": 0,
+              "description": "Section transposition shift in semitones (-12 to +12).",
+              "format": "int8",
+              "maximum": 127,
+              "minimum": -128,
+              "type": "integer"
             }
           },
           "type": "object"
@@ -2577,6 +3719,61 @@ expression: summary
     "description": "Replaces the open song with a fully editable CTG composition in one undo step. Uses CTG's native and ZzFX preset instruments with motif development and voice leading. Supply editor_id and revision from `song_get`. Does not save or overwrite a file; history_undo restores the previous complete song.",
     "input_schema": {
       "$defs": {
+        "AccompanimentStyle": {
+          "description": "Accompaniment / chord texture behavior.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Let vibe or genre_style select accompaniment texture.",
+              "type": "string"
+            },
+            {
+              "const": "chord_pulses",
+              "description": "Half-bar stereo chord swells.",
+              "type": "string"
+            },
+            {
+              "const": "offbeat_stabs",
+              "description": "Offbeat rave chord stabs.",
+              "type": "string"
+            },
+            {
+              "const": "broken_chords",
+              "description": "Syncopated dyad comping.",
+              "type": "string"
+            },
+            {
+              "const": "pendulum",
+              "description": "Interlocking answer notes in melody rests.",
+              "type": "string"
+            },
+            {
+              "const": "rising_arp",
+              "description": "Polyrhythmic 3-over-4 rising pluck pattern.",
+              "type": "string"
+            },
+            {
+              "const": "falling_arp",
+              "description": "Phrase-end turnaround cascade.",
+              "type": "string"
+            },
+            {
+              "const": "sidechain_pad",
+              "description": "Full-bar stereo pad pumped by the kick sidechain bus.",
+              "type": "string"
+            },
+            {
+              "const": "piano_house_stabs",
+              "description": "90s Korg M1 syncopated house piano stabs.",
+              "type": "string"
+            },
+            {
+              "const": "minimal_gap_answer",
+              "description": "Minimal gap chord stabs playing only where the lead rests.",
+              "type": "string"
+            }
+          ]
+        },
         "BassRhythm": {
           "description": "Bass onset selection, always respecting the section's attack budget.",
           "oneOf": [
@@ -2597,10 +3794,50 @@ expression: summary
             }
           ]
         },
+        "ChordProgressionStyle": {
+          "description": "Chord progression vocabulary for multi-section semi-pro songwriting.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Let section role and genre choose the optimal harmonic progression.",
+              "type": "string"
+            },
+            {
+              "const": "royal_road",
+              "description": "Iconic Japanese anime & pop progression (`VI -> VII -> v -> i` / `IV -> V -> iii -> vi`).",
+              "type": "string"
+            },
+            {
+              "const": "eurobeat_circle",
+              "description": "Relentless Initial D circle-of-fifths motion (`i -> iv -> VII -> III -> VI -> iv -> V7 -> i`).",
+              "type": "string"
+            },
+            {
+              "const": "uprising_anthem",
+              "description": "Soaring 4-chord uprising anthem (`i -> VI -> III -> VII`).",
+              "type": "string"
+            },
+            {
+              "const": "komuro_drive",
+              "description": "J-pop / Eurodance driving lift (`VI -> VII -> i -> i` / `VI -> VII -> III -> v`).",
+              "type": "string"
+            },
+            {
+              "const": "dramatic_minor",
+              "description": "Dramatic minor climb into V7 dominant tension (`iv -> v -> VI -> VII -> V7`).",
+              "type": "string"
+            }
+          ]
+        },
         "ComposeConfig": {
           "additionalProperties": false,
           "description": "Repeatable composition recipe. Omitted fields use the documented defaults.",
           "properties": {
+            "accompaniment_style": {
+              "$ref": "#/$defs/AccompanimentStyle",
+              "default": "auto",
+              "description": "Explicit chord / accompaniment texture override."
+            },
             "bass_hits": {
               "default": 7,
               "description": "Bass attacks per 16-step verse bar, 0-16. Sections scale this budget.",
@@ -2632,6 +3869,14 @@ expression: summary
               "description": "Add sevenths or ninths to suitable chords.",
               "type": "boolean"
             },
+            "custom_sections": {
+              "default": [],
+              "description": "Custom multi-section song timeline (overrides default Form sections when non-empty).",
+              "items": {
+                "$ref": "#/$defs/SectionSpec"
+              },
+              "type": "array"
+            },
             "expressive_slides": {
               "default": false,
               "description": "Add deliberate pickups, slides and glissando to selected phrases.",
@@ -2642,10 +3887,23 @@ expression: summary
               "default": "standard",
               "description": "Short (16), standard (32), or extended (48) bars."
             },
+            "genre_style": {
+              "$ref": "#/$defs/GenreStyle",
+              "default": "auto",
+              "description": "Electronic, rave or world style blueprint (auto preserves classic vibe behavior)."
+            },
+            "groove_template": {
+              "$ref": "#/$defs/GrooveTemplate",
+              "default": "auto",
+              "description": "Explicit drum groove override."
+            },
             "instruments": {
               "$ref": "#/$defs/Palette",
               "default": {
+                "arp": "anime_sparkle_arp",
                 "bass": "pc98_opna_slap_bass",
+                "cowbell": "eurobeat_cowbell",
+                "crash": "club_crash_cymbal",
                 "emotional": "aloboi_cello_solo",
                 "harmony": "trig_velvet_chord_pluck",
                 "hat": "hihat_closed",
@@ -2660,6 +3918,16 @@ expression: summary
               "description": "Root note name, e.g. C, F#, Bb.",
               "type": "string"
             },
+            "key_change_finale": {
+              "default": false,
+              "description": "Modulate FinalChorus +2 semitones upward for an uprising climax.",
+              "type": "boolean"
+            },
+            "melody_contour": {
+              "$ref": "#/$defs/MelodyContour",
+              "default": "auto",
+              "description": "Melodic contour and rhythmic phrasing archetype (auto varies across all 10 modes)."
+            },
             "modal_mixture": {
               "default": false,
               "description": "Borrow minor iv in a major-key bridge.",
@@ -2670,9 +3938,32 @@ expression: summary
               "description": "Reuse and develop one melodic motif across sections.",
               "type": "boolean"
             },
+            "motif_form": {
+              "$ref": "#/$defs/MotifForm",
+              "default": "auto",
+              "description": "Four-bar motif development grammar (AABA, ABAC, AABB or Call/Response)."
+            },
             "neon_funk": {
               "default": false,
               "description": "Lock in syncopated octave bass and offbeat stabs for neon chiptune funk.",
+              "type": "boolean"
+            },
+            "progression_style": {
+              "$ref": "#/$defs/ChordProgressionStyle",
+              "default": "auto",
+              "description": "Semi-pro harmonic chord progression family."
+            },
+            "rest_density": {
+              "default": 35,
+              "description": "Target melody breathing space / silence percentage, 0-80.",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "riser_builds": {
+              "default": false,
+              "description": "Add accelerating 8th->16th snare buildup rolls before choruses.",
               "type": "boolean"
             },
             "scale": {
@@ -2692,6 +3983,19 @@ expression: summary
               "minimum": 0,
               "type": "integer"
             },
+            "slide_probability": {
+              "default": 25,
+              "description": "Probability of pitch glides/scoops on expressive notes, 0-100.",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "studio_layers": {
+              "default": false,
+              "description": "Enable 10-track studio arrangement layers (Sparkle Arp, Cowbell, Crash Cymbal).",
+              "type": "boolean"
+            },
             "suspensions": {
               "default": true,
               "description": "Prepare and resolve a suspension at suitable bridge chord changes.",
@@ -2700,6 +4004,14 @@ expression: summary
             "swing": {
               "default": 12,
               "description": "Native swing percentage, 0-60. Zero is straight.",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "syncopation": {
+              "default": 40,
+              "description": "Preference for offbeat & upbeat rhythmic syncopation, 0-100.",
               "format": "uint8",
               "maximum": 255,
               "minimum": 0,
@@ -2740,6 +4052,286 @@ expression: summary
               "const": "extended",
               "description": "Twelve sections, 48 bars.",
               "type": "string"
+            },
+            {
+              "const": "long",
+              "description": "Sixteen sections, 64 bars.",
+              "type": "string"
+            },
+            {
+              "const": "epic",
+              "description": "Twenty-four sections, 96 bars.",
+              "type": "string"
+            },
+            {
+              "const": "marathon",
+              "description": "Thirty-two sections, 128 bars.",
+              "type": "string"
+            }
+          ]
+        },
+        "GenreStyle": {
+          "description": "High-level electronic/rave/world style preset driving default groove, contour and bass feel.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Let vibe and seed choose freely.",
+              "type": "string"
+            },
+            {
+              "const": "euphoric_trance",
+              "description": "138 BPM soaring supersaw festival trance.",
+              "type": "string"
+            },
+            {
+              "const": "acid_warehouse_303",
+              "description": "303 diode-ladder warehouse acid rave.",
+              "type": "string"
+            },
+            {
+              "const": "liquid_dnb",
+              "description": "174 BPM 2-step drum & bass with sustained Reese lead/bass.",
+              "type": "string"
+            },
+            {
+              "const": "uk_garage_2step",
+              "description": "Skipped 2-step UK Garage shuffle with pitched vocal chops.",
+              "type": "string"
+            },
+            {
+              "const": "french_touch_disco",
+              "description": "French-touch electro-funk & talkbox disco bounce.",
+              "type": "string"
+            },
+            {
+              "const": "melbourne_bounce",
+              "description": "Offbeat Melbourne bounce / FM donk festival drop.",
+              "type": "string"
+            },
+            {
+              "const": "midtempo_cyberpunk",
+              "description": "Heavy midtempo cyberpunk stomp with wide leaps.",
+              "type": "string"
+            },
+            {
+              "const": "piano_house_90s",
+              "description": "90s Korg M1 piano house & organ bass.",
+              "type": "string"
+            },
+            {
+              "const": "afterlife_techno",
+              "description": "Hypnotic melodic techno call-and-response.",
+              "type": "string"
+            },
+            {
+              "const": "balkan_festival_brass",
+              "description": "Balkan brass / Phrygian ornamental festival rave.",
+              "type": "string"
+            },
+            {
+              "const": "initial_d_eurobeat",
+              "description": "High-octane 150-162 BPM Initial D Super Eurobeat with synth brass & solo guitar.",
+              "type": "string"
+            },
+            {
+              "const": "anime_opening_techno",
+              "description": "Fast 160-175 BPM anime opening techno with Royal Road sabi & sparkle arps.",
+              "type": "string"
+            },
+            {
+              "const": "uprising_melodic_techno",
+              "description": "Uprising melodic techno with rising buildups & key-change finale.",
+              "type": "string"
+            },
+            {
+              "const": "hyper_eurodance_rave",
+              "description": "90s Hyper Eurodance rave with M1 chords, cowbell & explosive choruses.",
+              "type": "string"
+            }
+          ]
+        },
+        "GrooveTemplate": {
+          "description": "Drum groove pattern template.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Let vibe or genre_style select the drum groove.",
+              "type": "string"
+            },
+            {
+              "const": "four_on_floor",
+              "description": "Four-on-the-floor kick with offbeat club hats.",
+              "type": "string"
+            },
+            {
+              "const": "syncopated",
+              "description": "Syncopated funk pocket.",
+              "type": "string"
+            },
+            {
+              "const": "breakbeat",
+              "description": "Classic broken-beat pattern.",
+              "type": "string"
+            },
+            {
+              "const": "tresillo",
+              "description": "3+3+2 Afro-Cuban/dancehall groove.",
+              "type": "string"
+            },
+            {
+              "const": "half_time",
+              "description": "Spacious half-time snare on beat 3.",
+              "type": "string"
+            },
+            {
+              "const": "driving",
+              "description": "High-energy driving 16th-hat groove.",
+              "type": "string"
+            },
+            {
+              "const": "acid_warehouse",
+              "description": "909 warehouse acid kick and crisp offbeat claps.",
+              "type": "string"
+            },
+            {
+              "const": "liquid_dnb_174",
+              "description": "174 BPM two-step Liquid DnB breakbeat.",
+              "type": "string"
+            },
+            {
+              "const": "uk_garage_2step",
+              "description": "Skipped UK Garage two-step shuffle hats.",
+              "type": "string"
+            },
+            {
+              "const": "french_disco",
+              "description": "French Touch four-on-the-floor disco pocket.",
+              "type": "string"
+            },
+            {
+              "const": "melbourne_offbeat",
+              "description": "Melbourne Bounce heavy kick and clean offbeat groove.",
+              "type": "string"
+            },
+            {
+              "const": "midtempo_stomp",
+              "description": "Midtempo cyberpunk stomp with heavy halftime snare.",
+              "type": "string"
+            },
+            {
+              "const": "house_m1",
+              "description": "90s M1 Piano House swinging club groove.",
+              "type": "string"
+            },
+            {
+              "const": "melodic_techno",
+              "description": "Hypnotic Afterlife melodic techno rolling 16ths.",
+              "type": "string"
+            },
+            {
+              "const": "balkan_brass",
+              "description": "High-energy Balkan festival brass groove.",
+              "type": "string"
+            },
+            {
+              "const": "eurobeat_156",
+              "description": "150-162 BPM Super Eurobeat four-on-floor & driving 16th offbeats.",
+              "type": "string"
+            },
+            {
+              "const": "anime_techno_166",
+              "description": "Fast anime opening techno groove with accelerating risers.",
+              "type": "string"
+            }
+          ]
+        },
+        "MelodyContour": {
+          "description": "Melodic contour & rhythmic phrasing archetype.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Vary archetype deterministically from the seed and genre.",
+              "type": "string"
+            },
+            {
+              "const": "pedal_pivot",
+              "description": "Rapid alternation between a fixed anchor pedal note and upper chord tones.",
+              "type": "string"
+            },
+            {
+              "const": "descending_cascade",
+              "description": "Starts on a high 7th/9th peak and cascades downward in sequential terraces.",
+              "type": "string"
+            },
+            {
+              "const": "anacrusis_pickup",
+              "description": "Phrase begins with a late-bar pickup resolving into a long downbeat note.",
+              "type": "string"
+            },
+            {
+              "const": "offbeat_syncopated",
+              "description": "Deliberately rests on beat 1 and punches syncopated offbeats.",
+              "type": "string"
+            },
+            {
+              "const": "dual_call_response",
+              "description": "Bar 1 Question on Lead answered in Bar 2 by the Answer / Bridge instrument.",
+              "type": "string"
+            },
+            {
+              "const": "vocal_chop_syllabic",
+              "description": "Staccato vocal syllables grouped into bursts with generous rests.",
+              "type": "string"
+            },
+            {
+              "const": "exotic_ornamental",
+              "description": "Tight modal half-step / augmented-2nd turns with ornament pairs.",
+              "type": "string"
+            },
+            {
+              "const": "rhythmic_morse_hook",
+              "description": "Hypnotic 2-to-3 pitch Morse-code syncopated hook.",
+              "type": "string"
+            },
+            {
+              "const": "wide_interval_leap",
+              "description": "Cinematic octave, 6th and 7th interval leaps with sustained hold.",
+              "type": "string"
+            },
+            {
+              "const": "blues_funk_riff",
+              "description": "Pocketed pentatonic/blues turnaround lick with grace anticipations.",
+              "type": "string"
+            }
+          ]
+        },
+        "MotifForm": {
+          "description": "4-bar phrase structure grammar.",
+          "oneOf": [
+            {
+              "const": "auto",
+              "description": "Choose motif structure deterministically from seed or genre.",
+              "type": "string"
+            },
+            {
+              "const": "aaba",
+              "description": "Statement, repeat, contrasting B bar, resolved return.",
+              "type": "string"
+            },
+            {
+              "const": "abac",
+              "description": "Alternating A and B phrases ending on a C turnaround.",
+              "type": "string"
+            },
+            {
+              "const": "aabb",
+              "description": "Paired Question statements followed by paired elevated Answer bars.",
+              "type": "string"
+            },
+            {
+              "const": "call_response",
+              "description": "Even bars call, odd bars answer and resolve.",
+              "type": "string"
             }
           ]
         },
@@ -2747,9 +4339,24 @@ expression: summary
           "additionalProperties": false,
           "description": "Native preset ids for the seven lanes. Every built-in preset is selectable.",
           "properties": {
+            "arp": {
+              "default": "anime_sparkle_arp",
+              "description": "Upper-register sparkle arpeggio (10-track studio mode).",
+              "type": "string"
+            },
             "bass": {
               "default": "pc98_opna_slap_bass",
               "description": "Bass instrument.",
+              "type": "string"
+            },
+            "cowbell": {
+              "default": "eurobeat_cowbell",
+              "description": "Offbeat Eurobeat / Initial D cowbell (10-track studio mode).",
+              "type": "string"
+            },
+            "crash": {
+              "default": "club_crash_cymbal",
+              "description": "Section-drop crash cymbal (10-track studio mode).",
               "type": "string"
             },
             "emotional": {
@@ -2781,6 +4388,112 @@ expression: summary
               "default": "snare",
               "description": "Snare drum.",
               "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "SectionKind": {
+          "description": "Musical role of a custom or generated arrangement section.",
+          "oneOf": [
+            {
+              "const": "intro_riff",
+              "description": "High-energy opening synth brass or hook riff.",
+              "type": "string"
+            },
+            {
+              "const": "verse_a",
+              "description": "First lyrical verse melody.",
+              "type": "string"
+            },
+            {
+              "const": "verse_b",
+              "description": "Answering higher verse continuation melody.",
+              "type": "string"
+            },
+            {
+              "const": "pre_chorus",
+              "description": "Climbing tension builder with snare rolls into Chorus.",
+              "type": "string"
+            },
+            {
+              "const": "chorus",
+              "description": "Main high-altitude soaring sabi/chorus hook.",
+              "type": "string"
+            },
+            {
+              "const": "solo",
+              "description": "Blazing guitar / synth solo showcase section.",
+              "type": "string"
+            },
+            {
+              "const": "breakdown",
+              "description": "Stripped emotional breakdown before the final drop.",
+              "type": "string"
+            },
+            {
+              "const": "final_chorus",
+              "description": "Maximum energy finale chorus (optionally +2 st key change).",
+              "type": "string"
+            },
+            {
+              "const": "outro",
+              "description": "Punchy closing turnaround.",
+              "type": "string"
+            }
+          ]
+        },
+        "SectionSpec": {
+          "additionalProperties": false,
+          "description": "One customizable song section inside a multi-section arrangement.",
+          "properties": {
+            "bars": {
+              "default": 8,
+              "description": "Number of four-beat bars (2-16).",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "energy": {
+              "default": 4,
+              "description": "Section energy intensity (1-5).",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "kind": {
+              "$ref": "#/$defs/SectionKind",
+              "default": "chorus",
+              "description": "Musical function of this section."
+            },
+            "melody_theme": {
+              "default": 4,
+              "description": "Independent melodic theme slot (0-5) so different sections sing different melodies.",
+              "format": "uint8",
+              "maximum": 255,
+              "minimum": 0,
+              "type": "integer"
+            },
+            "progression": {
+              "$ref": "#/$defs/ChordProgressionStyle",
+              "default": "auto",
+              "description": "Chord progression blueprint (Auto adapts to `kind`)."
+            },
+            "seed_offset": {
+              "default": 0,
+              "description": "Per-section seed tweak allowing individual section melody rerolls.",
+              "format": "uint32",
+              "minimum": 0,
+              "type": "integer"
+            },
+            "transpose_semitones": {
+              "default": 0,
+              "description": "Section transposition shift in semitones (-12 to +12).",
+              "format": "int8",
+              "maximum": 127,
+              "minimum": -128,
+              "type": "integer"
             }
           },
           "type": "object"

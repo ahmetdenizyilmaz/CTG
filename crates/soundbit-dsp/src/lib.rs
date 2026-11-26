@@ -26,6 +26,7 @@
 #[cfg(test)]
 extern crate std;
 
+pub mod delay;
 pub mod envelope;
 pub mod filter;
 pub mod fm;
@@ -34,6 +35,8 @@ pub mod modulation;
 pub mod osc;
 mod phase;
 pub mod reverb;
+
+pub use delay::{DelayParams, StereoDelay};
 
 pub use envelope::{Adsr, AdsrParams};
 pub use filter::{FilterResponse, Svf};

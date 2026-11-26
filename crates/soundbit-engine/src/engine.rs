@@ -1,7 +1,7 @@
 //! The playback engine.
 
 use soundbit_core::limits::MAX_TRACKS;
-use soundbit_dsp::Reverb;
+use soundbit_dsp::{Reverb, StereoDelay};
 use soundbit_dsp::math::soft_clip;
 
 use crate::meter::{Meters, TrackPower};
@@ -17,7 +17,7 @@ const MASTER_GAIN: f32 = 0.4;
 /// Plays a [`Schedule`] and produces interleaved stereo samples.
 ///
 /// Every method marked RT-safe never allocates, locks or performs I/O, so it can run inside an
-/// audio callback. Player state for the maximum number of tracks and the reverb's delay lines
+/// audio callback. Player state for the maximum number of tracks and the reverb/delay buffers
 /// are allocated up front, which lets [`Engine::replace_schedule`] swap in an edited song
 /// while it plays.
 #[derive(Debug, Clone)]
@@ -26,10 +26,15 @@ pub struct Engine {
     players: Vec<TrackPlayer>,
     reverb: Reverb,
     reverb_buffer: Vec<f32>,
+    reverb_hp_in: f32,
+    reverb_hp_out: f32,
+    delay: StereoDelay,
+    delay_buffer: Vec<f32>,
     meters: Option<Meters>,
     sample_rate: f64,
     position: u64,
     looping: bool,
+    sidechain_env: f32,
 }
 
 impl Engine {
@@ -39,15 +44,21 @@ impl Engine {
         let players = (0..slots).map(|_| TrackPlayer::new()).collect();
         let rate = schedule.sample_rate();
         let reverb = Reverb::new(rate, schedule.reverb());
+        let delay = StereoDelay::new(rate, schedule.delay_params());
         Self {
             players,
             reverb,
             reverb_buffer: vec![0.0; Reverb::buffer_len(rate)],
+            reverb_hp_in: 0.0,
+            reverb_hp_out: 0.0,
+            delay,
+            delay_buffer: vec![0.0; StereoDelay::buffer_len(rate)],
             meters: None,
             sample_rate: f64::from(rate),
             schedule,
             position: 0,
             looping: false,
+            sidechain_env: 0.0,
         }
     }
 
@@ -87,6 +98,7 @@ impl Engine {
         !self.looping
             && self.position >= self.schedule.end_sample()
             && self.reverb.is_quiet()
+            && self.delay.is_quiet()
             && self
                 .players
                 .iter()
@@ -112,6 +124,7 @@ impl Engine {
     pub fn replace_schedule(&mut self, schedule: Schedule) -> Schedule {
         let old = std::mem::replace(&mut self.schedule, schedule);
         self.reverb.set_params(self.schedule.reverb());
+        self.delay.set_params(self.schedule.delay_params());
         let plans = self.schedule.tracks();
         for (index, player) in self.players.iter_mut().enumerate() {
             match plans.get(index) {
@@ -157,20 +170,18 @@ impl Engine {
     // RT-SAFE
     fn mix_frame(&mut self) -> (f32, f32) {
         let patches = self.schedule.patches();
+        let samples = self.schedule.samples();
+        let tracks = self.schedule.tracks();
         let (mut left, mut right, mut send) = (0.0, 0.0, 0.0);
-        for (index, (player, plan)) in self
-            .players
-            .iter_mut()
-            .zip(self.schedule.tracks())
-            .enumerate()
-        {
-            let frame = player.render(
-                self.position,
-                plan,
-                patches,
-                self.sample_rate,
-                self.schedule.samples(),
-            );
+
+        // Pass 1: Render kick tracks first and update the audio-rate sidechain pumping envelope
+        let mut kick_peak = 0.0_f32;
+        for (index, (player, plan)) in self.players.iter_mut().zip(tracks).enumerate() {
+            if !plan.is_kick {
+                continue;
+            }
+            let frame = player.render(self.position, plan, patches, self.sample_rate, samples);
+            kick_peak = kick_peak.max(frame.left.abs().max(frame.right.abs()));
             if let Some(meters) = &mut self.meters {
                 meters.record(index, frame.left * MASTER_GAIN, frame.right * MASTER_GAIN);
             }
@@ -178,9 +189,51 @@ impl Engine {
             right += frame.right;
             send += frame.send;
         }
+
+        // Fast 2ms sidechain attack, smooth 95ms exponential release
+        let release_coeff = (1.0 - 1.0 / (0.095 * self.sample_rate as f32)).clamp(0.99, 0.9999);
+        if kick_peak > self.sidechain_env {
+            self.sidechain_env += 0.25 * (kick_peak - self.sidechain_env);
+        } else {
+            self.sidechain_env *= release_coeff;
+        }
+        let sc = self.sidechain_env.min(1.0);
+
+        // Pass 2: Render all non-kick tracks with audio-rate sidechain ducking on pads/chords/bass
+        let (mut delay_in_l, mut delay_in_r) = (0.0_f32, 0.0_f32);
+        for (index, (player, plan)) in self.players.iter_mut().zip(tracks).enumerate() {
+            if plan.is_kick {
+                continue;
+            }
+            let frame = player.render(self.position, plan, patches, self.sample_rate, samples);
+            let duck = 1.0 - plan.sidechain_duck * sc;
+            let l = frame.left * duck;
+            let r = frame.right * duck;
+            let s = frame.send * duck;
+            delay_in_l += l * plan.delay_send;
+            delay_in_r += r * plan.delay_send;
+            if let Some(meters) = &mut self.meters {
+                meters.record(index, l * MASTER_GAIN, r * MASTER_GAIN);
+            }
+            left += l;
+            right += r;
+            send += s;
+        }
+
+        if self.schedule.uses_delay() || !self.delay.is_quiet() {
+            let (dl, dr) = self.delay.process(&mut self.delay_buffer, delay_in_l, delay_in_r);
+            left += dl;
+            right += dr;
+        }
+
         // Skipping a silent reverb keeps songs without sends bit-identical to a dry mix.
         if self.schedule.uses_reverb() || !self.reverb.is_quiet() {
-            let (wet_left, wet_right) = self.reverb.process(&mut self.reverb_buffer, send);
+            // High-pass ~180 Hz on reverb send so sub bass never clouds the room
+            let hp_a = (1.0 - 1_130.0 / self.sample_rate).clamp(0.90, 0.992) as f32;
+            let hp_send = hp_a * (self.reverb_hp_out + send - self.reverb_hp_in);
+            self.reverb_hp_in = send;
+            self.reverb_hp_out = hp_send;
+            let (wet_left, wet_right) = self.reverb.process(&mut self.reverb_buffer, hp_send);
             left += wet_left;
             right += wet_right;
         }

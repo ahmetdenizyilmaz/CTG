@@ -16,7 +16,7 @@ const UNISON_GAIN: [f32; MAX_UNISON] = [1.0, core::f32::consts::FRAC_1_SQRT_2, 0
 /// Cents per semitone.
 const CENTS: f64 = 100.0;
 
-/// The detuned copies a note plays.
+/// The detuned copies a note plays, with wide stereo panning per unison layer.
 #[derive(Debug, Clone, Copy, PartialEq)]
 pub(crate) struct UnisonPatch {
     pub(crate) layers: usize,
@@ -24,12 +24,16 @@ pub(crate) struct UnisonPatch {
     pub(crate) ratios: [f64; MAX_UNISON],
     /// Starting point of each layer in its cycle.
     pub(crate) phases: [f64; MAX_UNISON],
+    /// Constant-power left channel gain per unison layer.
+    pub(crate) pan_left: [f32; MAX_UNISON],
+    /// Constant-power right channel gain per unison layer.
+    pub(crate) pan_right: [f32; MAX_UNISON],
     pub(crate) gain: f32,
 }
 
 impl UnisonPatch {
-    /// Layers spread evenly from `-detune` to `+detune` cents. Noise has no pitch to detune,
-    /// so it always plays a single layer.
+    /// Layers spread from `-detune` to `+detune` cents using a non-linear JP-8000 detune curve
+    /// and wide alternating stereo panning. Noise has no pitch to detune, so it uses 1 layer.
     pub(crate) fn compile(unison: Unison, voice: &Voice) -> Self {
         let layers = if matches!(voice, Voice::Noise { .. }) {
             1
@@ -39,18 +43,31 @@ impl UnisonPatch {
         let detune = f64::from(unison.detune.get());
         let mut ratios = [1.0; MAX_UNISON];
         let mut phases = [0.0; MAX_UNISON];
+        let mut pan_left = [1.0_f32; MAX_UNISON];
+        let mut pan_right = [1.0_f32; MAX_UNISON];
         if layers > 1 {
             let last = (layers - 1) as f64;
             for layer in 0..layers {
                 let position = 2.0 * layer as f64 / last - 1.0;
-                ratios[layer] = semitone_ratio(position * detune / CENTS);
-                phases[layer] = layer as f64 / layers as f64;
+                // Non-linear JP-8000 supersaw detune curve: tight center core + lush outer spread
+                let curved = position.signum() * position.abs().powf(1.22);
+                ratios[layer] = semitone_ratio(curved * detune / CENTS);
+                // Golden-ratio phase distribution prevents hollow phaser cancellation on attack
+                phases[layer] = (layer as f64 * 0.381_966_011).fract();
+                // Alternating left/right stereo spread across [-0.76, +0.76]
+                let sign = if layer % 2 == 0 { -1.0_f32 } else { 1.0_f32 };
+                let mag = 0.42 + 0.34 * (layer as f32 / last as f32);
+                let pan = sign * mag;
+                pan_left[layer] = (1.0 - pan).min(1.0);
+                pan_right[layer] = (1.0 + pan).min(1.0);
             }
         }
         Self {
             layers,
             ratios,
             phases,
+            pan_left,
+            pan_right,
             gain: UNISON_GAIN[layers - 1],
         }
     }

@@ -2,7 +2,11 @@
 #![allow(clippy::expect_used, reason = "tests fail on invalid projects")]
 use soundbit_app::{
     Command, Editor, Origin, PresetLibrary, Session,
-    compose::{BassRhythm, ComposeConfig, Form, Role, Vibe, euclidean, generate, transform_notes},
+    compose::{
+        AccompanimentStyle, BassRhythm, ChordProgressionStyle, ComposeConfig, Form, GenreStyle,
+        GrooveTemplate, MelodyContour, MotifForm, Role, SectionKind, SectionSpec, Vibe, euclidean,
+        generate, transform_notes,
+    },
     model::{Note, Pitch, Scale, ScaleKind, Song},
 };
 
@@ -158,16 +162,34 @@ fn native_generation_undo_redo_restores_complete_projects() {
 fn all_added_packs_are_default_and_cached() {
     let first = PresetLibrary::builtin().expect("presets");
     let second = PresetLibrary::builtin().expect("presets");
-    assert_eq!(first.all().len(), 168);
+    assert_eq!(first.all().len(), 253);
     assert!(std::ptr::eq(first.all().as_ptr(), second.all().as_ptr()));
     for id in [
+        "acoustic_grand_piano",
+        "bw_bright_pulse_lead",
         "aloboi_cello_solo",
         "osc_spiral_pluck",
         "sfx_zoom_in_riser",
         "pc98_opna_brass_lead",
         "trig_velvet_chord_pluck",
+        "vocal_formant_chop",
+        "devilfish_303_acid",
+        "alpha_juno_hoover",
+        "m1_house_piano",
+        "m1_organ_bass",
+        "uk_bassline_donk",
+        "padsynth_lush_choir",
+        "balkan_zurna_lead",
+        "cyber_shamisen_pluck",
+        "eurobeat_synth_brass",
+        "eurobeat_octave_bass",
+        "anime_rock_guitar",
+        "uprising_trance_lead",
+        "anime_sparkle_arp",
+        "eurobeat_cowbell",
+        "club_crash_cymbal",
     ] {
-        assert!(first.find(id).is_some());
+        assert!(first.find(id).is_some(), "missing preset {id}");
     }
 }
 
@@ -350,4 +372,187 @@ fn neon_funk_recipe_has_original_zzfx_sounds_and_expressive_sections() {
         composition.song,
         soundbit_formats::from_project_json(&project).expect("read")
     );
+}
+
+#[test]
+fn all_ten_contours_genres_motif_forms_and_new_scales_generate_distinct_valid_music() {
+    use std::collections::BTreeSet;
+    let mut motifs = BTreeSet::new();
+    for contour in MelodyContour::ALL {
+        let result = generate(&ComposeConfig {
+            melody_contour: contour,
+            form: Form::Short,
+            rest_density: 40,
+            syncopation: 55,
+            slide_probability: 50,
+            ..ComposeConfig::default()
+        })
+        .expect("contour valid");
+        assert_eq!(result.song.profile_violations(), []);
+        assert_eq!(result.report.design.melody_contour, contour.as_str());
+        motifs.insert(result.report.motif);
+    }
+    assert!(motifs.len() >= 8, "contours must vary motifs widely");
+
+    let genres = [
+        GenreStyle::EuphoricTrance,
+        GenreStyle::AcidWarehouse303,
+        GenreStyle::LiquidDnb,
+        GenreStyle::UkGarage2Step,
+        GenreStyle::FrenchTouchDisco,
+        GenreStyle::MelbourneBounce,
+        GenreStyle::MidtempoCyberpunk,
+        GenreStyle::PianoHouse90s,
+        GenreStyle::AfterlifeTechno,
+        GenreStyle::BalkanFestivalBrass,
+    ];
+    let mut grooves = BTreeSet::new();
+    for genre in genres {
+        let result = generate(&ComposeConfig {
+            genre_style: genre,
+            form: Form::Short,
+            ..ComposeConfig::default()
+        })
+        .expect("genre valid");
+        assert_eq!(result.song.profile_violations(), []);
+        grooves.insert(result.report.design.groove);
+    }
+    assert!(grooves.len() >= 8);
+
+    for form in MotifForm::ALL {
+        for scale in ["phrygian", "lydian", "blues", "melodic_minor"] {
+            let result = generate(&ComposeConfig {
+                motif_form: form,
+                scale: scale.into(),
+                groove_template: GrooveTemplate::AcidWarehouse,
+                accompaniment_style: AccompanimentStyle::MinimalGapAnswer,
+                form: Form::Short,
+                ..ComposeConfig::default()
+            })
+            .expect("form and scale valid");
+            assert_eq!(result.song.profile_violations(), []);
+            let (_, track) = result.song.tracks().next().expect("lead");
+            let id = track.clip_at(15).expect("final lead clip");
+            let last = result
+                .song
+                .pattern(id)
+                .expect("pattern")
+                .notes()
+                .last()
+                .expect("last note");
+            assert_eq!(last.pitch.class().get(), result.song.scale().root.get());
+            assert_eq!(last.end(), 16);
+        }
+    }
+}
+
+#[test]
+fn semi_pro_initial_d_and_anime_multi_section_songs_have_distinct_melodies_and_continuations() {
+    use std::collections::BTreeSet;
+    for genre in [
+        GenreStyle::InitialDEurobeat,
+        GenreStyle::AnimeOpeningTechno,
+        GenreStyle::UprisingMelodicTechno,
+        GenreStyle::HyperEurodanceRave,
+    ] {
+        let mut config = ComposeConfig {
+            genre_style: genre,
+            key: "D".into(),
+            scale: "natural_minor".into(),
+            bpm: 156,
+            form: Form::Standard,
+            key_change_finale: true,
+            riser_builds: true,
+            studio_layers: true,
+            ..ComposeConfig::default()
+        };
+        config.instruments.lead = "eurobeat_synth_brass".into();
+        config.instruments.harmony = "anime_grand_chords".into();
+        config.instruments.bass = "eurobeat_octave_bass".into();
+        config.instruments.emotional = "anime_rock_guitar".into();
+        config.instruments.kick = "tr909_club_kick".into();
+        config.instruments.snare = "tr909_club_snare".into();
+
+        let generated = generate(&config).expect("semi-pro song generates");
+        assert_eq!(generated.song.tracks().count(), 10);
+        assert_eq!(generated.song.profile_violations(), []);
+        assert_eq!(generated.song.length_bars(), 48);
+
+        // Distinct section types must yield distinct written lead/solo bar patterns
+        let mut distinct_bars = BTreeSet::new();
+        for bar in 0..generated.song.length_bars() {
+            for (_, trk) in generated.song.tracks().take(4) {
+                if let Some(pid) = trk.clip_at(bar)
+                    && let Some(pat) = generated.song.pattern(pid)
+                {
+                    let sig: Vec<_> = pat.notes().iter().map(|n| (n.start, n.pitch.get())).collect();
+                    distinct_bars.insert(sig);
+                }
+            }
+        }
+        assert!(
+            distinct_bars.len() >= 12,
+            "semi-pro arrangement should produce diverse bars across sections (got {})",
+            distinct_bars.len()
+        );
+    }
+
+    // Custom multi-section builder with per-section theme, progression, energy & key shift
+    let custom = ComposeConfig {
+        genre_style: GenreStyle::InitialDEurobeat,
+        bpm: 158,
+        riser_builds: true,
+        studio_layers: true,
+        custom_sections: vec![
+            SectionSpec {
+                kind: SectionKind::IntroRiff,
+                bars: 4,
+                melody_theme: 0,
+                progression: ChordProgressionStyle::EurobeatCircle,
+                energy: 5,
+                transpose_semitones: 0,
+                seed_offset: 11,
+            },
+            SectionSpec {
+                kind: SectionKind::VerseA,
+                bars: 4,
+                melody_theme: 1,
+                progression: ChordProgressionStyle::UprisingAnthem,
+                energy: 3,
+                transpose_semitones: 0,
+                seed_offset: 22,
+            },
+            SectionSpec {
+                kind: SectionKind::VerseB,
+                bars: 4,
+                melody_theme: 2,
+                progression: ChordProgressionStyle::KomuroDrive,
+                energy: 4,
+                transpose_semitones: 0,
+                seed_offset: 33,
+            },
+            SectionSpec {
+                kind: SectionKind::PreChorus,
+                bars: 4,
+                melody_theme: 3,
+                progression: ChordProgressionStyle::DramaticMinor,
+                energy: 4,
+                transpose_semitones: 0,
+                seed_offset: 44,
+            },
+            SectionSpec {
+                kind: SectionKind::FinalChorus,
+                bars: 4,
+                melody_theme: 4,
+                progression: ChordProgressionStyle::RoyalRoad,
+                energy: 5,
+                transpose_semitones: 2,
+                seed_offset: 55,
+            },
+        ],
+        ..ComposeConfig::default()
+    };
+    let custom_out = generate(&custom).expect("custom section song");
+    assert_eq!(custom_out.song.length_bars(), 20);
+    assert_eq!(custom_out.song.tracks().count(), 10);
 }

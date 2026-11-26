@@ -37,7 +37,7 @@ pub(crate) fn compile(
     let mut count = 0_usize;
     let sr_f = f64::from(sample_rate);
 
-    // 1. Apply sustain-pedal / natural acoustic ring-out to struck & plucked physical models
+    // 1. Respect written note durations with a short natural release (no multi-second overlap mud)
     for track in tracks.iter_mut() {
         let len = track.events.len();
         for i in 0..len {
@@ -52,29 +52,22 @@ pub(crate) fn compile(
                 continue;
             }
             let on = track.events[i].on;
-            let pitch = track.events[i].pitch;
-            let min_ring = (kind.min_ring_seconds() * sr_f) as u64;
-            let mut target_off = (on + min_ring).min(song_end.max(track.events[i].off));
-
-            if kind == PhysicalModelKind::UprightBass {
-                // Monophonic bass finger damping: mute slightly after the next bass note starts
-                if let Some(next_ev) = track.events.get(i + 1) {
-                    let overlap = (0.06 * sr_f) as u64;
-                    target_off = target_off.min(next_ev.on.saturating_add(overlap));
-                }
-            } else {
-                // Polyphonic sustain (piano, harp, guitar, mallets): ring until the same string is re-struck
-                for next_ev in &track.events[(i + 1)..] {
-                    if next_ev.pitch == pitch && next_ev.on > on {
-                        target_off = target_off.min(next_ev.on);
-                        break;
-                    }
-                }
+            let written_dur = track.events[i].off.saturating_sub(on);
+            // Add at most a clean 120ms natural release tail, never overlapping the next note on the same track
+            let tail = (0.12 * sr_f) as u64;
+            let mut target_off = (track.events[i].off + tail).min(song_end.max(track.events[i].off));
+            if let Some(next_ev) = track.events.get(i + 1)
+                && next_ev.on > on
+            {
+                // If it's a short staccato/stab note or bassline, stop cleanly before the next attack
+                let max_overlap = if written_dur <= (0.25 * sr_f) as u64 || kind == PhysicalModelKind::UprightBass {
+                    (0.03 * sr_f) as u64
+                } else {
+                    (0.10 * sr_f) as u64
+                };
+                target_off = target_off.min(next_ev.on.saturating_add(max_overlap));
             }
-
-            if target_off > track.events[i].off {
-                track.events[i].off = target_off;
-            }
+            track.events[i].off = target_off;
         }
     }
 

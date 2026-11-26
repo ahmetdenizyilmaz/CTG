@@ -10,7 +10,7 @@ use std::sync::{Arc, OnceLock};
 use crate::AppError;
 
 /// The preset files, by name.
-const FILES: [(&str, &str); 14] = [
+const FILES: [(&str, &str); 16] = [
     (
         "acoustic_studio.json",
         include_str!("../../../assets/presets/acoustic_studio.json"),
@@ -18,6 +18,14 @@ const FILES: [(&str, &str); 14] = [
     (
         "pixel_studio_fusion.json",
         include_str!("../../../assets/presets/pixel_studio_fusion.json"),
+    ),
+    (
+        "electronic_rave_world.json",
+        include_str!("../../../assets/presets/electronic_rave_world.json"),
+    ),
+    (
+        "eurobeat_anime_studio.json",
+        include_str!("../../../assets/presets/eurobeat_anime_studio.json"),
     ),
     (
         "zzfx.json",

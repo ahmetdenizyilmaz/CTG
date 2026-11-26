@@ -26,6 +26,8 @@ pub(crate) struct Voice {
     layers: [Source; MAX_UNISON],
     layer_count: usize,
     layer_ratios: [f64; MAX_UNISON],
+    layer_pan_left: [f32; MAX_UNISON],
+    layer_pan_right: [f32; MAX_UNISON],
     layer_gain: f32,
     hz: f64,
     sample_rate: f64,
@@ -37,7 +39,8 @@ pub(crate) struct Voice {
     sample_positions: [f64; MAX_UNISON],
     duration_samples: u64,
     pitch: PitchMod,
-    filter: VoiceFilter,
+    filter_left: VoiceFilter,
+    filter_right: VoiceFilter,
     envelope: Adsr,
     gain: StereoGain,
     send: f32,
@@ -66,6 +69,8 @@ impl Voice {
         self.sample_rate = sample_rate;
         self.layer_count = unison.layers.clamp(1, MAX_UNISON);
         self.layer_ratios = unison.ratios;
+        self.layer_pan_left = unison.pan_left;
+        self.layer_pan_right = unison.pan_right;
         self.layer_gain = unison.gain;
         for ((layer, ratio), phase) in self
             .layers
@@ -83,7 +88,8 @@ impl Voice {
         self.duration_samples = event.off.saturating_sub(event.on).max(1);
         self.modulated = !patch.pitch.is_static() || event.slide_semitones != 0;
         self.pitch.start(patch.pitch, sample_rate);
-        self.filter.start(patch.filter, sample_rate);
+        self.filter_left.start(patch.filter, sample_rate);
+        self.filter_right.start(patch.filter, sample_rate);
         self.envelope.set_params(patch.envelope);
         self.envelope.note_on();
         self.gain = patch.gain.scaled(event.velocity);
@@ -133,9 +139,10 @@ impl Voice {
         if self.modulated {
             self.retune(now);
         }
-        let sample = self.layers_sample();
+        let (raw_left, raw_right) = self.layers_stereo();
         let envelope = self.envelope.next_level();
-        let sample = self.filter.process(sample, envelope);
+        let filt_left = self.filter_left.process(raw_left, envelope);
+        let filt_right = self.filter_right.process(raw_right, envelope);
         let first = &self.layers[0];
         let (level, finished) = if first.has_own_envelope() {
             (1.0, first.is_silent())
@@ -145,11 +152,13 @@ impl Voice {
         if finished {
             self.active = false;
         }
-        let out = sample * level;
+        let out_l = filt_left * level;
+        let out_r = filt_right * level;
+        let out_mono = 0.5 * (out_l + out_r);
         VoiceFrame {
-            left: out * self.gain.left,
-            right: out * self.gain.right,
-            send: out * self.send,
+            left: out_l * self.gain.left,
+            right: out_r * self.gain.right,
+            send: out_mono * self.send,
         }
     }
 
@@ -195,51 +204,85 @@ impl Voice {
         let slide = self.slide_semitones * progress;
         let offset = self.pitch.next_offset() + if self.glissando { slide.trunc() } else { slide };
         let rate = 44100. / self.sample_rate * semitone_ratio(offset);
-        let mut value = 0.;
+        let mut left = 0.0_f32;
+        let mut right = 0.0_f32;
         let mut sounding = false;
-        for (position, ratio) in self
-            .sample_positions
-            .iter_mut()
-            .zip(self.layer_ratios)
-            .take(self.layer_count)
-        {
+        if self.layer_count <= 1 {
+            let position = &mut self.sample_positions[0];
             let index = *position as usize;
             if index < samples.len() {
                 sounding = true;
                 let fraction = (*position - index as f64) as f32;
-                value += samples[index]
+                let sample = samples[index]
                     + (samples.get(index + 1).copied().unwrap_or(0.) - samples[index]) * fraction;
+                left = sample;
+                right = sample;
             }
-            *position += rate * ratio;
+            *position += rate * self.layer_ratios[0];
+        } else {
+            for (((position, ratio), &pan_l), &pan_r) in self
+                .sample_positions
+                .iter_mut()
+                .zip(self.layer_ratios)
+                .zip(&self.layer_pan_left)
+                .zip(&self.layer_pan_right)
+                .take(self.layer_count)
+            {
+                let index = *position as usize;
+                if index < samples.len() {
+                    sounding = true;
+                    let fraction = (*position - index as f64) as f32;
+                    let sample = samples[index]
+                        + (samples.get(index + 1).copied().unwrap_or(0.) - samples[index])
+                            * fraction;
+                    left += sample * pan_l;
+                    right += sample * pan_r;
+                }
+                *position += rate * ratio;
+            }
         }
         if !sounding {
             self.active = false;
             return VoiceFrame::default();
         }
-        value *= self.layer_gain;
         // ZzFXM de-clicks the end of each note over 99 samples at 44.1 kHz.
         let fade =
             ((self.release_at - now) as f64 / (99. * self.sample_rate / 44100.)).min(1.) as f32;
+        let scale = self.layer_gain * fade;
         let envelope = self.envelope.next_level();
-        let out = self.filter.process(value * fade, envelope);
+        let out_l = self.filter_left.process(left * scale, envelope);
+        let out_r = if self.layer_count <= 1 {
+            out_l
+        } else {
+            self.filter_right.process(right * scale, envelope)
+        };
+        let out_mono = 0.5 * (out_l + out_r);
         VoiceFrame {
-            left: out * self.gain.left,
-            right: out * self.gain.right,
-            send: out * self.send,
+            left: out_l * self.gain.left,
+            right: out_r * self.gain.right,
+            send: out_mono * self.send,
         }
     }
 
     // RT-SAFE
-    fn layers_sample(&mut self) -> f32 {
+    fn layers_stereo(&mut self) -> (f32, f32) {
         if self.layer_count == 1 {
-            return self.layers[0].next_sample();
+            let s = self.layers[0].next_sample();
+            return (s, s);
         }
-        let sum: f32 = self
+        let mut left = 0.0_f32;
+        let mut right = 0.0_f32;
+        for ((layer, &pan_l), &pan_r) in self
             .layers
             .iter_mut()
+            .zip(&self.layer_pan_left)
+            .zip(&self.layer_pan_right)
             .take(self.layer_count)
-            .map(Source::next_sample)
-            .sum();
-        sum * self.layer_gain
+        {
+            let s = layer.next_sample();
+            left += s * pan_l;
+            right += s * pan_r;
+        }
+        (left * self.layer_gain, right * self.layer_gain)
     }
 }

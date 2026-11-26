@@ -17,11 +17,11 @@ use soundbit_engine::{EngineError, RenderOptions, Rendered, Schedule, render};
 /// This pins the exact audio output. If a change to the DSP or engine alters the sound on
 /// purpose, update the value and explain why in the pull request. If it changes by accident,
 /// or differs between platforms, something broke determinism.
-const SHOWCASE_HASH: u64 = 0x4cdc_1659_08bf_c6c1;
+const SHOWCASE_HASH: u64 = 0xdff5_ca3d_380e_6341;
 
 /// Hash of the sound-shaping song rendered at 48 kHz: pins pitch envelopes, vibrato,
 /// unison, filters and reverb the same way [`SHOWCASE_HASH`] pins the bare voices.
-const SHAPED_HASH: u64 = 0xcec6_770b_254c_a081;
+const SHAPED_HASH: u64 = 0x1fc0_5fd7_dca5_c9f1;
 
 fn render_showcase() -> Rendered {
     render(&showcase_song(), &RenderOptions::default()).expect("valid options")

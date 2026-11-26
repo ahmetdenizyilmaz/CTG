@@ -1,4 +1,4 @@
-export type WorkspaceView = 'studio' | 'compose' | 'demos' | 'connect';
+export type WorkspaceView = 'studio' | 'compose' | 'arranger' | 'demos' | 'connect';
 class Workspace {
   view = $state<WorkspaceView>('studio');
   library = $state(true);
